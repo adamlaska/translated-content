@@ -1,10 +1,8 @@
 ---
 title: column-rule-style
 slug: Web/CSS/column-rule-style
-tags:
-  - мультиколоночная вёрстка
-translation_of: Web/CSS/column-rule-style
 ---
+
 {{ CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`column-rule-style`** устанавливает стиль линии, расположенной между колонками при мультиколоночной вёрстке.
@@ -26,7 +24,7 @@ column-rule-style: ridge;
 column-rule-style: inset;
 column-rule-style: outset;
 
-/* глобальные значения */
+/* Глобальные значения */
 column-rule-style: inherit;
 column-rule-style: initial;
 column-rule-style: unset;
@@ -48,10 +46,11 @@ column-rule-style: unset;
 ### HTML
 
 ```html
-<p>This is a bunch of text split into three columns.
-   The `column-rule-style` property is used to change
-   the style of the line that is drawn between columns.
-   Don't you think that's wonderful?</p>
+<p>
+  This is a bunch of text split into three columns. The `column-rule-style`
+  property is used to change the style of the line that is drawn between
+  columns. Don't you think that's wonderful?
+</p>
 ```
 
 ### CSS
@@ -73,6 +72,6 @@ p {
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

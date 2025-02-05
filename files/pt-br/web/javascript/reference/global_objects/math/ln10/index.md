@@ -1,8 +1,8 @@
 ---
 title: Math.LN10
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN10
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN10
 ---
+
 {{JSRef}}
 
 A propriedade **`Math.LN10`** representa o logaritmo natural de 10, aproximadamente 2.302:
@@ -31,16 +31,11 @@ getNatLog10(); // 2.302585092994046
 
 ## Especificações
 
-| Especificação                                                            | Status                       | Comentário                                         |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Definição inicial. Implementado em JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.2', 'Math.LN10')}}     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.ln10', 'Math.LN10')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-math.ln10', 'Math.LN10')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.LN10")}}
+{{Compat}}
 
 ## Veja também
 

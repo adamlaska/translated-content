@@ -1,16 +1,12 @@
 ---
 title: max
 slug: Web/EXSLT/math/max
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/math/max
 ---
-{{XsltRef}}
+
+{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
 `math:max()` devuelve el valor máximo de un conjunto de nodos (node-set).
 
-To compute the maximum value of the node-set, the node set is sorted into descending order as it would be using [`xsl:sort()`](/es/docs/Web/XSLT/sort) with a data type of `number`. The maximum value is then the first node in the sorted list, converted into a number.
+To compute the maximum value of the node-set, the node set is sorted into descending order as it would be using [`xsl:sort()`](/es/docs/Web/XSLT/Element/sort) with a data type of `number`. The maximum value is then the first node in the sorted list, converted into a number.
 
 ## Sintaxis
 

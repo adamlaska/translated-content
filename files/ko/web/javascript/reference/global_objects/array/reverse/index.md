@@ -1,14 +1,8 @@
 ---
 title: Array.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/reverse
-browser-compat: javascript.builtins.Array.reverse
 ---
+
 {{JSRef}}
 
 **`reverse()`** 메서드는 배열의 순서를 반전합니다. 첫 번째 요소는 마지막 요소가 되며 마지막 요소는 첫 번째 요소가 됩니다.
@@ -18,7 +12,7 @@ browser-compat: javascript.builtins.Array.reverse
 ## 구문
 
 ```js
-    a.reverse()
+a.reverse();
 ```
 
 ### 반환 값
@@ -36,11 +30,11 @@ browser-compat: javascript.builtins.Array.reverse
 다음 예시는 3개의 요소가 든 myArray 배열을 만든 후, 반전시킵니다.
 
 ```js
-    const a = [1, 2, 3];
-    console.log(a); // [1, 2, 3]
+const a = [1, 2, 3];
+console.log(a); // [1, 2, 3]
 
-    a.reverse();
-    console.log(a); // [3, 2, 1]
+a.reverse();
+console.log(a); // [3, 2, 1]
 ```
 
 ## 명세

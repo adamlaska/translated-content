@@ -1,8 +1,8 @@
 ---
-title: 'Window: beforeunload event'
+title: "Window: beforeunload event"
 slug: Web/API/Window/beforeunload_event
-translation_of: Web/API/Window/beforeunload_event
 ---
+
 {{APIRef}}
 
 Событие **beforeunload** запускается, когда окно, документ и его ресурсы вот-вот будут выгружены. Документ все ещё виден, и событие в этот момент может быть отменено.
@@ -52,11 +52,11 @@ translation_of: Web/API/Window/beforeunload_event
 В HTML-спецификации указано, что авторы должны использовать метод {{domxref("Event.preventDefault()")}}, а не {{domxref("Event.returnValue")}}. Однако, это поддерживается не всеми браузерами.
 
 ```js
-window.addEventListener('beforeunload', (event) => {
+window.addEventListener("beforeunload", (event) => {
   // Отмените событие, как указано в стандарте.
   event.preventDefault();
   // Chrome требует установки возвратного значения.
-  event.returnValue = '';
+  event.returnValue = "";
 });
 ```
 
@@ -68,7 +68,7 @@ window.addEventListener('beforeunload', (event) => {
 
 {{Compat}}
 
-Смотрите [WindowEventHandlers/onbeforeunload](/ru/docs/Web/API/WindowEventHandlers/onbeforeunload#Browser_compatibility) для получения более подробной информации о том, как различные браузеры обрабатывают это событие.
+Смотрите [WindowEventHandlers/onbeforeunload](/ru/docs/Web/API/Window/beforeunload_event#browser_compatibility) для получения более подробной информации о том, как различные браузеры обрабатывают это событие.
 
 ## Смотрите также
 

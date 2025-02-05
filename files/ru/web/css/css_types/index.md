@@ -1,8 +1,8 @@
 ---
 title: CSS basic data types
 slug: Web/CSS/CSS_Types
-translation_of: Web/CSS/CSS_Types
 ---
+
 {{CssRef}}
 
 Базовые типы данных в **CSS** определяют типичные значения (включая ключевые слова и единицы измерения), принимаемые CSS-свойствами и функциями. Они являются частным случаем [component value type](https://www.w3.org/TR/css3-values/#component-types).
@@ -35,9 +35,6 @@ translation_of: Web/CSS/CSS_Types
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("&lt;url&gt;")}}
 
-## Спецификация
+## Спецификации
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('CSS4 Values') }} | {{ Spec2('CSS4 Values') }} |                     |
-| {{ SpecName('CSS3 Values') }} | {{ Spec2('CSS3 Values') }} | Initial definition. |
+{{Specifications}}

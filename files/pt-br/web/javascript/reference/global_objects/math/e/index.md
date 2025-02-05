@@ -1,13 +1,8 @@
 ---
 title: Math.E
 slug: Web/JavaScript/Reference/Global_Objects/Math/E
-tags:
-  - JavaScript
-  - Math
-  - Propriedade
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/E
 ---
+
 {{JSRef}}
 
 A propriedade **`Math.E`** representa a base dos logarítmos naturais, aproximadamente 2.718.
@@ -36,16 +31,11 @@ getNapier(); // 2.718281828459045
 
 ## Especificações
 
-| Especificação                                                    | Status                       | Comentário                                         |
-| ---------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                         | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.1', 'Math.E')}} | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.e', 'Math.E')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-math.e', 'Math.E')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.E")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,9 +1,8 @@
 ---
 title: Math.asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/asin
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/asin
 ---
+
 {{JSRef}}
 
 La Funcion **`Math.asin()`** retorna El arco seno (en radianes) de un número, eso es.
@@ -36,28 +35,23 @@ Because `asin()` is a static method of `Math`, you always use it as `Math.asin()
 ### Usando `Math.asin()`
 
 ```js
-Math.asin(-2);  // NaN
-Math.asin(-1);  // -1.5707963267948966 (-pi/2)
-Math.asin(0);   // 0
+Math.asin(-2); // NaN
+Math.asin(-1); // -1.5707963267948966 (-pi/2)
+Math.asin(0); // 0
 Math.asin(0.5); // 0.5235987755982989
-Math.asin(1);   // 1.5707963267948966 (pi/2)
-Math.asin(2);   // NaN
+Math.asin(1); // 1.5707963267948966 (pi/2)
+Math.asin(2); // NaN
 ```
 
 For values less than -1 or greater than 1, `Math.asin()` returns {{jsxref("NaN")}}.
 
-## Espesificaciones
+## Especificaciones
 
-| Espesificacion                                                           | Estado                       | Comentario                                         |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.3', 'Math.asin')}}     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.asin', 'Math.asin')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-math.asin', 'Math.asin')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.asin")}}
+{{Compat}}
 
 ## Ver Mas
 

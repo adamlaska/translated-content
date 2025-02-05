@@ -1,15 +1,8 @@
 ---
 title: Access-Control-Allow-Methods
 slug: Web/HTTP/Headers/Access-Control-Allow-Methods
-tags:
-  - CORS
-  - Cabeçalho de Resposta
-  - HTTP
-  - Reference
-  - cabeçalho
-  - header
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Methods
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta **`Access-Control-Allow-Methods`** especifica o método ou métodos permitidos quando acessando o recurso em resposta a uma {{glossary("preflight request")}}.
@@ -50,13 +43,11 @@ Access-Control-Allow-Methods: *
 
 ## Especificações
 
-| Especificação                                                                                                            | Status                   | Comentário        |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ----------------- |
-| {{SpecName('Fetch','#http-access-control-allow-methods', 'Access-Control-Allow-Methods')}} | {{Spec2("Fetch")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Methods")}}
+{{Compat}}
 
 ## Veja também
 

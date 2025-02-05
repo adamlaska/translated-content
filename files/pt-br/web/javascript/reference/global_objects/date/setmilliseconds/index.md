@@ -1,17 +1,8 @@
 ---
 title: Date.prototype.setMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototipo
-  - Prototype
-  - Referencia
-  - data
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
 ---
+
 {{JSRef}}
 
 O método **`setMilliseconds()`** atribui os milissegundos para a data específica de acordo com a hora local.
@@ -48,13 +39,11 @@ theBigDay.setMilliseconds(100);
 
 ## Especificações
 
-| Especificação                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.setmilliseconds', 'Date.prototype.setMilliseconds')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setMilliseconds")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,16 +1,8 @@
 ---
 title: Clear-Site-Data
 slug: Web/HTTP/Headers/Clear-Site-Data
-tags:
-  - Armazenamento
-  - Cabeçalho HTTP
-  - Cache
-  - Cookies
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Clear-Site-Data
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho HTTP **`Clear-Site-Data`** limpa os dados de navegação (_cookies_, armazenamento, _cache_) associados com o site requisitado. Ele permite desenvolvedores web terem maior controle sobre os dados armazenados localmente pelo navegador para suas origens.
@@ -45,7 +37,8 @@ Clear-Site-Data: "*"
 
 ## Diretivas
 
-> **Nota:** Todas as diretivas devem estar de acordo com a [gramática de cadeia de caracteres com as aspas](https://tools.ietf.org/html/rfc7230#section-3.2.6). A diretiva que não inclui aspas duplas é inválida.
+> [!NOTE]
+> Todas as diretivas devem estar de acordo com a [gramática de cadeia de caracteres com as aspas](https://tools.ietf.org/html/rfc7230#section-3.2.6). A diretiva que não inclui aspas duplas é inválida.
 
 - `"cache"`
   - : Indica que o servidor quer remover localmente os dados cacheados (i.e. o cache do navegador, veja [HTTP caching](/pt-BR/docs/Web/HTTP/Caching)) para a URL de origem da resposta. Dependendo do navegador, essa diretiva pode acabar apagando outras coisas como páginas pré-renderizadas, _scripts_ armazenados, shaders WebGL ou sugestões na barra de endereço.
@@ -95,7 +88,7 @@ Clear-Site-Data: "cookies"
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Clear-Site-Data")}}
+{{Compat}}
 
 ## Veja também
 

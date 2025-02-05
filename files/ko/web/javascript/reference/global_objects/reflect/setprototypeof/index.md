@@ -1,24 +1,18 @@
 ---
 title: Reflect.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 ---
+
 {{JSRef}}
 
-**`Reflect`\*\***`.setPrototypeOf()`\*\* 정적 메서드는 주어진 객체의 프로토타입(내부 `[[Prototype]]` 속성)을 다른 객체나 {{jsxref("null")}}로 바꿉니다. 반환 값을 제외하면 {{jsxref("Object.setPrototypeOf()")}} 메서드와 같습니다.
+**`Reflect.setPrototypeOf()`** 정적 메서드는 주어진 객체의 프로토타입(내부 `[[Prototype]]` 속성)을 다른 객체나 {{jsxref("null")}}로 바꿉니다. 반환 값을 제외하면 {{jsxref("Object.setPrototypeOf()")}} 메서드와 같습니다.
 
 {{EmbedInteractiveExample("pages/js/reflect-setprototypeof.html")}}
 
 ## 구문
 
 ```js
-Reflect.setPrototypeOf(target, prototype)
+Reflect.setPrototypeOf(target, prototype);
 ```
 
 ### 매개변수

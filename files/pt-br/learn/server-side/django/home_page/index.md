@@ -1,18 +1,8 @@
 ---
-title: 'Django Tutorial Parte 5: Criando nossa home page'
+title: "Django Tutorial Parte 5: Criando nossa home page"
 slug: Learn/Server-side/Django/Home_page
-tags:
-  - Aprender
-  - Artigo
-  - Codificação
-  - Iniciante
-  - Tutorial
-  - django
-  - django templates
-  - django views
-  - lado servidor (server-side)
-translation_of: Learn/Server-side/Django/Home_page
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 
 Agora estamos prontos para adicionar o código que exibe nossa primeira página completa - uma home page do site [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website). A página inicial mostrará o número de registros que temos para cada tipo de modelo e fornecerá links de navegação na barra lateral para nossas outras páginas. Ao longo do caminho, obteremos experiência prática ao escrever mapas e visualizações básicos de URL, obter registros do banco de dados e usar modelos.
@@ -23,10 +13,10 @@ Agora estamos prontos para adicionar o código que exibe nossa primeira página 
       <th scope="row">Pré-requisitos:</th>
       <td>
         Leia a
-        <a href="/en-US/docs/Learn/Server-side/Django/Introduction"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/Introduction"
           >Introdução ao Django</a
         >. Conclua os tópicos do tutorial anterior (incluindo
-        <a href="/en-US/docs/Learn/Server-side/Django/Admin_site"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/Admin_site"
           >Django Tutorial Part 4: Django admin site</a
         >).
       </td>
@@ -51,7 +41,7 @@ O diagrama a seguir descreve o fluxo de dados principal e os componentes necess�
 - View functions para obter os dados solicitados dos modelos, crie páginas HTML que exibem os dados e retorne as páginas ao usuário para visualização no navegador.
 - Templates para usar ao renderizar dados nas visualizações.
 
-![](https://mdn.mozillademos.org/files/13931/basic-django.png)
+![](basic-django.png)
 
 Como você verá na próxima seção, temos 5 páginas para exibir, o que é muita informação para documentar em um único artigo. Portanto, este artigo se concentrará em como implementar a página inicial e abordaremos as outras páginas em um artigo subsequente. Isso deve fornecer uma boa compreensão completa de como os mapeadores, visualizações e modelos de URL funcionam na prática.
 
@@ -65,13 +55,14 @@ As URLs que iremos precisar na nossa página são:
 - `catalog/books/` — Uma lista de todos os livros.
 - `catalog/authors/` — Uma lista de todos os autores.
 - `catalog/book/<id>` — A exibição de detalhes de um livro específico, com uma chave primária de campo `<id>` (o padrão). Por exemplo, o URL do terceiro livro adicionado à lista será `/catalog/book/3`.
-- `catalog/author/<id>` — A exibição de detalhes para o autor específico com um campo de chave primária de _`<id>`. Por exemplo, o URL do 11º autor adicionado à lista será `/catalog/author/11`.
+- `catalog/author/<id>` — A exibição de detalhes para o autor específico com um campo de chave primária de `<id>`. Por exemplo, o URL do 11º autor adicionado à lista será `/catalog/author/11`.
 
 Os três primeiros URLs retornarão a página de índice, a lista de livros e a lista de autores. Esses URLs não codificam nenhuma informação adicional e as consultas que buscam dados no banco de dados sempre serão as mesmas. No entanto, os resultados retornados pelas consultas dependerão do conteúdo do banco de dados.
 
 Por outro lado, os dois URLs finais exibirão informações detalhadas sobre um livro ou autor específico. Esses URLs codificam a identidade do item a ser exibido (representado por `<id>` acima). O mapeador de URLs extrairá as informações codificadas e as passará para a visualização, e a visualização determinará dinamicamente quais informações serão obtidas do banco de dados. Ao codificar as informações no URL, usaremos um único conjunto de mapeamento de URL, uma visualização e um modelo para lidar com todos os livros (ou autores).
 
-> **Nota:** Com o Django, você pode construir suas URLs da maneira que desejar - você pode codificar informações no corpo da URL, como mostrado acima, ou incluir `GET` parâmetros no URL, por exemplo `/book/?id=6`. Qualquer que seja a abordagem usada, os URLs devem ser mantidos limpos, lógicos e legíveis, conforme [recomendado pelo W3C](https://www.w3.org/Provider/Style/URI).
+> [!NOTE]
+> Com o Django, você pode construir suas URLs da maneira que desejar - você pode codificar informações no corpo da URL, como mostrado acima, ou incluir `GET` parâmetros no URL, por exemplo `/book/?id=6`. Qualquer que seja a abordagem usada, os URLs devem ser mantidos limpos, lógicos e legíveis, conforme [recomendado pelo W3C](https://www.w3.org/Provider/Style/URI).
 > A documentação do Django recomenda informações de codificação no corpo da URL para obter um melhor design da URL.
 
 Conforme mencionado na visão geral, o restante deste artigo descreve como construir a página index.
@@ -80,7 +71,8 @@ Conforme mencionado na visão geral, o restante deste artigo descreve como const
 
 A primeira página que criaremos é a página index (`catalog/`). A pagina index incluirá algum HTML estático, juntamente com "contagens" geradas de diferentes registros no banco de dados. Para fazer isso funcionar, criaremos um mapeamento de URL, uma visualização e um modelo.
 
-> **Nota:** Vale a pena prestar um pouco de atenção extra nesta seção. A maioria das informações também se aplica às outras páginas que criaremos.
+> [!NOTE]
+> Vale a pena prestar um pouco de atenção extra nesta seção. A maioria das informações também se aplica às outras páginas que criaremos.
 
 ### Mapeamento de URL
 
@@ -94,7 +86,8 @@ urlpatterns += [
 ]
 ```
 
-> **Nota:** Sempre que o Django encontra a função de importação [`django.urls.include()`](https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.include), divide a string da URL no caractere final designado e envia a subsequência restante para o módulo URLconf incluído para processamento adicional.
+> [!NOTE]
+> Sempre que o Django encontra a função de importação [`django.urls.include()`](https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.include), divide a string da URL no caractere final designado e envia a subsequência restante para o módulo URLconf incluído para processamento adicional.
 
 Também criamos um arquivo de espaço reservado para o modulo _URLConf_, chamado **/catalog/urls.py**. Adicione as seguintes linhas a esse arquivo:
 
@@ -115,7 +108,8 @@ A função `path()` também especifica um parâmetro de nome, que é um identifi
 <a href="{% url 'index' %}">Home</a>.
 ```
 
-> **Nota:** Podemos codificar o link como em `<a href="/catalog/">Home</a>`), mas se alterarmos o padrão da nossa página inicial, por exemplo, para `/catalog/index`) os modelos não serão mais vinculados corretamente. Usar um mapeamento de URL invertido é muito mais flexível e robusto.
+> [!NOTE]
+> Podemos codificar o link como em `<a href="/catalog/">Home</a>`), mas se alterarmos o padrão da nossa página inicial, por exemplo, para `/catalog/index`) os modelos não serão mais vinculados corretamente. Usar um mapeamento de URL invertido é muito mais flexível e robusto.
 
 ### View (function-based)
 
@@ -160,7 +154,7 @@ def index(request):
 
 A primeira linha importa as classes de models que usaremos para acessar dados em todas as nossas visualizações.
 
-A primeira parte da função view busca o número de registros usando o atributo `objects.all()` nas classes de modelo. Também recebe uma lista de objetos de `BookInstance` que possuem um valor de 'a' (Disponibilidade) no campo status. Você pode encontrar mais informações sobre como acessar os dados do modelo em nosso tutorial anterior [Django Tutorial Part 3: Using models > Searching for records](/pt-BR/docs/Learn/Server-side/Django/Models#Searching_for_records).
+A primeira parte da função view busca o número de registros usando o atributo `objects.all()` nas classes de modelo. Também recebe uma lista de objetos de `BookInstance` que possuem um valor de 'a' (Disponibilidade) no campo status. Você pode encontrar mais informações sobre como acessar os dados do modelo em nosso tutorial anterior [Django Tutorial Part 3: Using models > Searching for records](/pt-BR/docs/Learn/Server-side/Django/Models#searching_for_records).
 
 No final da função view chamamos a função `render()` para criar uma página HTML e retornar a página como resposta. essa função de atalho envolve várias outras funções para simplificar um caso de uso muito comum. A função `render()` aceita os seguintes parâmetros:
 
@@ -178,7 +172,8 @@ Django irá procurar automaticamente templates na pasta chamada '**templates**' 
 
 Você pode verificar isso salvando as alterações anteriores e acessando `127.0.0.1:8000` no seu navegador - ele exibirá uma mensagem de erro bastante intuitiva: "`TemplateDoesNotExist at /catalog/`", e outros detalhes.
 
-> **Nota:** Com base no arquivo de configurações do seu projeto, o Django procurará templates em vários locais, pesquisando nos aplicativos instalados por padrão. Você pode descobrir mais sobre como o Django encontra templates e quais formatos ele suporta no [the Templates section of the Django documentation](https://docs.djangoproject.com/en/2.1/topics/templates/).
+> [!NOTE]
+> Com base no arquivo de configurações do seu projeto, o Django procurará templates em vários locais, pesquisando nos aplicativos instalados por padrão. Você pode descobrir mais sobre como o Django encontra templates e quais formatos ele suporta no [the Templates section of the Django documentation](https://docs.djangoproject.com/en/2.1/topics/templates/).
 
 #### Estendendo templates
 
@@ -188,18 +183,19 @@ Grande parte da estrutura HTML e de navegação será a mesma em todas as págin
 
 O seguinte snippet de código é um template base de amostra de um arquivo **base_generic.html**. Em breve, criaremos o modelo para a LocalLibrary. O exemplo abaixo inclui HTML comum com seções para um título, uma barra lateral e o conteúdo principal marcado com as template tags de nome `block` e `endblock`, mostrado em negrito. Você pode deixar os blocos vazios ou incluir o conteúdo padrão a ser usado ao renderizar páginas derivadas do modelo.
 
-> **Nota:** Template _tags_ são funções que você pode usar em um modelo para percorrer as listas, executar operações condicionais com base no valor de uma variável e assim por diante. Além das template tags, a sintaxe template permite que você faça referência a variáveis que são passadas para a template a partir da view e use filtros de template para formatar variáveis (por exemplo, para converter uma sequência em minúscula).
+> [!NOTE]
+> Template _tags_ são funções que você pode usar em um modelo para percorrer as listas, executar operações condicionais com base no valor de uma variável e assim por diante. Além das template tags, a sintaxe template permite que você faça referência a variáveis que são passadas para a template a partir da view e use filtros de template para formatar variáveis (por exemplo, para converter uma sequência em minúscula).
 
-```html
+```django
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  {% block title %}<title>Local Library</title>{% endblock %}
-</head>
-<body>
-  {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
-  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
-</body>
+  <head>
+    {% block title %}<title>Local Library</title>{% endblock %}
+  </head>
+  <body>
+    {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
+    {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+  </body>
 </html>
 ```
 
@@ -207,7 +203,7 @@ Ao definir um template para uma visualização específica, primeiro especificam
 
 Por exemplo, o trecho de código abaixo mostra como usar a template tag `extends` e substituir o block `content`. O HTML gerado incluirá o código e a estrutura definidos no template base, incluindo o conteúdo padrão que você definiu no block `title`, mas o novo block `content` no lugar do padrão.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -220,50 +216,55 @@ Por exemplo, o trecho de código abaixo mostra como usar a template tag `extends
 
 Usaremos o seguinte snippet de código como modelo básico para o site _LocalLibrary_. Como você pode ver, ele contém algum código HTML e define blocos para `title`, `sidebar`, e `content`. Temos um título padrão e uma barra lateral padrão com links para listas de todos os livros e autores, ambos colocados em blocos para serem facilmente alterados no futuro.
 
-> **Nota:** Também introduzimos duas template tags adicionais: `url` e `load static`. Essas tags serão explicadas nas próximas seções.
+> [!NOTE]
+> Também introduzimos duas template tags adicionais: `url` e `load static`. Essas tags serão explicadas nas próximas seções.
 
 Crie um novo arquivo **_base_generic.html_ **em **/locallibrary/catalog/templates/** e cole o seguinte código no arquivo:
 
-```html
-<!DOCTYPE html>
+```django
+<!doctype html>
 <html lang="en">
-<head>
-  {% block title %}<title>Local Library</title>{% endblock %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <!-- Add additional CSS in static file -->
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-<body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-2">
-      {% block sidebar %}
-        <ul class="sidebar-nav">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="">All books</a></li>
-          <li><a href="">All authors</a></li>
-        </ul>
-     {% endblock %}
+  <head>
+    {% block title %}<title>Local Library</title>{% endblock %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous" />
+    <!-- Add additional CSS in static file -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2">
+          {% block sidebar %}
+            <ul class="sidebar-nav">
+              <li><a href="{% url 'index' %}">Home</a></li>
+              <li><a href="">All books</a></li>
+              <li><a href="">All authors</a></li>
+            </ul>
+          {% endblock %}
+        </div>
+        <div class="col-sm-10">{% block content %}{% endblock %}</div>
       </div>
-      <div class="col-sm-10 ">{% block content %}{% endblock %}</div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
 ```
 
 O template inclui CSS de [Bootstrap](http://getbootstrap.com/) para melhorar o layout e a apresentação da página HTML. O uso do Bootstrap (ou outra estrutura da Web do lado do cliente) é uma maneira rápida de criar uma página atraente que é exibida bem em diferentes tamanhos de tela.
 
-O template base também faz referência a um arquivo css local (**styles.css**) que fornece estilo adicional. Criar um arquivo **styles.css** em** **/locallibrary/catalog/static/css/** e cole o seguinte código no arquivo:
+O template base também faz referência a um arquivo css local (**styles.css**) que fornece estilo adicional. Criar um arquivo **styles.css** em **/locallibrary/catalog/static/css/** e cole o seguinte código no arquivo:
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 
@@ -271,12 +272,15 @@ O template base também faz referência a um arquivo css local (**styles.css**) 
 
 Crie um novo arquivo HTML **_index.html_ **em **/locallibrary/catalog/templates/** e cole o seguinte código no arquivo Esse código estende nosso modelo base na primeira linha e substitui o padrão block `content` para o template.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
   <h1>Local Library Home</h1>
-  <p>Welcome to LocalLibrary, a website developed by <em>Mozilla Developer Network</em>!</p>
+  <p>
+    Welcome to LocalLibrary, a website developed by
+    <em>Mozilla Developer Network</em>!
+  </p>
   <h2>Dynamic content</h2>
   <p>The library has the following record counts:</p>
   <ul>
@@ -290,7 +294,8 @@ Crie um novo arquivo HTML **_index.html_ **em **/locallibrary/catalog/templates/
 
 Na seção _Dynamic content_, declaramos espaços reservados (_variáveis de template_) para as informações da exibição que queremos incluir. As variáveis são colocadas entre chaves (guiador), como mostrado em negrito no exemplo de código.
 
-> **Nota:** Você pode reconhecer facilmente variáveis de template e template tags (funções) - as variáveis são colocadas entre chaves (`\{{ num_books }}`), e as tags são colocadas em chaves simples com sinais de porcentagem (`{% extends "base_generic.html" %}`).
+> [!NOTE]
+> Você pode reconhecer facilmente variáveis de template e template tags (funções) - as variáveis são colocadas entre chaves (`\{{ num_books }}`), e as tags são colocadas em chaves simples com sinais de porcentagem (`{% extends "base_generic.html" %}`).
 
 O importante a ser observado aqui é que as variáveis são nomeadas com as _chaves_ que passamos para o dicionário `context` na função `render()` da nossa view (veja a amostra abaixo). As variáveis serão substituídas pelos _valores_ associados quando o modelo for renderizado.
 
@@ -311,20 +316,24 @@ return render(request, 'index.html', context=context)
 
 Dentro do template que você chama primeiro na template tag `load` especificando "static" para adicionar a biblioteca de modelos, conforme mostrado no exemplo de código abaixo. Você pode então usar a template tag `static` e especifique o URL relativo ao arquivo necessário.
 
-```html
+```django
 <!-- Add additional CSS in static file -->
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 ```
 
 Você pode adicionar uma imagem à página de maneira semelhante, por exemplo:
 
-```html
+```django
 {% load static %}
-<img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="UML diagram" style="width:555px;height:540px;">
+<img
+  src="{% static 'catalog/images/local_library_model_uml.png' %}"
+  alt="UML diagram"
+  style="width:555px;height:540px;" />
 ```
 
-> **Nota:** Os exemplos acima especificam onde os arquivos estão localizados, mas o Django não os serve por padrão. Configuramos o servidor da web de desenvolvimento para exibir arquivos modificando o mapeador de URL global (**/locallibrary/locallibrary/urls.py**) quando [criamos o esqueleto do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website), mas ainda precisamos ativar a veiculação de arquivos na produção. Veremos isso mais tarde.
+> [!NOTE]
+> Os exemplos acima especificam onde os arquivos estão localizados, mas o Django não os serve por padrão. Configuramos o servidor da web de desenvolvimento para exibir arquivos modificando o mapeador de URL global (**/locallibrary/locallibrary/urls.py**) quando [criamos o esqueleto do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website), mas ainda precisamos ativar a veiculação de arquivos na produção. Veremos isso mais tarde.
 
 Para obter mais informações sobre como [Trabalhar com arquivos estaticos](https://docs.djangoproject.com/en/2.1/howto/static-files/), consulte Gerenciando arquivos estáticos na documentação do Django.
 
@@ -366,16 +375,17 @@ TEMPLATES = [
 
 Neste ponto, criamos todos os recursos necessários para exibir a página index. Execute o servidor (`python3 manage.py runserver`) e abra `http://127.0.0.1:8000/` no seu navegador. Se tudo estiver configurado corretamente, seu site deverá ter a seguinte captura de tela.
 
-![Index page for LocalLibrary website](https://mdn.mozillademos.org/files/14045/index_page_ok.png)
+![Index page for LocalLibrary website](index_page_ok.png)
 
-> **Nota:** Os links **All books** e **All authors** ainda não funcionarão porque os caminhos, visualizações e modelos para essas páginas não estão definidos. Acabamos de inserir espaços reservados para esses links no template `base_generic.html`.
+> [!NOTE]
+> Os links **All books** e **All authors** ainda não funcionarão porque os caminhos, visualizações e modelos para essas páginas não estão definidos. Acabamos de inserir espaços reservados para esses links no template `base_generic.html`.
 
 ## Desafie-se
 
 Temos duas tarefas para testar a sua familiaridade com as consultas de modelos, views e templates
 
-1. O modelo de [base](/pt-BR/docs/Learn/Server-side/Django/Home_page#The_LocalLibrary_base_template) da BibliotecaLocal inclui um bloco de `título`. Substitua este bloco no modelo de índice e crie um novo título para a página.
-2. > **Nota:** **Dica:** A seção [Extendendo Templates](#Extending_templates) explica como criar blocos e extender um bloco em outro template.
+1. O modelo de [base](#The_LocalLibrary_base_template) da BibliotecaLocal inclui um bloco de `título`. Substitua este bloco no modelo de índice e crie um novo título para a página.
+2. > **Nota:** **Dica:** A seção [Extendendo Templates](#extending_templates) explica como criar blocos e extender um bloco em outro template.
 3. Modifique a [view](<#View_(function-based)>) para gerar contagens para gêneros e livros que contenham uma palavra específica (case insensitive), e passe o resultado para o `contexto`. Isso é feito de maneira semelhante à criação e uso de `num_books` e `num_instances_available`. Em seguida, atualize o template do index para incluir essas variáveis.
 
 ## Resumo

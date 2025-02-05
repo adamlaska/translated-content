@@ -1,11 +1,10 @@
 ---
 title: XPath
 slug: Web/XPath
-tags:
-  - Todas_las_Categorías
-  - XPath
-translation_of: Web/XPath
 ---
+
+{{XsltSidebar}}
+
 El **Lenguaje de Caminos XML**
 proporciona un modo flexible de dirigirse (señalando a) a las distintas partes de un documento XML. También puede ser usado para cotejar nodos y determinar si encajan un modelo o no.
 
@@ -52,6 +51,4 @@ XPath usa una notación de caminos (como en los URLs) para navegar por la estruc
 - Temas relacionados
   - : [XSLT](/es/XSLT)
     , [XML](/es/XML)
-    , [DOM](/es/DOM)
-
-{{ languages( { "cs": "cs/XPath", "en": "en/XPath", "fr": "fr/XPath", "ja": "ja/XPath", "ko": "ko/XPath", "pl": "pl/XPath", "zh-cn": "cn/XPath" } ) }}
+    , [DOM](/es/docs/Web/API/Document_Object_Model)

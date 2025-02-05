@@ -1,15 +1,8 @@
 ---
 title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
-tags:
-  - JavaScript
-  - Matemática
-  - Math
-  - Method
-  - Trigonometría
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/atan
 ---
+
 {{JSRef}}
 
 La función **`Math.atan()`** retorna el arcotangente (en radianes) de un number, esto es
@@ -46,12 +39,12 @@ Dado que `atan()` es un método estático de `Math`, siempre debes usarlo como `
 ### Usando `Math.atan()`
 
 ```js
-Math.atan(1);   // 0.7853981633974483
-Math.atan(0);   // 0
-Math.atan(-0);  // -0
+Math.atan(1); // 0.7853981633974483
+Math.atan(0); // 0
+Math.atan(-0); // -0
 
-Math.atan(Infinity);   //  1.5707963267948966
-Math.atan(-Infinity);  // -1.5707963267948966
+Math.atan(Infinity); //  1.5707963267948966
+Math.atan(-Infinity); // -1.5707963267948966
 
 // El ángulo que la línea [(0,0);(x,y)] forma con el eje-x en un sistema de coordenadas Cartesianas.
 Math.atan(y / x);
@@ -61,16 +54,11 @@ Nota que podrías querer evitar usar **±**`Infinity` por razones de estilo. En 
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                       | Comentario                                          |
-| ------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Definición inicial. Implementada en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.4', 'Math.atan')}}     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-math.atan', 'Math.atan')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-math.atan', 'Math.atan')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
-## Compatibilidad con el navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.atan")}}
+{{Compat}}
 
 ## Ver también
 

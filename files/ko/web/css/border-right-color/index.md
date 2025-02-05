@@ -1,13 +1,8 @@
 ---
 title: border-right-color
 slug: Web/CSS/border-right-color
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/border-right-color
 ---
+
 {{CSSRef}}
 
 **`border-right-color`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 오른쪽 테두리 색상을 지정합니다. {{cssxref("border-color")}} 또는 {{cssxref("border-right")}} 단축 속성으로도 지정할 수 있습니다.
@@ -50,9 +45,10 @@ border-right-color: unset;
 
 ```html
 <div class="mybox">
-  <p>This is a box with a border around it.
-     Note which side of the box is
-     <span class="redtext">red</span>.</p>
+  <p>
+    This is a box with a border around it. Note which side of the box is
+    <span class="redtext">red</span>.
+  </p>
 </div>
 ```
 
@@ -62,7 +58,7 @@ border-right-color: unset;
 .mybox {
   border: solid 0.3em gold;
   border-right-color: red;
-    width: auto;
+  width: auto;
 }
 
 .redtext {

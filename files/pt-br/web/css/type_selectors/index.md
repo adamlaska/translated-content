@@ -1,8 +1,8 @@
 ---
 title: Type selectors
 slug: Web/CSS/Type_selectors
-translation_of: Web/CSS/Type_selectors
 ---
+
 {{CSSRef}}
 
 O **seletor de tipo** CSS corresponde aos elementos pelo nome do nó. Em outras palavras, ele seleciona todos os elementos do tipo fornecido em um documento.
@@ -44,13 +44,8 @@ span {
 
 ## Especificações
 
-| Especificação                                                                                            | Status                               | Comment           |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
-| {{SpecName('CSS4 Selectors', '#type-selectors', 'Type (tag name) selector')}} | {{Spec2('CSS4 Selectors')}} | Sem mudanças      |
-| {{SpecName('CSS3 Selectors', '#type-selectors', 'type selectors')}}                 | {{Spec2('CSS3 Selectors')}} | Sem mudanças      |
-| {{SpecName('CSS2.1', 'selector.html#type-selectors', 'type selectors')}}         | {{Spec2('CSS2.1')}}             |                   |
-| {{SpecName('CSS1', '#basic-concepts', 'type selectors')}}                             | {{Spec2('CSS1')}}             | Definição Inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.type")}}
+{{Compat}}

@@ -1,15 +1,8 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Statements/class
-tags:
-  - Classes
-  - Declaration
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/class
 ---
+
 {{jsSidebar("Statements")}}
 
 **`class` 선언**은 프로토타입 기반 상속을 사용하여, 주어진 이름의 새로운 클래스를 만듭니다.
@@ -41,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Statements/class
 ```js
 class Polygon {
   constructor(height, width) {
-    this.name = 'Polygon';
+    this.name = "Polygon";
     this.height = height;
     this.width = width;
   }
@@ -50,23 +43,24 @@ class Polygon {
 class Square extends Polygon {
   constructor(length) {
     super(length, length);
-    this.name = 'Square';
+    this.name = "Square";
   }
 }
 ```
 
-> **Warning:** 같은 클래스를 두 번 선언하려고 시도할 때 클래스 선언문으로 같은 클래스를 두 번 선언하면 오류가 발생합니다.
+> [!WARNING]
+> 같은 클래스를 두 번 선언하려고 시도할 때 클래스 선언문으로 같은 클래스를 두 번 선언하면 오류가 발생합니다.
 
 ```js
-class Foo {};
-class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declared
+class Foo {}
+class Foo {} // Uncaught SyntaxError: Identifier 'Foo' has already been declared
 ```
 
 이전에 표현식으로 정의한 경우에도 오류가 발생합니다.
 
 ```js
 var Foo = class {};
-class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared
+class Foo {} // Uncaught TypeError: Identifier 'Foo' has already been declared
 ```
 
 ## 명세서

@@ -44,13 +44,11 @@ dataview.getInt8(1); // 3
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.setint8', 'DataView.prototype.setInt8')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.DataView.setInt8")}}
+{{Compat}}
 
 ## 関連情報
 

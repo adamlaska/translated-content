@@ -1,8 +1,8 @@
 ---
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext
 ---
+
 {{APIRef("WebGL")}}
 
 Интерфейс **WebGLRenderingContext** обеспечивает доступ к контексту рендеринга OpenGL ES 2.0 (**OpenGL** for **E**mbedded **S**ystems — OpenGL для встраиваемых систем) для использования его с помощью HTML {{HTMLElement("canvas")}} элемента.
@@ -10,13 +10,13 @@ translation_of: Web/API/WebGLRenderingContext
 Чтобы получить объект с помощью этого интерфейса вызовите метод {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} элемента \<canvas> , используя "webgl" в качестве аргумента.
 
 ```js
-var canvas = document.getElementById('myCanvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("myCanvas");
+var gl = canvas.getContext("webgl");
 ```
 
 После того, как вы получили WebGL контекст, вы можете его использовать для рендеринга.
 
-[WebGL tutorial](/ru/docs/Web/API/WebGL_API/Tutorial "WebGL tutorial") содержит больше информации, примеров, ссылок на ресурсы которые помогут начать использовать WebGL.
+[WebGL tutorial](/ru/docs/Web/API/WebGL_API/Tutorial) содержит больше информации, примеров, ссылок на ресурсы которые помогут начать использовать WebGL.
 
 ## Константы
 
@@ -35,7 +35,7 @@ var gl = canvas.getContext('webgl');
 - {{domxref("WebGLRenderingContext.drawingBufferHeight")}}
   - : Доступная только для чтения высота текущего буфера отрисовки. Должна совпадать с высотой холста связанного с данным контекстом.
 - {{domxref("WebGLRenderingContext.getContextAttributes()")}}
-  - : Возвращает `WebGLContextAttributes объект который содержит атрибуты текущего контекста. Может возвращать `{{jsxref("null")}} если контекст утерян.``
+  - : Возвращает `WebGLContextAttributes объект который содержит атрибуты текущего контекста. Может возвращать {{jsxref("null")}} если контекст утерян.
 - {{domxref("WebGLRenderingContext.isContextLost()")}}
   - : Возвращает `true` если контекст утерян, в противном случае возвращает `false`.
 
@@ -54,11 +54,8 @@ var gl = canvas.getContext('webgl');
   - : Устанавливает параметры смешивания источника и назначения
 - {{domxref("WebGLRenderingContext.blendEquation()")}}
   - : Уравнение смешивания RGB и уравнение альфа-смешивания сводит к одному уравнению.
-
-**{{domxref("WebGLRenderingContext.blendEquationSeparate()")}}**
-
-Устанавливает уравнение смешивания RGB и уравнение alpha смешивания отдельно.
-
+- {{domxref("WebGLRenderingContext.blendEquationSeparate()")}}
+  - : Устанавливает уравнение смешивания RGB и уравнение альфа-смешивания отдельно.
 - {{domxref("WebGLRenderingContext.blendFunc()")}}
   - : Определяет, какая арифметическая функция используется для смешивания пикселей.
 - {{domxref("WebGLRenderingContext.blendFuncSeparate()")}}
@@ -294,16 +291,14 @@ These methods manage WebGL extensions:
 - {{domxref("WebGLRenderingContext.getExtension()")}}
   - : Returns an extension object.
 
-## Specifications
+## Спецификации
 
-| Specification                                                            | Status                   | Comment            |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('WebGL', "#5.14", "WebGLRenderingContext")}} | {{Spec2('WebGL')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("HTMLCanvasElement")}}

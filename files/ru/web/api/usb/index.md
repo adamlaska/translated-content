@@ -1,15 +1,8 @@
 ---
 title: USB
 slug: Web/API/USB
-tags:
-  - API
-  - Interface
-  - Reference
-  - USB
-  - WebUSB
-  - WebUSB API
-translation_of: Web/API/USB
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 Интерфейс **`USB`** [WebUSB API](/ru/docs/Web/API/WebUSB_API) представляет атрибуты и методы для поиска и подключения USB устройств из WEB страницы.
@@ -32,7 +25,7 @@ translation_of: Web/API/USB
 - {{domxref("USB.requestDevice()")}}
   - : Возвращает {{jsxref("Promise")}}, который разрешается экземпляром {{domxref("USBDevice")}}, если указанное устройство найдено. Вызов этой функции запускает поток сопряжения агента пользователя.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

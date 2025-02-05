@@ -1,9 +1,8 @@
 ---
 title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isFinite
 ---
+
 {{JSRef}}
 
 El método **`Number.isFinite()`** determina si el valor pasado es un número finito.
@@ -32,37 +31,36 @@ En comparación con la funcion global {{jsxref("isFinite", "isFinite()")}} , est
 ## Ejemplos
 
 ```js
-Number.isFinite(Infinity);  // false
-Number.isFinite(NaN);       // false
+Number.isFinite(Infinity); // false
+Number.isFinite(NaN); // false
 Number.isFinite(-Infinity); // false
 
-Number.isFinite(0);         // true
-Number.isFinite(2e64);      // true
+Number.isFinite(0); // true
+Number.isFinite(2e64); // true
 
-Number.isFinite('0');       // false, retornaría true con la función
-                            // global isFinite('0')
-Number.isFinite(null);      // false, retornaría true con la función
-                            // global isFinite(null)
+Number.isFinite("0"); // false, retornaría true con la función
+// global isFinite('0')
+Number.isFinite(null); // false, retornaría true con la función
+// global isFinite(null)
 ```
 
 ## Polyfill
 
 ```js
-Number.isFinite = Number.isFinite || function(value) {
-    return typeof value === 'number' && isFinite(value);
-}
+Number.isFinite =
+  Number.isFinite ||
+  function (value) {
+    return typeof value === "number" && isFinite(value);
+  };
 ```
 
-## Specificaciones
+## Especificaciones
 
-| Specification                                                                            | Status                       | Comment             |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-number.isfinite', 'Number.isInteger')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-number.isfinite', 'Number.isInteger')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.isFinite")}}
+{{Compat}}
 
 ## Ver también
 

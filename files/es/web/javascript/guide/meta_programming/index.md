@@ -1,15 +1,8 @@
 ---
 title: Metaprogramación
 slug: Web/JavaScript/Guide/Meta_programming
-tags:
-  - ECMAScript 2015
-  - Guía
-  - JavaScript
-  - Proxy
-  - Reflejar
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Meta_programming
 ---
+
 {{jsSidebar("Guía de JavaScript")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}
 
 A partir de ECMAScript 2015, JavaScript gana soporte para los objetos {{jsxref("Proxy")}} y {{jsxref("Reflect")}} lo cual te permite interceptar y definir un comportamiento personalizado para las operaciones fundamentales del lenguaje (por ejemplo, búsqueda de propiedades, asignación, enumeración, invocación de funciones, etc.). Con la ayuda de estos dos objetos, puedes programar en el metanivel de JavaScript.
@@ -22,17 +15,17 @@ Por ejemplo, obtener una propiedad sobre un objeto:
 
 ```js
 let handler = {
-  get: function(target, name) {
-    return name in target? target[name] : 42
-  }
-}
+  get: function (target, name) {
+    return name in target ? target[name] : 42;
+  },
+};
 
-let p = new Proxy({}, handler)
-p.a = 1
-console.log(p.a, p.b) // 1, 42
+let p = new Proxy({}, handler);
+p.a = 1;
+console.log(p.a, p.b); // 1, 42
 ```
 
-El objeto `Proxy` define un _`target`_ (un objeto vacío aquí) y un objeto _`handler`_, en el que se implementa un `get` _trap_. Aquí, un objeto que es proxy no devolverá `undefined` cuando obtenga propiedades indefinidas, sino que devolverá el número `42`.
+El objeto `Proxy` define un `target` (un objeto vacío aquí) y un objeto `handler`, en el que se implementa un `get` _trap_. Aquí, un objeto que es proxy no devolverá `undefined` cuando obtenga propiedades indefinidas, sino que devolverá el número `42`.
 
 Hay ejemplos adicionales disponibles en la página de referencia {{jsxref("Proxy")}}.
 
@@ -40,7 +33,7 @@ Hay ejemplos adicionales disponibles en la página de referencia {{jsxref("Proxy
 
 Los siguientes términos se utilizan cuando se habla de la funcionalidad de los proxies.
 
-- {{jsxref("Global_Objects/Proxy/handler","handler","","true")}}
+- {{jsxref("Global_Objects/Proxy/handler","handler","",1)}}
   - : Objeto marcador de posición que contiene trampas.
 - traps
   - : Los métodos que proporcionan acceso a la propiedad. (Esto es análogo al concepto de _trampas_ en los sistemas operativos).
@@ -51,7 +44,7 @@ Los siguientes términos se utilizan cuando se habla de la funcionalidad de los 
 
 ## Controladores y trampas
 
-La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve las [páginas de referencia](/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler) para explicaciones detalladas y ejemplos.
+La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve las [páginas de referencia](/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy) para explicaciones detalladas y ejemplos.
 
 <table class="standard-table">
     <thead>
@@ -241,20 +234,23 @@ El método {{jsxref ("Proxy.revocable()")}} se usa para crear un objeto `Proxy` 
 Posteriormente, cualquier operación en el proxy conduce a un {{jsxref("TypeError")}}.
 
 ```js
-let revocable = Proxy.revocable({}, {
-  get: function(target, name) {
-    return '[[' + name + ']]'
-  }
-})
-let proxy = revocable.proxy
-console.log(proxy.foo) // "[[foo]]"
+let revocable = Proxy.revocable(
+  {},
+  {
+    get: function (target, name) {
+      return "[[" + name + "]]";
+    },
+  },
+);
+let proxy = revocable.proxy;
+console.log(proxy.foo); // "[[foo]]"
 
-revocable.revoke()
+revocable.revoke();
 
-console.log(proxy.foo)   // Lanza TypeError
-proxy.foo = 1            // TypeError nuevamente
-delete proxy.foo         // todavía TypeError
-typeof proxy             // "object", typeof no activa ninguna trampa
+console.log(proxy.foo); // Lanza TypeError
+proxy.foo = 1; // TypeError nuevamente
+delete proxy.foo; // todavía TypeError
+typeof proxy; // "object", typeof no activa ninguna trampa
 ```
 
 ## Reflexión
@@ -268,15 +264,15 @@ typeof proxy             // "object", typeof no activa ninguna trampa
 Con {{jsxref("Reflect.has()")}} por ejemplo, obtienes el operador [`in`](/es/docs/Web/JavaScript/Reference/Operators/in) como función:
 
 ```js
-Reflect.has(Object, 'assign') // true
+Reflect.has(Object, "assign"); // true
 ```
 
 ### Una mejor función `apply`
 
-En ES5, normalmente usas el método {{jsxref("Function.prototype.apply()")}} para llamar a una función con un valor `this` y `arguments` proporcionado como un arreglo (o un [objeto similar a un arreglo](/es/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
+En ES5, normalmente usas el método {{jsxref("Function.prototype.apply()")}} para llamar a una función con un valor `this` y `arguments` proporcionado como un arreglo (o un [objeto similar a un arreglo](/es/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 
 ```js
-Function.prototype.apply.call(Math.floor, undefined, [1.75])
+Function.prototype.apply.call(Math.floor, undefined, [1.75]);
 ```
 
 Con {{jsxref("Reflect.apply")}} esto se vuelve menos detallado y más fácil de entender:

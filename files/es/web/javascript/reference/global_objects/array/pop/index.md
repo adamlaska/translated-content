@@ -1,15 +1,8 @@
 ---
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
-tags:
-  - Array
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/pop
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/pop
 ---
+
 {{JSRef}}
 
 El método **`pop()`** elimina el **último** elemento de un array y lo devuelve. Este método cambia la longitud del array.
@@ -41,7 +34,7 @@ Si se llama a `pop()` en un array vacío, devuelve {{jsxref("undefined")}}.
 El siguiente código crea el array `myFish`, que contiene cuatro elementos, a continuación, elimina su último elemento.
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
 
 var popped = myFish.pop();
 
@@ -52,16 +45,11 @@ console.log(popped); // 'sturgeon'
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                             | Estándar                     | Definición inicial. Implementada en JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.6', 'Array.prototype.pop')}}                     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-array.prototype.pop', 'Array.prototype.pop')}}         | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-array.prototype.pop', 'Array.prototype.pop')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.pop")}}
+{{Compat}}
 
 ## Vea también
 

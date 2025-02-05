@@ -1,18 +1,11 @@
 ---
 title: CanvasRenderingContext2D.fill()
 slug: Web/API/CanvasRenderingContext2D/fill
-tags:
-  - API
-  - Canvas
-  - Method
-  - Reference
-  - Справка
-  - метод
-translation_of: Web/API/CanvasRenderingContext2D/fill
 ---
+
 {{APIRef}}
 
-**`CanvasRenderingContext2D`\*\***`.fill()`\*\* метод Canvas 2D API заполняет текущий или заданный путём с текущим стилем заливки, используя одно из двух правил - ненулевого индекса или чётно-нечётное.
+**`CanvasRenderingContext2D.fill()`** метод Canvas 2D API заполняет текущий или заданный путём с текущим стилем заливки, используя одно из двух правил - ненулевого индекса или чётно-нечётное.
 
 ## Синтаксис
 
@@ -28,8 +21,10 @@ void ctx.fill(path[, fillRule]);
   - : Выбор алгоритма заливки фигуры
     Возможные значения:
 
-    - **`"nonzero`**": [Правило ненулевого индекса](https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%BE_%D0%BD%D0%B5%D0%BD%D1%83%D0%BB%D0%B5%D0%B2%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D0%B0), значение по умолчанию
-    - **`"evenodd"`**: [Чётно-нечётное правило](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)
+    - `nonzero`
+      - : [Правило ненулевого индекса](https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%BE_%D0%BD%D0%B5%D0%BD%D1%83%D0%BB%D0%B5%D0%B2%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D0%B0), значение по умолчанию
+    - `evenodd`
+      - : [Чётно-нечётное правило](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)
 
 - `path`
   - : {{domxref("Path2D")}} путь для заливки.
@@ -49,8 +44,8 @@ void ctx.fill(path[, fillRule]);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
 ```
@@ -65,7 +60,8 @@ ctx.fill();
 </div>
 <textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
-ctx.fill();</textarea>
+ctx.fill();</textarea
+>
 ```
 
 ```js hidden
@@ -81,14 +77,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -96,13 +92,11 @@ window.addEventListener("load", drawCanvas);
 
 {{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-## Характеристики
+## Спецификации
 
-| Характеристика                                                                                                                       | Статус                           | Комментарий |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fill", "CanvasRenderingContext2D.fill")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

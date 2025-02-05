@@ -1,13 +1,8 @@
 ---
 title: Number.MIN_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
-tags:
-  - JavaScript
-  - Number
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 ---
+
 {{JSRef}}
 
 **`Number.MIN_VALUE`** 속성은 JavaScript가 표현할 수 있는 제일 작은 양의 숫자 값을 나타냅니다.

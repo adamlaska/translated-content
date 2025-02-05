@@ -1,10 +1,10 @@
 ---
 title: Comment
 slug: Web/API/Comment
-tags:
-  - Комментарии
-translation_of: Web/API/Comment
 ---
+
+{{ ApiRef("DOM") }}
+
 Интерфейс **`Comment`** представляет собой текстовые записи в разметке; хотя, в основном, они не отображаются, такие комментарии доступны для чтения в исходном коде. Комментарии представляются в HTML и XML как контент, заключённый между '`<!--`' и '`-->`'. В XML, последовательность символов '`--`' может не использоваться в комментариях.
 
 {{InheritanceDiagram}}
@@ -24,17 +24,12 @@ _У этого интерфейса нет конкретных методов, 
 
 ## Спецификации
 
-| Спецификация                                                                                 | Статус                           | Комментарий                                                   |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#comment', 'Comment')}}                             | {{Spec2('DOM WHATWG')}} | Добавлен конструктор                                          |
-| {{SpecName('DOM3 Core', 'core.html#ID-1728279322', 'Comment')}}         | {{Spec2('DOM3 Core')}}     | Нет изменений по сравнению с {{SpecName('DOM2 Core')}} |
-| {{SpecName('DOM2 Core', 'core.html#ID-1728279322', 'Comment')}}         | {{Spec2('DOM2 Core')}}     | Нет изменений по сравнению с {{SpecName('DOM1')}}     |
-| {{SpecName('DOM1', 'level-one-core.html#ID-1728279322', 'Comment')}} | {{Spec2('DOM1')}}         | Первое определение                                            |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [The DOM interfaces index](/ru/docs/Web/API/Document_Object_Model "/en-US/docs/DOM/DOM_Reference")
+- [The DOM interfaces index](/ru/docs/Web/API/Document_Object_Model)

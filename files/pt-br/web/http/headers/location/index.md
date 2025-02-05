@@ -1,13 +1,8 @@
 ---
 title: Location
 slug: Web/HTTP/Headers/Location
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de Resposta
-  - HTTP
-translation_of: Web/HTTP/Headers/Location
-original_slug: Web/HTTP/Headers/Localização
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta **`Location`** indica o URL para qual página deve-se ser redirecionada. Ele só tem significado quando é enviado junto a uma resposta de status `3xx` (redirecionamento) ou `201` (criado).
@@ -55,13 +50,13 @@ Location: /index.html
 
 ## Especificações
 
-| Especificação                                    | Título                                                        |
-| ------------------------------------------------ | ------------------------------------------------------------- |
+| Especificação                        | Título                                                        |
+| ------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("7231", "Location", "7.1.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Location")}}
+{{Compat}}
 
 ## Veja também
 

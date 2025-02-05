@@ -31,13 +31,11 @@ dataview3.byteLength; // 6 (due to the offset of the constructed DataView)
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-get-dataview.prototype.bytelength', 'DataView.prototype.byteLength')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.DataView.byteLength")}}
+{{Compat}}
 
 ## 関連情報
 

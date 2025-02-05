@@ -1,13 +1,8 @@
 ---
 title: GET
 slug: Web/HTTP/Methods/GET
-tags:
-  - HTTP
-  - Método GET
-  - Método Request
-  - Referencia
-translation_of: Web/HTTP/Methods/GET
 ---
+
 {{HTTPSidebar}}O **método HTTP GET** solicita uma representação do recurso especificado. Solicitações usando GET só devem recuperar dados.
 
 <table class="properties">
@@ -59,13 +54,13 @@ GET /index.html
 
 ## Especificações
 
-| Especificação                            | Título                                                        |
-| ---------------------------------------- | ------------------------------------------------------------- |
+| Especificação                   | Título                                                        |
+| ------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "GET", "4.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.methods.GET")}}
+{{Compat}}
 
 ## Veja também
 

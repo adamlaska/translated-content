@@ -1,13 +1,8 @@
 ---
 title: HEAD
 slug: Web/HTTP/Methods/HEAD
-tags:
-  - Método de solicitação
-  - Referencia
-  - requisição
-  - solicitação
-translation_of: Web/HTTP/Methods/HEAD
 ---
+
 {{HTTPSidebar}}
 
 O **método HTTP `HEAD`** solicita os cabeçalhos retornados de um recurso específico que foi requisitado por um método HTTP {{HTTPMethod("GET")}}. Tal solicitação pode ser feita antes de baixar um grande recurso para economizar largura de banda, por exemplo.
@@ -56,13 +51,13 @@ HEAD /index.html
 
 ## Especificações
 
-| Especificação                                | Título                                                       |
-| -------------------------------------------- | ------------------------------------------------------------ |
+| Especificação                    | Título                                                       |
+| -------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7231", "HEAD", "4.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semântica e Conteúdo |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.methods.HEAD")}}
+{{Compat}}
 
 ## Veja também
 

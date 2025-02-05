@@ -1,17 +1,11 @@
 ---
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Referencia
-  - Sentencia
-translation_of: Web/JavaScript/Reference/Statements/for...of
-original_slug: Web/JavaScript/Referencia/Sentencias/for...of
 ---
+
 {{jsSidebar("Statements")}}
 
-La sentencia **sentencia `for...of`** ejecuta un bloque de código para cada elemento de un [objeto iterable](/es/docs/Web/JavaScript/Guide/iterable), como lo son: {{jsxref("String")}}, {{jsxref("Array")}}, objetos similares a array (por ejemplo, {{jsxref("Functions/arguments", "arguments")}} or [`NodeList`](/es/docs/Web/API/NodeList)), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} e iterables definidos por el usuario.
+La sentencia **sentencia `for...of`** ejecuta un bloque de código para cada elemento de un [objeto iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols), como lo son: {{jsxref("String")}}, {{jsxref("Array")}}, objetos similares a array (por ejemplo, {{jsxref("Functions/arguments", "arguments")}} or [`NodeList`](/es/docs/Web/API/NodeList)), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} e iterables definidos por el usuario.
 
 ## Sintaxis
 
@@ -83,7 +77,11 @@ for (let value of iterable) {
 ### Iterando un {{jsxref("Map")}}
 
 ```js
-let iterable = new Map([["a", 1], ["b", 2], ["c", 3]]);
+let iterable = new Map([
+  ["a", 1],
+  ["b", 2],
+  ["c", 3],
+]);
 
 for (let entry of iterable) {
   console.log(entry);
@@ -113,10 +111,10 @@ for (let value of iterable) {
 // 3
 ```
 
-### Iterando un objeto [arguments](/es/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments)
+### Iterando un objeto arguments
 
 ```js
-(function() {
+(function () {
   for (let argument of arguments) {
     console.log(argument);
   }
@@ -146,11 +144,11 @@ for (let paragraph of articleParagraphs) {
 En los bucles `for...of`, se puede causar que la iteración termine de un modo brusco usando: `break`, `continue[4]`, `throw` or `return[5]`. En estos casos la iteración se cierra.
 
 ```js
-function* foo(){
+function* foo() {
   yield 1;
   yield 2;
   yield 3;
-};
+}
 
 for (let o of foo()) {
   console.log(o);
@@ -163,7 +161,8 @@ for (let o of foo()) {
 También es posible iterar las nuevas funciones **[generator](/es/docs/Web/JavaScript/Reference/Statements/function*)**:
 
 ```js
-function* fibonacci() { // una función generador
+function* fibonacci() {
+  // una función generador
   let [prev, curr] = [0, 1];
   while (true) {
     [prev, curr] = [curr, prev + curr];
@@ -180,17 +179,17 @@ for (let n of fibonacci()) {
 }
 ```
 
-> **Nota:** **No se deben reutilizar los generadores** Los generadores no deben ser reutilizados, incluso si el bucle **`for...of`** se ha terminado antes de tiempo con la sentencia [break](/es/docs/Web/JavaScript/Referencia/Sentencias/break). Una vez abandonado el bucle, el generador está cerrado y tratar de iterar sobre él de nuevo no dará más resultados. Firefox no ha implementado aún este comportamiento y el generador puede ser reutilizado en contra de lo escrito en el estándar ES6 ([13.7.5.13, step 5m](https://www.ecma-international.org/ecma-262/6.0/#sec-13.7.5.13)), pero esto cambiará una vez que el bug {{Bug(1147371)}} haya sido corregido.
+> **Nota:** **No se deben reutilizar los generadores.** Los generadores no deben ser reutilizados, incluso si el bucle **`for...of`** se ha terminado antes de tiempo con la sentencia [break](/es/docs/Web/JavaScript/Reference/Statements/break). Una vez abandonado el bucle, el generador está cerrado y tratar de iterar sobre él de nuevo no dará más resultados. Firefox no ha implementado aún este comportamiento y el generador puede ser reutilizado en contra de lo escrito en el estándar ES6 ([13.7.5.13, step 5m](https://www.ecma-international.org/ecma-262/6.0/#sec-13.7.5.13)), pero esto cambiará una vez que el bug [Error 1147371 en Firefox](https://bugzil.la/1147371) haya sido corregido.
 
 ```js example-bad
-var gen = (function *(){
+var gen = (function* () {
   yield 1;
   yield 2;
   yield 3;
 })();
 for (let o of gen) {
   console.log(o);
-  break;  // Finaliza la iteración
+  break; // Finaliza la iteración
 }
 
 // El generador no debe ser reutilizado, lo siguiente no tiene sentido
@@ -213,9 +212,9 @@ var iterable = {
           return { value: this.i++, done: false };
         }
         return { value: undefined, done: true };
-      }
+      },
     };
-  }
+  },
 };
 
 for (var value of iterable) {
@@ -232,31 +231,28 @@ El bucle `for...in iterará sobre todas las propiedades de un objeto.` Más tecn
 
 La sintaxis de **`for...of`** es específica para las **colecciones**, y no para todos los objetos. Esta Iterará sobre cualquiera de los elementos de una colección que tengan la propiedad `[Symbol.iterator]`.
 
-El siguiente ejemplo muestra las diferencias entre un bucle **`for...of`** y un bucle **f`or...in`**.
+El siguiente ejemplo muestra las diferencias entre un bucle **`for...of`** y un bucle **`for...in`**.
 
 ```js
 let arr = [3, 5, 7];
 arr.foo = "hola";
 
 for (let i in arr) {
-   console.log(i); // logs "0", "1", "2", "foo"
+  console.log(i); // logs "0", "1", "2", "foo"
 }
 
 for (let i of arr) {
-   console.log(i); // logs "3", "5", "7"
+  console.log(i); // logs "3", "5", "7"
 }
 ```
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Cometario           |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-for-in-and-for-of-statements', 'for...of statement')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...of statement')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.for_of")}}
+{{Compat}}
 
 ## Vea también
 

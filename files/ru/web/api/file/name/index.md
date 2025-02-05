@@ -1,14 +1,8 @@
 ---
 title: File.name
 slug: Web/API/File/name
-tags:
-  - API
-  - File API
-  - Files
-  - Property
-  - Reference
-translation_of: Web/API/File/name
 ---
+
 {{APIRef("File API")}}
 
 Возвращает имя файла представленного объектом типа {{domxref("File")}}. По соображениям безопасности не содержит пути к файлу.
@@ -26,7 +20,7 @@ var name = file.name;
 ## Пример
 
 ```html
-<input type="file" multiple onchange="processSelectedFiles(this)">
+<input type="file" multiple onchange="processSelectedFiles(this)" />
 ```
 
 ```js
@@ -43,7 +37,7 @@ function processSelectedFiles(fileInput) {
 
 {{ EmbedLiveSample('Пример', 300, 50) }}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
@@ -53,4 +47,4 @@ function processSelectedFiles(fileInput) {
 
 ## Смотрите также
 
-- [Использование файлов в веб приложениях](/ru/docs/Using_files_from_web_applications)
+- [Использование файлов в веб приложениях](/ru/docs/Web/API/File_API/Using_files_from_web_applications)

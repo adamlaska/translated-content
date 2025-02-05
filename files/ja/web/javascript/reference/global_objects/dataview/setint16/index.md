@@ -46,13 +46,11 @@ dataview.getInt16(1); // 3
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.setint16', 'DataView.prototype.setInt16')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.DataView.setInt16")}}
+{{Compat}}
 
 ## 関連情報
 

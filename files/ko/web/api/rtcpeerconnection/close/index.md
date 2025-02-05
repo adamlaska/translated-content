@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection.close()
 slug: Web/API/RTCPeerConnection/close
-translation_of: Web/API/RTCPeerConnection/close
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCPeerConnection.close()`** 메소드로 피어 연결을 종료합니다.
@@ -51,6 +51,6 @@ dc.onclose = function () {
 
 ## 참조
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/ko/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection")}}
 - {{domxref("RTCPeerConnection.signalingState")}}

@@ -34,15 +34,21 @@ slug: Web/JavaScript/Reference/Global_Objects/globalThis
 
 ```js
 var getGlobal = function () {
-  if (typeof self !== 'undefined') { return self; }
-  if (typeof window !== 'undefined') { return window; }
-  if (typeof global !== 'undefined') { return global; }
-  throw new Error('unable to locate global object');
+  if (typeof self !== "undefined") {
+    return self;
+  }
+  if (typeof window !== "undefined") {
+    return window;
+  }
+  if (typeof global !== "undefined") {
+    return global;
+  }
+  throw new Error("unable to locate global object");
 };
 
 var globals = getGlobal();
 
-if (typeof globals.setTimeout !== 'function') {
+if (typeof globals.setTimeout !== "function") {
   // no setTimeout in this environment!
 }
 ```
@@ -50,20 +56,18 @@ if (typeof globals.setTimeout !== 'function') {
 `globalThis` が利用可能になったため、異なる環境間でグローバルを追加で検索する必要がなくなりました。
 
 ```js
-if (typeof globalThis.setTimeout !== 'function') {
+if (typeof globalThis.setTimeout !== "function") {
   // no setTimeout in this environment!
 }
 ```
 
 ## 仕様
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName("ESDraft", "#sec-globalthis", "globalThis")}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.globalThis")}}
+{{Compat}}
 
 ## 関連情報
 

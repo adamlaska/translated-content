@@ -1,12 +1,8 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
-tags:
-  - CSS
-  - Cajas Flexibles de CSS
-  - Propiedad de CSS
-translation_of: Web/CSS/flex-basis
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -46,13 +42,15 @@ flex-basis: unset;
 
   - : Indica el dimensionamiento automático, basado en el contenido del elemento flexible.
 
-    > **Nota:** Tenga en cuenta que éste valor no fue presentado en el lanzamiento inicial del Diseño de Caja Flexible, así que no será soportado por algunas implementaciones antiguas. El efecto equivalente puede tenerlo usando `auto` junto con un tamaño principal ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) o [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) en auto.
+    > [!NOTE]
+    > Tenga en cuenta que éste valor no fue presentado en el lanzamiento inicial del Diseño de Caja Flexible, así que no será soportado por algunas implementaciones antiguas. El efecto equivalente puede tenerlo usando `auto` junto con un tamaño principal ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) o [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) en auto.
 
-    > **Nota:** Breve historia
+    > [!NOTE]
+    > Breve historia
     >
     > - Originalmente, "flex-basis:auto" significa "observa mi propiedad width o height".
-    > - Después, flex-basis:auto fue cambiado a automatic-sizing, y fue introducido "main-size" como palabra clave "observa mi propiedad width o height". Ésto fue implementado en [bug 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922 'RESOLVED FIXED - Rename "flex-basis:auto" to "main-size", while preserving "flex:auto" shorthand value').
-    > - Después, ese cambio fue revertido en [bug 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316 'RESOLVED FIXED - Back out flexbox "flex-basis:main-size" rename, since the CSSWG removed it from the spec'), y nuevamente "auto" significa "observa mi propiedad width o height"; y se está introduciendo una nueva palabra clave 'content' para provocar un dimensionamiento automático. ({{bug("1105111")}} incluye la inclusión de dicha palabra clave).
+    > - Después, flex-basis:auto fue cambiado a automatic-sizing, y fue introducido "main-size" como palabra clave "observa mi propiedad width o height". Ésto fue implementado en [bug 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922).
+    > - Después, ese cambio fue revertido en [bug 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316), y nuevamente "auto" significa "observa mi propiedad width o height"; y se está introduciendo una nueva palabra clave 'content' para provocar un dimensionamiento automático. ([Error 1105111 en Firefox](https://bugzil.la/1105111) incluye la inclusión de dicha palabra clave).
 
 ### Sintaxis Formal
 
@@ -89,10 +87,10 @@ flex-basis: unset;
 }
 
 .flex {
-  background: #6AB6D8;
+  background: #6ab6d8;
   padding: 10px;
   margin-bottom: 50px;
-  border: 3px solid #2E86BB;
+  border: 3px solid #2e86bb;
   color: white;
   font-size: 20px;
   text-align: center;
@@ -115,7 +113,7 @@ flex-basis: unset;
 }
 
 .flex1:after {
-  content: 'auto';
+  content: "auto";
 }
 
 .flex2 {
@@ -125,7 +123,7 @@ flex-basis: unset;
 }
 
 .flex2:after {
-  content: 'max-content';
+  content: "max-content";
 }
 
 .flex3 {
@@ -135,7 +133,7 @@ flex-basis: unset;
 }
 
 .flex3:after {
-  content: 'min-content';
+  content: "min-content";
 }
 
 .flex4 {
@@ -145,15 +143,15 @@ flex-basis: unset;
 }
 
 .flex4:after {
-  content: 'fit-content';
+  content: "fit-content";
 }
 
 .flex5 {
-   flex-basis: content;
+  flex-basis: content;
 }
 
 .flex5:after {
-  content: 'content';
+  content: "content";
 }
 
 .flex6 {
@@ -163,25 +161,23 @@ flex-basis: unset;
 }
 
 .flex6:after {
-  content: 'fill/-webkit-fill-available/-moz-available';
+  content: "fill/-webkit-fill-available/-moz-available";
 }
 ```
 
 ### Resultados
 
-{{EmbedLiveSample('Example', '860', '360', '', 'Web/CSS/flex-basis')}}
+{{EmbedLiveSample('', '860', '360')}}
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox', '#propdef-flex-basis', 'flex-basis')}} | {{Spec2('CSS3 Flexbox')}} | Definición Inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.flex-basis")}}
+{{Compat}}
 
 ## Ver también
 
-- [Using CSS flexible boxes](/es/docs/CSS/Using_CSS_flexible_boxes)
+- [Using CSS flexible boxes](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - {{cssxref("width")}}

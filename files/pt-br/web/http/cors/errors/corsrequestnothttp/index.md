@@ -1,20 +1,8 @@
 ---
-title: 'Reason: CORS request not HTTP'
+title: "Reason: CORS request not HTTP"
 slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
-tags:
-  - CORS
-  - CORSRequestNotHttp
-  - Cross-Origin
-  - Erro
-  - HTTP
-  - HTTPS
-  - Mensagens
-  - Razões
-  - Segurança
-  - Solução de Problemas
-  - console
-translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ---
+
 {{HTTPSidebar}}
 
 ## Razão
@@ -40,4 +28,4 @@ Em resposta ao [CVE-2019-11730](https://www.mozilla.org/pt-BR/security/advisorie
 - [CORS errors](/pt-BR/docs/Web/HTTP/CORS/Errors)
 - Glossário: {{Glossary("CORS")}}
 - [CORS introduction](/pt-BR/docs/Web/HTTP/CORS)
-- [What is a URL?](/pt-BR/docs/Learn/Common_questions/What_is_a_URL)
+- [What is a URL?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)

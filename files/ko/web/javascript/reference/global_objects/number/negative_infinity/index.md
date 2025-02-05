@@ -1,13 +1,8 @@
 ---
 title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 ---
+
 {{JSRef}}
 
 **`Number.NEGATIVE_INFINITY`** 속성은 음의 무한대를 나타냅니다.
@@ -41,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 다음 코드에서 `smallNumber`는 JavaScript의 최솟값보다 작은 값을 할당받습니다. {{jsxref("Statements/if...else", "if")}} 문이 실행되면, `smallNumber`의 값이 `-Infinity`이므로 `smallNumber`는 계산에 좀 더 적합한 값을 다시 할당합니다.
 
 ```js
-var smallNumber = (-Number.MAX_VALUE) * 2;
+var smallNumber = -Number.MAX_VALUE * 2;
 
 if (smallNumber === Number.NEGATIVE_INFINITY) {
   smallNumber = returnFinite();

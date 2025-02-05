@@ -1,16 +1,8 @@
 ---
 title: USB.getDevices()
 slug: Web/API/USB/getDevices
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - WebUSB
-  - WebUSB API
-  - getDevices()
-translation_of: Web/API/USB/getDevices
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 Метод** `getDevices` **интерфейса {{DOMxRef("USB")}} возвращает {{JSxRef("Promise")}}, который разрешается с массивом {{DOMxRef("USBDevice")}} объектов сопряжённых подключённых устройств. Для информации о сопряжённых устройствах, смотрите {{DOMxRef("USB.requestDevice()")}}.
@@ -34,16 +26,20 @@ USB.getDevices()
 В следующем примере имена продуктов и серийные номера сопряжённых устройств выводятся в консоль. Для информации о сопряжённых устройствах, смотрите {{DOMxRef("USB.requestDevice","USB.requestDevice()")}}.
 
 ```js
-navigator.usb.getDevices()
-.then(devices => {
+navigator.usb.getDevices().then((devices) => {
   console.log("Total devices: " + devices.length);
-  devices.forEach(device => {
-    console.log("Product name: " + device.productName + ", serial number " + device.serialNumber);
+  devices.forEach((device) => {
+    console.log(
+      "Product name: " +
+        device.productName +
+        ", serial number " +
+        device.serialNumber,
+    );
   });
 });
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

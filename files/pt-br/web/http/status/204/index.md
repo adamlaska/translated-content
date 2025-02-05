@@ -1,8 +1,8 @@
 ---
 title: 204 No Content
 slug: Web/HTTP/Status/204
-translation_of: Web/HTTP/Status/204
 ---
+
 {{HTTPSidebar}}
 
 O código de resposta HTTP de status de sucesso **`204 No Content`** indica que a solicitação foi bem sucedida e o cliente não precisa sair da página atual. Uma resposta `204` é armazenada em cache por padrão. Um cabeçalho {{HTTPHeader("ETag")}} está incluso na resposta.
@@ -17,13 +17,13 @@ O caso de uso comum é retornar `204` como resultado de uma solicitação {{HTTP
 
 ## Especificações
 
-| Especificação                                            | Título                                                        |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                               | Título                                                        |
+| ------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "204 No Content" , "6.3.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.204")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 

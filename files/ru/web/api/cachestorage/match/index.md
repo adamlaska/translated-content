@@ -1,16 +1,8 @@
 ---
 title: CacheStorage.match()
 slug: Web/API/CacheStorage/match
-tags:
-  - API
-  - CacheStorage
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - match
-  - Экспериментальная функция
-translation_of: Web/API/CacheStorage/match
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 Метод **`match()`** интерфейса {{domxref("CacheStorage")}} (доступный через глобальное свойство `caches`) проверяет является ли данный {{domxref("Request")}} или строка url ключом для какого-либо хранимого {{domxref("Response")}}. Метод возвращает {{jsxref("Promise")}} если {{domxref("Response")}} найден, или `undefined` если нет ни одного совпадения.
@@ -48,21 +40,27 @@ caches.match(request, options).then(function(response) {
 
 Это пример из MDN [sw-test example](https://github.com/mdn/sw-test/) (см. [sw-test running live](https://mdn.github.io/sw-test/)). В данном примере, мы обрабатываем событие {{domxref("FetchEvent")}}. Мы строим проверку ответа следующим образом:
 
-1.  Проверяем, совпадения для запроса в {{domxref("CacheStorage")}} используя {{domxref("CacheStorage.match","CacheStorage.match()")}}. Если совпадение найдено, возвращаем response.
-2.  Если нет, открываем `v1` объект кеша, используя метод `open()`, добавляем изначальный запрос в кеш используя {{domxref("Cache.put","Cache.put()")}} и возвращаем клонированный объект запроса, используя `return response.clone()`. Это необходимо, потому что метод `put()` сохраняет в кеш тело запроса, изменяя, таким образом, изначальный запрос.
-3.  Если произошла какая-либо ошибка (например, из-за проблем с сетью), возвращаем резервный ответ.
+1. Проверяем, совпадения для запроса в {{domxref("CacheStorage")}} используя {{domxref("CacheStorage.match","CacheStorage.match()")}}. Если совпадение найдено, возвращаем response.
+2. Если нет, открываем `v1` объект кеша, используя метод `open()`, добавляем изначальный запрос в кеш используя {{domxref("Cache.put","Cache.put()")}} и возвращаем клонированный объект запроса, используя `return response.clone()`. Это необходимо, потому что метод `put()` сохраняет в кеш тело запроса, изменяя, таким образом, изначальный запрос.
+3. Если произошла какая-либо ошибка (например, из-за проблем с сетью), возвращаем резервный ответ.
 
 ```js
-caches.match(event.request).then(function(response) {
-  return response || fetch(event.request).then(function(r) {
-    caches.open('v1').then(function(cache) {
-      cache.put(event.request, r);
-    });
-    return r.clone();
+caches
+  .match(event.request)
+  .then(function (response) {
+    return (
+      response ||
+      fetch(event.request).then(function (r) {
+        caches.open("v1").then(function (cache) {
+          cache.put(event.request, r);
+        });
+        return r.clone();
+      })
+    );
+  })
+  .catch(function () {
+    return caches.match("/sw-test/gallery/myLittleVader.jpg");
   });
-}).catch(function() {
-  return caches.match('/sw-test/gallery/myLittleVader.jpg');
-});
 ```
 
 ## Спецификации
@@ -75,6 +73,6 @@ caches.match(event.request).then(function(response) {
 
 ## Смотрите также
 
-- [Использование Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Использование Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("WorkerGlobalScope.caches", "self.caches")}}

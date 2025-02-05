@@ -1,8 +1,8 @@
 ---
 title: HTMLCanvasElement.getContext()
 slug: Web/API/HTMLCanvasElement/getContext
-translation_of: Web/API/HTMLCanvasElement/getContext
 ---
+
 {{APIRef("Canvas API")}}
 
 Метод **`HTMLCanvasElement.getContext()`** возвращает контекст рисования на холсте, или {{jsxref("null")}}, если идентификатор контекста не определён.
@@ -31,9 +31,7 @@ canvas.getContext(contextType, contextAttributes);
   - : Вы можете использовать несколько атрибутов контекста при создании контекста рендеринга, например:
 
     ```js
-    canvas.getContext("webgl",
-                     { antialias: false,
-                       depth: false });
+    canvas.getContext("webgl", { antialias: false, depth: false });
     ```
 
     2d атрибуты контекста:
@@ -54,7 +52,7 @@ canvas.getContext(contextType, contextAttributes);
 
 ### Возвращаемое значение
 
-{{domxref("RenderingContext")}}, который представляет собой
+Контекст рендеринга, который представляет собой
 
 - {{domxref("CanvasRenderingContext2D")}} для `"2d"`,
 - {{domxref("WebGLRenderingContext")}} для `"webgl"` и `"experimental-webgl"`,
@@ -85,7 +83,7 @@ Now you have the [2D rendering context](/ru/docs/Web/API/CanvasRenderingContext2
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

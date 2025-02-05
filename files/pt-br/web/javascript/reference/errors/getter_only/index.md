@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: setting getter-only property "x"'
 slug: Web/JavaScript/Reference/Errors/Getter_only
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - Strict Mode
-  - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 A exceção apenas do modo [strict](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) do Javascript "setting getter-only property" ocorre quando é feita a tentativa de definir um novo valor para uma propriedade para qual apenas um [getter](/pt-BR/docs/Web/JavaScript/Reference/Functions/get) está especificado.
@@ -41,11 +36,11 @@ O exemplo abaixo mostra como definir um getter para uma propriedade. Isso não e
 
 function Arquivo() {
   var temperatura = null;
-  Object.defineProperty(this, 'temperatura', {
-    get: function() {
-      console.log('get!');
+  Object.defineProperty(this, "temperatura", {
+    get: function () {
+      console.log("get!");
       return temperatura;
-    }
+    },
   });
 }
 
@@ -66,18 +61,20 @@ function Arquivo() {
   var temperatura = null;
   var arquivo = [];
 
-  Object.defineProperty(this, 'temperatura', {
-    get: function() {
-      console.log('get!');
+  Object.defineProperty(this, "temperatura", {
+    get: function () {
+      console.log("get!");
       return temperatura;
     },
-    set: function(value) {
+    set: function (value) {
       temperatura = value;
       arquivo.push({ val: temperatura });
-    }
+    },
   });
 
-  this.getArquivo = function() { return arquivo; };
+  this.getArquivo = function () {
+    return arquivo;
+  };
 }
 
 var arq = new Arquivo();

@@ -1,13 +1,8 @@
 ---
 title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
-tags:
-  - 레퍼런스
-  - 메소드
-  - 수학
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
 ---
+
 {{JSRef}}
 
 **`Math.sin()`** 함수는 숫자의 사인값을 반환합니다.
@@ -17,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
 ## Syntax
 
 ```js
-    Math.sin(x)
+Math.sin(x);
 ```
 
 ### 파라미터
@@ -40,13 +35,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
 ### Using `Math.sin()`
 
 ```js
-Math.sin(0);           // 0
-Math.sin(1);           // 0.8414709848078965
+Math.sin(0); // 0
+Math.sin(1); // 0.8414709848078965
 
 Math.sin(Math.PI / 2); // 1
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

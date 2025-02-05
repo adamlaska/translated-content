@@ -1,17 +1,15 @@
 ---
-title: '<big>: Elemento para deixar o texto maio'
+title: "<big>: Elemento para deixar o texto maio"
 slug: Web/HTML/Element/big
-translation_of: Web/HTML/Element/big
 ---
-{{obsolete_header}}
 
 The obsolete **HTML Big Element** (**`<big>`**) renders the enclosed text at a font size one level larger than the surrounding text (`medium` becomes `large`, for example). The size is capped at the browser's maximum permitted font size.
 
-> **Note:** **Usage note:** As it was purely presentational, this element has been removed in [HTML5](/pt-BR/docs/Web/Guide/HTML/HTML5) and shouldn't be used anymore. Instead web developers should use the CSS {{cssxref("font-size")}} property to adjust the font size.
+> **Note:** **Usage note:** As it was purely presentational, this element has been removed in [HTML5](/pt-BR/docs/Glossary/HTML5) and shouldn't be used anymore. Instead web developers should use the CSS {{cssxref("font-size")}} property to adjust the font size.
 
 ## Atributos
 
-This element has no other attributes than the [global attributes](/pt-BR/docs/HTML/global_attributes), common to all elements.
+This element has no other attributes than the [global attributes](/pt-BR/docs/Web/HTML/Global_attributes), common to all elements.
 
 ## Examples
 
@@ -25,8 +23,8 @@ Este elemento usa o comando `<big>` para aumentar o tamanho do texto. O elemento
 
 ```html
 <p>
-  Este é o primeiro texto. <big>Este texto usa big
-para ficar com a aparência maior.</big>
+  Este é o primeiro texto.
+  <big>Este texto usa big para ficar com a aparência maior.</big>
 </p>
 ```
 
@@ -50,8 +48,8 @@ This example uses the CSS {{cssxref("font-size")}} property to increase the font
 
 ```html
 <p>
-  This is the first sentence. <span class="bigger">This whole
-  sentence is in bigger letters.</span>
+  This is the first sentence.
+  <span class="bigger">This whole sentence is in bigger letters.</span>
 </p>
 ```
 
@@ -67,12 +65,12 @@ This element implements the {{domxref('HTMLElement')}} interface.
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.big")}}
+{{Compat}}
 
 ## See also
 
 - CSS: {{cssxref("font-size")}}, {{cssxref("font")}}
 - HTML: {{htmlelement("small")}}, {{htmlelement("font")}}, {{htmlelement("style")}}
-- HTML 4.01 Specification: [Font Styles](http://www.w3.org/TR/html4/present/graphics.html#h-15.2)
+- HTML 4.01 Specification: [Font Styles](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -1,11 +1,9 @@
 ---
 title: string
 slug: Web/XPath/Functions/string
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/string
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `string` 함수는 인수를 문자열로 변환합니다.
 
@@ -17,7 +15,7 @@ string( [object] )
 
 ### 인수
 
-- _`object`_
+- `object`
   (선택사항)
   - : 문자열로 변환할 개체. 빼면, 문맥 노드를 씁니다.
 
@@ -39,7 +37,7 @@ string( [object] )
 
 ### 정의
 
-[XPath 1.0 4.2](http://www.w3.org/TR/xpath#function-string)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-string)
 
 ### Gecko 지원
 

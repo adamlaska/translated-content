@@ -1,62 +1,59 @@
 ---
-title: IDBDatabase.name
+title: "IDBDatabase: name プロパティ"
+short-title: name
 slug: Web/API/IDBDatabase/name
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{ APIRef("IDBDatabase") }}
+{{ APIRef("IndexedDB") }}
 
-`IDBDatabaseインターフェイスのnameプロパティは、接続しているデータベース名を含む` {{ domxref("DOMString")}}です。
+**`name`** は {{domxref("IDBDatabase")}} インターフェイスのプロパティで、接続しているデータベース名を含む文字列です。
 
-## 構文
+{{AvailableInWorkers}}
 
-```js
-db.name
-```
+## 値
 
-### 値
-
-`接続しているデータベース名を含む`{{ domxref("DOMString")}}。
+接続しているデータベース名を含む文字列です。
 
 ## 例
 
-この例は接続しているデータベースと、DB の version と name プロパティを持つ{{domxref("IDBDatabase")}} オブジェクトの結果、そしてログを表示します。完全な例は、[To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) app ([view example live](http://chrisdavidmills.github.io/to-do-notifications/))を見てください。
+この例は接続しているデータベースと、DB の `version` と `name` プロパティを持つ {{domxref("IDBDatabase")}} オブジェクトの結果、そしてログを表示します。完全な例は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) アプリケーション（[動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/)）を見てください。
 
 ```js
-// Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// データベースを開く
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-// these two event handlers act on the database being opened successfully, or not
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>Error loading database.</li>';
+// これら 2 個のイベントハンドラーは､データベースが正常に開かれたか､失敗した時に動作します｡
+DBOpenRequest.onerror = (event) => {
+  note.innerHTML += "<li>データベースの読み込みに失敗しました｡</li>";
 };
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+DBOpenRequest.onsuccess = (event) => {
+  note.innerHTML += "<li>データベースを初期化しました｡</li>";
 
-  // store the result of opening the database in the db variable. This is used a lot below
+  // データベースを開いた結果を変数 db に保存します｡これは後でたくさん使います｡
   db = DBOpenRequest.result;
 
-  // This line will log the name of the database, which should be "toDoList"
+  // この行ではデータベースの名前をログ出力します。 "toDoList" のはずです。
   console.log(db.name);
 };
 ```
 
-## 仕様
+## 仕様書
 
-| Specification                                                                    | Status                       | Comment |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-name', 'name')}} | {{Spec2('IndexedDB')}} |         |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
-{{Compat("api.IDBDatabase.name")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Using IndexedDB](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Starting transactions: {{domxref("IDBDatabase")}}
-- Using transactions: {{domxref("IDBTransaction")}}
-- Setting a range of keys: {{domxref("IDBKeyRange")}}
-- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
-- Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- トランザクションの開始 : {{domxref("IDBDatabase")}}
+- トランザクションの使用 : {{domxref("IDBTransaction")}}
+- キーの範囲の設定 : {{domxref("IDBKeyRange")}}
+- データの取得と変更 : {{domxref("IDBObjectStore")}}
+- カーソルの使用 : {{domxref("IDBCursor")}}
+- リファレンス例 : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

@@ -1,13 +1,8 @@
 ---
 title: Math.LN2
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN2
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN2
 ---
+
 {{JSRef}}
 
 The **`Math.LN2`** property represents the natural logarithm of 2, approximately 0.693:

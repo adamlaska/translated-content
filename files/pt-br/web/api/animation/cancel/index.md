@@ -1,13 +1,14 @@
 ---
 title: Animation.cancel()
 slug: Web/API/Animation/cancel
-translation_of: Web/API/Animation/cancel
 ---
+
 {{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
 O método **`Animation.cancel()`** da interface {{domxref("Animation")}} , limpa todas as {{domxref("KeyframeEffect", "keyframeEffects")}} geradas pela animação e aborta esta execução.
 
-> **Nota:** Quando uma animação é cancelada, os valores de {{domxref("Animation.startTime", "startTime")}} e {{domxref("Animation.currentTime", "currentTime")}} são definidos como `null`.
+> [!NOTE]
+> Quando uma animação é cancelada, os valores de {{domxref("Animation.startTime", "startTime")}} e {{domxref("Animation.currentTime", "currentTime")}} são definidos como `null`.
 
 ## Sintaxe
 
@@ -30,13 +31,11 @@ Se o método {{domxref("Animation.playState")}} da animação estiver executando
 
 ## Especificações
 
-| Specification                                                                                            | Status                               | Comment         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------- |
-| {{SpecName('Web Animations', '#dom-animation-cancel', 'Animation.cancel()' )}} | {{Spec2('Web Animations')}} | Editor's draft. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Animation.cancel")}}
+{{Compat}}
 
 ## Veja também
 

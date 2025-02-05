@@ -1,13 +1,8 @@
 ---
 title: Boolean() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
-tags:
-  - Boolean
-  - Constructor
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 ---
+
 {{JSRef}}
 
 **`Boolean()`** 생성자는 {{jsxref("Boolean")}} 객체를 생성할 때 사용합니다.
@@ -17,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 ## 구문
 
 ```js
-    new Boolean([value])
+new Boolean([value]);
 ```
 
 ### 매개변수

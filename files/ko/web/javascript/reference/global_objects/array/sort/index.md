@@ -1,14 +1,8 @@
 ---
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
-browser-compat: javascript.builtins.Array.sort
 ---
+
 {{JSRef}}
 
 **`sort()`** 메서드는 배열의 요소를 적절한 위치에 정렬한 후 그 배열을 반환합니다. 정렬은 [stable sort](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability)가 아닐 수 있습니다. 기본 정렬 순서는 문자열의 유니코드 코드 포인트를 따릅니다.
@@ -20,7 +14,7 @@ browser-compat: javascript.builtins.Array.sort
 ## 구문
 
 ```js
-    arr.sort([compareFunction])
+arr.sort([compareFunction]);
 ```
 
 ### 매개변수
@@ -70,7 +64,7 @@ sort 메소드는 {{jsxref ( "연산자 / 함수", "함수식", "", 1)}} (및 �
 
 ```js
 var numbers = [4, 2, 5, 1, 3];
-numbers.sort(function(a, b) {
+numbers.sort(function (a, b) {
   return a - b;
 });
 console.log(numbers);
@@ -82,12 +76,12 @@ console.log(numbers);
 
 ```js
 var items = [
-  { name: 'Edward', value: 21 },
-  { name: 'Sharpe', value: 37 },
-  { name: 'And', value: 45 },
-  { name: 'The', value: -12 },
-  { name: 'Magnetic', value: 13 },
-  { name: 'Zeros', value: 37 }
+  { name: "Edward", value: 21 },
+  { name: "Sharpe", value: 37 },
+  { name: "And", value: 45 },
+  { name: "The", value: -12 },
+  { name: "Magnetic", value: 13 },
+  { name: "Zeros", value: 37 },
 ];
 
 // value 기준으로 정렬
@@ -103,7 +97,7 @@ items.sort(function (a, b) {
 });
 
 // name 기준으로 정렬
-items.sort(function(a, b) {
+items.sort(function (a, b) {
   var nameA = a.name.toUpperCase(); // ignore upper and lowercase
   var nameB = b.name.toUpperCase(); // ignore upper and lowercase
   if (nameA < nameB) {
@@ -125,29 +119,35 @@ items.sort(function(a, b) {
 다음 예제에서는 네 개의 배열을 만들고 원래 배열을 표시 한 다음 정렬 된 배열을 표시합니다. 숫자 배열은 비교 함수없이 정렬 된 다음 비교 함수로 정렬됩니다.
 
 ```js
-var stringArray = ['Blue', 'Humpback', 'Beluga'];
-var numericStringArray = ['80', '9', '700'];
+var stringArray = ["Blue", "Humpback", "Beluga"];
+var numericStringArray = ["80", "9", "700"];
 var numberArray = [40, 1, 5, 200];
-var mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
+var mixedNumericArray = ["80", "9", "700", 40, 1, 5, 200];
 
 function compareNumbers(a, b) {
   return a - b;
 }
 
-console.log('stringArray:', stringArray.join());
-console.log('Sorted:', stringArray.sort());
+console.log("stringArray:", stringArray.join());
+console.log("Sorted:", stringArray.sort());
 
-console.log('numberArray:', numberArray.join());
-console.log('Sorted without a compare function:', numberArray.sort());
-console.log('Sorted with compareNumbers:', numberArray.sort(compareNumbers));
+console.log("numberArray:", numberArray.join());
+console.log("Sorted without a compare function:", numberArray.sort());
+console.log("Sorted with compareNumbers:", numberArray.sort(compareNumbers));
 
-console.log('numericStringArray:', numericStringArray.join());
-console.log('Sorted without a compare function:', numericStringArray.sort());
-console.log('Sorted with compareNumbers:', numericStringArray.sort(compareNumbers));
+console.log("numericStringArray:", numericStringArray.join());
+console.log("Sorted without a compare function:", numericStringArray.sort());
+console.log(
+  "Sorted with compareNumbers:",
+  numericStringArray.sort(compareNumbers),
+);
 
-console.log('mixedNumericArray:', mixedNumericArray.join());
-console.log('Sorted without a compare function:', mixedNumericArray.sort());
-console.log('Sorted with compareNumbers:', mixedNumericArray.sort(compareNumbers));
+console.log("mixedNumericArray:", mixedNumericArray.join());
+console.log("Sorted without a compare function:", mixedNumericArray.sort());
+console.log(
+  "Sorted with compareNumbers:",
+  mixedNumericArray.sort(compareNumbers),
+);
 ```
 
 이 예제는 다음 출력을 생성합니다. 결과가 보여 주듯이 비교 함수가 사용되면 숫자는 숫자 또는 숫자 문자열인지 여부에 관계없이 올바르게 정렬됩니다.
@@ -174,7 +174,7 @@ console.log('Sorted with compareNumbers:', mixedNumericArray.sort(compareNumbers
 ASCII 이외의 문자, 즉 악센트 부호가있는 문자 (e, é, è, a, ä 등)가있는 문자열을 정렬하려면 영어가 아닌 다른 언어의 문자열에 {{jsxref ( "String.localeCompare")}}를 사용하십시오. 이 함수는 해당 문자를 비교하여 올바른 순서로 나타낼 수 있습니다.
 
 ```js
-var items = ['réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu'];
+var items = ["réservé", "premier", "cliché", "communiqué", "café", "adieu"];
 items.sort(function (a, b) {
   return a.localeCompare(b);
 });
@@ -188,20 +188,20 @@ items.sort(function (a, b) {
 
 ```js
 // 소트 할 배열
-var list = ['Delta', 'alpha', 'CHARLIE', 'bravo'];
+var list = ["Delta", "alpha", "CHARLIE", "bravo"];
 
 // 임시 배열은 위치 및 정렬 값이있는 객체를 보유합니다.
-var mapped = list.map(function(el, i) {
+var mapped = list.map(function (el, i) {
   return { index: i, value: el.toLowerCase() };
-})
+});
 
 // 축소 치를 포함한 매핑 된 배열의 소트
-mapped.sort(function(a, b) {
+mapped.sort(function (a, b) {
   return +(a.value > b.value) || +(a.value === b.value) - 1;
 });
 
 // 결과 순서를 위한 컨테이너
-var result = mapped.map(function(el){
+var result = mapped.map(function (el) {
   return list[el.index];
 });
 ```

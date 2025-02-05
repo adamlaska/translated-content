@@ -1,27 +1,18 @@
 ---
 title: Object.isFrozen()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Méthode
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/isFrozen
 ---
 
 {{JSRef}}
 
-La méthode **`Object.isFrozen()`**permet de déterminer si un objet est {{jsxref("Object.freeze()", "gelé", "", 1)}}.
+La méthode **`Object.isFrozen()`** permet de déterminer si un objet est {{jsxref("Object.freeze()", "gelé", "", 1)}}.
 
 {{EmbedInteractiveExample("pages/js/object-isfrozen.html")}}
 
 ## Syntaxe
 
 ```js
-Object.isFrozen(obj)
+Object.isFrozen(obj);
 ```
 
 ### Paramètres

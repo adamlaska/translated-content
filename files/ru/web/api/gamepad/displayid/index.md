@@ -1,10 +1,8 @@
 ---
 title: Gamepad.displayId
 slug: Web/API/Gamepad/displayId
-tags:
-  - Виртуальная реальность
-translation_of: Web/API/Gamepad/displayId
 ---
+
 {{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}
 
 Свойство **displayId** только для чтения {{domxref("Gamepad")}} возвращаемый интерфейс* {{domxref("VRDisplay.displayId")}} связанный с {{domxref("VRDisplay")}} — `VRDisplay` (дисплей виртуальной реальности) в котором геймпад управляет отображаемой сценой.*
@@ -24,26 +22,25 @@ var myDisplayId = gamepadInstance.displayId;
 ## Examples
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
-  if(!e.gamepad.displayId) {
-    console.log('Gamepad connected');
+window.addEventListener("gamepadconnected", function (e) {
+  if (!e.gamepad.displayId) {
+    console.log("Gamepad connected");
   } else {
-    console.log('Gamepad connected, associated with VR display ' + e.gamepad.displayId);
+    console.log(
+      "Gamepad connected, associated with VR display " + e.gamepad.displayId,
+    );
   }
 });
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                        | Status                       | Comment            |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#gamepad-getvrdisplays-attribute', 'displayId')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — демосцены, материалы, доступные для скачивания и другие материалы команды the Mozilla VR team.
+- [WebVR API](/ru/docs/Web/API/WebVR_API)

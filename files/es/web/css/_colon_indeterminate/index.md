@@ -1,14 +1,8 @@
 ---
-title: ':indeterminate'
+title: ":indeterminate"
 slug: Web/CSS/:indeterminate
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:indeterminate
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:indeterminate`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento de formulario cuyo estado sea indeterminado.
@@ -40,11 +34,11 @@ Este ejemplo aplica estilos especiales a las etiquetas asociadas con campos de f
 
 ```html
 <div>
-  <input type="checkbox" id="checkbox">
+  <input type="checkbox" id="checkbox" />
   <label for="checkbox">Esta etiqueta comienza con el color lima.</label>
 </div>
 <div>
-  <input type="radio" id="radio">
+  <input type="radio" id="radio" />
   <label for="radio">Esta etiqueta comienza con el color lima.</label>
 </div>
 ```
@@ -67,7 +61,7 @@ for (var i = 0; i < inputs.length; i++) {
 }
 ```
 
-### Resultado
+#### Resultado
 
 {{EmbedLiveSample('Checkbox_y_radio_button', 'auto', 50)}}
 
@@ -76,7 +70,7 @@ for (var i = 0; i < inputs.length; i++) {
 #### HTML
 
 ```html
-<progress>
+<progress></progress>
 ```
 
 #### CSS
@@ -93,19 +87,14 @@ progress:indeterminate {
 }
 ```
 
-### Resultado
+#### Resultado
 
 {{EmbedLiveSample('Barra_de_progreso', 'auto', 30)}}
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentarios                                                   |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-indeterminate', ':indeterminate')}} | {{Spec2('HTML WHATWG')}}     | Ningún cambio.                                                |
-| {{SpecName('HTML5 W3C', '#selector-indeterminate', ':indeterminate')}}     | {{Spec2('HTML5 W3C')}}         | Define la semántica de HTML y la validación de restricciones. |
-| {{SpecName('CSS4 Selectors', '#indeterminate', ':indeterminate')}}         | {{Spec2('CSS4 Selectors')}} | Ningún cambio.                                                |
-| {{SpecName('CSS3 Basic UI', '#indeterminate', ':indeterminate')}}         | {{Spec2('CSS3 Basic UI')}} | Define la pseudo-clase, pero no la semántica asociada.        |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.indeterminate")}}
+{{Compat}}

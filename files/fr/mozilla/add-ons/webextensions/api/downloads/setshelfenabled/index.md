@@ -1,26 +1,16 @@
 ---
 title: downloads.setShelfEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/setShelfEnabled
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - setShelfEnabled
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/setShelfEnabled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-La fonction  **`setShelfEnabled()`** de l'API {{WebExtAPIRef("downloads")}} active ou désactive l'étagère grise située en bas de chaque fenêtre associée au profil de navigateur actuel. L'étagère sera désactivée si au moins une extension l'a désactivée.
+La fonction **`setShelfEnabled()`** de l'API {{WebExtAPIRef("downloads")}} active ou désactive l'étagère grise située en bas de chaque fenêtre associée au profil de navigateur actuel. L'étagère sera désactivée si au moins une extension l'a désactivée.
 
 Si vous essayez d'activer l'étagère lorsqu'au moins une autre extension l'a déjà désactivé, l'appel échouera et {{WebExtAPIRef("runtime.lastError")}} sera défini avec un message d'erreur approprié.
 
-> **Note :** Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), `"downloads.shelf"`, ainsi que la permission `"downloads"`.
+> [!NOTE]
+> Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), `"downloads.shelf"`, ainsi que la permission `"downloads"`.
 
 ## Syntaxe
 
@@ -28,22 +18,22 @@ Si vous essayez d'activer l'étagère lorsqu'au moins une autre extension l'a d�
 chrome.downloads.setShelfEnabled(enabled);
 ```
 
-Cette API est également disponible en tant que  `browser.downloads.setShelfEnabled()`.
+Cette API est également disponible en tant que `browser.downloads.setShelfEnabled()`.
 
 ### Paramètres
 
 - `enabled`
   - : Un `boolean` l'état que vous souhaitez définir `setShelfEnabled()` à — `true` pour activer et `false` pour désactiver.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.setShelfEnabled")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

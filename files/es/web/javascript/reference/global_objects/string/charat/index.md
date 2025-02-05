@@ -1,15 +1,9 @@
 ---
 title: String.prototype.charAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charAt
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/charAt
 ---
-{{JSRef("Objetos_globales", "String")}}
+
+{{JSRef}}
 
 ## Resumen
 
@@ -37,14 +31,26 @@ Los caracteres de una cadena se indexan de izquierda a derecha. El índice del p
 El siguiente ejemplo muestra caracteres de diferentes localizaciones en la cadena "`Brave new world`":
 
 ```js
-var cualquierCadena="Brave new world";
+var cualquierCadena = "Brave new world";
 
-console.log("El carácter en el índice 0 es '" + cualquierCadena.charAt(0) + "'")
-console.log("El carácter en el índice 1 es '" + cualquierCadena.charAt(1) + "'")
-console.log("El carácter en el índice 2 es '" + cualquierCadena.charAt(2) + "'")
-console.log("El carácter en el índice 3 es '" + cualquierCadena.charAt(3) + "'")
-console.log("El carácter en el índice 4 es '" + cualquierCadena.charAt(4) + "'")
-console.log("El carácter en el índice 999 es '" + cualquierCadena.charAt(999) + "'")
+console.log(
+  "El carácter en el índice 0 es '" + cualquierCadena.charAt(0) + "'",
+);
+console.log(
+  "El carácter en el índice 1 es '" + cualquierCadena.charAt(1) + "'",
+);
+console.log(
+  "El carácter en el índice 2 es '" + cualquierCadena.charAt(2) + "'",
+);
+console.log(
+  "El carácter en el índice 3 es '" + cualquierCadena.charAt(3) + "'",
+);
+console.log(
+  "El carácter en el índice 4 es '" + cualquierCadena.charAt(4) + "'",
+);
+console.log(
+  "El carácter en el índice 999 es '" + cualquierCadena.charAt(999) + "'",
+);
 ```
 
 Estas líneas muestran lo siguiente:
@@ -58,17 +64,13 @@ El carácter en el índice 4 es 'e'
 El carácter en el índice 999 es ''
 ```
 
-## Especificaciónes
+## Especificaciones
 
-| Especificación                                                                                           | Estado                   | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| ECMAScript 1st Edition.                                                                                  | Estándar                 | Primera definición |
-| {{SpecName('ES5.1', '#sec-15.5.4.4', 'String.prototype.charAt')}}                 | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-string.prototype.charat', 'String.prototype.charAt')}} | {{Spec2('ES6')}}     |                    |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.charAt")}}
+{{Compat}}
 
 ## Vea También
 

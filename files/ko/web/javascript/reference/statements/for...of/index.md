@@ -1,13 +1,8 @@
 ---
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/for...of
 ---
+
 {{jsSidebar("Statements")}}
 
 **`for...of` 명령문**은 [반복가능한 객체](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#iterable) ({{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, [arguments](/ko/docs/Web/JavaScript/Reference/Functions/arguments) 객체 등을 포함)에 대해서 반복하고 각 개별 속성값에 대해 실행되는 문이 있는 사용자 정의 반복 후크를 호출하는 루프를 생성합니다.
@@ -17,9 +12,9 @@ translation_of: Web/JavaScript/Reference/Statements/for...of
 ## 구문
 
 ```js
-    for (variable of iterable) {
-      statement
-    }
+for (variable of iterable) {
+  statement;
+}
 ```
 
 - `variable`
@@ -29,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Statements/for...of
 
 ## 예제
 
-### {{jsxref("Array")}}에 대해 반복:
+### {{jsxref("Array")}}에 대해 반복
 
 ```js
 let iterable = [10, 20, 30];
@@ -55,7 +50,7 @@ for (const value of iterable) {
 // 30
 ```
 
-### {{jsxref("String")}}에 대해 반복:
+### {{jsxref("String")}}에 대해 반복
 
 ```js
 let iterable = "boo";
@@ -68,7 +63,7 @@ for (let value of iterable) {
 // "o"
 ```
 
-### {{jsxref("TypedArray")}}에 대해 반복:
+### {{jsxref("TypedArray")}}에 대해 반복
 
 ```js
 let iterable = new Uint8Array([0x00, 0xff]);
@@ -80,10 +75,14 @@ for (let value of iterable) {
 // 255
 ```
 
-### {{jsxref("Map")}}에 대해 반복:
+### {{jsxref("Map")}}에 대해 반복
 
 ```js
-let iterable = new Map([["a", 1], ["b", 2], ["c", 3]]);
+let iterable = new Map([
+  ["a", 1],
+  ["b", 2],
+  ["c", 3],
+]);
 
 for (let entry of iterable) {
   console.log(entry);
@@ -100,7 +99,7 @@ for (let [key, value] of iterable) {
 // 3
 ```
 
-### {{jsxref("Set")}}에 대해 반복:
+### {{jsxref("Set")}}에 대해 반복
 
 ```js
 let iterable = new Set([1, 1, 2, 2, 3, 3]);
@@ -132,7 +131,8 @@ for (let paragraph of articleParagraphs) {
 [생성기](/ko/docs/Web/JavaScript/Reference/Statements/function*)에 대해서도 반복할 수 있습니다:
 
 ```js
-function* fibonacci() { // 생성기 함수
+function* fibonacci() {
+  // 생성기 함수
   let [prev, curr] = [1, 1];
   while (true) {
     [prev, curr] = [curr, prev + curr];
@@ -163,9 +163,9 @@ var iterable = {
           return { value: this.i++, done: false };
         }
         return { value: undefined, done: true };
-      }
+      },
     };
-  }
+  },
 };
 
 for (var value of iterable) {

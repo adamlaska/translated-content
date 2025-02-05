@@ -1,22 +1,17 @@
 ---
 title: flex-flow
 slug: Web/CSS/flex-flow
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/flex-flow
 ---
+
 {{ CSSRef}}
 
 ## Resumen
 
-La propiedad [CSS](/es/docs/CSS) **`flex-flow`** es una propiedad atajo para las propiedades individuales `flex-direction` y `flex-wrap`.
+La propiedad [CSS](/es/docs/Web/CSS) **`flex-flow`** es una propiedad atajo para las propiedades individuales `flex-direction` y `flex-wrap`.
 
 {{cssinfo}}
 
-Para más propiedades e información ve [Utilizando cajas flexibles CSS](/es/docs/CSS/Using_CSS_flexible_boxes).
+Para más propiedades e información ve [Utilizando cajas flexibles CSS](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
 
 ## Sintaxis
 
@@ -45,7 +40,7 @@ flex-flow: unset;
 
 ### Valores
 
-Ve [`flex-direction`](/es/docs/CSS/flex-direction) y [`flex-wrap`](/es/docs/CSS/flex-wrap) para más detalles de los valores.
+Ve [`flex-direction`](/es/docs/Web/CSS/flex-direction) y [`flex-wrap`](/es/docs/Web/CSS/flex-wrap) para más detalles de los valores.
 
 ### Sintaxis formal
 
@@ -62,14 +57,12 @@ element {
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                               | Comentario         |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{ SpecName('CSS3 Flexbox','#flex-flow','flex-flow') }} | {{ Spec2('CSS3 Flexbox') }} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.flex-flow")}}
+{{Compat}}
 
 ## Ver también
 
-- [Utilizando cajas flexibles CSS](/es/docs/CSS/Using_CSS_flexible_boxes)
+- [Utilizando cajas flexibles CSS](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)

@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 ---
+
 {{JSRef}}
 
 **`toJSON()`** 메서드는 {{jsxref("Date")}} 객체의 문자열 표현을 반환합니다.
@@ -18,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 ## 구문
 
 ```js
-    dateObj.toJSON()
+dateObj.toJSON();
 ```
 
 ### 반환 값
@@ -34,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 ### `toJSON()` 사용하기
 
 ```js
-const jsonDate = (new Date()).toJSON();
+const jsonDate = new Date().toJSON();
 const backToDate = new Date(jsonDate);
 
 console.log(jsonDate); //2015-10-26T07:46:36.611Z

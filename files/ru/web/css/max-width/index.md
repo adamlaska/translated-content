@@ -1,11 +1,11 @@
 ---
 title: max-width
 slug: Web/CSS/max-width
-translation_of: Web/CSS/max-width
 ---
+
 {{CSSRef}}
 
-Свойство [CSS](ru/docs/Web/CSS) **`max-width`** устанавливает максимальную ширину элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("width") }} от становления больше, чем значение, указанное для `max-width`.
+Свойство [CSS](/ru/docs/Web/CSS) **`max-width`** устанавливает максимальную ширину элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("width") }} от становления больше, чем значение, указанное для `max-width`.
 
 {{EmbedInteractiveExample("pages/css/max-width.html")}}
 
@@ -14,18 +14,18 @@ translation_of: Web/CSS/max-width
 ## Синтаксис
 
 ```css
-/* <length> значение */
-max-width: 3.5em;
-
-/* <percentage> значение */
-max-width: 75%;
-
-/* Значения-ключевые слова */
+/* Ключевые слова */
 max-width: none;
 max-width: max-content;
 max-width: min-content;
 max-width: fit-content;
 max-width: fill-available;
+
+/* Значения длины */
+max-width: 3.5em;
+
+/* <percentage> значение */
+max-width: 75%;
 
 /* Глобальные значения */
 max-width: inherit;
@@ -88,9 +88,7 @@ max-width: unset;
 
 ```html
 <div id="parent">
-    <div id="child">
-        Child Text
-    </div>
+  <div id="child">Child Text</div>
 </div>
 ```
 
@@ -100,7 +98,7 @@ max-width: unset;
   width: 300px;
 }
 
-#child  {
+#child {
   background: gold;
   width: 100%;
   max-width: -moz-fit-content;
@@ -110,7 +108,7 @@ max-width: unset;
 
 {{EmbedLiveSample("fit-content-demo", 400, 100)}}
 
-## Проблемы доступности
+## Доступность
 
 Убедитесь, что элементы с `max-width` не обрезаются и / или не закрывают другой контент, когда страница увеличена для увеличения размера текста.
 
@@ -123,11 +121,11 @@ max-width: unset;
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - {{ Cssxref("width") }}, {{ Cssxref("min-width") }}, {{ Cssxref("max-height") }}
-- [Блочная модель](/ru/docs/CSS/box_model), {{ Cssxref("box-sizing") }}
+- [Блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{ Cssxref("box-sizing") }}

@@ -1,8 +1,8 @@
 ---
 title: Window.event
 slug: Web/API/Window/event
-translation_of: Web/API/Window/event
 ---
+
 {{APIRef}}
 
 {{ Non-standard_header() }}
@@ -17,7 +17,7 @@ Microsoft [tem uma descrição na MSDN](<https://msdn.microsoft.com/en-us/librar
 
 ## Compatibilidade de navegadores
 
-{{Compat("api.Window.event")}}
+{{Compat}}
 
 ## Veja também
 

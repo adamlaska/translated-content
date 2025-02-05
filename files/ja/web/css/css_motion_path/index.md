@@ -1,6 +1,6 @@
 ---
 title: CSS モーションパス
-slug: Web/CSS/CSS_Motion_Path
+slug: Web/CSS/CSS_motion_path
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -17,7 +17,7 @@ slug: Web/CSS/CSS_Motion_Path
 
 ```css
 #motion-demo {
-  offset-path: path('M20,20 C20,100 200,0 200,100');
+  offset-path: path("M20,20 C20,100 200,0 200,100");
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;
   height: 40px;
@@ -49,12 +49,10 @@ slug: Web/CSS/CSS_Motion_Path
 
 ## 仕様書
 
-| 仕様書                                    | 状態                                       | コメント             |
-| ------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName('Motion Path Level 1')}} | {{Spec2('Motion Path Level 1')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
 ## offset プロパティ
 
-{{Compat("css.properties.offset-path")}}
+{{Compat}}

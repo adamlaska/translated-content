@@ -1,8 +1,8 @@
 ---
 title: font-variant-ligatures
 slug: Web/CSS/font-variant-ligatures
-translation_of: Web/CSS/font-variant-ligatures
 ---
+
 {{CSSRef}}
 
 ## Сводка
@@ -16,15 +16,15 @@ translation_of: Web/CSS/font-variant-ligatures
 ```css
 font-variant-ligatures: normal;
 font-variant-ligatures: none;
-font-variant-ligatures: common-ligatures;           /* <common-lig-values> */
-font-variant-ligatures: no-common-ligatures;        /* <common-lig-values> */
-font-variant-ligatures: discretionary-ligatures;    /* <discretionary-lig-values> */
+font-variant-ligatures: common-ligatures; /* <common-lig-values> */
+font-variant-ligatures: no-common-ligatures; /* <common-lig-values> */
+font-variant-ligatures: discretionary-ligatures; /* <discretionary-lig-values> */
 font-variant-ligatures: no-discretionary-ligatures; /* <discretionary-lig-values> */
-font-variant-ligatures: historical-ligatures;       /* <historical-lig-values> */
-font-variant-ligatures: no-historical-ligatures;    /* <historical-lig-values> */
-font-variant-ligatures: contextual;                 /* <contextual-alt-values> */
-font-variant-ligatures: no-contextual;              /* <contextual-alt-values> */
-font-variant-ligatures: contextual;                 /* <no-historical-ligatures> <common-ligatures> */
+font-variant-ligatures: historical-ligatures; /* <historical-lig-values> */
+font-variant-ligatures: no-historical-ligatures; /* <historical-lig-values> */
+font-variant-ligatures: contextual; /* <contextual-alt-values> */
+font-variant-ligatures: no-contextual; /* <contextual-alt-values> */
+font-variant-ligatures: contextual; /* <no-historical-ligatures> <common-ligatures> */
 
 /* Глобальные значения */
 font-variant-ligatures: inherit;
@@ -52,7 +52,7 @@ font-variant-ligatures: unset;
     - `no-historical-ligatures` деактивирует лигатуры. Обратите внимание, обычно, ключевое слово `normal` также деактивирует лигатуры.
 - _\<contextual-alt-values>_
   - : Эти значения определяют, адаптируются ли буквы к своему контексту, то есть адаптируются ли они к окружающим их буквам. Эти значения соответствуют вычисленным значениям OpenType. Возможны два значения:
-    - `contextual`указывает, что должны использоваться контекстные альтернативы. Обратите внимание, что ключевое слово `normal` обычно также активирует лигатуры.
+    - `contextual` указывает, что должны использоваться контекстные альтернативы. Обратите внимание, что ключевое слово `normal` обычно также активирует лигатуры.
     - `no-contextual` предотвращает их использование.
 
 ### Соответствующий правилам синтаксис

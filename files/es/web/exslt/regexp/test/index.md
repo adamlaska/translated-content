@@ -1,13 +1,9 @@
 ---
 title: test
 slug: Web/EXSLT/regexp/test
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/regexp/test
 ---
-{{XsltRef}}
+
+{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
 
 `regexp:test()` comprueba si una cadena coincide con una expresión regular especificada.
 

@@ -1,7 +1,6 @@
 ---
 title: SpeechRecognitionError
 slug: Web/API/SpeechRecognitionErrorEvent
-original_slug: Web/API/SpeechRecognitionError
 ---
 
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
@@ -22,21 +21,19 @@ _`SpeechRecognitionError` は、親インターフェイスである {{domxref("
 ```js
 var recognition = new SpeechRecognition();
 
-recognition.onerror = function(event) {
-  console.log('Speech recognition error detected: ' + event.error);
-  console.log('Additional information: ' + event.message);
-}
+recognition.onerror = function (event) {
+  console.log("Speech recognition error detected: " + event.error);
+  console.log("Additional information: " + event.message);
+};
 ```
 
 ## 仕様
 
-| 仕様書                                                                                                   | 策定状況                             | 備考 |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---- |
-| {{SpecName('Web Speech API', '#speechreco-error', 'SpeechRecognitionError')}} | {{Spec2('Web Speech API')}} |      |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 
-{{Compat("api.SpeechRecognitionError")}}
+{{Compat}}
 
 ### Firefox OS の許可設定
 

@@ -1,16 +1,15 @@
 ---
 title: Modelo de Objeto de Documento (DOM)
 slug: Web/API/Document_Object_Model
-translation_of: Web/API/Document_Object_Model
-original_slug: DOM/Referencia_do_DOM
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 O **Modelo de Objeto de Documento (_DOM_)** é uma interface de programação para documentos HTML, XML e SVG . Ele fornece uma representação estruturada do documento como uma árvore. O DOM define métodos que permitem acesso à árvore, para que eles possam alterar a estrutura, estilo e conteúdo do documento. O DOM fornece uma representação do documento como um grupo estruturado de nós e objetos, possuindo várias propriedades e métodos. Os nós também podem ter manipuladores de eventos que lhe são inerentes, e uma vez que um evento é acionado, os manipuladores de eventos são executados. Essencialmente, ele conecta páginas web a scripts ou linguagens de programação.
 
 Embora o DOM seja frequentemente acessado usando JavaScript, não é uma parte da linguagem JavaScript. Ele também pode ser acessado por outras linguagens.
 
-Uma [introdução](/pt-BR/docs/DOM/DOM_Reference/Introduction) ao DOM está disponível.
+Uma [introdução](/pt-BR/docs/Web/API/Document_Object_Model/Introduction) ao DOM está disponível.
 
 ## DOM interfaces
 
@@ -109,7 +108,6 @@ Um objeto `HTMLDocument` também da acesso á vários recursos de navegadores co
 - {{domxref("HTMLIFrameElement")}}
 - {{domxref("HTMLImageElement")}}
 - {{domxref("HTMLInputElement")}}
-- {{domxref("HTMLKeygenElement")}}
 - {{domxref("HTMLLabelElement")}}
 - {{domxref("HTMLLegendElement")}}
 - {{domxref("HTMLLIElement")}}
@@ -170,7 +168,6 @@ Um objeto `HTMLDocument` também da acesso á vários recursos de navegadores co
 
 ### Obsoleto HTML interfaces
 
-- {{domxref("HTMLBaseFontElement")}}
 - {{domxref("HTMLIsIndexElement")}}
 
 ## SVG interfaces
@@ -267,7 +264,8 @@ Um objeto `HTMLDocument` também da acesso á vários recursos de navegadores co
 
 Aqui estão a DOM API para tipos de dados utilizados nas definições de propriedades SVG e atributos.
 
-> **Nota:** Starting in {{Gecko("5.0")}}, the following SVG-related DOM interfaces representing lists of objects are now indexable and can be accessed ; in addition, they have a length property indicating the number of items in the lists: {{domxref("SVGLengthList")}}, {{domxref("SVGNumberList")}}, {{domxref("SVGPathSegList")}}, and {{domxref("SVGPointList")}}.
+> [!NOTE]
+> Starting in Gecko 5.0, the following SVG-related DOM interfaces representing lists of objects are now indexable and can be accessed ; in addition, they have a length property indicating the number of items in the lists: {{domxref("SVGLengthList")}}, {{domxref("SVGNumberList")}}, {{domxref("SVGPathSegList")}}, and {{domxref("SVGPointList")}}.
 
 #### Static type
 
@@ -333,4 +331,4 @@ Aqui estão a DOM API para tipos de dados utilizados nas definições de proprie
 
 ## Veja também
 
-- [DOM Exemplos](/pt-BR/docs/DOM/DOM_Reference/Examples)
+- [DOM Exemplos](/pt-BR/docs/Web/API/Document_Object_Model/Examples)

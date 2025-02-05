@@ -19,10 +19,8 @@ var tag = SyncEvent.tag
 
 ## 仕様
 
-| 仕様                                                                 | ステータス                           | 備考       |
-| -------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('Background Sync','#sync-event', 'tag')}} | {{Spec2('Background Sync')}} | 初回定義。 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 
-{{Compat("api.SyncEvent.tag")}}
+{{Compat}}

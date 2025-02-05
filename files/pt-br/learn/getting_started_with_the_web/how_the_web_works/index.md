@@ -1,20 +1,8 @@
 ---
 title: Como a Web funciona
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
-tags:
-  - Aprender
-  - Cliente
-  - DNS
-  - HTTP
-  - IP
-  - Infraestrutura
-  - Iniciante
-  - Servidor
-  - TCP
-  - l10n:prioridade
-translation_of: Learn/Getting_started_with_the_web/How_the_Web_works
-original_slug: Aprender/Getting_started_with_the_web/Como_a_Web_funciona
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
@@ -38,7 +26,7 @@ O cliente e o servidor que descrevemos acima não contam toda a história. Exist
 
 Por enquanto, vamos imaginar que a web é uma estrada. Em um extremo da estrada, temos o cliente, que é como sua casa. No extremo oposto, temos o servidor, que é como uma loja onde você quer comprar algo.
 
-![](https://mdn.mozillademos.org/files/9749/road.jpg)
+![](road.jpg)
 
 Além do cliente e do servidor, também precisamos dizer oi para:
 
@@ -74,7 +62,7 @@ Anteriormente, usamos o termo "pacotes" para descrever o formato no qual os dado
 
 ## Veja também
 
-- [Como a Internet funciona](/pt-BR/docs/Learn/Common_questions/Como_a_internet_funciona)
+- [Como a Internet funciona](/pt-BR/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
 - [HTTP — uma Aplicação a Nível de Protocolo](https://dev.opera.com/articles/http-basic-introduction/)
 - [HTTP: Vamos Começar!](https://dev.opera.com/articles/http-lets-get-it-on/)
 - [HTTP: Códigos de resposta](https://dev.opera.com/articles/http-response-codes/)
@@ -84,14 +72,3 @@ Anteriormente, usamos o termo "pacotes" para descrever o formato no qual os dado
 Foto da rua: [Street composing](https://www.flickr.com/photos/kdigga/9110990882/in/photolist-cXrKFs-c1j6hQ-mKrPUT-oRTUK4-7jSQQq-eT7daG-cZEZrh-5xT9L6-bUnkip-9jAbvr-5hVkHn-pMfobT-dm8JuZ-gjwYYM-pREaSM-822JRW-5hhMf9-9RVQNn-bnDMSZ-pL2z3y-k7FRM4-pzd8Y7-822upY-8bFN4Y-kedD87-pzaATg-nrF8ft-5anP2x-mpVky9-ceKc9W-dG75mD-pY62sp-gZmXVZ-7vVJL9-h7r9AQ-gagPYh-jvo5aM-J32rC-ibP2zY-a4JBcH-ndxM5Y-iFHsde-dtJ15p-8nYRgp-93uCB1-o6N5Bh-nBPUny-dNJ66P-9XWmVP-efXhxJ), por [Kevin D](https://www.flickr.com/photos/kdigga/).
 
 {{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
-
-## Neste módulo
-
-- [Instalando os programas básicos](/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos)
-- [Como será o seu site?](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer)
-- [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos)
-- [HTML básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico)
-- [CSS básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico)
-- [JavaScript básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/JavaScript_basico)
-- [Publicando seu website](/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site)
-- [Como a web funciona](/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona)

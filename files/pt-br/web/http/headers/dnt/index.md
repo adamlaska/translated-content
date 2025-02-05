@@ -1,13 +1,8 @@
 ---
 title: DNT
 slug: Web/HTTP/Headers/DNT
-tags:
-  - DNT
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/DNT
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de requisição **`DNT`** (**D**o **N**ot **T**rack) indica a preferência do usuário de permitir ser "seguido". Ele indica se o usuário prefere privacidade ao invés de conteúdo personalizado.
@@ -51,13 +46,11 @@ navigator.doNotTrack; // "0" or "1"
 
 ## Especificações
 
-| Especificação                                                                                                | Status                       | Comentários        |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('Tracking','#dnt-header-field', 'DNT Header Field for HTTP Requests')}} | {{Spec2("Tracking")}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.DNT")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,15 +1,8 @@
 ---
 title: outline-width
 slug: Web/CSS/outline-width
-tags:
-  - CSS
-  - CSS Outline
-  - CSS Property
-  - Layout
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/outline-width
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`outline-width`** 속성은 요소 외곽선의 두께를 설정합니다. 외곽선은 요소의 [테두리](/ko/docs/Web/CSS/border) 바깥에 그려지는 선입니다.

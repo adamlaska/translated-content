@@ -43,10 +43,8 @@ bounds = xrReferenceSpace.boundsGeometry;
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                     | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#dom-xrboundedreferencespace-boundsgeometry','boundsGeometry')}} | {{Spec2('WebXR')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRBoundedReferenceSpace.boundsGeometry")}}
+{{Compat}}

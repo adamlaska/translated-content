@@ -1,15 +1,8 @@
 ---
 title: Content-Security-Policy-Report-Only
 slug: Web/HTTP/Headers/Content-Security-Policy-Report-Only
-tags:
-  - CSP
-  - HTTP
-  - HTTPS
-  - Referencia
-  - Segurança
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta HTTP **`Content-Security-Policy-Report-Only`** permite aos desenvolvedores _web_ experimentar políticas monitorando (mas não forçando) seus efeitos. Esses relatórios de violação consistem de documentos {{Glossary("JSON")}} enviados por uma requisição HTTP `POST` para a URI especificada.
@@ -95,11 +88,11 @@ Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.c
 O HTML de `signup.html` se parece com isto:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     ... Conteúdo ...
@@ -126,14 +119,11 @@ Como você pode ver, o relatório inclui o caminho completo para o recurso viola
 
 ## Especificações
 
-| Especificação                    | Status                       | Comentário         |
-| -------------------------------- | ---------------------------- | ------------------ |
-| {{specName("CSP 3.0")}} | {{Spec2('CSP 3.0')}} | Sem alterações.    |
-| {{specName("CSP 1.1")}} | {{Spec2('CSP 1.1')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Security-Policy-Report-Only")}}
+{{Compat}}
 
 ## Veja também
 

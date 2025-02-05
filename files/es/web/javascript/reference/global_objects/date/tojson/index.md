@@ -1,9 +1,8 @@
 ---
 title: Date.prototype.toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toJSON
 ---
+
 {{JSRef}}
 
 El metodo **`toJSON()`** retorna una representacion de cadena del objeto {{jsxref("Date")}}
@@ -31,7 +30,7 @@ Una representación de cadena de la fecha dada.
 ### Usando `toJSON()`
 
 ```js
-var jsonDate = (new Date()).toJSON();
+var jsonDate = new Date().toJSON();
 var backToDate = new Date(jsonDate);
 
 console.log(jsonDate); //2015-10-26T07:46:36.611Z
@@ -39,13 +38,11 @@ console.log(jsonDate); //2015-10-26T07:46:36.611Z
 
 ## Especificaciones
 
-| Especificación                                                                                           |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.tojson', 'Date.prototype.toJSON')}} |
+{{Specifications}}
 
-## Compatibilidad en buscadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toJSON")}}
+{{Compat}}
 
 ## Ver también
 

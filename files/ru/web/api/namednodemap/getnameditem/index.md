@@ -1,8 +1,8 @@
 ---
 title: NamedNodeMap.getNamedItem()
 slug: Web/API/NamedNodeMap/getNamedItem
-translation_of: Web/API/NamedNodeMap/getNamedItem
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`getNamedItem()`** интерфейса {{domxref ("NamedNodeMap")}} возвращает значение {{domxref ("Attr")}}, соответствующее заданному имени, или значение null, если соответствующий атрибут отсутствует.
@@ -17,6 +17,6 @@ myAttr = attrs.getNamedItem(name)
 
 - `name` имя нужного атрибута
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

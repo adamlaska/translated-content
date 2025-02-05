@@ -1,8 +1,8 @@
 ---
 title: HTMLImageElement.decoding
 slug: Web/API/HTMLImageElement/decoding
-translation_of: Web/API/HTMLImageElement/decoding
 ---
+
 {{APIRef}}
 
 Свойство **`decoding`** интерфейса {{domxref("HTMLImageElement")}} предназначено для указания браузеру, как он должен декодировать изображение.
@@ -26,8 +26,8 @@ imgElem.decoding = refStr;
 
 ```js
 var img = new Image();
-img.decoding = 'sync';
-img.src = 'img/logo.png';
+img.decoding = "sync";
+img.src = "img/logo.png";
 ```
 
 ## Спецификации

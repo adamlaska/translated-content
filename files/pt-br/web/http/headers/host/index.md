@@ -1,8 +1,8 @@
 ---
 title: Host
 slug: Web/HTTP/Headers/Host
-translation_of: Web/HTTP/Headers/Host
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de solicitação de **`Host`** especifica o nome de domínio do servidor (para hospedagem virtual), e (opcionalmente) o número da porta TCP no qual o servidor está escutando.
@@ -45,13 +45,13 @@ Host: developer.mozilla.org
 
 ## Specifications
 
-| Specification                            | Title                                                              |
-| ---------------------------------------- | ------------------------------------------------------------------ |
+| Specification                  | Title                                                              |
+| ------------------------------ | ------------------------------------------------------------------ |
 | {{RFC("7230", "Host", "5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Host")}}
+{{Compat}}
 
 ## See also
 

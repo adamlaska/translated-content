@@ -1,8 +1,8 @@
 ---
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
-translation_of: Web/HTTP/Headers/Content-Type
 ---
+
 {{HTTPSidebar}}O cabeçalho **Content-Type** é utilizado para indicar o {{Glossary("MIME type","tipo de arquivo")}} do recurso.Em respostas, o `Content-Type` diz para o client qual é o tipo de conteúdo que a resposta, de fato, tem. Alguns browsers vão realizar o chamado "MIME Sniffing" em alguns casos e não vão, necessariamente, seguir o valor declarado por este cabeçalho. Para previnir este comportamento é possível definir o cabeçalho {{HTTPHeader("X-Content-Type-Options")}} para o valor `nosniff`.Em requisições, como {{HTTPMethod("POST")}} ou {{HTTPMethod("PUT")}}, o client diz ao servidor qual o tipo de dado que está, de fato, sendo enviado.
 
 <table class="properties">
@@ -36,7 +36,7 @@ Content-Type: multipart/form-data; boundary=something
 ## Diretivas
 
 - `media-type`
-  - : O [MIME type](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types) do recurso ou dado.
+  - : O [MIME type](/pt-BR/docs/Web/HTTP/MIME_types) do recurso ou dado.
 - charset
   - : O encoding da string
 - boundary
@@ -50,8 +50,8 @@ Em uma requisição {{HTTPMethod("POST")}}, resultado de uma submissão de um fo
 
 ```html
 <form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="some text">
-  <input type="file" name="myFile">
+  <input type="text" name="description" value="some text" />
+  <input type="file" name="myFile" />
   <button type="submit">Submit</button>
 </form>
 ```
@@ -77,14 +77,14 @@ Content-Type: text/plain
 
 ## Especificações
 
-| Especificação                                                        | Título                                                        |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                                       | Título                                                        |
+| --------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7233", "Content-Type in multipart", "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests        |
-| {{RFC("7231", "Content-Type", "3.1.1.5")}}             | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{RFC("7231", "Content-Type", "3.1.1.5")}}          | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Type")}}
+{{Compat}}
 
 ## Ver também
 

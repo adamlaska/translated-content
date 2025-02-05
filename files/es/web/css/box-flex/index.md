@@ -1,20 +1,18 @@
 ---
-title: '-moz-box-flex'
+title: "-moz-box-flex"
 slug: Web/CSS/box-flex
-tags:
-  - CSS
-  - No estándar(2)
-  - Referencia CSS
-translation_of: Web/CSS/box-flex
-original_slug: Web/CSS/-moz-box-flex
 ---
-{{CSSRef}}{{warning("Esta propiedad es para controlar parte del modelo de caja XUL. No coincide ni con el antiguo borrador del módulo CSS para el diseño de caja flexibles  '<code>box-flex</code>' (que se basa en esta propiedad) ni con el comportamiento de '<code>-webkit-box-flex</code>' (que se basa en esos borradores).")}}
 
-Ver [Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) para más información acerca de qué usar en vez de esta propiedad.
+{{CSSRef}}
+
+> [!WARNING]
+> Esta propiedad es para controlar parte del modelo de caja XUL. No coincide ni con el antiguo borrador del módulo CSS para el diseño de caja flexibles '`box-flex`' (que se basa en esta propiedad) ni con el comportamiento de '`-webkit-box-flex`' (que se basa en esos borradores).
+
+Ver [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) para más información acerca de qué usar en vez de esta propiedad.
 
 ## Resumen
 
-Las propiedades [CSS](/es/docs/Web/CSS)`-moz-box-flex` y `-webkit-box-flex` especifican cómo una `-moz-box` o `-webkit-box` crecen para rellenar la caja que los contienen, en la dirección del diseño o esquema (layout) de la caja contenedora.Ver [Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) para más información sobre las propiedades de los elementos flexbox.
+Las propiedades [CSS](/es/docs/Web/CSS)`-moz-box-flex` y `-webkit-box-flex` especifican cómo una `-moz-box` o `-webkit-box` crecen para rellenar la caja que los contienen, en la dirección del diseño o esquema (layout) de la caja contenedora.Ver [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) para más información sobre las propiedades de los elementos flexbox.
 
 {{cssinfo}}
 
@@ -47,7 +45,7 @@ Las propiedades [CSS](/es/docs/Web/CSS)`-moz-box-flex` y `-webkit-box-flex` espe
 ## Ejemplos
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Ejemplo de -moz-box-flex</title>
@@ -59,13 +57,13 @@ Las propiedades [CSS](/es/docs/Web/CSS)`-moz-box-flex` y `-webkit-box-flex` espe
         width: 100%;
       }
       div.example > p:nth-child(1) {
-        -moz-box-flex: 1;       /* Mozilla */
-        -webkit-box-flex: 1;    /* WebKit */
+        -moz-box-flex: 1; /* Mozilla */
+        -webkit-box-flex: 1; /* WebKit */
         border: 1px solid black;
       }
       div.example > p:nth-child(2) {
-        -moz-box-flex: 0;       /* Mozilla */
-        -webkit-box-flex: 0;    /* WebKit */
+        -moz-box-flex: 0; /* Mozilla */
+        -webkit-box-flex: 0; /* WebKit */
         border: 1px solid black;
       }
     </style>
@@ -91,17 +89,17 @@ Los elementos que tienen el mismo valor para flex crecen en la misma cantidad en
 
 Si el valor flex se ha establecido usando el atributo flex del elemento, entonces el estilo es ignorado.
 
-Para hacer que los elementos XUL dentro de una caja contenedora tengan el mismo tamaño, fijaremos el atributo `equalsize`de la caja contenedora a `always`. Este atributo no tiene correspondencia con ninguna propiedad CSS.
+Para hacer que los elementos XUL dentro de una caja contenedora tengan el mismo tamaño, fijaremos el atributo `equalsize` de la caja contenedora a `always`. Este atributo no tiene correspondencia con ninguna propiedad CSS.
 
 Un truco para hacer que todos los elementos dentro una caja contenedora tengan el mismo tamaño es darles un tamaño fijo,(por ejemplo `height: 0`), y el mismo valor box-flex mayor que cero a todos (por ejemplo `-moz-box-flex: 1`).
 
 ## Especificaciones
 
-Esta propiedad es una extensión no estándar. Había una [old draft of the CSS3 Flexbox specification](http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) que definía una propiedad`box-flex` , pero ese borrador nunca ha sido sustituido.
+Esta propiedad es una extensión no estándar. Había una [old draft of the CSS3 Flexbox specification](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) que definía una propiedad `box-flex`, pero ese borrador nunca ha sido sustituido.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.box-flex")}}
+{{Compat}}
 
 ## Ver además
 

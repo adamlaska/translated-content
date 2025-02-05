@@ -1,17 +1,8 @@
 ---
 title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/copyWithin
 ---
+
 {{JSRef}}
 
 El método **`copyWithin()`** transfiere una copia plana de una sección a otra dentro del mismo array ( o contexto similar ), sin modificar su propiedad length y lo devuelve.
@@ -65,7 +56,7 @@ En los siguientes ejemplos céntrate en los siguientes aspectos:
 - El tamaño del contexto en el que se aplica no cambia. En los ejemplos el array parte con cinco elementos y siempre mantiene cinco elementos.
 - `start` y `end` trabajan juntos para decidir qué se copiará. Siempre tienen valor por defecto aunque omitas `end`, o `start` y `end`.
 - `target` trabaja solo y debe especificarse. Indica el lugar para en el que la copia comenzará a sobreescribir datos existentes. Debe estar dentro de los límites en el contexto que se aplique.
-- escribir `arr.copyWithin( n )`es lo mismo que `arr.copyWithin( n, 0, arr.length)`
+- escribir `arr.copyWithin( n )` es lo mismo que `arr.copyWithin( n, 0, arr.length)`
 
 ```js
 [1, 2, 3, 4, 5].copyWithin(-2);
@@ -87,7 +78,7 @@ A continuación se aplica en el contexto de un objeto **array-like**:
 - observa que **no** se modifica la propiedad length, a pesar de que se ha introducido una nueva propiedad con clave 0. A esto ser refiere cuando se dice que `copyWithin` es un método **mutador**. ¿Por qué se creó esta nueva propiedad? porque mediante el argumento target se especificó que la copia debía comenzar a partir de un índice que ¡¡no existía!!
 
 ```js
-[].copyWithin.call({length: 5, 3: 1}, 0, 3);
+[].copyWithin.call({ length: 5, 3: 1 }, 0, 3);
 // {0: 1, 3: 1, length: 5}
 ```
 
@@ -110,46 +101,48 @@ i32a.copyWithin(0, 2);
 ```js
 if (!Array.prototype.copyWithin) {
   Array.prototype.copyWithin =
-  // Array: Number[, Number[, Number]]
-  function copyWithin(target, start, stop) {
-    var positiveT = target >= 0,
+    // Array: Number[, Number[, Number]]
+    function copyWithin(target, start, stop) {
+      var positiveT = target >= 0,
         positiveS = (start = start | 0) >= 0,
-        length    = this.length,
-        zero      = 0,
-        r         = function() {return ((+new Date) * Math.random()).toString(36)},
+        length = this.length,
+        zero = 0,
+        r = function () {
+          return (+new Date() * Math.random()).toString(36);
+        },
         delimiter = "\b" + r() + "-" + r() + "-" + r() + "\b",
         hold;
 
-    stop = stop || this.length;
-    hold = this.slice.apply(this,
-      positiveT?
-        [start, stop]:
-      positiveS?
-        [start, -target]:
-      [start])
-    .join(delimiter);
+      stop = stop || this.length;
+      hold = this.slice
+        .apply(
+          this,
+          positiveT ? [start, stop] : positiveS ? [start, -target] : [start],
+        )
+        .join(delimiter);
 
-    return this.splice.apply(this,
-      positiveT?
-        [target, stop - start, hold]:
-      positiveS?
-        [target, stop, hold]:
-      [target, start, hold]),
-            this.join(delimiter).split(delimiter).slice(zero, length);
-  }
+      return (
+        this.splice.apply(
+          this,
+          positiveT
+            ? [target, stop - start, hold]
+            : positiveS
+              ? [target, stop, hold]
+              : [target, start, hold],
+        ),
+        this.join(delimiter).split(delimiter).slice(zero, length)
+      );
+    };
 }
 ```
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                       | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-array.prototype.copyWithin', 'Array.prototype.copyWithin')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-array.prototype.copyWithin', 'Array.prototype.copyWithin')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.copyWithin")}}
+{{Compat}}
 
 ## Ver también
 

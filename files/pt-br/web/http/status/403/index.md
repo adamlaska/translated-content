@@ -1,8 +1,8 @@
 ---
 title: 403 Forbidden
 slug: Web/HTTP/Status/403
-translation_of: Web/HTTP/Status/403
 ---
+
 {{HTTPSidebar}}
 
 O código de resposta de status de erro do cliente HTTP **`403 Forbidden`** indica que o servidor entendeu o pedido, mas se recusa a autorizá-lo.
@@ -24,13 +24,13 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Especificações
 
-| Especificação                                            | Título                         |
-| -------------------------------------------------------- | ------------------------------ |
+| Especificação                             | Título                         |
+| ----------------------------------------- | ------------------------------ |
 | {{RFC("7231", "403 Proibido" , "6.5.3")}} | HTTP/1.1: Semântica e Conteúdo |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.403")}}
+{{Compat}}
 
 ## Veja também
 

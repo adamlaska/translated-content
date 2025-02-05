@@ -25,20 +25,18 @@ new FinalizationRegistry([callback]);
 コールバックを渡してレジストリを生成します。
 
 ```js
-const registry = new FinalizationRegistry(heldValue => {
+const registry = new FinalizationRegistry((heldValue) => {
   // ....
 });
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WeakRefs', '#sec-finalization-registry-constructor', 'FinalizationRegistry constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.FinalizationRegistry.FinalizationRegistry")}}
+{{Compat}}
 
 ## 関連情報
 

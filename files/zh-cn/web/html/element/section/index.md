@@ -3,7 +3,7 @@ title: <section>
 slug: Web/HTML/Element/section
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML \<section\> 元素**表示 HTML 文档中一个通用独立章节，它没有更具体的语义元素来表示。一般来说会包含一个标题。
 
@@ -23,7 +23,7 @@ slug: Web/HTML/Element/section
     </tr>
     <tr>
       <th scope="row">标签省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
     </tr>
     <tr>
       <th scope="row">允许的父元素</th>
@@ -42,15 +42,15 @@ slug: Web/HTML/Element/section
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
       <td>
-        {{ARIARole("alert")}}, {{ARIARole("alertdialog")}},
-        {{ARIARole("application")}}, {{ARIARole("banner")}},
-        {{ARIARole("complementary")}},
-        {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}},
-        {{ARIARole("document")}}, {{ARIARole("feed")}},
-        {{ARIARole("log")}}, {{ARIARole("main")}},
-        {{ARIARole("marquee")}}, {{ARIARole("navigation")}},
-        {{ARIARole("search")}}, {{ARIARole("status")}},
-        {{ARIARole("tabpanel")}}
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/alert_role"><code>alert</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a>,
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role"><code>banner</code></a>,
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/complementary_role"><code>complementary</code></a>,
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/contentinfo_role"><code>contentinfo</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/dialog_role"><code>dialog</code></a>,
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/feed_role"><code>feed</code></a>,
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/log_role"><code>log</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/main_role"><code>main</code></a>,
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/marquee_role"><code>marquee</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/navigation_role"><code>navigation</code></a>,
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/status_role"><code>status</code></a>,
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tabpanel_role"><code>tabpanel</code></a>
       </td>
     </tr>
     <tr>
@@ -71,7 +71,7 @@ slug: Web/HTML/Element/section
 注意事项：
 
 - 当该元素的内容可以作为一个独立的作品在多个媒体上发表，使用 {{HTMLElement("article")}} 是一个更好的选择。
-- 当内容包含代表与主要内容一同展示的有用的切入信息，但不是直接的一部分（如相关链接，作者简历等），请使用 {{HTMLElement("main")}}。
+- 当内容包含代表与主要内容一同展示的有用的切入信息，但不是直接的一部分（如相关链接，作者简历等），请使用 {{HTMLElement("aside")}}。
 - 当内容代表文档中的主要内容区域，请使用 {{HTMLElement("main")}}。
 - 将该元素作为一个样式包装时，请使用 {{HTMLElement("div")}}。一般来说，`<section>` 应该出现在文档大纲中。
 

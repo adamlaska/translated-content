@@ -1,8 +1,8 @@
 ---
-title: ':focus-visible'
+title: ":focus-visible"
 slug: Web/CSS/:focus-visible
-translation_of: Web/CSS/:focus-visible
 ---
+
 {{CSSRef}}
 
 La pseudo-clase **`:focus-visible`** se aplica mientras un elemento coincide con la pseudo-clase {{CSSxRef(":focus")}} y el UA ([Agente de Usuario](/es/docs/Glossary/User_agent)) determina mediante heurística que el foco debe hacerse evidente en el elemento. (Muchos navegdores muestras un "anillo de enfoque" por defecto en este caso.
@@ -22,16 +22,17 @@ Nótese que Firefox soporta una funcionalidad similar a través de una pseudo-cl
 En este ejemplo, el selector `:focus-visible` usa el comportamiento del UA para deteminar cuándo emparejar. Compara lo que sucede cuando haces clic en los diferentes controles con un ratón con lo que sucede cuando los atraviesas con el teclado. Note la diferencia de comportamiento con respecto a los elementos con estilo `:focus`.
 
 ```html
-<input value="Default styles"><br>
-<button>Default styles</button><br>
-<input class="focus-only" value=":focus only"><br>
-<button class="focus-only">:focus only</button><br>
-<input class="focus-visible-only" value=":focus-visible only"><br>
+<input value="Default styles" /><br />
+<button>Default styles</button><br />
+<input class="focus-only" value=":focus only" /><br />
+<button class="focus-only">:focus only</button><br />
+<input class="focus-visible-only" value=":focus-visible only" /><br />
 <button class="focus-visible-only">:focus-visible only</button>
 ```
 
 ```css
-input, button {
+input,
+button {
   margin: 10px;
 }
 
@@ -102,13 +103,11 @@ Puede que no sea obvio por qué el indicador de enfoque aparece y desaparece si 
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                               | Comentario          |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS4 Selectors", "#the-focus-visible-pseudo", ":focus-visible")}} | {{Spec2("CSS4 Selectors")}} | Initial definition. |
+{{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.focus-visible")}}
+{{Compat}}
 
 ## Vea también
 

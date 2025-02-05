@@ -1,17 +1,8 @@
 ---
 title: String.prototype.toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-tags:
-  - Caixa alta
-  - JavaScript
-  - Letras maúsculas
-  - Método(2)
-  - Protótipo(2)
-  - Referência(2)
-  - String
-  - toUpperCase()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 ---
+
 {{JSRef}}
 
 O método `toUpperCase()` retorna o valor da string original convertido em letras maiúsculas.
@@ -40,21 +31,16 @@ O método `toUpperCase()` retorna o valor da string convertido para letras maiú
 ### Uso básico
 
 ```js
-console.log('alfabeto'.toUpperCase()); // 'ALFABETO'
+console.log("alfabeto".toUpperCase()); // 'ALFABETO'
 ```
 
 ## Especificações
 
-| Especificação                                                                                                                | Status                       | Comentário                                         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.5.4.18', 'String.prototype.toUpperCase')}}                             | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}}         | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.toUpperCase")}}
+{{Compat}}
 
 ## Veja também
 

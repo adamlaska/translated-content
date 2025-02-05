@@ -21,13 +21,11 @@ SVG の DOM 経由での {{SVGElement("font")}} 要素の属性へのオブジ�
 
 ## 仕様
 
-| Specification                                                                                            | Status                   | Comment            |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName("SVG1.1", "fonts.html#InterfaceSVGFontElement", "SVGFontElement")}} | {{Spec2("SVG1.1")}} | Initial definition |
+{{Specifications}}
 
 ## ブラウザ実装状況
 
-{{Compat("api.SVGFontElement")}}
+{{Compat}}
 
 ## 関連情報
 

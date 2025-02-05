@@ -1,13 +1,9 @@
 ---
 title: concat
 slug: Web/EXSLT/str/concat
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/str/concat
 ---
-{{XsltRef}}
+
+{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
 
 `str:concat()` devuelve una cadena que contiene todos los valores cadena de un conjunto de nodos (node-set) concatenados juntos.
 

@@ -1,12 +1,8 @@
 ---
 title: Location
 slug: Web/API/Location
-tags:
-  - API
-  - Interface
-  - Location
-translation_of: Web/API/Location
 ---
+
 {{APIRef("HTML DOM")}}
 
 ## Resumo
@@ -55,14 +51,11 @@ _A inteface `Location` não herda nenhum método, mas implementa os métodos de 
 
 ## Especificações
 
-| Especificação                                                                                            | Status                           | Comentário                                                 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "history.html#the-location-interface", "Location")}} | {{Spec2('HTML WHATWG')}} | Nenhuma mudança a partir {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Location")}} | {{Spec2('HTML5 W3C')}}     | Definição inicial.                                         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Location")}}
+{{Compat}}
 
 ## Veja também
 

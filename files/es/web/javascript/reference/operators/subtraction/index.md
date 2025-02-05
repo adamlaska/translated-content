@@ -1,11 +1,8 @@
 ---
 title: Sustracción (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Operators/Subtraction
-original_slug: Web/JavaScript/Referencia/Operadores/Sustracción
 ---
+
 {{jsSidebar("Operators")}}
 
 El operador de sustracción (`-`) sustrae dos operandos, produciendo su diferencia.
@@ -23,25 +20,23 @@ Operator: x - y
 ### Sustracción con números
 
 ```js
-5 - 3     // 2
-3 - 5     // -2
+5 - 3; // 2
+3 - 5; // -2
 ```
 
 ### Sustracción de no numéricos
 
 ```js
-'foo' - 3 // NaN
+"foo" - 3; // NaN
 ```
 
 ## Especificaciones
 
-| Specification                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-subtraction-operator-minus', 'Subtraction operator')}} |
+{{Specifications}}
 
-## Compatibilidad entre exploradores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.subtraction")}}
+{{Compat}}
 
 ## También revisa
 

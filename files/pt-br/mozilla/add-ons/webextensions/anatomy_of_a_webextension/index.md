@@ -1,28 +1,24 @@
 ---
 title: Anatomia de uma WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-tags:
-  - Extensões
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-original_slug: Mozilla/Add-ons/WebExtensions/Anatomia_de_uma_WebExtension
 ---
+
 Uma extensão consiste de uma coleção de arquivos, empacotados para distribuição e instalação. Nesse artigo vamos falar rapidamente sobre os arquivos que podem estar presentes em uma extensão.
 
-Toda extensão contém um arquivo chamado ["manifest.json"](/pt-BR/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#manifest.json). Ele pode conter ponteiros para quatro outros tipos de arquivos:
+Toda extensão contém um arquivo chamado ["manifest.json"](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#manifest.json). Ele pode conter ponteiros para quatro outros tipos de arquivos:
 
-- [background pages](/pt-BR/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages): implementação de lógica de longa duração
-- [content scripts](/pt-BR/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts): executado no contexto de páginas web
-- [browser action files](/pt-BR/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions): implementação de botões na toolbar
-- [web accessible resources](/pt-BR/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Web_accessible_resources): torna o conteúdo do pacote acessível a páginas web e scripts de conteúdo
+- [background pages](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_pages): implementação de lógica de longa duração
+- [content scripts](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts): executado no contexto de páginas web
+- [browser action files](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions): implementação de botões na toolbar
+- [web accessible resources](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#web_accessible_resources): torna o conteúdo do pacote acessível a páginas web e scripts de conteúdo
 
-![](https://mdn.mozillademos.org/files/11465/webextension-anatomy.svg)
+![](webextension-anatomy.svg)
 
 ## manifest.json
 
 Esse é o único arquivo que está presente em toda WebExtension. Ele contém metadados básicos sobre a extensão, tais como o nome, a versão e as permissões que ela necessita. Também provê ponteiros para outros arquivos na extensão.
 
-Para mais detalhes sobre o arquivo "manifest.json", acesse a [página de referência.](/pt-BR/Add-ons/WebExtensions/manifest.json)
+Para mais detalhes sobre o arquivo "manifest.json", acesse a [página de referência.](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
 
 ## Background pages
 
@@ -93,11 +89,11 @@ Para injetar os scripts na página via programação (por exemplo, quando o usu�
 // background.js
 
 chrome.tabs.executeScript({
-  file: "my-script.js"
+  file: "my-script.js",
 });
 ```
 
-Aprenda mais sobre scripts de conteúdo lendo sua [documentação](/pt-BR/Add-ons/SDK/Guides/Content_Scripts).
+Aprenda mais sobre scripts de conteúdo lendo sua [documentação](/pt-BR/docs/Mozilla/Add-ons/SDK/Guides/Content_Scripts).
 
 ## Ações de navegador
 

@@ -1,12 +1,10 @@
 ---
 title: border-width
 slug: Web/CSS/border-width
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/border-width
 ---
+
+{{CSSRef}}
+
 ### Resumen
 
 La propiedad **`border-width`** define el ancho del borde.
@@ -47,7 +45,7 @@ La propiedad **`border-width`** define el ancho del borde.
 
 ### Ejemplos
 
-[V](/samples/cssref/border.html)er el ejemplo en vivo
+[V](https://mdn.dev/archives/media/samples/cssref/border.html)er el ejemplo en vivo
 
 ```
 element {
@@ -59,18 +57,11 @@ element {
 
 ### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#border-width)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/box.html#border-width-properties)
-- [CSS 3](http://www.w3.org/TR/css3-background/#border-width)
+{{Specifications}}
 
-### Compatibilidad
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 4.0            |
-| Firefox           | 1.0            |
-| Netscape          |                |
-| Opera             | 3.5            |
+{{Compat}}
 
 ### Ver también
 

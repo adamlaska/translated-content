@@ -1,12 +1,8 @@
 ---
 title: Document.URL
 slug: Web/API/Document/URL
-tags:
-  - API
-  - Document
-  - Property
-translation_of: Web/API/Document/URL
 ---
+
 {{APIRef("DOM")}}
 
 Возвращает строку URL документа HTML.
@@ -29,7 +25,7 @@ document.getElementById("url").textContent = document.URL;
 
 ```html
 <p id="urlText">
-  URL:<br/>
+  URL:<br />
   <span id="url">URL goes here</span>
 </p>
 ```
@@ -42,7 +38,7 @@ document.getElementById("url").textContent = document.URL;
 
 {{Specifications}}
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}
 

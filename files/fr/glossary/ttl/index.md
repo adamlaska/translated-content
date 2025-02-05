@@ -1,12 +1,10 @@
 ---
 title: TTL
 slug: Glossary/TTL
-tags:
-  - Glossaire
-  - Infrastructure
-translation_of: Glossary/TTL
-original_slug: Glossaire/TTL
 ---
+
+{{GlossarySidebar}}
+
 TTL peut se référer soit à :
 
 - la durée de vie d'un paquet dans un réseau (avant de pouvoir être libéré)

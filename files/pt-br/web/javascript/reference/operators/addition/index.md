@@ -1,9 +1,6 @@
 ---
 title: Adição (+)
 slug: Web/JavaScript/Reference/Operators/Addition
-browser-compat: javascript.operators.addition
-translation_of: Web/JavaScript/Reference/Operators/Addition
-
 ---
 
 {{jsSidebar("Operators")}}
@@ -43,22 +40,22 @@ Você é aconselhado a não usar "" + x para executar a [coerção de string](/p
 
 ```js
 // Number + Number -> adição
-1 + 2 // 3
+1 + 2; // 3
 // Boolean + Number -> adição
-true + 1 // 2
+true + 1; // 2
 // Boolean + Boolean -> adição
-false + false // 0
+false + false; // 0
 ```
 
 ### Concatenação de String
 
 ```js
 // String + String -> concatenação
-'foo' + 'bar' // "foobar"
+"foo" + "bar"; // "foobar"
 // Number + String -> concatenação
-5 + 'foo' // "5foo"
+5 + "foo"; // "5foo"
 // String + Boolean -> concatenação
-'foo' + false // "foofalse"
+"foo" + false; // "foofalse"
 ```
 
 ## Especificações

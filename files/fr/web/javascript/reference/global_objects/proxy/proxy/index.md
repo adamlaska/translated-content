@@ -1,19 +1,11 @@
 ---
 title: Gestionnaire de Proxy (handler)
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
-translation_of_original: Web/JavaScript/Reference/Global_Objects/Proxy/handler
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler
 ---
 
 {{JSRef}}
 
-L'objet gestionnaire d'un proxy est un objet qui contient les trappes de captures (_traps_) pour le  {{jsxref("Proxy", "proxy", "", 1)}}.
+L'objet gestionnaire d'un proxy est un objet qui contient les trappes de captures (_traps_) pour le {{jsxref("Proxy", "proxy", "", 1)}}.
 
 ## Méthodes
 
@@ -46,7 +38,7 @@ Toutes ces trappes sont optionnelles. Si une trappe n'a pas été définie, le c
 - {{jsxref("Objets_globaux/Proxy/handler/construct", "handler.construct()")}}
   - : Une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}.
 
-Certaines trappes non standards sont désormais [obsolètes et ont été supprimées](/fr/docs/JavaScript/Reference/Annexes/Fonctionnalités_dépréciées#Proxy).
+Certaines trappes non standards sont désormais [obsolètes et ont été supprimées](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#proxy).
 
 ## Spécifications
 

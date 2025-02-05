@@ -46,10 +46,8 @@ if (buf.length == 1) {
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("HTML WHATWG", "#dom-timeranges-end", "TimeRanges.end()")}} | {{Spec2("HTML WHATWG")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.TimeRanges.end")}}
+{{Compat}}

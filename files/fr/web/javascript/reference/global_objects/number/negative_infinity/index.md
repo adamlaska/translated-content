@@ -1,13 +1,6 @@
 ---
 title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/NEGATIVE_INFINITY
 ---
 
 {{JSRef}}
@@ -26,8 +19,8 @@ Cette valeur se comporte différemment de l'infini mathématique :
 - Toute valeur négative, y compris `NEGATIVE_INFINITY`, multipliée par `NEGATIVE_INFINITY` sera égale à `POSITIVE_INFINITY`.
 - Zéro multiplié par `NEGATIVE_INFINITY` sera égal à {{jsxref("NaN")}}.
 - NaN multiplié par `NEGATIVE_INFINITY` sera égal à `NaN`.
-- `NEGATIVE_INFINITY`, divisé par n'importe quelle valeur négative, à l'exception de  `NEGATIVE_INFINITY`, sera égal à `POSITIVE_INFINITY`.
-- `NEGATIVE_INFINITY`, divisé par n'importe quelle valeur positive à l'exception de  `POSITIVE_INFINITY`, sera égal à `NEGATIVE_INFINITY`.
+- `NEGATIVE_INFINITY`, divisé par n'importe quelle valeur négative, à l'exception de `NEGATIVE_INFINITY`, sera égal à `POSITIVE_INFINITY`.
+- `NEGATIVE_INFINITY`, divisé par n'importe quelle valeur positive à l'exception de `POSITIVE_INFINITY`, sera égal à `NEGATIVE_INFINITY`.
 - `NEGATIVE_INFINITY`, divisé par `NEGATIVE_INFINITY` ou `POSITIVE_INFINITY`, sera égal à `NaN`.
 - Tout nombre positif divisé par `NEGATIVE_INFINITY` sera égal au zéro négatif.
 - Tout nombre négatif divisé par `NEGATIVE_INFINITY` sera égal au zéro positif.
@@ -41,10 +34,10 @@ La propriété `Number.NEGATIVE_INFINITY` peut être utilisée pour indiquer une
 Dans l'exemple qui suit, on affecte une variable inférieure à la valeur numérique minimale à la variable `petitNombre`. Lorsque l'instruction conditionnelle `if` est exécutée, `petitNombre` possède la valeur "`-Infinity`", on modifie donc la valeur de `petitNombre` afin qu'il puisse être géré.
 
 ```js
-var petitNombre = (-Number.MAX_VALUE) * 2
+var petitNombre = -Number.MAX_VALUE * 2;
 
 if (petitNombre === Number.NEGATIVE_INFINITY) {
- petitNombre = renvoyerUneValeurFinie();
+  petitNombre = renvoyerUneValeurFinie();
 }
 ```
 

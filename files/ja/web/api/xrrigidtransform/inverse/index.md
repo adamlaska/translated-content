@@ -33,8 +33,11 @@ for (let view of pose.view) {
   /* ... */
 
   mat4.multiply(modelViewMatrix, view.transform.inverse.matrix, objectMatrix);
-  gl.uniformMatrix4fv(programInfo.uniformLocations.modelViewMatrix,
-                      false, modelViewMatrix);
+  gl.uniformMatrix4fv(
+    programInfo.uniformLocations.modelViewMatrix,
+    false,
+    modelViewMatrix,
+  );
 
   /* ... */
 }
@@ -44,10 +47,8 @@ for (let view of pose.view) {
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                     | コメント |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName("WebXR","#dom-xrrigidtransform-inverse","XRRigidTransform.inverse")}} | {{Spec2("WebXR")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRRigidTransform.inverse")}}
+{{Compat}}

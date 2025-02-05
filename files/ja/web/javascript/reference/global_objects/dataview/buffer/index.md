@@ -25,13 +25,11 @@ dataview.buffer; // ArrayBuffer { byteLength: 8 }
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-get-dataview.prototype.buffer', 'DataView.prototype.buffer')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.DataView.buffer")}}
+{{Compat}}
 
 ## 関連情報
 

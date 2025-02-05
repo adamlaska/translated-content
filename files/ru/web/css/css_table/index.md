@@ -1,13 +1,8 @@
 ---
 title: CSS Table
-slug: Web/CSS/CSS_Table
-tags:
-  - CSS
-  - CSS Reference
-  - CSS Table
-  - Overview
-translation_of: Web/CSS/CSS_Table
+slug: Web/CSS/CSS_table
 ---
+
 {{CSSRef}}
 
 **CSS Table** - модуль в CSS, который определяет, как размещать данные в таблицах.
@@ -29,6 +24,4 @@ _Нет._
 
 ## Спецификации
 
-| Specification                                    | Status                   | Comment            |
-| ------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName("CSS2.1", "tables.html")}} | {{Spec2("CSS2.1")}} | Initial definition |
+{{Specifications}}

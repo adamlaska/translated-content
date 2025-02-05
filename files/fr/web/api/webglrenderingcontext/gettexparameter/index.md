@@ -1,19 +1,11 @@
 ---
 title: WebGLRenderingContext.getTexParameter()
 slug: Web/API/WebGLRenderingContext/getTexParameter
-tags:
-  - API
-  - Méthode
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/getTexParameter
 ---
 
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.getTexParameter()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) retourne des informations concernant la texture indiquée.
+La méthode **`WebGLRenderingContext.getTexParameter()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) retourne des informations concernant la texture indiquée.
 
 ## Syntaxe
 
@@ -166,7 +158,7 @@ quelconque gl.getTexParameter(cible, nomp);
           <td><code>gl.TEXTURE_WRAP_R</code></td>
           <td>{{domxref("GLenum")}}</td>
           <td>
-            Fonction d'emballage pour la coordonnée de texture  <code>r</code>
+            Fonction d'emballage pour la coordonnée de texture <code>r</code>
           </td>
           <td>
             <code>gl.REPEAT</code> (valeur par défaut),

@@ -1,6 +1,6 @@
 ---
 title: CSS カウンタースタイル
-slug: Web/CSS/CSS_Counter_Styles
+slug: Web/CSS/CSS_counter_styles
 ---
 
 {{CSSRef}}
@@ -30,25 +30,23 @@ slug: Web/CSS/CSS_Counter_Styles
 
 ## ガイド
 
-- [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
+- [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
   - : カウンターを使用して HTML 要素に番号を振る方法や、複雑なカウンターを実行する方法を説明します。
 
 ## 仕様書
 
-| 仕様書                              | 状態                             | 備考     |
-| ----------------------------------- | -------------------------------- | -------- |
-| {{SpecName('CSS3 Counter Styles')}} | {{Spec2('CSS3 Counter Styles')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
 ### `@counter-style` ルール
 
-{{Compat("css.at-rules.counter-style")}}
+{{Compat}}
 
 ### `counter-increment` プロパティ
 
-{{Compat("css.properties.counter-increment")}}
+{{Compat}}
 
 ### `counter-reset` プロパティ
 
-{{Compat("css.properties.counter-reset")}}
+{{Compat}}

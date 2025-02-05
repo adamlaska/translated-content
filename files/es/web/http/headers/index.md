@@ -1,15 +1,9 @@
 ---
 title: HTTP headers
 slug: Web/HTTP/Headers
-tags:
-  - HTTP
-  - Headers
-  - Networking
-  - Reference
-  - TopicStub
-translation_of: Web/HTTP/Headers
 ---
-{{HTTPSidebar}}Las cabeceras (en inglés _headers_) HTTP permiten al cliente y al servidor enviar información adicional junto a una petición o respuesta. Una cabecera de petición esta compuesta por su nombre (no sensible a las mayusculas) seguido de dos puntos '`:`', y a continuación su valor (sin saltos de línea). Los espacios en blanco a la izquierda del valor son ignoradosSe pueden agregar cabeceras propietarias personalizadas usando el prefijo 'X-', pero esta convención se encuentra desfasada desde Julio de 2012, debido a los inconvenientes causados cuando se estandarizaron campos no estandar en el [RFC 6648](https://tools.ietf.org/html/rfc6648); otras están listadas en un [registro IANA](http://www.iana.org/assignments/message-headers/perm-headers.html), cuyo contenido original fue definido en el [RFC 4229](http://tools.ietf.org/html/rfc4229), IANA tambien mantiene un [registro de propuestas para nuevas cabeceras HTTP](http://www.iana.org/assignments/message-headers/prov-headers.html)
+
+{{HTTPSidebar}}Las cabeceras (en inglés _headers_) HTTP permiten al cliente y al servidor enviar información adicional junto a una petición o respuesta. Una cabecera de petición esta compuesta por su nombre (no sensible a las mayusculas) seguido de dos puntos '`:`', y a continuación su valor (sin saltos de línea). Los espacios en blanco a la izquierda del valor son ignoradosSe pueden agregar cabeceras propietarias personalizadas usando el prefijo 'X-', pero esta convención se encuentra desfasada desde Julio de 2012, debido a los inconvenientes causados cuando se estandarizaron campos no estandar en el [RFC 6648](https://tools.ietf.org/html/rfc6648); otras están listadas en un [registro IANA](https://www.iana.org/assignments/message-headers/perm-headers.html), cuyo contenido original fue definido en el [RFC 4229](https://tools.ietf.org/html/rfc4229), IANA tambien mantiene un [registro de propuestas para nuevas cabeceras HTTP](https://www.iana.org/assignments/message-headers/prov-headers.html)
 
 Las Cabeceras pueden ser agrupadas de acuerdo a sus contextos:
 
@@ -118,9 +112,9 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
   - : Contiene [HTTP cookies](/es/docs/Web/HTTP/Cookies) enviadas previamente por el servidor con la cabecera {{HTTPHeader("Set-Cookie")}} .
 - {{HTTPHeader("Set-Cookie")}}
   - : Envia cookies desde el servidor al usuario.
-- {{HTTPHeader("Cookie2")}} {{obsolete_inline}}
+- {{HTTPHeader("Cookie2")}} {{deprecated_inline}}
   - : Habitualmente contenía una cookie HTTP, enviada previamente por el servidor con la cabecera {{HTTPHeader("Set-Cookie2")}} , pero ha quedado obsoleta por la especificación. Utiliza en su lugar {{HTTPHeader("Cookie")}}.
-- {{HTTPHeader("Set-Cookie2")}} {{obsolete_inline}}
+- {{HTTPHeader("Set-Cookie2")}} {{deprecated_inline}}
   - : Se utilizaba para enviar cookies desde el servidor al usuario, but has been obsoleted by the specification. pero ha quedado obsoleta por la especificación. Utiliza en su lugar {{HTTPHeader("Set-Cookie")}} .
 
 ## CORS
@@ -144,7 +138,7 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
 - {{HTTPHeader("Origin")}}
   - : Indica el punto de origen de una petición de recogida.
 - {{HTTPHeader("Timing-Allow-Origin")}}
-  - : Especifica los origines que tienen permitido ver los valores de los atributos obtenidos mediante las características de la [Resource Timing API](/es/docs/Web/API/Resource_Timing_API), que de otra forma serían reportados como cero debido a los orígenes cruzados.
+  - : Especifica los origines que tienen permitido ver los valores de los atributos obtenidos mediante las características de la [Resource Timing API](/es/docs/Web/API/Performance_API/Resource_timing), que de otra forma serían reportados como cero debido a los orígenes cruzados.
 
 ## Cabeceras sin seguimiento
 
@@ -295,7 +289,7 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
 - {{HTTPHeader("Server-Timing")}}
   - : Comunica una o mas métricas y descripciones para un dado ciclo de petición-respuesta.
 - {{HTTPHeader("SourceMap")}}
-  - : Enlaza el código generado a un [source map](/es/docs/Tools/Debugger/How_to/Use_a_source_map).
+  - : Enlaza el código generado a un [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html).
 - {{HTTPHeader("Upgrade")}}
   - : Éste es un Estándar de Internet Propuesto. Para leer una guía inclusiva de todos los Estándares de Internet Oficiales y Propuestos con información detallada sobre cada uno de ellos, [visita esta referencia de Estándares de Internet,](https://www.rfc-editor.org/standards) que se actualiza de forma diaria. El documento relevante de la RFC para la Actualuzación sobre los Estándares de Cabeceras es el [RFC 7230, sección 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). El estándar establece reglas para la actualización o cambios a un protocolo doferente en el cliente, servidor, o protocolo de conexiones actuales.Por ejemplo, este estándar de cabecera permite que un cliente cambie de un protocolo HTTP 1.1 al HTTP 2.0, asumiendo que el servidor decida reconocer e implementar la cabecera de Actualización. Ninguna de las partes involucradas está obligada a aceptar los cambios implementados por el campo de la Cabecera de Actualización {{HTTPHeader("Upgrade")}}. Puede usarse tanto para cabeceras de cliente como para las del servidor. Si se especifica la cabecera de Actualización, el emisor también DEBE enviar el campo de cabecera de Conexión con la opción de actualización especificada. Para más detalles sobre dicho campo, por favor revisar la[sección 6.1 de la ya mencionada RFC](https://tools.ietf.org/html/rfc7230#section-6.1).
 - {{HTTPHeader("Vary")}}

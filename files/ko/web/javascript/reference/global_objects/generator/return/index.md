@@ -1,16 +1,8 @@
 ---
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/return
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Generator.return
 ---
+
 {{JSRef}}
 
 제너레이터의 **`return()`** 메서드는 현재 중단된 위치에서 제너레이터 본체에 리턴 문이 삽입 된 것처럼 작동합니다. 이는 [`try...finally`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) 블록을 사용하여 제너레이터를 정리 할 수 있도록 합니다.
@@ -18,8 +10,9 @@ browser-compat: javascript.builtins.Generator.return
 ## 구문
 
 <!-- We don't usually add the "generatorObject" subject for methods. However, it is necessary here, because "return" is a keyword, so otherwise it's invalid syntax. -->
+
 ```js
-generatorObject.return(value)
+generatorObject.return(value);
 ```
 
 ## 매개변수
@@ -57,14 +50,14 @@ function* gen() {
 
 const g = gen();
 
-g.next();        // { value: 1, done: false }
-g.return('foo'); // { value: "foo", done: true }
-g.next();        // { value: undefined, done: true }
+g.next(); // { value: 1, done: false }
+g.return("foo"); // { value: "foo", done: true }
+g.next(); // { value: undefined, done: true }
 ```
 
 제너레이터가 이미 "완료" 상태 일때 `return(value)`가 호출되면 제너레이터는 "완료" 상태를 유지합니다.
 
-인수를 지정하지 않으면 반환된 객체의 `value` 속성은 `undefined`가 됩니다. 인수가 제공되면 `yield` 식이 `try...finally`로 감싸지지 않는 한 반환된 객체의 `value` 속성은  해당 값이 됩니다.
+인수를 지정하지 않으면 반환된 객체의 `value` 속성은 `undefined`가 됩니다. 인수가 제공되면 `yield` 식이 `try...finally`로 감싸지지 않는 한 반환된 객체의 `value` 속성은 해당 값이 됩니다.
 
 ```js
 function* gen() {
@@ -95,7 +88,7 @@ function* gen() {
     yield 2;
     yield 3;
   } finally {
-    yield 'cleanup';
+    yield "cleanup";
   }
 }
 
@@ -103,20 +96,20 @@ const g1 = gen();
 g1.next(); // { value: 1, done: false }
 
 // try...finally 전에 실행이 일시 중단됩니다.
-g1.return('early return'); // { value: 'early return', done: true }
+g1.return("early return"); // { value: 'early return', done: true }
 
 const g2 = gen();
 g2.next(); // { value: 1, done: false }
 g2.next(); // { value: 2, done: false }
 
 // try...finally 내에서 실행이 일시 중단됩니다.
-g2.return('early return'); // { value: 'cleanup', done: false }
+g2.return("early return"); // { value: 'cleanup', done: false }
 
 // 완료 값은 유지됩니다.
 g2.next(); // { value: 'early return', done: true }
 
 // 제너레이터가 완료된 상태입니다.
-g2.return('not so early return'); // { value: 'not so early return', done: true }
+g2.return("not so early return"); // { value: 'not so early return', done: true }
 ```
 
 ## 명세서

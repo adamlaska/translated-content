@@ -1,14 +1,8 @@
 ---
 title: Array.prototype.unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/unshift
 ---
+
 {{JSRef}}
 
 **`unshift()`** 메서드는 새로운 요소를 배열의 맨 앞쪽에 추가하고, 새로운 길이를 반환합니다.
@@ -18,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/unshift
 ## 구문
 
 ```js
-    arr.unshift([...elementN])
+arr.unshift([...elementN]);
 ```
 
 ### 매개변수

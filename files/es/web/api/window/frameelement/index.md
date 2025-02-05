@@ -1,8 +1,8 @@
 ---
 title: Window.frameElement
 slug: Web/API/Window/frameElement
-translation_of: Web/API/Window/frameElement
 ---
+
 {{ ApiRef }}
 
 Retorna el elemento (como es {{HTMLElement("iframe")}} ó {{HTMLElement("object")}}) en el cual la ventana está incrustada o `null` si el elemento es bien de nivel superior (top-level) o bien está inrustada en un documento con un origen de diferente; esto es, en situaciones de origen cruzado.
@@ -15,7 +15,8 @@ frameEl = window.frameElement;
 
 - `frame El` es el elemento dentro del cual está empotrada la ventana. Si la ventana no está incrustada dentro de otro documento, o si el documento en el que está empotrada tiene un origen diferente (como procede de un dominio diferente), este valor será `null`.
 
-> **Nota:** A pesar del nombre de esta propiedad, funciona para documentos empotrados en cualquier forma o método de incrustación, incluyendo {{HTMLElement("object")}}, {{HTMLElement("iframe")}}, or {{HTMLElement("embed")}}.
+> [!NOTE]
+> A pesar del nombre de esta propiedad, funciona para documentos empotrados en cualquier forma o método de incrustación, incluyendo {{HTMLElement("object")}}, {{HTMLElement("iframe")}}, or {{HTMLElement("embed")}}.
 
 ## Ejemplo
 
@@ -23,19 +24,17 @@ frameEl = window.frameElement;
 var frameEl = window.frameElement;
 // Si estamos empotrados, cambia la URL de elemento contenedor to 'http://mozilla.org/'
 if (frameEl) {
-  frameEl.src = 'http://mozilla.org/';
+  frameEl.src = "http://mozilla.org/";
 }
 ```
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Observaciones           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------- |
-| {{ SpecName('HTML WHATWG', '#dom-frameelement', 'Window.frameElement') }} | {{ Spec2('WebRTC 1.0') }} | Especificación inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Window.frameElement")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,11 +1,9 @@
 ---
 title: "HTMLElement: dragstart event"
 slug: Web/API/HTMLElement/dragstart_event
-translation_of: Web/API/HTMLElement/dragstart_event
-original_slug: Web/API/HTMLElement/dragstart_event
-page-type: web-api-event
-browser-compat: api.HTMLElement.dragstart_event
 ---
+
+{{APIRef}}
 
 El evento `dragstart` se dispara cuando el usuario arrastra un elemento o una selección de texto.
 
@@ -14,9 +12,9 @@ El evento `dragstart` se dispara cuando el usuario arrastra un elemento o una se
 Usar el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}} , o establecer una propiedad de controlador de eventos.
 
 ```js
-addEventListener('dragstart', (event) => {});
+addEventListener("dragstart", (event) => {});
 
-ondragstart = (event) => { };
+ondragstart = (event) => {};
 ```
 
 ## Tipo de Evento
@@ -40,7 +38,7 @@ En este ejemplo, tenemos un elemento arrastrable dentro de un contenedor. Intent
 
 Escuchamos el evento `dragstart` para hacer que el elemento sea medio transparente mientras se arrastra.
 
-For a more complete example of [drag](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event) and drop, see the page for the drag event.
+For a more complete example of [drag](/es/docs/Web/API/HTMLElement/drag_event) and drop, see the page for the drag event.
 
 #### HTML
 

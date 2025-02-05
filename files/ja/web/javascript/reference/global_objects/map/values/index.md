@@ -1,35 +1,41 @@
 ---
 title: Map.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
+l10n:
+  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
 {{JSRef}}
 
-**`values()`** メソッドは、 `Map` オブジェクトに挿入された要素を挿入順に列挙する新しい **[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)** オブジェクトを返します。
+**`values()`** は {{jsxref("Map")}} インスタンスのメソッドで、この `Map` オブジェクトに挿入された要素の値を挿入順に列挙する新しい[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-values.html")}}
 
 ## 構文
 
+```js-nolint
+values()
 ```
-myMap.values()
-```
+
+### 引数
+
+なし。
 
 ### 返値
 
-{{jsxref("Map")}} の新しいイテレーターオブジェクト。
+新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
 
 ## 例
 
 ### values() の使用
 
 ```js
-var myMap = new Map();
-myMap.set('0', 'foo');
-myMap.set(1, 'bar');
-myMap.set({}, 'baz');
+const myMap = new Map();
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
 
-var mapIter = myMap.values();
+const mapIter = myMap.values();
 
 console.log(mapIter.next().value); // "foo"
 console.log(mapIter.next().value); // "bar"
@@ -38,13 +44,11 @@ console.log(mapIter.next().value); // "baz"
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map.prototype.values', 'Map.prototype.values')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Map.values")}}
+{{Compat}}
 
 ## 関連情報
 

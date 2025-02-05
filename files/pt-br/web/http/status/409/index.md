@@ -1,8 +1,8 @@
 ---
 title: 409 Conflict
 slug: Web/HTTP/Status/409
-translation_of: Web/HTTP/Status/409
 ---
+
 {{HTTPSidebar}}
 
 O status de resposta **`409 Conflict`** indica que a solicitação atual conflitou com o recurso que está no servidor.
@@ -17,8 +17,8 @@ Conflitos são mais frequentes quando usado o método {{HTTPMethod("PUT")}}. Por
 
 ## Especificações
 
-| Especificação                                            | Título                                                                    |
-| -------------------------------------------------------- | ------------------------------------------------------------------------- |
+| Especificação                             | Título                                                                    |
+| ----------------------------------------- | ------------------------------------------------------------------------- |
 | {{RFC("7231", "409 Conflict" , "6.5.8")}} | Protocolo de Transferência de Hypertexto (HTTP/1.1): Semântica e Conteúdo |
 
 ## Veja também

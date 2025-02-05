@@ -1,14 +1,16 @@
 ---
 title: 詳細度
 slug: Web/CSS/Specificity
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
 
-**詳細度** (Specificity) は、ある要素に最も関連性の高い CSS 宣言を決定するためにブラウザーが使用するアルゴリズムで、これによって、その要素に使用するプロパティ値が決定されます。詳細度のアルゴリズムは、CSS セレクターの重みを計算し、競合する CSS 宣言の中からどのルールを要素に適用するかを決定します。
-は、どの CSS プロパティが要素に最も関係があるか、すなわち適用されるかをブラウザーが決定する手段です。詳細度は様々な組み合わせの [CSS セレクター](/ja/docs/Web/CSS/Reference#セレクター)で構成される照合ルールに基づいています。
+**詳細度** (Specificity) は、ある要素に最も関連性の高い [CSS 宣言](/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_の構文の基本)を決定するためにブラウザーが使用するアルゴリズムで、これによって、その要素に使用するプロパティ値が決定されます。詳細度のアルゴリズムは、[CSS セレクター](/ja/docs/Web/CSS/Reference#セレクター)の重みを計算し、競合する CSS 宣言の中からどのルールを要素に適用するかを決定します。
 
-> **メモ:** ブラウザーは、[カスケードのオリジンと重要度](/ja/docs/Web/CSS/Cascade)を決定した後に、詳細度を検討します。言い換えれば、プロパティ宣言が競合している場合、そのプロパティの優先順位を保有する 1 つの[カスケードのオリジンとレイヤー](/ja/docs/Web/CSS/@layer)のセレクター間でのみ、詳細度が関連し比較されます。優先順位を持つカスケードレイヤーで競合する宣言のセレクターの詳細度が等しいとき、出現順序が関連するようになります。
+> [!NOTE]
+> ブラウザーは、[カスケードのオリジンと重要度](/ja/docs/Web/CSS/Cascade)を決定した**後**に、詳細度を検討します。言い換えれば、プロパティ宣言が競合している場合、そのプロパティの優先順位を保有する 1 つの[カスケードのオリジンとレイヤー](/ja/docs/Web/CSS/@layer)のセレクター間でのみ、詳細度が関連し比較されます。優先順位を持つカスケードレイヤーで競合する宣言のセレクターの詳細度が等しいとき、[スコープの詳細度](/ja/docs/Web/CSS/@scope#scope_の競合の解決方法)と出現順序が関連するようになります。
 
 ## 詳細度の計算方法
 
@@ -29,9 +31,13 @@ slug: Web/CSS/Specificity
 - 値なし
   - : 全称セレクター ({{CSSxRef("Universal_selectors", "*")}}) および擬似クラス {{CSSxRef(":where", ":where()")}} とその引数は、重みの計算にはカウントされませんが、要素には一致します。全称セレクターと擬似クラスの値は 0-0-0 です。これらのセレクターは詳細度の計算に影響を与えません。
 
-結合子（{{CSSxRef("Adjacent_sibling_combinator", "+")}}、{{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/ja/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}）は、何を選択するのかをより具体化することができますが、詳細度の重みに値を追加することはありません。
+結合子（{{CSSxRef("Next-sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("Subsequent-sibling_combinator", "~")}}, [" "](/ja/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}）は、何を選択するのかをより具体化することができますが、詳細度の重みに値を追加することはありません。
 
-否定擬似クラスである {{CSSxRef(":not", ":not()")}} 自身は重みがありません。 {{CSSxRef(":is", ":is()")}} 擬似クラスも同様です。しかし、これらのセレクターの引数は重みを持ちます。どちらの値も、引数リストの中で最も詳細度の高い引数から採用されます。 [`:not()` と `:is()` の例外](#is_および_not_の例外) については、後ほど説明します。
+`&` 結合子は詳細度の重みを追加しませんが、入れ子になったルールは詳細度を追加します。詳細度および機能性の観点では、入れ子は{{CSSxRef(":is", ":is()")}} 擬似クラスとよく似ています。
+
+入れ子と同様に、擬似クラスである {{CSSxRef(":is", ":is()")}}、{{CSSxRef(":has", ":has()")}}、否定 ({{CSSxRef(":not", ":not()")}}) 自体は重みを持ちません。しかし、これらのセレクターの引数は重みを持ちます。各セレクターの重みは、最も高い詳細度を持つセレクターのリストに掲載されているセレクターの引数から取得されます。同様に、入れ子になったセレクターの場合、入れ子になったセレクター部分が加える詳細度は、最も高い詳細度を持つ入れ子になったセレクターのカンマ区切りのリストに掲載されているセレクターです。
+
+[`:not()`, `:is()` および `:has()` の例外](#is、not、has、css_入れ子の例外) については、後ほど説明します。
 
 #### 一致するセレクター
 
@@ -51,7 +57,7 @@ input:focus,
 
 `id="myApp"` という属性を持つ要素にネストされた必須入力の詳細度は、 1 つの ID、 2 つの擬似クラス、 1 つの要素型に基づいて、 `1-2-1` となります。
 
-パスワード入力型が `id="myApp"` が設定された要素にネストされている場合、フォーカスがあるかどうかに関わらず、詳細度の重みは `1-2-1` になります。なぜこの場合、詳細度の重みが `0-1-1` や `0-1-0` ではなく、 `1-2-1` になるのでしょうか？それは、詳細度の重みが最も大きい一致するセレクターから、詳細度の重みが決まるからです。重みは 3 つの列の値を左から右に比較することで決定されます。
+パスワード入力型に `required` がついている場合、 `id="myApp"` が設定された要素の内部にある場合、フォーカスがあるかどうかに関わらず、詳細度の重みは ID ひとつ、擬似クラス 2 つ、要素型 1 つなので `1-2-1` になります。なぜこの場合、詳細度の重みが `0-1-1` や `0-1-0` ではなく、 `1-2-1` になるのでしょうか？それは、詳細度の重みが最も大きい一致するセレクターから、詳細度の重みが決まるからです。重みは 3 つの列の値を左から右に比較することで決定されます。
 
 ```css
 [type="password"]             /* 0-1-0 */
@@ -64,8 +70,12 @@ input:focus                   /* 0-1-1 */
 該当するセレクターの詳細度値が決まったら、それぞれの列のセレクター成分の数を左から右に並べて比較します。
 
 ```css
-#myElement { color: green; /* 1-0-0  - 勝ち!! */}
-.bodyClass .sectionClass .parentClass [id="myElement"] { color: yellow; /* 0-4-0 */}
+#myElement {
+  color: green; /* 1-0-0  - 勝ち!! */
+}
+.bodyClass .sectionClass .parentClass [id="myElement"] {
+  color: yellow; /* 0-4-0 */
+}
 ```
 
 最初の列は _ID_ 成分の値で、各セレクターのIDの数を表しています。競合するセレクターの _ID_ 列の数値が比較されます。他の列の値がどうであれ、 _ID_ 列の値がより大きいセレクターが勝ちます。上記の例では、黄色のセレクターが全体としてより多くの成分を保有しているとしても、重要なのは最初の列の値だけです。
@@ -73,15 +83,23 @@ input:focus                   /* 0-1-1 */
 競合するセレクターの _ID_ 列の数字が同じであれば、次の _CLASS_ 列を比較し、次のようになります。
 
 ```css
-#myElement { color: yellow; /* 1-0-0  */}
-#myApp [id="myElement"] { color: green; /* 1-1-0  - WINS!! */}
+#myElement {
+  color: yellow; /* 1-0-0 */
+}
+#myApp [id="myElement"] {
+  color: green; /* 1-1-0  - 勝ち!! */
+}
 ```
 
 _CLASS_ 列は、セレクターに含まれるクラス名、属性セレクター、擬似クラスの数です。 _ID_ 列の値が同じ場合、 _TYPE_ 列の値にかかわらず、 _CLASS_ 列の値が大きいセレクターが勝ちます。これは、以下の例で示されています。
 
 ```css
-:root input { color: green; /* 0-1-1 - CLASS 列が大きいため勝ち */}
-html body main input  { color: yellow; /* 0-0-4 */}
+:root input {
+  color: green; /* 0-1-1 - CLASS 列が大きいため勝ち */
+}
+html body main input {
+  color: yellow; /* 0-0-4 */
+}
 ```
 
 競合するセレクターの _CLASS_ 列と _ID_ 列の数字が同じであれば、 _TYPE_ 列が関係してきます。 _TYPE_ 列は、セレクターに入力された要素型と擬似要素の数です。最初の 2 列が同じ値である場合、 _TYPE_ 列の数値が大きいセレクターが勝ちます。
@@ -89,38 +107,81 @@ html body main input  { color: yellow; /* 0-0-4 */}
 競合するセレクターが 3 列すべてで同じ値を持つ場合、近接ルールが適用され、最後に宣言されたスタイルが優先されます。
 
 ```css
-input.myClass { color: yellow; /* 0-1-1 */}
-:root input   { color: green; /* 0-1-1  後にあるので勝ち */}
+input.myClass {
+  color: yellow; /* 0-1-1 */
+}
+:root input {
+  color: green; /* 0-1-1 後にあるので勝ち */
+}
 ```
 
-### `:is()` および `:not()` の例外
+### `:is()`、`:not()`、`:has()`、CSS 入れ子の例外
 
-全一致の擬似クラス {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} および否定擬似クラスの {{CSSxRef(":not", ":not()")}} は、詳細度の計算では擬似クラスとは見なされません。それ自体は、詳細度算出のための重みを追加するものではありません。しかし、擬似クラスの括弧に渡されたセレクターの引数は、詳細度アルゴリズムの一部です。詳細度値の計算における一致するセレクターと否定の擬似クラスの重みは、引数の[重み](#セレクターの重み分類)となります。
+全一致の擬似クラス {{CSSxRef(":is", ":is()")}}, 否定擬似クラス {{CSSxRef(":not", ":not()")}} および関係擬似クラス {{CSSxRef(":has", ":has()")}} は、詳細度の計算では擬似クラスとは見なされません。それ自体は、詳細度算出のための重みを追加するものではありません。しかし、擬似クラスの括弧に渡されたセレクターの引数は、詳細度アルゴリズムの一部です。詳細度値の計算における一致するセレクターと否定の擬似クラスの重みは、引数の[重み](#セレクターの重み分類)となります。
 
 ```css
-p { /* 0-0-1 */ }
-:is(p) { /* 0-0-1 */}
+p {
+  /* 0-0-1 */
+}
+:is(p) {
+  /* 0-0-1 */
+}
 
-div.outer p {  /* 0-1-2 */ }
-div:not(.inner) p {  /* 0-1-2 */ }
+h2:nth-last-of-type(n + 2) {
+  /* 0-1-1 */
+}
+h2:has(~ h2) {
+  /* 0-0-2 */
+}
+
+div.outer p {
+  /* 0-1-2 */
+}
+div:not(.inner) p {
+  /* 0-1-2 */
+}
 ```
 
-上記の CSS の組み合わせにおいて、`:is()` と `:not()` 擬似クラスが提供する詳細度の重みは、擬似クラスの値ではなく、セレクターの引数の値であることに注意してください。
+上記の CSS の組み合わせにおいて、`:is()`, `:not()` および `:has()` 擬似クラスが提供する詳細度の重みは、擬似クラスの値ではなく、セレクターの引数の値であることに注意してください。
 
-これらの擬似クラスは両方とも、カンマで区切られたセレクターのリストである、複雑なセレクターリストを引数として受け入れます。この機能は、セレクターの詳細度を上げるために使用することができます。
+これら3つの擬似クラスは、引数としてカンマで区切られた複雑なセレクターリストを受け入れます。この機能は、セレクターの詳細度を上げるために使用することができます。
 
 ```css
-:is(p, #fakeId) { /* 1-0-0 */}
-p:not(#fakeId) {  /* 1-0-1 */ }
-div:not(.inner, #fakeId) p {  /* 1-0-2 */ }
+:is(p, #fakeId) {
+  /* 1-0-0 */
+}
+h1:has(+ h2, > #fakeId) {
+  /* 1-0-1 */
+}
+p:not(#fakeId) {
+  /* 1-0-1 */
+}
+div:not(.inner, #fakeId) p {
+  /* 1-0-2 */
+}
 ```
 
 上記の CSS コードブロックでは、セレクターに `#fakeId` が含まれています。この `#fakeId` は、各段落の詳細度の重みに `1-0-0` を追加します。
 
-一般的に、詳細度は最小限に抑えたいものですが、特定の理由で要素の詳細度を上げる必要がある場合は、この 2 つの擬似クラスが役に立ちます。
+[CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting)を使用して複雑なセレクターリストを作成した場合、この動作は `:is()` 擬似クラスとまったく同じです。
 
 ```css
-a:not(#fakeId#fakeId#fakeID) { color: blue; /* 3-0-1 */}
+p,
+#fakeId {
+  span {
+    /* 1-0-1 */
+  }
+}
+```
+
+上記のコードブロックでは、複雑なセレクター `p, #fakeId` の詳細度は `#fakeId` から導かれると同時に `span` からも導かれるため、`p span` と `#fakeId span` の両方に対して `1-0-1` という詳細度が作成されます。これは、`:is(p, #fakeId) span` セレクターと同等の詳細度です。
+
+一般的に、詳細度は最小限に抑えたいものですが、特定の理由で要素の詳細度を上げる必要がある場合は、この 3 つの擬似クラスが役に立ちます。
+
+```css
+a:not(#fakeId#fakeId#fakeID) {
+  color: blue; /* 3-0-1 */
+}
 ```
 
 この例では、 3 つ以上の ID を持つリンク宣言、 `a` に一致する色の値が [`!important` フラグ](#!important_の例外)を含む場合、またはリンクに[インラインスタイル](#インラインスタイル)の色宣言がある場合で上書きされなければ、すべてのリンクは青色となります。このようなテクニックを使用する場合は、なぜそのハックが必要であったかを説明するコメントを追加してください。
@@ -134,11 +195,13 @@ a:not(#fakeId#fakeId#fakeID) { color: blue; /* 3-0-1 */}
 多くの JavaScript フレームワークやライブラリーはインラインスタイルを追加します。インラインスタイルを使用する属性セレクターなど、とても的を絞ったセレクターで `!important` を使用することは、これらのインラインスタイルを上書きする一つの方法です。
 
 ```html
-<p style="color: purple">
+<p style="color: purple">…</p>
 ```
 
 ```css
-p[style*="purple"] { color: rebeccapurple; }
+p[style*="purple"] {
+  color: rebeccapurple !important;
+}
 ```
 
 important フラグを使用する際は必ずコメントを入れてください。そうすれば、コードの管理者はなぜ CSS のアンチパターンが使用されたかを理解することができます。
@@ -160,7 +223,8 @@ important とマークされた CSS 宣言は、同じカスケード層とオ�
 CSS を編集するアクセス権を持たない開発者が使用するサードパーティ CSS を保有する場合、可能な限り詳細度の低い CSS を作成することは良い習慣と考えられています。例えば、あなたのテーマが以下のような CSS を入れている場合は次のようにします。
 
 ```css
-:where(#defaultTheme) a { /* 0-0-1 */
+:where(#defaultTheme) a {
+  /* 0-0-1 */
   color: red;
 }
 ```
@@ -168,10 +232,43 @@ CSS を編集するアクセス権を持たない開発者が使用するサー�
 そうすれば、ウィジェットを搭載する開発者は、要素型セレクターを使用するだけで、簡単にリンクの色を上書きすることができます。
 
 ```css
-footer a { /* 0-0-2 */
+footer a {
+  /* 0-0-2 */
   color: blue;
 }
 ```
+
+### `@scope` ブロックが詳細度に影響する方法
+
+`@scope` ブロック内にルールセットを記述しても、セレクターが使用されるスコープのルートや制限に関わらず、そのセレクターの特定の詳細度には影響しません。例えば次のようになります。
+
+```css
+@scope (.article-body) {
+  /* img はの詳細度は期待通り 0-0-1 になる */
+  img { ... }
+}
+```
+
+しかし、もし明示的に `:scope` 擬似クラスをスコープ付きセレクターの前に追加する場合は、その詳細度を計算する際に考慮する必要があります。 `:scope` は、すべての通常の擬似クラスと同様に、 0-1-0 の詳細度を持ちます。
+
+```css
+@scope (.article-body) {
+  /* :scope img の詳細度 0-1-0 + 0-0-1 = 0-1-1 となる */
+  :scope img { ... }
+}
+```
+
+`@scope` ブロック内で `&` セレクターを使用する場合、 `&` はスコープルートセレクターを表します。これは、内部的には {{cssxref(":is", ":is()")}} セレクターで囲まれたセレクターに書き換えられます。例えば、次のような場合です。
+
+```css
+@scope (figure, #primary) {
+  & img { ... }
+}
+```
+
+`& img` は `:is(figure, #primary) img` と同等です。
+
+`:is()` は最も詳細度の高い引数（この場合は `#primary`）の詳細度を取るので、スコープされた `& img` セレクターは 1-0-0 + 0-0-1 = 1-0-1 となります。
 
 ## 詳細度に関する頭痛の種を処理するためのヒント
 
@@ -188,9 +285,15 @@ footer a { /* 0-0-2 */
 ```
 
 ```css
-#myContent h1 { color: green; /* 1-0-1 */}
-[id="myContent"] h1 { color: yellow; /* 0-1-1 */}
-:where(#myContent) h1 { color: blue;  /* 0-0-1 */}
+#myContent h1 {
+  color: green; /* 1-0-1 */
+}
+[id="myContent"] h1 {
+  color: yellow; /* 0-1-1 */
+}
+:where(#myContent) h1 {
+  color: blue; /* 0-0-1 */
+}
 ```
 
 どのような順番であっても、見出しは緑色になります。そのルールが最も詳細度が高いからです。
@@ -206,8 +309,12 @@ footer a { /* 0-0-2 */
 詳細度を上げるための特別な方法として、 _CLASS_ または _ID_ 列の重みを重複させることができます。複合セレクターの中で、ID、クラス、擬似クラス、属性のセレクターを重複して保有すると、詳細度を高めて、制御できないとても詳細度の高いセレクターを上書きすることができます。
 
 ```css
-#myId#myId#myId span { /* 3-0-1 */}
-.myClass.myClass.myClass span { /* 0-3-1 */ }
+#myId#myId#myId span {
+  /* 3-0-1 */
+}
+.myClass.myClass.myClass span {
+  /* 0-3-1 */
+}
 ```
 
 使用するとしても控えめにしてください。セレクターの重複を使用する場合は、常に　CSS　にコメントを入れましょう。
@@ -215,8 +322,12 @@ footer a { /* 0-0-2 */
 `:is()` と `:not()` を使用することで、親要素に `id` を追加することができなくても、詳細度を上げることができます。
 
 ```css
-:not(#fakeID#fakeId#fakeID) span { /* 3-0-1 */ }
-:is(#fakeID#fakeId#fakeID, span) { /* 3-0-0 */ }
+:not(#fakeID#fakeId#fakeID) span {
+  /* 3-0-1 */
+}
+:is(#fakeID#fakeId#fakeID, span) {
+  /* 3-0-0 */
+}
 ```
 
 ### サードパーティの CSS より優先
@@ -230,7 +341,8 @@ footer a { /* 0-0-2 */
 ```html
 <style>
   @import TW.css layer();
-  p, p * {
+  p,
+  p * {
     font-size: 1rem;
   }
 </style>
@@ -250,7 +362,7 @@ footer a { /* 0-0-2 */
 
 このようなメソッドはすべて、前のセクションに則しています。
 
-もし、作成者のスタイルシートから `!important` フラグを削除できない場合、重要なスタイルを上書きする唯一の解決策は、  `!important` を使用することです。 important 宣言を上書きする[カスケードレイヤー](../@layer/)を作成することは、優れた解決策です。これを行うには、次の 2 つの方法があります。
+もし、作成者のスタイルシートから `!important` フラグを削除できない場合、重要なスタイルを上書きする唯一の解決策は、 `!important` を使用することです。 important 宣言を上書きする[カスケードレイヤー](/ja/docs/Web/CSS/@layer)を作成することは、優れた解決策です。これを行うには、次の 2 つの方法があります。
 
 #### 方法 #1
 
@@ -267,28 +379,28 @@ footer a { /* 0-0-2 */
 
 1. スタイルシートの宣言の始めに、以下のように名前付きカスケードレイヤーを作成します。
 
-    ```css
-    @layer importantOverrides;
-    ```
+   ```css
+   @layer importantOverrides;
+   ```
 
 2. 重要な宣言を上書きする必要がある場合は、その都度、指定されたレイヤーの中で宣言してください。重要なルールはレイヤーの中だけで宣言してください。
 
-    ```css
-    [id="myElement"] p {
-      /* normal styles here */
-    }
-    @layer importantOverrides {
-      [id="myElement"] p {
-        /* important style here */;
-      }
-    }
-    ```
+   ```css
+   [id="myElement"] p {
+     /* normal styles here */
+   }
+   @layer importantOverrides {
+     [id="myElement"] p {
+       /* important style here */
+     }
+   }
+   ```
 
 レイヤー内の重要なスタイルのセレクターの詳細度は、上書きしようとする要素に一致する限り、低くてもかまいません。通常のレイヤーは、レイヤーのスタイルはレイヤーなしのスタイルより優先順位が低いので、レイヤーの外側で宣言する必要があります。
 
 ### 文書ツリー内の近接性の無視
 
-指定されたセレクターで参照される要素と他の要素との近接性は、詳細度には影響を与えません。以下のスタイル宣言と...
+指定されたセレクターで参照される要素と他の要素との近接性は、詳細度には影響を与えません。
 
 ```css
 body h1 {
@@ -300,11 +412,11 @@ html h1 {
 }
 ```
 
-これは、 2 つの宣言で[セレクターの種類](#セレクターの種類)の数が同じですが、 `html h1` セレクターが後に宣言されているからです。
+これらの宣言は詳細度が同じですが、あとに宣言されたセレクターが優先されるため `<h1>` 要素は紫色になります。
 
 ### 直接対象の要素と継承されたスタイル
 
-直接対象となる要素のスタイルは、継承されたルールの詳細度に関係なく、常に継承されたスタイルよりも優先されます。以下のような CSS と HTML がある場合。
+直接対象となる要素のスタイルは、継承されたルールの詳細度に関係なく、常に継承されたスタイルよりも優先されます。以下のような CSS と HTML がある場合...
 
 ```css
 #parent {
@@ -317,7 +429,7 @@ h1 {
 ```
 
 ```html
-<html>
+<html lang="ja">
   <body id="parent">
     <h1>これがタイトルです。</h1>
   </body>
@@ -331,9 +443,15 @@ h1 {
 以下の CSS には、色を設定する {{HTMLElement('input')}} 要素を対象とする 3 つのセレクターがあります。与えられた入力に対して、 優先する色宣言の詳細度重み付けは、最も大きい重みで一致するセレクターになります。
 
 ```css
-#myElement input.myClass { color: red; } /* 1-1-1 */
-input[type="password"]:required { color: blue; } /* 0-2-1 */
-html body main input { color: green; }  /* 0-0-4 */
+#myElement input.myClass {
+  color: red;
+} /* 1-1-1 */
+input[type="password"]:required {
+  color: blue;
+} /* 0-2-1 */
+html body main input {
+  color: green;
+} /* 0-0-4 */
 ```
 
 上記のセレクターがすべて同じ入力を対象とした場合、最初の宣言が _ID_ 列に最も大きな値を保有しているため、入力は赤になります。
@@ -343,8 +461,12 @@ html body main input { color: green; }  /* 0-0-4 */
 上の例のコードで id セレクターを属性セレクターに変換していた場合、最初の 2 つのセレクターは、以下のように同じ詳細度を持つことになります。
 
 ```css
-[id="myElement"] input.myClass { color: red; }   /* 0-2-1 */
-input[type="password"]:required { color: blue; } /* 0-2-1 */
+[id="myElement"] input.myClass {
+  color: red;
+} /* 0-2-1 */
+input[type="password"]:required {
+  color: blue;
+} /* 0-2-1 */
 ```
 
 複数の宣言が同じ詳細度である場合、 CSS の中で最後に見つかった宣言がその要素に適用されます。両方のセレクターが同じ {{HTMLElement('input')}} に一致する場合、色は青になります。
@@ -355,11 +477,13 @@ input[type="password"]:required { color: blue; } /* 0-2-1 */
 
 1. 詳細度は、同じ要素が同じカスケードレイヤーやオリジンの複数の宣言によってターゲットにされている場合にのみ適用されます。特定度は、同じ重要度、同じオリジン、[カスケードレイヤー](/ja/docs/Web/CSS/@layer)の宣言にのみ関係します。一致するセレクターが異なるオリジンにある場合、[カスケード](/ja/docs/Web/CSS/Cascade)はどちらの宣言が優先されるかを決定します。
 
-2. 同じカスケードレイヤー、同じオリジンにある 2 つのセレクターが同じ詳細度にある場合、近接度が重要であり、最後のセレクターが勝ちます。
+2. 2 つのセレクターが同じカスケードレイヤーとオリジンで同じ詳細度を持っている場合、スコープの近接度が計算されます。最もスコープの近接度が低いルールセットが優先されます。詳細と例えばについては、 [`@scope` の競合の解決方法](/ja/docs/Web/CSS/@scope#scope_の競合の解決方法)を参照してください。
 
-3. CSS のルールとして、要素が祖先から継承するルールよりも、[直接対象となる要素](#直接対象の要素と継承されたスタイル) が常に優先されます。
+3. スコープの近接度がどちらのセレクターでも同じである場合、ソースの順序が重要になります。すべてがまったく同じである場合、最後のセレクターが優先されます。
 
-4. 文書ツリー内の[要素の近接性](#文書ツリー内の近接性の無視)は詳細度に影響しません。
+4. CSS のルールとして、要素が祖先から継承するルールよりも、[直接対象となる要素](#直接対象の要素と継承されたスタイル) が常に優先されます。
+
+5. 文書ツリー内の[要素の近接性](#文書ツリー内の近接性の無視)は詳細度に影響しません。
 
 ## 仕様書
 
@@ -367,24 +491,18 @@ input[type="password"]:required { color: blue; } /* 0-2-1 */
 
 ## 関連情報
 
-- [「カスケードと継承」の「詳細度」](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2)
-- [SpeciFISHity](https://specifishity.com)
+- [「カスケードと継承」の「詳細度」](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#詳細度)
+- [SpeciFISHity](https://specifishity.com/)
 - [Specificity Calculator](https://specificity.keegan.st/): 自身の CSS ルールをテストし、理解するための対話型ウェブサイト
-- [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html) 詳細度クイズ
-- CSS の主要概念:
-  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/At-rule)
-  - [コメント](/ja/docs/Web/CSS/Comments)
-  - [継承](/ja/docs/Web/CSS/inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
-  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
-  - 値
-    - [初期値](/ja/docs/Web/CSS/initial_value)
-    - [計算値](/ja/docs/Web/CSS/computed_value)
-    - [使用値](/ja/docs/Web/CSS/used_value)
-    - [実効値](/ja/docs/Web/CSS/actual_value)
-  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
-  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/Replaced_element)
+- [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html) 詳細度クイズ（英語）
+- [CSS の構文](/ja/docs/Web/CSS/Syntax)ガイド
+- [CSS 構文](/ja/docs/Web/CSS/CSS_syntax) モジュール
+- [CSS のエラーの扱い](/ja/docs/Web/CSS/CSS_syntax/Error_handling)
+- [アットルール](/ja/docs/Web/CSS/At-rule)
+- [継承](/ja/docs/Web/CSS/Inheritance)
+- [初期値](/ja/docs/Web/CSS/initial_value)、[計算値](/ja/docs/Web/CSS/computed_value)、[使用値](/ja/docs/Web/CSS/used_value)、[実効値](/ja/docs/Web/CSS/actual_value)
+- [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
+- [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
+- [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
+- [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting)モジュール

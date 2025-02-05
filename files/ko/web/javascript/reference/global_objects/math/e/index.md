@@ -1,24 +1,29 @@
 ---
 title: Math.E
 slug: Web/JavaScript/Reference/Global_Objects/Math/E
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/E
+l10n:
+  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
+
 {{JSRef}}
 
-**`Math.E`** 속성은 자연로그의 밑 값 e를 나타내며 약 2.718의 값을 가집니다.
+**`Math.E`** 정적 데이터 속성은 오일러 수를 의미하며, 자연로그의 밑 값 e를 나타내며 약 2.718의 값을 가집니다.
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.E</mi></mstyle><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.E}} = e \approx 2.718</annotation></semantics></math>
+{{EmbedInteractiveExample("pages/js/math-e.html")}}
 
-{{EmbedInteractiveExample("pages/js/math-e.html")}}{{js_property_attributes(0, 0, 0)}}
+## 값
+
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙴</mi><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="TeX">\mathtt{Math.E} = e \approx 2.718</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## 설명
 
-`E`는 `Math`의 정적 속성이므로, 사용자가 생성한 `Math` 객체의 속성으로 접근할 수 없고 항상 `Math.E`를 사용해야 합니다. (`Math`는 생성자가 아닙니다)
+`E`는 `Math`의 정적 속성이므로, 생성한 `Math` 객체(`Math`는 생성자가 아닙니다)의 속성 대신 항상 `Math.E`를 사용해야 합니다.
 
 ## 예제
 
@@ -34,7 +39,7 @@ function getNapier() {
 getNapier(); // 2.718281828459045
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

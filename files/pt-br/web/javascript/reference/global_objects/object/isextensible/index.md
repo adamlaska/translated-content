@@ -1,8 +1,8 @@
 ---
 title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 ---
+
 {{JSRef}}
 
 O método **`Object.isExtensible()`** verifica se um objeto pode ser extendido (se é ou não possível adicinar novas propriedades).
@@ -26,7 +26,7 @@ Um valor booleano ({{jsxref("Boolean")}}) que indica se o objeto pode ser extend
 
 ## Descrição
 
-Objetos são extensíveis por padrão: novas propriedades podem ser adicionadas, e (em ambientes que suportam {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}}) a propriedade \_\_proto\_\_ pode ser modificada. Um objeto pode ser marcado como não extensível usando {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, ou {{jsxref("Object.freeze()")}}.
+Objetos são extensíveis por padrão: novas propriedades podem ser adicionadas, e (em ambientes que suportam [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}}) a propriedade \_\_proto\_\_ pode ser modificada. Um objeto pode ser marcado como não extensível usando {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, ou {{jsxref("Object.freeze()")}}.
 
 ## Exemplos
 
@@ -62,15 +62,11 @@ Object.isExtensible(1);
 
 ## Especificações
 
-| Especificações                                                                                       | Status                       | Comentário                                           |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.13', 'Object.isExtensible')}}                 | {{Spec2('ES5.1')}}     | Initial definition. Implemented in JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.isextensible', 'Object.isExtensible')}}         | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ESDraft', '#sec-object.isextensible', 'Object.isExtensible')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.isExtensible")}}
+{{Compat}}
 
 ## See also
 

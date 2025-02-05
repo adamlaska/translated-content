@@ -1,12 +1,8 @@
 ---
 title: performance.now()
 slug: Web/API/Performance/now
-tags:
-  - API
-  - Performance
-  - Web Performance API
-translation_of: Web/API/Performance/now
 ---
+
 {{APIRef("Navigation Timing")}}
 
 ## Краткое описание
@@ -31,12 +27,12 @@ t = performance.now();
 var t0 = performance.now();
 doSomething();
 var t1 = performance.now();
-console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
+console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
 ```
 
-В отличие от других временны́х типов данных, доступных в JavaScript (таких как [`Date.now`](/ru/docs/JavaScript/Reference/Global_Objects/Date/now)), метки времени, возвращённые из `performance.now(),` не ограничены кратностью в одну миллисекунду, а представляют значение времени как число с плавающей запятой, с точностью до микросекунд.
+В отличие от других временны́х типов данных, доступных в JavaScript (таких как [`Date.now`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date/now)), метки времени, возвращённые из `performance.now(),` не ограничены кратностью в одну миллисекунду, а представляют значение времени как число с плавающей запятой, с точностью до микросекунд.
 
-Также, в противоположность `Date.now`, значение, возвращаемое из `performance.now(), всегда возрастает с постоянной скоростью, независимо от системного времени `(которое может быть установлено вручную или изменено программами наподобие NTP).
+Также, в противоположность `Date.now`, значение, возвращаемое из `performance.now()`, всегда возрастает с постоянной скоростью, независимо от системного времени (которое может быть установлено вручную или изменено программами наподобие NTP).
 
 ## Спецификации
 
@@ -48,4 +44,4 @@ console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
 
 ## Смотрите также
 
-- [When milliseconds are not enough: performance.now() ](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now)от HTML5 Rocks.
+- [When milliseconds are not enough: performance.now()](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now) от HTML5 Rocks.

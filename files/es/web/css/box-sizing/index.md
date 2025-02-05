@@ -1,20 +1,15 @@
 ---
 title: box-sizing
 slug: Web/CSS/box-sizing
-tags:
-  - CSS
-  - Layout
-  - Propiedades CSS
-  - Web
-translation_of: Web/CSS/box-sizing
 ---
+
 {{CSSRef}}
 
 La propiedad CSS **`box-sizing`** como el {{glossary("user agent")}} debe calcular el ancho y alto total de un elemento.
 
 {{EmbedInteractiveExample("pages/css/box-sizing.html")}}
 
-Por defecto en el [modelo de caja de CSS](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), el ancho y alto asignado a un elemento es aplicado solo al contenido de la caja del elemento. Si el elemento tiene algun borde (border) o relleno (padding), este es entonces añadido al ancho y alto a alcanzar el tamaño de la caja que es desplegada en pantalla. Esto significa que cuando se definen el ancho y alto, se tiene que ajustar el valor definido para permitir cualquier borde o relleno que se pueda añadir.
+Por defecto en el [modelo de caja de CSS](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), el ancho y alto asignado a un elemento es aplicado solo al contenido de la caja del elemento. Si el elemento tiene algun borde (border) o relleno (padding), este es entonces añadido al ancho y alto a alcanzar el tamaño de la caja que es desplegada en pantalla. Esto significa que cuando se definen el ancho y alto, se tiene que ajustar el valor definido para permitir cualquier borde o relleno que se pueda añadir.
 
 La propiedad `box-sizing` puede ser usada para ajustar el siguiente comportamiento:
 
@@ -51,7 +46,7 @@ Este ejemplo muesta cómo diferentes valores de tamaño de la caja (`box-sizing`
 
 ```html
 <div class="content-box">Contenido de la caja</div>
-<br>
+<br />
 <div class="border-box">Borde de la caja</div>
 ```
 
@@ -89,16 +84,12 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                               | Estatus                              | Comentario         |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Basic UI', '#box-sizing', 'box-sizing')}} | {{Spec2('CSS3 Basic UI')}} | Definición inicial |
+{{Specifications}}
 
-{{cssinfo}}
+## Compatibilidad con navegadores
 
-## Compatibilidad del navegador
-
-{{Compat("css.properties.box-sizing")}}
+{{Compat}}
 
 ## Ver también
 
-- [Modelo de caja de CSS](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [Modelo de caja de CSS](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

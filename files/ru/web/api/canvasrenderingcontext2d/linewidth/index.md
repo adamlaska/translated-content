@@ -1,8 +1,8 @@
 ---
 title: CanvasRenderingContext2D.lineWidth
 slug: Web/API/CanvasRenderingContext2D/lineWidth
-translation_of: Web/API/CanvasRenderingContext2D/lineWidth
 ---
+
 {{APIRef}}
 
 `Свойство CanvasRenderingContext2D`**`.lineWidth`**, предоставляемое Canvas 2D API задаёт толщину линий в пикселах. При получении свойства возвращается его текущее значение. При задании свойства, присваиваемое значение должно быть положительным числом, ноль, отрицательные числа, {{jsxref("Infinity")}} и {{jsxref("NaN")}} игнорируются.
@@ -39,7 +39,7 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(0,0);
+ctx.moveTo(0, 0);
 ctx.lineWidth = 15;
 ctx.lineTo(100, 100);
 ctx.stroke();
@@ -58,7 +58,8 @@ ctx.beginPath();
 ctx.moveTo(0,0);
 ctx.lineWidth = 15;
 ctx.lineTo(100, 100);
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js hidden
@@ -74,14 +75,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -96,14 +97,6 @@ window.addEventListener("load", drawCanvas);
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Особенности WebKit/Blink
-
-- В браузерах на базе WebKit и Blink, помимо этого свойства также поддерживается нестандартный метод `ctx.setLineWidth()`.
-
-## Особенности Gecko
-
-- В Gecko ниже 2.0 версии, при задании lineWidth отрицательного значения выбрасывалось исключение.
 
 ## Смотрите также
 

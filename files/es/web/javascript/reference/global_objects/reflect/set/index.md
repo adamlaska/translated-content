@@ -1,8 +1,8 @@
 ---
 title: Reflect.set()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/set
 ---
+
 {{JSRef}}
 
 El método estático **`Reflect.set()`** funciona igual que asignar una propiedad en un objeto.
@@ -34,7 +34,7 @@ Un {{jsxref("TypeError")}}, si `target` no es un {{jsxref("Object")}}.
 
 ## Descripción
 
-El método `Reflect.set` permite asignar una propiedad a un objeto. It does property assignment and is like the [property accessor](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax as a function.
+El método `Reflect.set` permite asignar una propiedad a un objeto. It does property assignment and is like the [property accessor](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors) syntax as a function.
 
 ## Ejemplos
 
@@ -43,37 +43,34 @@ El método `Reflect.set` permite asignar una propiedad a un objeto. It does prop
 ```js
 // Objeto
 var obj = {};
-Reflect.set(obj, 'prop', 'value'); // true
+Reflect.set(obj, "prop", "value"); // true
 obj.prop; // "value"
 
 // Arreglo
-var arr = ['duck', 'duck', 'duck'];
-Reflect.set(arr, 2, 'goose'); // true
+var arr = ["duck", "duck", "duck"];
+Reflect.set(arr, 2, "goose"); // true
 arr[2]; // "goose"
 
 // Puede truncar un arreglo.
-Reflect.set(arr, 'length', 1); // true
+Reflect.set(arr, "length", 1); // true
 arr; // ["duck"];
 
 // Con solo un argumento, propertyKey y value son "undefined".
 var obj = {};
 Reflect.set(obj); // true
-Reflect.getOwnPropertyDescriptor(obj, 'undefined');
+Reflect.getOwnPropertyDescriptor(obj, "undefined");
 // { value: undefined, writable: true, enumerable: true, configurable: true }
 ```
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                       | Comentarios         |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-reflect.set', 'Reflect.set')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-reflect.set', 'Reflect.set')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Reflect.set")}}
+{{Compat}}
 
 ## Ver también
 
 - {{jsxref("Reflect")}}
-- [Property accessors](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors)

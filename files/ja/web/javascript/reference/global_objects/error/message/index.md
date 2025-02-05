@@ -18,20 +18,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/message
 ### 独自のエラーを発生させる
 
 ```js
-var e = new Error('Could not parse input');
+var e = new Error("Could not parse input");
 // e.message は 'Could not parse input'
 throw e;
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-error.prototype.message', 'Error.prototype.message')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Error.name")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,14 +1,8 @@
 ---
 title: ArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 ---
+
 {{JSRef}}
 
 **`slice()`** 메서드는 현재 `ArrayBuffer`를 주어진 시작과 끝점에 맞춰 자른 새로운 `ArrayBuffer`를 반환합니다.
@@ -24,6 +18,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 ### 매개변수
 
 - `begin`
+
   - : 자르기 시작할 지점을 나타내는 0 기반 인덱스.
 
 - `end` {{optional_inline}}

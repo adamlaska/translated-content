@@ -1,9 +1,8 @@
 ---
 title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
-translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
-browser-compat: javascript.builtins.RangeError
 ---
+
 {{JSRef}}
 
 El objeto **`RangeError`** indica un error cuando un valor no se encuentra dentro de un rango de valores permitidos.
@@ -66,7 +65,7 @@ try {
 function check(value) {
   if (["apple", "banana", "carrot"].includes(value) === false) {
     throw new RangeError(
-      'El argumento debe de ser una "apple", "banana", o "carrot".'
+      'El argumento debe de ser una "apple", "banana", o "carrot".',
     );
   }
 }

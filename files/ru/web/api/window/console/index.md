@@ -1,8 +1,8 @@
 ---
 title: Window.console
 slug: Web/API/Window/console
-translation_of: Web/API/Window/console
 ---
+
 {{ APIRef }}
 
 Свойство **`window.console`** даёт доступ к интерфейсу {{domxref("Console")}}, предоставляющий методы для вывода информации в консоль браузера. Данные методы предназначены для отладки приложения, и не должны использоваться конечными пользователями.
@@ -29,12 +29,12 @@ console.log("An error occurred while loading the content");
 console.dir(someObject);
 ```
 
-Примеры можно посмотреть по ссылке: {{SectionOnPage("/ru/docs/Web/API/Console", "Usage")}}
+Примеры можно посмотреть по ссылке: [Usage](/ru/docs/Web/API/console#использование)
 
-## Specifications
+## Спецификации
 
-| Specification                        | Status                           | Comment             |
-| ------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('Console API')}} | {{Spec2('Console API')}} | Initial definition. |
+{{Specifications}}
 
-> **Примечание:** Currently there are many implementation differences among browsers, but work is being done to bring them together and make them more consistent with one another.
+## Совместимость с браузерами
+
+{{Compat}}

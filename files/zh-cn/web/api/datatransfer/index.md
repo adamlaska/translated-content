@@ -5,7 +5,7 @@ slug: Web/API/DataTransfer
 
 {{APIRef("HTML Drag and Drop API")}}
 
-`DataTransfer` 对象用于保存拖动并放下（drag and drop）过程中的数据。它可以保存一项或多项数据，这些数据项可以是一种或者多种数据类型。关于拖放的更多信息，请参见 [Drag and Drop](/En/DragDrop/Drag_and_Drop).
+`DataTransfer` 对象用于保存拖动并放下（drag and drop）过程中的数据。它可以保存一项或多项数据，这些数据项可以是一种或者多种数据类型。关于拖放的更多信息，请参见 [Drag and Drop](/en-US/DragDrop/Drag_and_Drop).
 
 这个对象可以从所有拖动事件 {{domxref("DragEvent","drag events")}} 的 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 属性上获取。
 
@@ -27,13 +27,14 @@ slug: Web/API/DataTransfer
 - {{domxref("DataTransfer.items")}} {{readonlyInline}}
   - : 提供一个包含所有拖动数据列表的 {{domxref("DataTransferItemList")}} 对象。
 - {{domxref("DataTransfer.types")}} {{readonlyInline}}
-  - : 一个提供 {{event("dragstart")}} 事件中设置的格式的 {{domxref("DOMString","strings")}} 数组。
+  - : 一个提供 [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件中设置的格式的 {{domxref("DOMString","strings")}} 数组。
 
 ### Gecko 属性
 
 {{SeeCompatTable}}
 
-> **备注：** 本节中的所有属性为 Gecko 特有。
+> [!NOTE]
+> 本节中的所有属性为 Gecko 特有。
 
 - {{domxref("DataTransfer.mozCursor")}}
   - : 给出拖动光标的状态。这主要用于在拖动期间控制光标。
@@ -64,7 +65,8 @@ slug: Web/API/DataTransfer
 
 {{Non-standard_header()}}
 
-> **备注：** 本节所有方法为 Gecko 专有。
+> [!NOTE]
+> 本节所有方法为 Gecko 专有。
 
 - {{domxref("DataTransfer.addElement()")}}
   - : Sets the drag source to the given element.
@@ -97,5 +99,4 @@ slug: Web/API/DataTransfer
 - [拖与放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
 - [拖动操作](HTML_Drag_and_Drop_API/Drag_operations)
 - [推荐拖动类型](HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [拖动多项](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer 测试 - 粘贴、拖放](https://codepen.io/tech_query/pen/MqGgap)

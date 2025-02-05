@@ -1,13 +1,14 @@
 ---
 title: Blob.slice()
 slug: Web/API/Blob/slice
-translation_of: Web/API/Blob/slice
 ---
+
 {{APIRef("File API")}}
 
 O método **`Blob.slice()`** é usado para criar um novo {{domxref("Blob")}} object contendo os dados no intervalo especificado de bytes da fonte {{domxref("Blob")}}.
 
-> **Nota:** Nota: Esteja ciente de que o método `slice ()` tem prefixos de fornecedores em alguns navegadores e versões: `blob.mozSlice ()` para Firefox 12 e anteriores e `blob.webkitSlice ()` no Safari. Uma versão antiga do método `slice ()`, sem prefixos de fornecedor, tinha uma semântica diferente e é obsoleta
+> [!NOTE]
+> Nota: Esteja ciente de que o método `slice ()` tem prefixos de fornecedores em alguns navegadores e versões: `blob.mozSlice ()` para Firefox 12 e anteriores e `blob.webkitSlice ()` no Safari. Uma versão antiga do método `slice ()`, sem prefixos de fornecedor, tinha uma semântica diferente e é obsoleta
 
 ## Sintaxe
 
@@ -30,13 +31,11 @@ A new {{domxref("Blob")}} object containing the specified data from the source {
 
 ## Specifications
 
-| Specification                                                            | Status                       | Comment            |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName("File API", "#dfn-slice", "Blob.slice()")}} | {{Spec2("File API")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Blob.slice")}}
+{{Compat}}
 
 ## See also
 

@@ -28,13 +28,11 @@ dataview2.byteOffset; // 3 (as specified when constructing the DataView)
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-get-dataview.prototype.byteoffset', 'DataView.prototype.byteOffset')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.DataView.byteOffset")}}
+{{Compat}}
 
 ## 関連情報
 

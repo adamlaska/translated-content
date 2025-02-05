@@ -1,13 +1,8 @@
 ---
-title: 'SyntaxError: missing formal parameter'
+title: "SyntaxError: missing formal parameter"
 slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
-tags:
-  - Erro
-  - Erros
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensagem
@@ -52,15 +47,15 @@ Você terá de usar identificadores nas declarações de função:
 ```js example-good
 function quadrado(numero) {
   return numero * numero;
-};
+}
 
 function saudar(saudacao) {
   return saudacao;
-};
+}
 
 function log(arg) {
-  console.log(arg)
-};
+  console.log(arg);
+}
 ```
 
 You can then call these functions with the arguments you like:
@@ -70,12 +65,12 @@ quadrado(2); // 4
 
 saudar("Olá"); // "Olá"
 
-log({obj: "valor"}); // Object { obj: "valor" }
+log({ obj: "valor" }); // Object { obj: "valor" }
 ```
 
 ## Ver também
 
 - Outros erros referentes a parâmetros formais:
 
-  - [SyntaxError: Parâmetro formal mal formado](/pt-BR/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter)
+  - [SyntaxError: Parâmetro formal mal formado](/pt-BR/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter)
   - [SyntaxError: redeclaração de parâmetro formal "x"](/pt-BR/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter)

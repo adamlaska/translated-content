@@ -3,7 +3,7 @@ title: sessions.Session
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 该`Session`对象表示用户在当前浏览会话中已关闭的选项卡或窗口。
 
@@ -25,7 +25,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 - `lastModified`
   - : `number`。选项卡或窗口关闭的时间，[自 epoch 以来的毫秒数](https://en.wikipedia.org/wiki/Unix_time)。
 - `tab`{{optional_inline}}
-  - : `object`。如果对象表示关闭的选项卡，则此属性存在，并且将是{{WebExtAPIRef("tabs.Tab")}}对象。仅当扩展名具有“tabs” [许可](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)权时`url`，它才会包含`title`和。`favIconUrl`
+  - : `object`。如果对象表示已关闭的选项卡，则此属性存在，并且将是 {{WebExtAPIRef("tabs.Tab")}} 对象。仅当扩展具有“tabs” [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)时，它才会包含 `url`，`title` 和 `favIconUrl`。
 - `window`{{optional_inline}}
   - : `object`。如果对象表示一个关闭的窗口，则此属性存在并且将是{{WebExtAPIRef("windows.Window")}}对象。
 
@@ -33,9 +33,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 
 {{Compat}}
 
-> **备注：** 该 API 基于 Chromium 的[`chrome.sessions`](https://developer.chrome.com/extensions/sessions)API。
->
-> Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并在此处包含在 Creative Commons Attribution 3.0 美国许可证下。
+> [!NOTE]
+> 该 API 基于 Chromium 的 [`chrome.sessions`](https://developer.chrome.google.cn/docs/extensions/reference/api/sessions) API。
 
 <!--
 //版权所有 2015 The Chromium Authors。版权所有。

@@ -1,14 +1,8 @@
 ---
 title: 나누기 (/)
 slug: Web/JavaScript/Reference/Operators/Division
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Division
-browser-compat: javascript.operators.division
 ---
+
 {{jsSidebar("Operators")}}
 
 나누기 연산자(`/`)는 왼쪽 피연산자를 피제수, 오른쪽 피연산자를 제수로 하여 몫을 구합니다.
@@ -18,7 +12,7 @@ browser-compat: javascript.operators.division
 ## 구문
 
 ```js
-x / y
+x / y;
 ```
 
 ## 예제
@@ -26,21 +20,21 @@ x / y
 ### 기본 나눗셈
 
 ```js
-1 / 2             // 0.5
+1 / 2; // 0.5
 
-Math.floor(3 / 2) // 1
+Math.floor(3 / 2); // 1
 
-1.0 / 2.0         // 0.5
+1.0 / 2.0; // 0.5
 ```
 
 ### 0으로 나누기
 
 ```js
-2.0 / 0     // Infinity
+2.0 / 0; // Infinity
 
-2.0 / 0.0   // Infinity, 0.0 === 0이기 때문
+2.0 / 0.0; // Infinity, 0.0 === 0이기 때문
 
-2.0 / -0.0  // -Infinity
+2.0 / -0.0; // -Infinity
 ```
 
 ## 명세

@@ -1,24 +1,16 @@
 ---
 title: Animation.onfinish
 slug: Web/API/Animation/finish_event
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Reference
-  - onfinish
-  - waapi
-translation_of: Web/API/Animation/onfinish
-original_slug: Web/API/Animation/onfinish
 ---
+
 {{ APIRef("Web Animations") }}
 
-La propiedad `onfinish` de la interfaz {{domxref("Animation")}} (de la [Web Animations API](/es/docs/Web/API/Web_Animations_API)) es el manejador de eventos para el evento {{event("finish")}}. Este evento se envía cuando la animación termina de reproducirse.
+La propiedad `onfinish` de la interfaz {{domxref("Animation")}} (de la [Web Animations API](/es/docs/Web/API/Web_Animations_API)) es el manejador de eventos para el evento [`finish`](/es/docs/Web/Reference/Events/finish). Este evento se envía cuando la animación termina de reproducirse.
 
 El evento `finish` ocurre cuando la reproducción se completa de forma natural, así como cuando se llama al método {{domxref("Animation.finish()")}} para que la animación termine inmediatamente.
 
-> **Nota:** El estado de reproducción `"paused"` reemplaza al estado `"finished"`. Si la animación está pausada y finalizada, el estado`"paused"` será el único reportado. Puedes forzar el estado de la animación a `"finished"` configurando su {{domxref("Animation.startTime", "startTime")}} a `document.timeline.currentTime - (Animation.currentTime * Animation.playbackRate)`.
+> [!NOTE]
+> El estado de reproducción `"paused"` reemplaza al estado `"finished"`. Si la animación está pausada y finalizada, el estado`"paused"` será el único reportado. Puedes forzar el estado de la animación a `"finished"` configurando su {{domxref("Animation.startTime", "startTime")}} a `document.timeline.currentTime - (Animation.currentTime * Animation.playbackRate)`.
 
 ## Sintaxis
 
@@ -30,7 +22,7 @@ Animation.onfinish = finishHandler;
 
 ### Valor
 
-Una función que debe ser llamada para manejar el evento {{event("finish")}}, o `null` si no se establece ningún manejador para el evento `finish`.
+Una función que debe ser llamada para manejar el evento [`finish`](/es/docs/Web/Reference/Events/finish), o `null` si no se establece ningún manejador para el evento `finish`.
 
 ## Ejemplos
 
@@ -49,8 +41,8 @@ hide(endingUI);
 
 // Cuando los créditos se hayan desvanecido,
 // volvemos a agregar los eventos de puntero cuando terminen.
-bringUI.onfinish = function() {
-  endingUI.style.pointerEvents = 'auto';
+bringUI.onfinish = function () {
+  endingUI.style.pointerEvents = "auto";
 };
 ```
 

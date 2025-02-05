@@ -1,14 +1,8 @@
 ---
-title: ':hover'
+title: ":hover"
 slug: Web/CSS/:hover
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:hover
 ---
+
 {{ CSSRef }}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:hover`** de [CSS](/es/docs/Web/CSS) coincide cuando el usuario interactúa con un elemento con un dispositivo señalador, pero no necesariamente lo activa. Generalmente se activa cuando el usuario se desplaza sobre un elemento con el cursor (puntero del mouse).
@@ -22,7 +16,8 @@ a:hover {
 
 Los estilos definidos por la pseudoclase `:active` serán anulados por cualquier pseudo-clase posterior relacionada con el _enlace_ ({{ cssxref(":link") }}, {{ cssxref(":visited") }}, o {{ cssxref(":active") }}) que tenga al menos la misma especificidad. Para darle un estilo apropiado a los enlaces, coloque la regla `:hover` después de las reglas `:link` y `:visited`, pero antes de `:active`, según lo definido por el _orden LVHA_: `:link` — `:visited` — `:hover` — `:active`.
 
-> **Nota:** La pseudo-clase `:hover` es problemática en las pantallas táctiles. Dependiendo del navegador, la pseudo-clase `:hover` podría no coincidir, coincidir solo por un momento después de tocar un elemento, o continuar coincidiendo incluso después de que el usuario haya dejado de tocar y hasta que el usuario toque otro elemento. Los desarrolladores web deben asegurarse de que el contenido sea accesible en dispositivos con capacidades _hovering_ limitadas o inexistentes.
+> [!NOTE]
+> La pseudo-clase `:hover` es problemática en las pantallas táctiles. Dependiendo del navegador, la pseudo-clase `:hover` podría no coincidir, coincidir solo por un momento después de tocar un elemento, o continuar coincidiendo incluso después de que el usuario haya dejado de tocar y hasta que el usuario toque otro elemento. Los desarrolladores web deben asegurarse de que el contenido sea accesible en dispositivos con capacidades _hovering_ limitadas o inexistentes.
 
 ## Sintaxis
 
@@ -43,7 +38,7 @@ Los estilos definidos por la pseudoclase `:active` serán anulados por cualquier
 ```css
 a {
   background-color: powderblue;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
 a:hover {
@@ -57,22 +52,18 @@ a:hover {
 
 ### Galería de imágenes
 
-Puede usar la pseudoclase `:hover` para crear una galería de imágenes con imágenes de tamaño completo que solo se muestran cuando el mouse se mueve sobre una miniatura. Vea [esta demostración](/@api/deki/files/6247/=css-gallery.zip) para una posible nota.
+Puede usar la pseudoclase `:hover` para crear una galería de imágenes con imágenes de tamaño completo que solo se muestran cuando el mouse se mueve sobre una miniatura. Vea [esta demostración](css-gallery.zip) para una posible nota.
 
-> **Nota:** Para un efecto análogo, pero basado en la pseudo-clase [`:checked`](/es/docs/Web/CSS/%3Achecked) (aplicado a radioboxes ocultos), vea [esta demostración](/@api/deki/files/6268/=css-checked-gallery.zip), tomada de la página de referencia [:checked](/es/docs/Web/CSS/:checked).
+> [!NOTE]
+> Para un efecto análogo, pero basado en la pseudo-clase [`:checked`](/es/docs/Web/CSS/%3Achecked) (aplicado a radioboxes ocultos), vea [esta demostración](css-checked-gallery.zip), tomada de la página de referencia [:checked](/es/docs/Web/CSS/:checked).
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                                   | Comentarios                                           |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', 'scripting.html#selector-hover', ':hover') }}                     | {{ Spec2('HTML WHATWG') }}     |                                                       |
-| {{ SpecName('CSS4 Selectors', '#the-hover-pseudo', ':hover') }}                                 | {{ Spec2('CSS4 Selectors') }} | Permite aplicar `:hover` a cualquier pseudo-elemento. |
-| {{ SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':hover') }} | {{ Spec2('CSS3 Selectors') }} | Ningún cambio significativo.                          |
-| {{ SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':hover') }}                 | {{ Spec2('CSS2.1') }}             | Definición Inicial.                                   |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.hover")}}
+{{Compat}}
 
 ## Ver también
 

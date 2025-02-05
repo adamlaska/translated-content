@@ -1,11 +1,14 @@
 ---
-title: MouseEvent.pageY
+title: "MouseEvent: pageY プロパティ"
+short-title: pageY
 slug: Web/API/MouseEvent/pageY
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-**`pageY`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、マウスがクリックされた位置の Y（垂直）座標を、文書全体の相対座標で返します。
+**`pageY`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、マウスがクリックされた位置の Y （垂直）座標を、文書全体の相対座標で返します。
 このプロパティはページの垂直スクロールを加味します。
 
 ## 値

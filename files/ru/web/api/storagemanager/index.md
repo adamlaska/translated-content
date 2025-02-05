@@ -1,19 +1,8 @@
 ---
 title: StorageManager
 slug: Web/API/StorageManager
-tags:
-  - API
-  - Interface
-  - Persistence
-  - Quotas
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - StorageManager
-  - Usage
-translation_of: Web/API/StorageManager
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}
 
 **`StorageManager`** является частью [Storage API](/ru/docs/Web/API/Storage_API) и предоставляет интерфейс для управления правами на хранение данных и для получения объёма данных, доступного для хранения. Доступ к интерфейсу можно получить через {{domxref("navigator.storage")}} или через {{domxref("WorkerNavigator.storage")}}.
@@ -27,7 +16,7 @@ translation_of: Web/API/StorageManager
 - {{domxref("StorageManager.persisted()")}} {{securecontext_inline}}
   - : Возвращает {{jsxref('Promise')}}, который принимает значение `true` в случае, когда сайт получил возможность хранить данные в браузере.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

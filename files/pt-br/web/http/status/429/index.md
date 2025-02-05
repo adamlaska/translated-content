@@ -1,15 +1,8 @@
 ---
 title: 429 Too Many Requests
 slug: Web/HTTP/Status/429
-tags:
-  - Código de status
-  - Erro
-  - Erro de cliente
-  - HTTP
-  - Referência(2)
-  - Status HTTP
-translation_of: Web/HTTP/Status/429
 ---
+
 {{HTTPSidebar}}
 
 O código de resposta HTTP **`429 Too Many Requests`** indica que o usuário enviou muitos pedidos em um determinado período de tempo.
@@ -32,8 +25,8 @@ Retry-After: 3600
 
 ## Especificações
 
-| Especificações                                               | Título                 |
-| ------------------------------------------------------------ | ---------------------- |
+| Especificações                                 | Título                 |
+| ---------------------------------------------- | ---------------------- |
 | {{RFC("6585", "429 Too Many Requests" , "4")}} | Status HTTP adicionais |
 
 ## Veja também

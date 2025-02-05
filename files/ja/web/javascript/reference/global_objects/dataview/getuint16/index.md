@@ -47,13 +47,11 @@ dataview.getUint16(1); // 0
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getuint16', 'DataView.prototype.getUint16')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.DataView.getUint16")}}
+{{Compat}}
 
 ## 関連情報
 

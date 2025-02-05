@@ -25,20 +25,20 @@ navigator.storage.persisted().then(function(persistent) { ... })
 
 ```js
 if (navigator.storage && navigator.storage.persist)
-  navigator.storage.persisted().then(function(persistent) {
+  navigator.storage.persisted().then(function (persistent) {
     if (persistent)
       console.log("明示的なユーザー操作以外では、ストレージは消去されません。");
     else
-      console.log("ストレージは UA によってストレージの圧力により消去されるかもしれません。");
+      console.log(
+        "ストレージは UA によってストレージの圧力により消去されるかもしれません。",
+      );
   });
 ```
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                         | コメント |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Storage','#dom-storagemanager-persisted','persisted')}} | {{Spec2('Storage')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.StorageManager.persisted")}}
+{{Compat}}

@@ -1,14 +1,8 @@
 ---
 title: Forwarded
 slug: Web/HTTP/Headers/Forwarded
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Forwarded
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho **`Forwarded`** contém informação dos [servidores de proxy reverso](/pt-BR/docs/Web/HTTP/Proxy_servers_and_tunneling) que é alterada ou perdida quando um proxy está envolvido no caminho da requisição.
@@ -86,13 +80,13 @@ Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"
 
 ## Especificações
 
-| Especificação                                | Título                   |
-| -------------------------------------------- | ------------------------ |
+| Especificação                     | Título                   |
+| --------------------------------- | ------------------------ |
 | {{RFC("7239", "Forwarded", "4")}} | Forwarded HTTP Extension |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Forwarded")}}
+{{Compat}}
 
 ## Veja também
 

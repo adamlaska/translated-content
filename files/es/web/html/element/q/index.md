@@ -1,21 +1,9 @@
 ---
-title: '<q>: El elemento de cita en línea'
+title: "<q>: El elemento de cita en línea"
 slug: Web/HTML/Element/q
-tags:
-  - Cita de bloque independiente
-  - Citación
-  - Elemento
-  - HTML
-  - Marca de cita
-  - Q
-  - Referencia
-  - Semántica HTML a nivel de texto
-  - Web
-  - cita
-translation_of: Web/HTML/Element/q
-original_slug: Web/HTML/Elemento/q
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El **elemento HTML `<q>`** indica que el texto adjunto es una cita corta en línea. La mayoría de los navegadores modernos implementan esto rodeando el texto entre comillas. Este elemento está destinado a citas breves que no requieren saltos de párrafo; para citas de bloque independiente, utiliza el elemento {{HTMLElement("blockquote")}}.
 
@@ -50,7 +38,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
     </tr>
     <tr>
       <th scope="row">Omisión de etiqueta</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Padres autorizados</th>
@@ -80,37 +68,36 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
   </tbody>
 </table>
 
-> **Nota:** **Nota de uso**: La mayoría de los navegadores modernos automáticamente agregarán comillas alrededor del texto dentro de un elemento `<q>`. Es posible que se necesite una regla de estilo para agregar comillas en navegadores antiguos.
+> [!NOTE]
+> La mayoría de los navegadores modernos automáticamente agregarán comillas alrededor del texto dentro de un elemento `<q>`. Es posible que se necesite una regla de estilo para agregar comillas en navegadores antiguos.
 
 ## Atributos
 
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("cite")}}
+- `cite`
   - : El valor de este atributo es una URL que designa un documento o mensaje fuente para la información citada. Este atributo está destinado a señalar información que explica el contexto o la referencia de la cita.
 
 ## Ejemplo
 
 ```html
-<p>Conforme al sitio web de Mozilla,
-  <q
-  cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0
-  fue lanzado en 2004 y se convirtió en un gran éxito.</q></p>
+<p>
+  Conforme al sitio web de Mozilla,
+  <q cite="https://www.mozilla.org/en-US/about/history/details/"
+    >Firefox 1.0 fue lanzado en 2004 y se convirtió en un gran éxito.</q
+  >
+</p>
 ```
 
 {{EmbedLiveSample('Ejemplo')}}
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                               | Comentario         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{ SpecName('HTML WHATWG', 'semantics.html#the-q-element', '&lt;q&gt;') }}         | {{ Spec2('HTML WHATWG') }} |                    |
-| {{ SpecName('HTML5 W3C', 'textlevel-semantics.html#the-q-element', '&lt;q&gt;') }} | {{ Spec2('HTML5 W3C') }}     |                    |
-| {{ SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;q&gt;') }}                     | {{ Spec2('HTML4.01') }}     | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{ Compat("html.elements.q") }}
+{{Compat}}
 
 ## Ve también
 

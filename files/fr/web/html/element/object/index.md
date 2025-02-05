@@ -1,11 +1,9 @@
 ---
 title: <object>
 slug: Web/HTML/Element/object
-translation_of: Web/HTML/Element/object
-browser-compat: html.elements.object
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<object>`** représente une ressource externe qui peut être interprétée comme une image, un contexte de navigation imbriqué ou une ressource à traiter comme un _plugin_.
 
@@ -53,7 +51,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 - `data`
   - : L'adresse de la ressource, une URL valide. Au moins un attribut `data` et un attribut `type` doivent être définis.
 - `form`
-  - : L'élément de formulaire éventuel auquel l'élément est associé. La valeur de cet attribut doit être l'identifiant d'un élément [`<form>`](/fr/docs/Web/HTML/Element/Form) du même document.
+  - : L'élément de formulaire éventuel auquel l'élément est associé. La valeur de cet attribut doit être l'identifiant d'un élément [`<form>`](/fr/docs/Web/HTML/Element/form) du même document.
 - `height`
   - : La hauteur de la ressource à afficher, exprimée en [pixels CSS](https://drafts.csswg.org/css-values/#px) (uniquement en valeur absolue, [pas de pourcentage autorisé](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)).
 - `name`
@@ -78,7 +76,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 - `codetype` {{deprecated_inline}}
   - : Le type de contenu des données spécifiés par `classid`.
 - `declare` {{deprecated_inline}}
-  - : Si cet attribut booléen est présent, l'élément sera seulement une déclaration. L'objet devra donc être instancié par un élément  `<object>` dans la suite du document. En HTML5, il faut répéter l'élément `<object>` complètement chaque fois que la ressource est réutilisée.
+  - : Si cet attribut booléen est présent, l'élément sera seulement une déclaration. L'objet devra donc être instancié par un élément `<object>` dans la suite du document. En HTML5, il faut répéter l'élément `<object>` complètement chaque fois que la ressource est réutilisée.
 - `standby` {{deprecated_inline}}
   - : Un message que le navigateur peut afficher pendant le chargement de l'implémentation et des données liées à l'objet.
 
@@ -87,11 +85,11 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 ### Intégrer une vidéo YouTube
 
 ```html
-<object type="video/mp4"
-    data="https://www.youtube.com/watch?v=Sp9ZfSvpf7A"
-    width="1280"
-    height="720">
-</object>
+<object
+  type="video/mp4"
+  data="https://www.youtube.com/watch?v=Sp9ZfSvpf7A"
+  width="1280"
+  height="720"></object>
 ```
 
 ## Spécifications

@@ -3,7 +3,7 @@ title: <nav>
 slug: Web/HTML/Element/nav
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<nav>`元素**表示页面的一部分，其目的是在当前文档或其他文档中提供导航链接。导航部分的常见示例是菜单，目录和索引。
 
@@ -20,8 +20,8 @@ slug: Web/HTML/Element/nav
    <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流式内容</a>.</td>
   </tr>
   <tr>
-   <th scope="row"><dfn>忽略的标记</dfn></th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row"><dfn>允许的父元素</dfn></th>
@@ -40,7 +40,7 @@ slug: Web/HTML/Element/nav
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/HTML/Global_attributes).
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes).
 
 ## _使用说明_
 

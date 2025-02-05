@@ -29,22 +29,20 @@ Intl.getCanonicalLocales(locales)
 ### getCanonicalLocales の使用
 
 ```js
-Intl.getCanonicalLocales('EN-US'); // ["en-US"]
-Intl.getCanonicalLocales(['EN-US', 'Fr']); // ["en-US", "fr"]
+Intl.getCanonicalLocales("EN-US"); // ["en-US"]
+Intl.getCanonicalLocales(["EN-US", "Fr"]); // ["en-US", "fr"]
 
-Intl.getCanonicalLocales('EN_US');
+Intl.getCanonicalLocales("EN_US");
 // RangeError:'EN_US' is not a structurally valid language tag
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES Int Draft', '#sec-intl.getcanonicallocales', 'Intl.getCanonicalLocales')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Intl.getCanonicalLocales")}}
+{{Compat}}
 
 ## 関連情報
 

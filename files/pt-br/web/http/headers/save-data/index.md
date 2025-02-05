@@ -1,22 +1,16 @@
 ---
 title: Save-Data
 slug: Web/HTTP/Headers/Save-Data
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Referencia
-  - Save-Data
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Save-Data
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho **`Save-Data`** é um booleano no qual, em requisições, indica a preferência do cliente para reduzir uso de dados. Isso pode ser por algumas razões como custo de transferência alto, baixa velocidade de conexão, etc.
 
 Um valor de `On` indica uma opção explícita do usuário em querer reduzir a quantidade de dados usados no cliente, e quando comunicade para origens permite elas entregarem conteúdo alternativo para reduzir a quantidade de dados baixados como recursos de imagem e vídeo menores, marcação e estilo diferente, desabilitar _polling_ e atualizações automáticas, e assim por diante.
 
-> **Nota:** Desabilitar HTTP/2 Server Push ({{RFC("7540", "Server Push", "8.2")}}) pode ser desejável para reduzir o _download_ de dados.
+> [!NOTE]
+> Desabilitar HTTP/2 Server Push ({{RFC("7540", "Server Push", "8.2")}}) pode ser desejável para reduzir o _download_ de dados.
 
 ## Sintaxe
 
@@ -84,11 +78,11 @@ Content-Type: image/jpeg
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Save-Data")}}
+{{Compat}}
 
 ## Veja também
 
 - [Ajude seus usuários a "salvar-dados" (Help Your Users \`Save-Data\`) - CSS Tricks](https://css-tricks.com/help-users-save-data/)
 - [Entregando aplicações leves e rápidas com Save-Data (Delivering Fast and Light Applications with Save-Data) - Google Developers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/save-data/)
 - Cabeçalho para indicar que o conteúdo servidor varia por `Save-Data`: {{HTTPHeader("Vary")}}
-- Funcionalidade CSS @media [`prefers-reduced-data`](https://developer.mozilla.org/pt-BR/docs/Web/CSS/@media/prefers-reduced-data) {{experimental_inline}}
+- Funcionalidade CSS @media [`prefers-reduced-data`](/pt-BR/docs/Web/CSS/@media/prefers-reduced-data) {{experimental_inline}}

@@ -1,14 +1,8 @@
 ---
 title: Number.MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
-tags:
-  - JavaScript
-  - Number
-  - Property
-  - Propriedade
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 ---
+
 {{JSRef}}
 
 A propriedade **`Number.MAX_VALUE`** representa o maior valor numérico representável em JavaScript.
@@ -37,13 +31,11 @@ if (num1 * num2 <= Number.MAX_VALUE) {
 
 ## Especificações
 
-| Especificação                                                                                |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-number.max_value', 'Number.MAX_VALUE')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.MAX_VALUE")}}
+{{Compat}}
 
 ## Veja também
 

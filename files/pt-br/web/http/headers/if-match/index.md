@@ -1,14 +1,8 @@
 ---
 title: If-Match
 slug: Web/HTTP/Headers/If-Match
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Referencia
-  - Requisições Condicionais
-translation_of: Web/HTTP/Headers/If-Match
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de requisição HTTP **`If-Match`** faz a requisição condicional. Para métodos {{HTTPMethod("GET")}} e {{HTTPMethod("HEAD")}}, o servidor irá mandar de volta o recurso requisitado somente se ele corresponde com uma das `ETags` listadas. Para {{HTTPMethod("PUT")}} e outros métodos não-seguros, ele somente irá fazer o upload do recurso neste caso.
@@ -59,13 +53,13 @@ If-Match: *
 
 ## Especificações
 
-| Especificação                                | Título                                                       |
-| -------------------------------------------- | ------------------------------------------------------------ |
+| Especificação                      | Título                                                       |
+| ---------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7232", "If-Match", "3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.If-Match")}}
+{{Compat}}
 
 ## Veja também
 

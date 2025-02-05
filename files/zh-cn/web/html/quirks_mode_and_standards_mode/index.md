@@ -3,7 +3,7 @@ title: 怪异模式和标准模式
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 在很久以前的网络上，页面通常有两种版本：为网景（Netscape）的 Navigator 准备的版本，以及为微软（Microsoft）的 Internet Explorer 准备的版本。当 W3C 创立网络标准后，为了不破坏当时既有的网站，浏览器不能直接弃用这些标准。因此，浏览器采用了两种模式，用以把能符合新规范的网站和老旧网站区分开。
 
@@ -14,10 +14,10 @@ slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 对 [HTML](/zh-CN/docs/Web/HTML) 文件来说，浏览器使用文件开头的 DOCTYPE 来决定用怪异模式处理或标准模式处理。为了确保你的页面使用标准模式，请确认你的页面如同本范例一样拥有 DOCTYPE：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Hello World!</title>
   </head>
   <body></body>
@@ -34,7 +34,7 @@ slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 ### XHTML
 
-如果你的网页使用 [XHTML](/zh-CN/docs/XHTML) 并在 `Content-Type` HTTP 标头使用 `application/xhtml+xml` MIME 类型，你不需要使用 DOCTYPE 启动标准模式，因为这种文件会永远使用标准模式。不过请注意，页面使用 `application/xhtml+xml` 会令 Internet Explorer 8 出于未知格式之故出现下载对话框，因为首个支持 XHTML 的 Internet Explorer 版本是 Internet Explorer 9。
+如果你的网页使用 [XHTML](/zh-CN/docs/Glossary/XHTML) 并在 `Content-Type` HTTP 标头使用 `application/xhtml+xml` MIME 类型，你不需要使用 DOCTYPE 启动标准模式，因为这种文件会永远使用标准模式。不过请注意，页面使用 `application/xhtml+xml` 会令 Internet Explorer 8 出于未知格式之故出现下载对话框，因为首个支持 XHTML 的 Internet Explorer 版本是 Internet Explorer 9。
 
 如果你的类 XHTML 网页使用 `text/html` MIME 类型，浏览器会将其视为 HTML，这时就需要使用 DOCTYPE 启用标准模式。
 

@@ -1,11 +1,11 @@
 ---
 title: CanvasRenderingContext2D.strokeText()
 slug: Web/API/CanvasRenderingContext2D/strokeText
-translation_of: Web/API/CanvasRenderingContext2D/strokeText
 ---
+
 {{APIRef}}
 
-Метод **`CanvasRenderingContext2D`\*\***`.strokeText(),`\*\* предоставляемый Canvas 2D API, выполняет обводку заданного текста в заданной позиции (_x, y_). Если указан необязательный четвёртый параметр, текст будет масштабироваться в соответствие с указанной максимальной шириной.
+Метод **`CanvasRenderingContext2D.strokeText()`**, предоставляемый Canvas 2D API, выполняет обводку заданного текста в заданной позиции (_x, y_). Если указан необязательный четвёртый параметр, текст будет масштабироваться в соответствие с указанной максимальной шириной.
 
 Смотрите также метод {{domxref("CanvasRenderingContext2D.fillText()")}} для заливки контуров текста.
 
@@ -58,7 +58,8 @@ ctx.strokeText("Hello world", 50, 100);
 </div>
 <textarea id="code" class="playable-code">
 ctx.font = "48px serif";
-ctx.strokeText("Hello world", 50, 100);</textarea>
+ctx.strokeText("Hello world", 50, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -74,14 +75,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

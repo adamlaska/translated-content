@@ -14,11 +14,23 @@ Firefox では、_表示_ >*スタイルシート*のサブメニューを使用
 代替スタイルシートはふつう、次のように {{HTMLElement("link")}} 要素に `rel="alternate stylesheet"` およびび `title="..."` 属性を使用することで指定されます。
 
 ```html
-<link href="reset.css" rel="stylesheet" type="text/css">
+<link href="reset.css" rel="stylesheet" type="text/css" />
 
-<link href="default.css" rel="stylesheet" type="text/css" title="既定のスタイル">
-<link href="fancy.css" rel="alternate stylesheet" type="text/css" title="ファンシー">
-<link href="basic.css" rel="alternate stylesheet" type="text/css" title="基本">
+<link
+  href="default.css"
+  rel="stylesheet"
+  type="text/css"
+  title="既定のスタイル" />
+<link
+  href="fancy.css"
+  rel="alternate stylesheet"
+  type="text/css"
+  title="ファンシー" />
+<link
+  href="basic.css"
+  rel="alternate stylesheet"
+  type="text/css"
+  title="基本" />
 ```
 
 この例では、*スタイルシート*のサブメニューに「既定のスタイル」「ファンシー」「基本」という項目が追加され、「既定のスタイル」が選択されています。ユーザーがスタイルを選択すると、ページはそのスタイルシートを使って即座に再描画されます。
@@ -27,7 +39,7 @@ Firefox では、_表示_ >*スタイルシート*のサブメニューを使用
 
 ### やってみましょう
 
-[ここをクリック](/samples/cssref/altstyles/index.html)すると、やってみることができる例を見ることができます。
+[ここをクリック](https://mdn.dev/archives/media/samples/cssref/altstyles/index.html)すると、やってみることができる例を見ることができます。
 
 ## 詳細
 
@@ -43,15 +55,8 @@ Firefox では、_表示_ >*スタイルシート*のサブメニューを使用
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   | 状態                             | 備考                                                                                                                                                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#rel-alternate', 'link type "alternate"')}}                                             | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                                                                                                                       |
-| {{SpecName('HTML WHATWG', '#the-link-is-an-alternative-stylesheet', 'alternative stylesheet')}}         | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                                                                                                                       |
-| {{SpecName('HTML WHATWG', '#attr-style-title', 'the "title" attribute for the style element')}}         | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                                                                                                                       |
-| {{SpecName('HTML WHATWG', '#attr-meta-http-equiv-default-style', 'meta http-equiv="default-style")')}} | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                                                                                                                       |
-| {{SpecName('CSSOM', '#css-style-sheet-collections', 'CSS Style Sheet Collections')}}                         | {{Spec2('CSSOM')}}         | CSS OM 仕様書は、**スタイルシートセット名**と、その**無効フラグ**、**推奨される CSS スタイルシートセット名** の概念を定義しています。 これらがどのように指定されるのかを定義し、 HTML 仕様書が **_CSS スタイルシートの作成時_**に定義する必要がある HTML に依存した動作を定義できるようにしています。 |
-| {{SpecName("HTML4.01", "present/styles.html#h-14.3", "Alternative style sheets")}}                             | {{Spec2("HTML4.01")}}     | 以前は、 HTML 仕様書自体で推奨及び代替スタイルシートの概念を定義していました。                                                                                                                                                                                                                        |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.link.rel.alternate_stylesheet")}}
+{{Compat}}

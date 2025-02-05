@@ -1,8 +1,8 @@
 ---
 title: TRACE
 slug: Web/HTTP/Methods/TRACE
-translation_of: Web/HTTP/Methods/TRACE
 ---
+
 {{HTTPSidebar}}
 
 O **método** **HTTP `TRACE` **realiza um teste de loopback enviando uma mensagem por todo o caminho até o recurso alvo no qual foi destinado, provendo um mecanismo útil para debug.
@@ -46,13 +46,13 @@ TRACE /index.html
 
 ## Especificações
 
-| Specification                                | Title                                                         |
-| -------------------------------------------- | ------------------------------------------------------------- |
+| Specification                     | Title                                                         |
+| --------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "TRACE", "4.3.8")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.methods.TRACE")}}
+{{Compat}}
 
 ## Veja também
 

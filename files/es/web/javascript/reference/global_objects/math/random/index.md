@@ -1,7 +1,6 @@
 ---
 title: Math.random()
 slug: Web/JavaScript/Reference/Global_Objects/Math/random
-browser-compat: javascript.builtins.Math.random
 ---
 
 {{JSRef}}
@@ -59,7 +58,8 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **Nota:** Puede ser tentador utilizar `Math.round()` para conseguir lo mismo, pero al hacerlo, los números aleatorios devueltos no seguirán una distribución uniforme. Esto podría no ser aceptable para sus necesidades.
+> [!NOTE]
+> Puede ser tentador utilizar `Math.round()` para conseguir lo mismo, pero al hacerlo, los números aleatorios devueltos no seguirán una distribución uniforme. Esto podría no ser aceptable para sus necesidades.
 
 ### Obtener un número entero aleatorio entre dos valores (incluyendo ambos)
 

@@ -1,9 +1,10 @@
 ---
 title: Viewport
 slug: Glossary/Viewport
-translation_of: Glossary/Viewport
-original_slug: Глоссарий/Viewport
 ---
+
+{{GlossarySidebar}}
+
 Viewport - это видимая пользователю область веб-страницы, то, что может увидеть пользователь, не прибегая к прокрутке.
 
 Окно просмотра представляет собой многоугольную (обычно прямоугольную) область в компьютерной графике, которая в настоящее время просматривается. В терминах веб-браузера это относится к той части просматриваемого документа, которая в данный момент отображается в её окне (или на экране, если документ просматривается в полноэкранном режиме).
@@ -14,7 +15,7 @@ Meta-тег **viewport** сообщает браузеру о том, как и�
 **Пример**:
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 ```
 
 ### Атрибуты метатега viewport
@@ -64,7 +65,7 @@ Meta-тег **HandheldFriendly** определяет оптимизирован
 **Пример**:
 
 ```html
-<meta name="HandheldFriendly" content="true">
+<meta name="HandheldFriendly" content="true" />
 ```
 
 Meta-тег **MobileOptimized** (<http://goo.gl/ZpLjZz>) задаёт ширину области просмотра в мобильных браузеров IE Mobile или Pocket IE. Является аналогом атрибута **width** в meta-теге **viewport**.
@@ -73,9 +74,9 @@ Meta-тег **MobileOptimized** (<http://goo.gl/ZpLjZz>) задаёт ширин
 
 ```html
 <!-- фиксированная ширина в 320 пикселей -->
-<meta name="MobileOptimized" content="320">
+<meta name="MobileOptimized" content="320" />
 <!-- ширина страницы в соответствии с размером экрана, аналог device-width -->
-<meta name="MobileOptimized" content="width">
+<meta name="MobileOptimized" content="width" />
 ```
 
 Meta-тег **apple-mobile-web-app-capable** (<http://goo.gl/VGDYQC>) позволяет странице работать в полноэкранном режиме, актуален для мобильных устройств Apple.
@@ -83,7 +84,7 @@ Meta-тег **apple-mobile-web-app-capable** (<http://goo.gl/VGDYQC>) позво
 **Пример**:
 
 ```html
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes" />
 ```
 
 ## Рекомендованный набор метатегов
@@ -91,10 +92,10 @@ Meta-тег **apple-mobile-web-app-capable** (<http://goo.gl/VGDYQC>) позво
 Используемый мной набор meta-тегов для сайтов с адаптивным дизайном, заточенным под мобильные устройства:
 
 ```html
-<meta name='viewport' content='width=device-width,initial-scale=1'/>
-<meta content='true' name='HandheldFriendly'/>
-<meta content='width' name='MobileOptimized'/>
-<meta content='yes' name='apple-mobile-web-app-capable'/>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta content="true" name="HandheldFriendly" />
+<meta content="width" name="MobileOptimized" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
 ```
 
 ## Читать больше
@@ -102,7 +103,7 @@ Meta-тег **apple-mobile-web-app-capable** (<http://goo.gl/VGDYQC>) позво
 ### General Knowledge
 
 - [meta viewport. Как он работает?](https://itchief.ru/lessons/html-and-css/meta-viewport-how-it-works)
-- [Всё, что вы хотели знать о meta-теге viewport](http://www.chuvyr.ru/2015/04/meta-viewport.html)
+- [Viewport](https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%80%D1%82_%D0%BF%D1%80%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B0) на Wikipedia
 - [What is viewport in HTML](https://stackoverflow.com/questions/2939693/what-is-viewport-in-html) on Stackoverflow
 - [Get viewport/window size (width and height) with javascript](https://andylangton.co.uk/blog/development/get-viewportwindow-size-width-and-height-javascript)
 - [A tale of two viewports](https://www.quirksmode.org/mobile/viewports.html) (Quirksmode)

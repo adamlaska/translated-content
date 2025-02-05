@@ -1,16 +1,8 @@
 ---
 title: <details>
 slug: Web/HTML/Element/details
-tags:
-  - Elemento
-  - Elementos HTML interactivos
-  - HTML
-  - HTML5
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/details
-original_slug: Web/HTML/Elemento/details
 ---
+
 {{ SeeCompatTable() }}
 
 ## Resumen
@@ -44,7 +36,7 @@ El elemento HTML Details **\<details>** es usado como un widget de revelación a
     </tr>
     <tr>
       <th scope="row">Omisión de etiquetas</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Elementos padres permitidos</th>
@@ -64,10 +56,10 @@ El elemento HTML Details **\<details>** es usado como un widget de revelación a
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales) .
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes) .
 
-- {{htmlattrdef("open")}}
-  - : Este atributo Booleano indica si los detalles serán mostrados al usuario cuando la página se cargue . Por default el valor es `false`y por lo tanto los detalles estarán ocultos.
+- `open`
+  - : Este atributo Booleano indica si los detalles serán mostrados al usuario cuando la página se cargue . Por default el valor es `false` y por lo tanto los detalles estarán ocultos.
 
 ## Ejemplo
 
@@ -82,21 +74,16 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
 {{EmbedLiveSample("Example")}}
 
-> **Nota:** Si el el ejemplo de arriba no funciona , ver [Compatibilidad con navegadores](#compatibilidad_con_navegadores) para determinar si el navegador soporta esta característica .
-
 ## Especificaciones
 
-| Especificaciones                                                                                                                 | Estatus                          | Comentario |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'interactive-elements.html#the-details-element', '&lt;details&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5.1', 'semantics.html#the-details-element', '&lt;details&gt;')}}                     | {{Spec2('HTML5.1')}}     |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("html.elements.details")}}
+{{Compat}}
 
 ## Ver también
 
 - {{HTMLElement("summary")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

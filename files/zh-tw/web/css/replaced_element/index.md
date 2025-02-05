@@ -3,7 +3,7 @@ title: 置換元素 (Replaced element)
 slug: Web/CSS/Replaced_element
 ---
 
-{{CSSRef()}}
+{{CSSRef}}
 
 ## 摘要
 
@@ -21,11 +21,11 @@ CSS 中所謂的「置換元素 (**Replaced element**)」，即是該元素所�
   - [@ 規則](/zh-TW/docs/Web/CSS/At-rule)
   - [註釋](/zh-TW/docs/Web/CSS/Comments)
   - [優先級](/zh-TW/docs/Web/CSS/Specificity)
-  - [繼承](/zh-TW/docs/Web/CSS/inheritance)
-  - [盒模型](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [繼承](/zh-TW/docs/Web/CSS/Inheritance)
+  - [盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [佈局模式](/zh-TW/docs/Web/CSS/Layout_mode)
   - [視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model)
-  - [外邊距合併](/zh-TW/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [外邊距合併](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
     - [初始值](/zh-TW/docs/Web/CSS/initial_value)

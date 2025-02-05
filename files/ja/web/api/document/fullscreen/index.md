@@ -1,23 +1,21 @@
 ---
-title: Document.fullscreen
+title: "Document: fullscreen プロパティ"
+short-title: fullscreen
 slug: Web/API/Document/fullscreen
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("Fullscreen API")}}{{Deprecated_Header}}
 
 廃止された {{domxref("Document")}} インターフェイスの **`fullscreen`** プロパティは読み取り専用で、文書が現在全画面モードで表示されているかどうかを報告します。
 
-このプロパティは読み取り専用ですが、変更されても (strict モードでも) 例外を投げません。セッターは何もしないので、無視されます。
+このプロパティは読み取り専用ですが、変更されても（厳格モードでも）例外を投げません。セッターは何もしないので、無視されます。
 
-> **メモ:** このプロパティは非推奨であり、文書が全画面モードになっているかどうかは、 {{DOMxRef("Document.fullscreenElement")}} が `null` ではないことで確認することができます。
+> [!NOTE]
+> このプロパティは非推奨であり、文書が全画面モードになっているかどうかは、 {{DOMxRef("Document.fullscreenElement")}} が `null` ではないことで確認することができます。
 
-## 構文
-
-```
-var isFullScreen = document.fullscreen;
-```
-
-### 返値
+## 返値
 
 真偽値であり、文書が全画面モードで表示されているときに `true`、それ以外の場合に `false` になります。
 
@@ -43,9 +41,7 @@ function isDocumentInFullScreenMode() {
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考                            |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------- |
-| {{SpecName("Fullscreen", "#dom-document-fullscreen", "Document.fullscreen")}} | {{Spec2("Fullscreen")}} | 初回定義 (廃止プロパティとして) |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -53,6 +49,6 @@ function isDocumentInFullScreenMode() {
 
 ## 関連情報
 
-- [Fullscreen API](/ja/docs/Web/API/Fullscreen_API)
-- [Fullscreen API ガイド](/ja/docs/Web/API/Fullscreen_API/Guide)
+- [全画面 API](/ja/docs/Web/API/Fullscreen_API)
+- [全画面 API ガイド](/ja/docs/Web/API/Fullscreen_API/Guide)
 - {{DOMxRef("Document.fullscreenEnabled")}}

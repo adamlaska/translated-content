@@ -1,15 +1,8 @@
 ---
 title: validityState.badInput
 slug: Web/API/ValidityState/badInput
-tags:
-  - API
-  - Constraints API
-  - HTML DOM
-  - Свойство
-  - Только для чтения
-  - ValidityState
-browser-compat: api.ValidityState.badInput
 ---
+
 {{APIRef("HTML DOM")}}
 
 Доступное только для чтения свойство **`badInput`** объекта [ValidityState](/ru/docs/Web/API/ValidityState), указывающее, что пользователь ввёл значение, которое браузер не может преобразовать. Например, поле ввода чисел, содержащее строку. _**Примечание:** Во всех браузерах, кроме Internet Explorer, ввести в числовое поле любое нечисловое значения не удастся._
@@ -17,7 +10,7 @@ browser-compat: api.ValidityState.badInput
 ## Пример
 
 ```html
-<input type="number" id="age">
+<input type="number" id="age" />
 ```
 
 ```js
@@ -39,5 +32,5 @@ if (input.validity.badInput) {
 
 ## Смотрите также
 
-- [Руководство: Валидация ограничений](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Руководство: Валидация ограничений](/ru/docs/Web/HTML/Constraint_validation)
 - [Учебник: Валидация форм](/ru/docs/Learn/Forms/Form_validation)

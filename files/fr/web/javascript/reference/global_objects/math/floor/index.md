@@ -1,13 +1,6 @@
 ---
 title: Math.floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/floor
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/floor
 ---
 
 {{JSRef}}
@@ -19,7 +12,7 @@ La fonction **`Math.floor(x)`** renvoie le plus grand entier qui est inférieur 
 ## Syntaxe
 
 ```js
-Math.floor(x)
+Math.floor(x);
 ```
 
 ### Paramètres
@@ -33,7 +26,7 @@ Un nombre qui représente le plus grand entier inférieur ou égal à la valeur 
 
 ## Description
 
-`floor()` est une méthode statique de l'objet `Math`, elle doit toujours être utilisée avec la syntaxe  `Math.floor()`, elle ne doit pas être utilisée avec un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`floor()` est une méthode statique de l'objet `Math`, elle doit toujours être utilisée avec la syntaxe `Math.floor()`, elle ne doit pas être utilisée avec un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
 
 > **Note :** `Math.floor(null)` renvoie `0` et pas {{jsxref("NaN")}}.
 
@@ -42,12 +35,12 @@ Un nombre qui représente le plus grand entier inférieur ou égal à la valeur 
 ### Utiliser `Math.floor`
 
 ```js
-Math.floor( 45.95); //  45
-Math.floor( 45.05); //  45
-Math.floor(  4   ); //   4
+Math.floor(45.95); //  45
+Math.floor(45.05); //  45
+Math.floor(4); //   4
 Math.floor(-45.05); // -46
 Math.floor(-45.95); // -46
-Math.floor(null);   // 0
+Math.floor(null); // 0
 ```
 
 ## Spécifications

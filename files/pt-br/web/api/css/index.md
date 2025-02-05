@@ -1,12 +1,8 @@
 ---
 title: CSS
 slug: Web/API/CSS
-tags:
-  - Apps
-  - CSSOM
-  - Referencia
-translation_of: Web/API/CSS
 ---
+
 {{APIRef("CSSOM")}}
 
 `A interface CSS` carrega métodos CSS-relacionados úteis. Nenhum objeto com essa interface foi implementado: Aqui só contém métodos estáticos e futuramente uma interface útil.
@@ -30,14 +26,11 @@ _Nenhuma método estático herdado_.
 
 ## Especificações
 
-| Especificações                                                                   | Estado                                   | Comentário                               |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------- |
-| {{SpecName('CSSOM', '#the-css.escape%28%29-method', 'CSS')}} | {{Spec2('CSSOM')}}                 | Adicionado o `escape()` método estático. |
-| {{SpecName('CSS3 Conditional', '#the-css-interface', 'CSS')}} | {{Spec2('CSS3 Conditional')}} | Definição inicial.                       |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CSS")}}
+{{Compat}}
 
 ## Veja também
 

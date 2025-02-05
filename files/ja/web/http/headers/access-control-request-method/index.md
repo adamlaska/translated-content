@@ -43,13 +43,11 @@ Access-Control-Request-Method: POST
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                     | 備考     |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('Fetch','#http-access-control-request-method', 'Access-Control-Request-Method')}} | {{Spec2("Fetch")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Access-Control-Request-Method")}}
+{{Compat}}
 
 ## 関連情報
 

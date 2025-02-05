@@ -1,16 +1,9 @@
 ---
 title: dl
 slug: Web/HTML/Element/dl
-tags:
-  - Agrupando contenido HTML
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/dl
-original_slug: Web/HTML/Elemento/dl
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El elemento **HTML `<dl>`** representa una lista descriptiva. El elemento encierra una lista de grupos de términos (especificados con el uso del elemento {{HTMLElement("dt")}}) y de descripciones (proveídas con elementos {{HTMLElement("dd")}}). Algunos usos comunes para este elemento son implementar un glosario o para desplegar metadatos (lista de pares llave-valor).
 
@@ -51,7 +44,7 @@ El contenido para este ejemplo interactivo se encuentra almacenado en un reposit
     </tr>
     <tr>
       <th scope="row">Omisión de Tag</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Padres permitidos</th>
@@ -66,7 +59,7 @@ El contenido para este ejemplo interactivo se encuentra almacenado en un reposit
     <tr>
       <th scope="row">Roles ARIA permitidos</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}}
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -78,7 +71,7 @@ El contenido para este ejemplo interactivo se encuentra almacenado en un reposit
 
 ## Atributos
 
-Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
+Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
 ## Ejemplos
 
@@ -88,10 +81,8 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
 <dl>
   <dt>Firefox</dt>
   <dd>
-    A free, open source, cross-platform,
-    graphical web browser developed by the
-    Mozilla Corporation and hundreds of
-    volunteers.
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
   </dd>
 
   <!-- Other terms and descriptions -->
@@ -100,7 +91,7 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
 
 Salida:
 
-![Image:HTML-dl1.png](/@api/deki/files/241/=HTML-dl1.png)
+![Image:HTML-dl1.png](html-dl1.png)
 
 ### Múltiples términos, descripción sencilla
 
@@ -110,10 +101,8 @@ Salida:
   <dt>Mozilla Firefox</dt>
   <dt>Fx</dt>
   <dd>
-    A free, open source, cross-platform,
-    graphical web browser developed by the
-    Mozilla Corporation and hundreds of
-    volunteers.
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
   </dd>
 
   <!-- Other terms and descriptions -->
@@ -122,7 +111,7 @@ Salida:
 
 Salida:
 
-![Image:HTML-dl2.png](/@api/deki/files/242/=HTML-dl2.png)
+![Image:HTML-dl2.png](html-dl2.png)
 
 ### Término sencillo, múltiples descripciones
 
@@ -130,16 +119,12 @@ Salida:
 <dl>
   <dt>Firefox</dt>
   <dd>
-    A free, open source, cross-platform,
-    graphical web browser developed by the
-    Mozilla Corporation and hundreds of
-    volunteers.
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
   </dd>
   <dd>
-    The Red Panda also known as the Lesser
-    Panda, Wah, Bear Cat or Firefox, is a
-    mostly herbivorous mammal, slightly larger
-    than a domestic cat (60 cm long).
+    The Red Panda also known as the Lesser Panda, Wah, Bear Cat or Firefox, is a
+    mostly herbivorous mammal, slightly larger than a domestic cat (60 cm long).
   </dd>
 
   <!-- Other terms and descriptions -->
@@ -148,7 +133,7 @@ Salida:
 
 Output:
 
-![Image:HTML-dl3.png](/@api/deki/files/243/=HTML-dl3.png)
+![Image:HTML-dl3.png](html-dl3.png)
 
 ### Múltiples términos y descripciones
 
@@ -181,7 +166,7 @@ dt::after {
 
 ### Encapsulado de grupos nombre-valor en elementos {{HTMLElement("div")}}
 
-[WHATWG](/es/docs/Glossary/WHATWG) HTML permite encapsular cada grupo nombre-valor de un elemento {{HTMLElement("dl")}} en un elemento {{HTMLElement("div")}}. Esto puede ser útil cuando se utilizan [microdatos](/es/docs/Web/HTML/Microdata), o cuando [atributos globales](/es/docs/Web/HTML/Atributos_Globales) apliquen a todo el grupo, o por motivos de estilo.
+[WHATWG](/es/docs/Glossary/WHATWG) HTML permite encapsular cada grupo nombre-valor de un elemento {{HTMLElement("dl")}} en un elemento {{HTMLElement("div")}}. Esto puede ser útil cuando se utilizan [microdatos](/es/docs/Web/HTML/Microdata), o cuando [atributos globales](/es/docs/Web/HTML/Global_attributes) apliquen a todo el grupo, o por motivos de estilo.
 
 ```html
 <dl>
@@ -212,15 +197,11 @@ Para cambiar la indentación de un término, usa la propiedad {{cssxref("margin"
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estatus                          | Comentarios        |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-dl-element', '&lt;dl&gt;')}}     | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-dl-element', '&lt;dl&gt;')}} | {{Spec2('HTML5 W3C')}}     |                    |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dl&gt;')}}                 | {{Spec2('HTML4.01')}}     | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad Web
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.dl")}}
+{{Compat}}
 
 ## See also
 

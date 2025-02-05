@@ -1,16 +1,8 @@
 ---
 title: Date.prototype.getUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
-tags:
-  - Date
-  - JavaScript
-  - Prototipo
-  - Prototype
-  - Referencia
-  - data
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
 ---
+
 {{JSRef}}
 
 O método **`getUTCMinutes()`** retorna os minutos na data especificada de acordo com o tempo universal.
@@ -40,13 +32,11 @@ var minutes = today.getUTCMinutes();
 
 ## Especificações
 
-| Especificação                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.getutcminutes', 'Date.prototype.getUTCMinutes')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getUTCMinutes")}}
+{{Compat}}
 
 ## Veja também
 

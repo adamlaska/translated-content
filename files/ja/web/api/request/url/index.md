@@ -1,43 +1,38 @@
 ---
-title: Request.url
+title: "Request: url プロパティ"
+short-title: url
 slug: Web/API/Request/url
+l10n:
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch")}}{{SeeCompatTable}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-{{domxref("Request")}} インターフェースの **`url`** 読み取り専用プロパティは、 リクエストの URL を含みます。
+**`url`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リクエストの URL を保持します。
 
-## 構文
+## 値
 
-```
-var myURL = request.url;
-```
-
-### 値
-
-リクエストの url を示す {{domxref("USVString")}}。
+リクエストの URL を示す文字列です。
 
 ## 例
 
-次のスニペットでは、{{domxref("Request.Request()")}} コンストラクタを使って（スクリプトと同じディレクトリにある画像ファイルのために）新しいリクエストを生成してから、変数にリクエストの url を保存しています：
+次のスニペットでは、 {{domxref("Request.Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのための）新しいリクエストを生成してから、変数にリクエストの URL を保存しています。
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myURL = myRequest.url; // "http://mdn.github.io/fetch-examples/fetch-request/flowers.jpg"
+const myRequest = new Request("flowers.jpg");
+const myURL = myRequest.url; // "https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request/flowers.jpg"
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                         | 状態                     | コメント           |
-| ------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#dom-request-url','url')}} | {{Spec2('Fetch')}} | Initial definition |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
-{{Compat("api.Request.url")}}
+{{Compat}}
 
 ## 関連項目
 
-- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

@@ -1,15 +1,9 @@
 ---
 title: <ruby>
 slug: Web/HTML/Element/ruby
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/ruby
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<ruby>` 요소**는 루비 주석을 나타냅니다. 루비 주석은 동아시아 문자의 발음을 표기할 때 사용합니다.
 
@@ -43,7 +37,7 @@ translation_of: Web/HTML/Element/ruby
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모</th>
@@ -74,8 +68,7 @@ translation_of: Web/HTML/Element/ruby
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
 
@@ -84,9 +77,7 @@ translation_of: Web/HTML/Element/ruby
 ### 단어별 표기
 
 ```html
-<ruby>
-  明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp>
-</ruby>
+<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
 ```
 
 {{EmbedLiveSample("단어별_표기")}}
@@ -97,7 +88,7 @@ translation_of: Web/HTML/Element/ruby
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.ruby")}}
+{{Compat}}
 
 ## 같이 보기
 

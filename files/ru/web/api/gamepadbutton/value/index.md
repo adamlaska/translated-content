@@ -1,8 +1,8 @@
 ---
 title: GamepadButton.value
 slug: Web/API/GamepadButton/value
-translation_of: Web/API/GamepadButton/value
 ---
+
 {{APIRef("Gamepad API")}}
 
 Свойство **`GamepadButton.value`** интерфейса {{domxref("GamepadButton")}} возвращает состояние аналоговой клавиши геймпада, такой, как, например триггеры.
@@ -20,7 +20,7 @@ translation_of: Web/API/GamepadButton/value
 ```js
 var gp = navigator.getGamepads()[0];
 
-if(gp.buttons[0].value > 0) {
+if (gp.buttons[0].value > 0) {
   // respond to analog button being pressed in
 }
 ```
@@ -29,16 +29,14 @@ if(gp.buttons[0].value > 0) {
 
 {{domxref("double")}}.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                        | Status                       | Comment            |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("Gamepad", "#dom-gamepadbutton-value", "GamepadButton.value")}} | {{Spec2("Gamepad")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)
+[Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

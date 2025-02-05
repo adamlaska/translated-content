@@ -1,30 +1,25 @@
 ---
-title: '<figcaption>: Элемент подписи иллюстрации'
+title: "<figcaption>: Элемент подписи иллюстрации"
 slug: Web/HTML/Element/figcaption
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Элемент
-translation_of: Web/HTML/Element/figcaption
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML-элемент `<figcaption>` или элемент подписи иллюстрации** представляет собой подпись (заголовок) или легенду, описывающую остальную часть содержимого родительского элемента {{HTMLElement("figure")}}.
 
 {{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
 
-| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | Нет                                                                                                         |
-| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Разрешённое содержимое                                           | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент)                           |
-| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                    |
-| Разрешённые родители                                             | Элемент {{HTMLElement("figure")}}; элемент `<figcaption>` должен быть первым или последним потомком. |
-| Разрешённые ARIA-роли                                            | {{ARIARole("group")}}, {{ARIARole("presentation")}}                                          |
-| DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                        |
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | Нет                                                                                                                                                                                |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                      | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#потоковый_контент)                                                                                                        |
+| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                   |
+| Допустимые родители                                        | Элемент {{HTMLElement("figure")}}; элемент `<figcaption>` должен быть первым или последним потомком.                                                                               |
+| Допустимые ARIA-роли                                       | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code> |
+| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                                         |
 
 ## Атрибуты
 
-Этот элемент принимает только [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
+Этот элемент принимает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ## Примеры
 
@@ -34,7 +29,7 @@ translation_of: Web/HTML/Element/figcaption
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

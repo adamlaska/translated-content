@@ -1,16 +1,8 @@
 ---
 title: Math.log2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log2
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log2
-browser-compat: javascript.builtins.Math.log2
 ---
+
 {{JSRef}}
 
 **`Math.log2()`** 함수는 숫자를 log2(숫자)로 반환합니다.
@@ -23,7 +15,7 @@ browser-compat: javascript.builtins.Math.log2
 ## 문법
 
 ```js
-    Math.log2(x)
+Math.log2(x);
 ```
 
 ### 매개변수
@@ -59,9 +51,10 @@ browser-compat: javascript.builtins.Math.log2
 {{jsxref("Math.round()")}} 로 감싸주어야 합니다.
 
 ```js
-if (!Math.log2) Math.log2 = function(x) {
-  return Math.log(x) * Math.LOG2E;
-};
+if (!Math.log2)
+  Math.log2 = function (x) {
+    return Math.log(x) * Math.LOG2E;
+  };
 ```
 
 ## 예제
@@ -69,11 +62,11 @@ if (!Math.log2) Math.log2 = function(x) {
 ### `Math.log2()`
 
 ```js
-Math.log2(3);    // 1.584962500721156
-Math.log2(2);    // 1
-Math.log2(1);    // 0
-Math.log2(0);    // -Infinity
-Math.log2(-2);   // NaN
+Math.log2(3); // 1.584962500721156
+Math.log2(2); // 1
+Math.log2(1); // 0
+Math.log2(0); // -Infinity
+Math.log2(-2); // NaN
 Math.log2(1024); // 10
 ```
 

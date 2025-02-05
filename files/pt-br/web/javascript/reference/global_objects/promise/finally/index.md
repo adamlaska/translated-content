@@ -1,13 +1,8 @@
 ---
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
-tags:
-  - JavaScript
-  - Promises
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
 ---
+
 {{JSRef}}
 
 O método **`finally()`** retorna uma {{jsxref("Promise")}}. Quando a promise for estabelecida, tenha ela sido realizada ou rejeitada, executa-se a função callback especificada. Isso permite a execução de um código que acontecerá independentemente da `Promise` ter sido realizada (com sucesso) ou rejeitada (com falha).
@@ -44,23 +39,31 @@ O método `finally()` é bastante similar a chamar `.then(quandoEstabelecida, qu
 - Diferentemente de `Promise.resolve(2).then(() => {}, () => {})` (será resolvido como `undefined`), `Promise.resolve(2).finally(() => {})` será resolvido como `2`.
 - De maneira semelhante, diferentemente de `Promise.reject(3).then(() => {}, () => {})` (que será resolvido como `undefined`), `Promise.reject(3).finally(() => {})` será rejeitado como `3`.
 
-> **Nota:** Um `throw` (ou retorno de uma promise rejeitada) no callback de `finally` rejeitará a nova promise com a razão de rejeição especificada na chamada de `throw()`.
+> [!NOTE]
+> Um `throw` (ou retorno de uma promise rejeitada) no callback de `finally` rejeitará a nova promise com a razão de rejeição especificada na chamada de `throw()`.
 
 ## Exemplos
 
 ```js
 let carregando = true;
 
-fetch(minhaRequisicao).then(function(resposta) {
+fetch(minhaRequisicao)
+  .then(function (resposta) {
     var tipoConteudo = response.headers.get("content-type");
-    if(tipoConteudo && tipoConteudo.includes("application/json")) {
+    if (tipoConteudo && tipoConteudo.includes("application/json")) {
       return resposta.json();
     }
     throw new TypeError("Opa, isso não é JSON!");
   })
-  .then(function(json) { /* processamento do seu JSON */ })
-  .catch(function(erro) { console.log(erro); })
-  .finally(function() { carregando = false; });
+  .then(function (json) {
+    /* processamento do seu JSON */
+  })
+  .catch(function (erro) {
+    console.log(erro);
+  })
+  .finally(function () {
+    carregando = false;
+  });
 ```
 
 ## Especificações
@@ -71,7 +74,7 @@ fetch(minhaRequisicao).then(function(resposta) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Promise.finally")}}
+{{Compat}}
 
 ## Veja também
 

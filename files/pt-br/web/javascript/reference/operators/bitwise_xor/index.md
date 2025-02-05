@@ -1,8 +1,8 @@
 ---
 title: Bitwise XOR (^)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_XOR
 ---
+
 {{jsSidebar("Operators")}}
 
 O operador bitwise XOR (`^`) retorna o numero 1 em cada posição de bit para a qual os bits correspondentes de ambos, mas não de ambos os operandos, são `1`s.
@@ -19,7 +19,7 @@ a ^ b
 
 Os operandos são convertidos em números inteiros de 32 bits e expressados por uma série de bits (zeros e uns). Numeros com mais de 32 bits descartam seus bits mais significativos. Por exemplo, o número inteiro a seguir com mais de 32 bits será convertido em um número inteiro de 32 bits:
 
-```js
+```plain
 Antes: 11100110111110100000000000000110000000000001
 Depois:            10100000000000000110000000000001
 ```
@@ -60,15 +60,13 @@ Bitwise XORing any number `x` with `0` yields `x`.
 
 ## Especificações
 
-| Specification                                                                                            |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#prod-BitwiseXORExpression', 'Bitwise XOR expression')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.bitwise_xor")}}
+{{Compat}}
 
 ## Leia também
 
-- [Bitwise operators in the JS guide](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Bitwise operators in the JS guide](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise)
 - [Bitwise XOR assignment operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)

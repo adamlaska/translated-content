@@ -1,8 +1,8 @@
 ---
 title: 410 Gone
 slug: Web/HTTP/Status/410
-translation_of: Web/HTTP/Status/410
 ---
+
 {{HTTPSidebar}}
 
 O código de resposta HTTP **`410 Gone`** de erro do cliente indica que o acesso ao recurso não está mais disponível no servidor de origem, e que esta condição tende a ser permanente.
@@ -19,15 +19,15 @@ Se você não sabe se a ausência do recurso é temporária ou permanente, o có
 
 ## Especificações
 
-| Especificação                                    | Título                                                        |
-| ------------------------------------------------ | ------------------------------------------------------------- |
+| Especificação                         | Título                                                        |
+| ------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "410 Gone" , "6.5.9")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
 A informação mostrada abaixo está sendo servida do MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.410")}}
+{{Compat}}
 
 ## Veja também
 

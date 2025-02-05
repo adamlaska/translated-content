@@ -1,14 +1,8 @@
 ---
 title: handler.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.isExtensible
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 ---
+
 {{JSRef}}
 
 **`handler.isExtensible()`** 메서드는 {{jsxref("Object.isExtensible()")}}에 대한 트랩입니다.
@@ -19,8 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 
 ```js
 new Proxy(target, {
-  isExtensible(target) {
-  }
+  isExtensible(target) {},
 });
 ```
 
@@ -59,25 +52,31 @@ new Proxy(target, {
 다음 코드는 {{jsxref("Object.isExtensible()")}}를 트랩합니다.
 
 ```js
-const p = new Proxy({}, {
-  isExtensible(target) {
-    console.log('called');
-    return true;
-  }
-});
+const p = new Proxy(
+  {},
+  {
+    isExtensible(target) {
+      console.log("called");
+      return true;
+    },
+  },
+);
 
 console.log(Object.isExtensible(p)); // "called"
-                                     // true
+// true
 ```
 
 다음 코드는 불변 조건을 위반합니다.
 
 ```js example-bad
-const p = new Proxy({}, {
-  isExtensible(target) {
-    return false;
-  }
-});
+const p = new Proxy(
+  {},
+  {
+    isExtensible(target) {
+      return false;
+    },
+  },
+);
 
 Object.isExtensible(p); // TypeError is thrown
 ```

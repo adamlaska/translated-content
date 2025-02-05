@@ -1,12 +1,6 @@
 ---
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
-tags:
-  - JavaScript
-  - Mémoire partagée
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics
 ---
 
 {{JSRef}}
@@ -47,7 +41,7 @@ Lorsque la mémoire est partagée, plusieurs _threads_ peuvent lire et écrire s
 
 ### Attente et notification (`wait` et `notify`)
 
-Le méthodes `wait`() et `notify()` sont basées sur les _futex_ Linux (selon le vocabulaire employé sur Linux où ça signifie « _fast user-space mutex_ » ou encore « mutex rapide pour l'espace utilisateur ») fournissent des outils pour attendre jusqu'à ce qu'une condition donnée soit vérifiée. Généralement ces méthodes sont utilisées pour bloquer des opérations.
+Le méthodes `wait()` et `notify()` sont basées sur les _futex_ Linux (selon le vocabulaire employé sur Linux où ça signifie « _fast user-space mutex_ » ou encore « mutex rapide pour l'espace utilisateur ») fournissent des outils pour attendre jusqu'à ce qu'une condition donnée soit vérifiée. Généralement ces méthodes sont utilisées pour bloquer des opérations.
 
 - {{jsxref("Atomics.wait()")}}
   - : Cette méthode vérifie qu'une position donnée du tableau contient bien une valeur donnée puis dort ou expire. Elle renvoie une des chaînes suivantes `"ok"`, `"not-equal"`, `"timed-out"`. Si l'agent appelant ne permet pas d'attente, cela lèvera une exception `Error` (la plupart des navigateurs ne permettront pas que `futexWait()` soit utilisé sur le _thread_ principal du navigateur).
@@ -67,8 +61,8 @@ Le méthodes `wait`() et `notify()` sont basées sur les _futex_ Linux (selon le
 ## Voir aussi
 
 - {{jsxref("ArrayBuffer")}}
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - [Web Workers](/fr/docs/Web/API/Web_Workers_API)
 - [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – un bibliothèque simple qui fournit des abstractions pour synchronisers et distribuer des tâches.
 - [La mémoire partagée – un rapide tutoriel](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
-- [A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks (en anglais)](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
+- [A Taste of JavaScript's New Parallel Primitives – Mozilla Hacks (en anglais)](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

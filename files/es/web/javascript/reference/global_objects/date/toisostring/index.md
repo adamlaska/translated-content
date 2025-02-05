@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
-tags:
-  - Date
-  - JavaScript
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toISOString
 ---
+
 {{JSRef}}
 
 El método **`toISOString()`** devuelve una cadena en el formato _simplificado_ extendido ISO ([ISO 8601](http://en.wikipedia.org/wiki/ISO_8601)), que siempre mide 24 o 27 caracteres de largo: (`YYYY-MM-DDTHH:mm:ss.sssZ` or `±YYYYYY-MM-DDTHH:mm:ss.sssZ`, respectivamente). El uso horario no tiene retraso respecto a UTC, como lo denota el sufijo `"Z"`.
@@ -28,7 +22,7 @@ Una cadena que representa la fecha dada en el formato [ISO 8601](http://en.wikip
 ### Usando `toISOString()`
 
 ```js
-var today = new Date('05 October 2011 14:48 UTC');
+var today = new Date("05 October 2011 14:48 UTC");
 
 console.log(today.toISOString()); // Devuelve 2011-10-05T14:48:00.000Z
 ```
@@ -41,40 +35,43 @@ Este método fue estandarizado en ECMA-262 5° edición. Los motores javascript 
 
 ```js
 if (!Date.prototype.toISOString) {
-  (function() {
-
+  (function () {
     function pad(number) {
       if (number < 10) {
-        return '0' + number;
+        return "0" + number;
       }
       return number;
     }
 
-    Date.prototype.toISOString = function() {
-      return this.getUTCFullYear() +
-        '-' + pad(this.getUTCMonth() + 1) +
-        '-' + pad(this.getUTCDate()) +
-        'T' + pad(this.getUTCHours()) +
-        ':' + pad(this.getUTCMinutes()) +
-        ':' + pad(this.getUTCSeconds()) +
-        '.' + (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
-        'Z';
+    Date.prototype.toISOString = function () {
+      return (
+        this.getUTCFullYear() +
+        "-" +
+        pad(this.getUTCMonth() + 1) +
+        "-" +
+        pad(this.getUTCDate()) +
+        "T" +
+        pad(this.getUTCHours()) +
+        ":" +
+        pad(this.getUTCMinutes()) +
+        ":" +
+        pad(this.getUTCSeconds()) +
+        "." +
+        (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
+        "Z"
+      );
     };
-
-  }());
+  })();
 }
 ```
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estatus                  | Comentario                                         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.9.5.43', 'Date.prototype.toISOString')}}                     | {{Spec2('ES5.1')}} | Definición inicial. Implementado en javascript 1.8 |
-| {{SpecName('ES6', '#sec-date.prototype.toisostring', 'Date.prototype.toISOString')}} | {{Spec2('ES6')}}     |                                                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toISOString")}}
+{{Compat}}
 
 ## Ver también
 

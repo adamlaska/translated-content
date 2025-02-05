@@ -1,10 +1,9 @@
 ---
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/bind
 ---
-{{JSRef("Global_Objects", "Function")}}
+
+{{JSRef}}
 
 ## Resumen
 
@@ -45,7 +44,9 @@ El uso más simple de `bind()` es hacer que una función que, sin importar cómo
 this.x = 9;
 var module = {
   x: 81,
-  getX: function() { return this.x; }
+  getX: function () {
+    return this.x;
+  },
 };
 
 module.getX(); // 81
@@ -86,13 +87,12 @@ function LateBloomer() {
 }
 
 // Declare bloom after a delay of 1 second
-LateBloomer.prototype.bloom = function() {
+LateBloomer.prototype.bloom = function () {
   window.setTimeout(this.declare.bind(this), 1000);
 };
 
-LateBloomer.prototype.declare = function() {
-  console.log('I am a beautiful flower with ' +
-    this.petalCount + ' petals!');
+LateBloomer.prototype.declare = function () {
+  console.log("I am a beautiful flower with " + this.petalCount + " petals!");
 };
 ```
 
@@ -108,19 +108,18 @@ function Point(x, y) {
   this.y = y;
 }
 
-Point.prototype.toString = function() {
-  return this.x + ',' + this.y;
+Point.prototype.toString = function () {
+  return this.x + "," + this.y;
 };
 
 var p = new Point(1, 2);
 p.toString(); // '1,2'
 
-
 var emptyObj = {};
-var YAxisPoint = Point.bind(emptyObj, 0/*x*/);
+var YAxisPoint = Point.bind(emptyObj, 0 /*x*/);
 // not supported in the polyfill below,
 // works fine with native bind:
-var YAxisPoint = Point.bind(null, 0/*x*/);
+var YAxisPoint = Point.bind(null, 0 /*x*/);
 
 var axisPoint = new YAxisPoint(5);
 axisPoint.toString(); // '0,5'
@@ -140,7 +139,7 @@ Note que no necesita hacer nada especial para crear una función ligada para usa
 // (aunque es usualmente indeseable)
 YAxisPoint(13);
 
-emptyObj.x + ',' + emptyObj.y;
+emptyObj.x + "," + emptyObj.y;
 // >  '0,13'
 ```
 
@@ -178,22 +177,24 @@ La función `bind()` fue añadida a la especificación ECMA-262, 5a edición; po
 
 ```js
 if (!Function.prototype.bind) {
-  Function.prototype.bind = function(oThis) {
-    if (typeof this !== 'function') {
+  Function.prototype.bind = function (oThis) {
+    if (typeof this !== "function") {
       // closest thing possible to the ECMAScript 5
       // internal IsCallable function
-      throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
+      throw new TypeError(
+        "Function.prototype.bind - what is trying to be bound is not callable",
+      );
     }
 
-    var aArgs   = Array.prototype.slice.call(arguments, 1),
-        fToBind = this,
-        fNOP    = function() {},
-        fBound  = function() {
-          return fToBind.apply(this instanceof fNOP && oThis
-                 ? this
-                 : oThis,
-                 aArgs.concat(Array.prototype.slice.call(arguments)));
-        };
+    var aArgs = Array.prototype.slice.call(arguments, 1),
+      fToBind = this,
+      fNOP = function () {},
+      fBound = function () {
+        return fToBind.apply(
+          this instanceof fNOP && oThis ? this : oThis,
+          aArgs.concat(Array.prototype.slice.call(arguments)),
+        );
+      };
 
     fNOP.prototype = this.prototype;
     fBound.prototype = new fNOP();
@@ -206,7 +207,7 @@ if (!Function.prototype.bind) {
 Algunas de las muchas diferencias (bien podría haber otras, en tanto la siguiente lista no intenta ser exhaustiva) entre este algoritmo y el algoritmo de la especificación son:
 
 - La implementación parcial se basa en {{jsxref("Array.prototype.slice()")}}, {{jsxref("Array.prototype.concat()")}}, {{jsxref("Function.prototype.call()")}} y {{jsxref("Function.prototype.apply()")}}, métodos incorporados para tener sus valores originales.
-- La implementación parcial crea funciones que no tienen "poison pills" inmutables {{jsxref("Function.caller", "caller")}} y las propiedades de los `argumentos` que lanzan una {{jsxref("Global_Objects/TypeError", "TypeError")}} sobre get, set, o deletion. (Esto podría ser añadido si la implementación soportara {{jsxref("Object.defineProperty")}}, o parcialmente implementada [sin el comportamiento throw-on-delete] si la implementación soportara las extensiones {{jsxref("Object.defineGetter", "__defineGetter__")}} y {{jsxref("Object.defineSetter", "__defineSetter__")}} ).
+- La implementación parcial crea funciones que no tienen "poison pills" inmutables {{jsxref("Function.caller", "caller")}} y las propiedades de los `argumentos` que lanzan una {{jsxref("Global_Objects/TypeError", "TypeError")}} sobre get, set, o deletion. (Esto podría ser añadido si la implementación soportara {{jsxref("Object.defineProperty")}}, o parcialmente implementada [sin el comportamiento throw-on-delete] si la implementación soportara las extensiones [`Object.prototype.__defineGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) y [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) ).
 - La implementación parcial crea funciones que tienen una propiedad `prototype`. (Las funciones ligadas no tienen ninguna).
 - La implementación parcial crea funciones ligadas cuya propiedad {{jsxref("Function.length", "length")}} no coincide con la indicada por ECMA-262: ésta crea funciones con longitud 0, mientras que la implementación completa, dependiendo de la longitud de la función objetivo y del número de argumentos pre-especificados, podría regresar una longitud mayor a zero.
 
@@ -216,14 +217,11 @@ Por favor checa <https://github.com/Raynos/function-bind> para ver una solución
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                   | Comentarios                                           |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.3.4.5', 'Function.prototype.bind')}}                 | {{Spec2('ES5.1')}} | Definición inicial. Implementado en JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-function.prototype.bind', 'Function.prototype.bind')}} | {{Spec2('ES6')}}     |                                                       |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.bind")}}
+{{Compat}}
 
 ## Ver también
 

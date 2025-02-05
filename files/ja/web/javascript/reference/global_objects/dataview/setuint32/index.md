@@ -46,13 +46,11 @@ dataview.getUint32(1); // 3
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.setuint32', 'DataView.prototype.setUint32')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.DataView.setUint32")}}
+{{Compat}}
 
 ## 関連情報
 

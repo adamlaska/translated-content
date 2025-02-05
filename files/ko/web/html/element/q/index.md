@@ -1,15 +1,9 @@
 ---
-title: '<q>: 인라인 인용문 요소'
+title: "<q>: 인라인 인용문 요소"
 slug: Web/HTML/Element/q
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/q
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<q>`요소**는 둘러싼 텍스트가 짧은 인라인 인용문이라는것을 나타냅니다. 대부분의 브라우저에서는 앞과 뒤에 따옴표를 붙여 표현합니다. `<q>`는 줄 바꿈이 없는 짧은 경우에 적합합니다. 긴 인용문은 {{htmlelement("blockquote")}} 요소를 사용하세요.
 
@@ -40,7 +34,7 @@ translation_of: Web/HTML/Element/q
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -61,22 +55,25 @@ translation_of: Web/HTML/Element/q
   </tbody>
 </table>
 
-> **참고:** 오래된 브라우저에서는 앞뒤 따옴표를 적용하려면 추가 스타일을 사용해야 할 수 있습니다.
+> [!NOTE]
+> 오래된 브라우저에서는 앞뒤 따옴표를 적용하려면 추가 스타일을 사용해야 할 수 있습니다.
 
 ## 특성
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : 인용문의 출처 문서나 메시지를 가리키는 URL. 인용문의 맥락 혹은 출처 정보를 가리킬 용도입니다.
 
 ## 예제
 
 ```html
-<p>Mozilla 재단의 웹사이트에 따르면,
-  <q
-  cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0
-  은 2004년 처음 공개되어 큰 성공을 거두었습니다.</q></p>
+<p>
+  Mozilla 재단의 웹사이트에 따르면,
+  <q cite="https://www.mozilla.org/en-US/about/history/details/"
+    >Firefox 1.0 은 2004년 처음 공개되어 큰 성공을 거두었습니다.</q
+  >
+</p>
 ```
 
 {{EmbedLiveSample('예제')}}
@@ -87,7 +84,7 @@ translation_of: Web/HTML/Element/q
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.q")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,11 +1,9 @@
 ---
 title: round
 slug: Web/XPath/Functions/round
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/round
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `round` 함수는 인수로 준 수에 가장 가까운 정수를 반환합니다.
 
@@ -17,7 +15,7 @@ round(decimal )
 
 ### 인수
 
-- _`decimal`_
+- `decimal`
   - : 정수 처리(round)될 10진수.
 
 ### 반환
@@ -32,7 +30,7 @@ _`decimal`_
 
 ### 정의
 
-[XPath 1.0 4.4](http://www.w3.org/TR/xpath#function-round)
+[XPath 1.0 4.4](https://www.w3.org/TR/xpath#function-round)
 
 ### Gecko 지원
 

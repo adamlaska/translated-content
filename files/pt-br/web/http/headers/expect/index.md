@@ -1,13 +1,8 @@
 ---
 title: Expect
 slug: Web/HTTP/Headers/Expect
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Headers/Expect
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de requisição HTTP **`Expect`** indica expectativas que precisão ser cumpridas pelo servidor para lidar com a requisição apropriadamente.
@@ -65,13 +60,13 @@ O servidor checa os cabeçalhos da requisição e responde com uma resposta {{HT
 
 ## Especificações
 
-| Especificação                                | Título                                                        |
-| -------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                      | Título                                                        |
+| ---------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Expect", "5.1.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Expect")}}
+{{Compat}}
 
 ## Veja também
 

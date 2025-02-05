@@ -1,14 +1,8 @@
 ---
 title: Math.fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/fround
-browser-compat: javascript.builtins.Math.fround
 ---
+
 {{JSRef}}
 
 **`Math.fround()`** 함수는 [single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) 포맷으로 표현할 수 있는 실수들 중에서 가장 가까운 숫자를 리턴합니다.
@@ -16,7 +10,7 @@ browser-compat: javascript.builtins.Math.fround
 ## 문법
 
 ```js
-    Math.fround(x)
+Math.fround(x);
 ```
 
 ### 파라메터
@@ -33,11 +27,11 @@ browser-compat: javascript.builtins.Math.fround
 ### `Math.fround() 사용법`
 
 ```js
-Math.fround(0);     // 0
-Math.fround(1);     // 1
+Math.fround(0); // 0
+Math.fround(1); // 1
 Math.fround(1.337); // 1.3370000123977661
-Math.fround(1.5);   // 1.5
-Math.fround(NaN);   // NaN
+Math.fround(1.5); // 1.5
+Math.fround(NaN); // NaN
 ```
 
 ## Polyfill
@@ -45,11 +39,13 @@ Math.fround(NaN);   // NaN
 만약 {{jsxref("Float32Array")}} 가 지원된다면, Math.fround() 를 다음 함수로 흉내낼 수 있습니다.
 
 ```js
-Math.fround = Math.fround || (function (array) {
-  return function(x) {
-    return array[0] = x, array[0];
-  };
-})(Float32Array(1));
+Math.fround =
+  Math.fround ||
+  (function (array) {
+    return function (x) {
+      return (array[0] = x), array[0];
+    };
+  })(Float32Array(1));
 ```
 
 ## 명세

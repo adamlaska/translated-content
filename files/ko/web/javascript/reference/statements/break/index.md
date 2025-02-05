@@ -1,12 +1,8 @@
 ---
 title: break
 slug: Web/JavaScript/Reference/Statements/break
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/break
 ---
+
 {{jsSidebar("Statements")}}
 
 **`break` 문**은 현재 반복문, {{jsxref("Statements/switch", "switch")}} 문, 또는 {{jsxref("Statements/label", "label")}} 문을 종료하고, 그 다음 문으로 프로그램 제어를 넘깁니다.
@@ -50,11 +46,11 @@ function testBreak(x) {
 ```js
 outer_block: {
   inner_block: {
-    console.log('1');
+    console.log("1");
     break outer_block; // inner_block과 outer_block 둘다 빠져나옴
-    console.log(':-('); // 건너뜀
+    console.log(":-("); // 건너뜀
   }
-  console.log('2'); // 건너뜀
+  console.log("2"); // 건너뜀
 }
 ```
 

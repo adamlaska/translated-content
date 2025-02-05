@@ -1,16 +1,6 @@
 ---
 title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
-tags:
-  - ECMAScript 2015
-  - Generators
-  - Iterable
-  - Iterator
-  - JavaScript
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/yield*
-original_slug: Web/JavaScript/Reference/Opérateurs/yield*
 ---
 
 {{jsSidebar("Operators")}}
@@ -22,7 +12,7 @@ Une **expression `yield*`** est utilisée afin de déléguer le mécanisme d'it�
 ## Syntaxe
 
 ```js
-yield* expression
+yield * expression;
 ```
 
 - `expression`
@@ -84,7 +74,7 @@ console.log(iterator.next()); // { value: 6, done: false }
 console.log(iterator.next()); // { value: undefined, done: true }
 ```
 
-### La valeur de l'expression `yield*`
+### La valeur de l'expression yield\*
 
 `yield*` est une expression et non une instruction, elle est donc évaluée et fournit une valeur :
 
@@ -105,10 +95,9 @@ var iterator = g5();
 console.log(iterator.next()); // { value: 1, done: false }
 console.log(iterator.next()); // { value: 2, done: false }
 console.log(iterator.next()); // { value: 3, done: false }
-console.log(iterator.next()); // { value: undefined, done: true },
-                              // g4() renvoie{ value: "toto", done: true } at this point
+console.log(iterator.next()); // { value: undefined, done: true }, g4() renvoie{ value: "toto", done: true } at this point
 
-console.log(résultat);          // "toto"
+console.log(résultat); // "toto"
 ```
 
 ## Spécifications
@@ -121,7 +110,7 @@ console.log(résultat);          // "toto"
 
 ## Voir aussi
 
-- [Le protocole itérateur](/fr/docs/Web/JavaScript/Guide/Le_protocole_iterator)
+- [Le protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
 - L'instruction {{jsxref("Instruction/function*", "function*")}}
 - L'expression {{jsxref("Opérateurs/function*", "function*")}}
 - {{jsxref("Opérateurs/yield", "yield")}}

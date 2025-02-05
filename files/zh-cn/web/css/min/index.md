@@ -1,7 +1,6 @@
 ---
 title: min()
 slug: Web/CSS/min
-original_slug: Web/CSS/min()
 ---
 
 {{CSSRef}}
@@ -17,7 +16,7 @@ width: min(1vw, 4em, 80px);
 
 ## 语法
 
-`min()` 方法拥有一个或多个逗号分隔符表达式作为参数，表达式的值中最小的值作为参数值。表达式可以是数学函数 (查看 {{CSSxRef("calc", "calc()")}} 了解更多), 字面量，或者其他表达式，比如 {{CSSxRef("attr", "attr()")}}, 可以求得有效值的的类型 (比如 {{CSSxRef("&lt;length&gt;")}})。如果你愿意，你甚至可以在表达式中给每个值一个不同的单位。并且在需要的地方只用圆括号改变计算优先级。
+`min()` 方法拥有一个或多个逗号分隔符表达式作为参数，表达式的值中最小的值作为参数值。表达式可以是数学函数（查看 {{CSSxRef("calc", "calc()")}} 了解更多）、字面量，或者其他表达式，比如 {{CSSxRef("attr", "attr()")}}，可以求得有效值的类型（比如 {{CSSxRef("&lt;length&gt;")}}）。如果你愿意，你甚至可以在表达式中给每个值一个不同的单位。并且在需要的地方只用圆括号改变计算优先级。
 
 ### 注意
 
@@ -27,11 +26,11 @@ width: min(1vw, 4em, 80px);
 - Oftentimes you will want to comine `min()` and `max()` values, or use `min()` within a `clamp()` or `calc()` function.
 - You can provide more than two arguments, if you have multiple constraints to apply.
 
-### Formal syntax
+### 形式语法
 
 {{CSSSyntax}}
 
-## Examples
+## 示例
 
 ### Growing images to a maximum size
 
@@ -44,7 +43,10 @@ width: min(1vw, 4em, 80px);
 ```
 
 ```html
-<img src="https://developer.mozilla.org/static/img/web-docs-sprite.svg" alt="MDN Web Docs" class="logo">
+<img
+  src="https://developer.mozilla.org/static/img/web-docs-sprite.svg"
+  alt="MDN Web Docs"
+  class="logo" />
 ```
 
 {{EmbedLiveSample("Growing_images_to_a_maximum_size", "100%", "60")}}
@@ -58,7 +60,8 @@ CSS 方法的另一个用途时设置响应式组件（form）的最大尺寸：
 看下面的样式：
 
 ```css
-input, label {
+input,
+label {
   padding: 2px;
   box-sizing: border-box;
   display: inline-block;
@@ -78,17 +81,17 @@ form {
 ```html
 <form>
   <label>Type something:</label>
-  <input type="text">
+  <input type="text" />
 </form>
 ```
 
-{{EmbedLiveSample("Setting_a_maximum_size_for_an_label_and_input", "100%", "80")}}
+{{EmbedLiveSample("给 label 和 input 设置最大值", "100%", "80")}}
 
 Think of the `min()` function as finding the maximum value allowed for a property.
 
 ## 无障碍问题
 
-当`min()` 用于控制文本大小时，要保证文本足够大以便于阅读。建议把 min() 方法嵌入到 {{CSSxRef("max", "max()")}} 中， [relative length unit](/zh-CN/docs/Web/CSS/length#Relative_length_units) 这样就可以便于阅读，比如：
+当`min()` 用于控制文本大小时，要保证文本足够大以便于阅读。建议把 min() 方法嵌入到 {{CSSxRef("max", "max()")}} 中， [relative length unit](/zh-CN/docs/Web/CSS/length#relative_length_units) 这样就可以便于阅读，比如：
 
 ```css
 small {
@@ -114,4 +117,4 @@ small {
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("max", "max()")}}
-- [CSS Values](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS Values](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
