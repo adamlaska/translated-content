@@ -1,8 +1,8 @@
 ---
 title: WebGLRenderingContext.activeTexture()
 slug: Web/API/WebGLRenderingContext/activeTexture
-translation_of: Web/API/WebGLRenderingContext/activeTexture
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.activeTexture()`** метод [WebGL API](/ru/docs/Web/API/WebGL_API) указывает какую текстуру сделать активной.
@@ -48,7 +48,7 @@ gl.getParameter(gl.ACTIVE_TEXTURE);
 // вернёт "33984" (0x84C0, gl.TEXTURE0 enum value)
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

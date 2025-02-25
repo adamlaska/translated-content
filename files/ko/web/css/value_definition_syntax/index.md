@@ -1,15 +1,8 @@
 ---
 title: 값 정의 구문
 slug: Web/CSS/Value_definition_syntax
-tags:
-  - CSS
-  - Guide
-  - Reference
-  - Syntax
-  - 구문
-  - 문법
-translation_of: Web/CSS/Value_definition_syntax
 ---
+
 {{CSSRef}}
 
 **CSS 값 정의 구문**은 [형식 문법](https://ko.wikipedia.org/wiki/%ED%98%95%EC%8B%9D_%EB%AC%B8%EB%B2%95)으로서 CSS 속성이나 함수가 받을 수 있는 유효한 값의 집합을 정의합니다. 유효한 값 집합은 정의 구문으로 인한 제한 외에도 반드시 양의 수가 와야 하는 등, 맥락에 따라 추가로 제한될 수 있습니다.
@@ -110,7 +103,8 @@ bold && <length>
 - `bold`. 두 구성 요소가 값에 모두 나타나야 합니다.
 - `bold 1em bold`, 두 구성 요소는 한 번씩만 나타나야 합니다.
 
-> **참고:** 병치는 이중 앰퍼샌드보다 우선순위가 높습니다. 즉 `bold thin && <length>`는 `[ bold thin ] && <length>`와 같습니다. 따라서 `bold thin <length>`와 `<length> bold thin`은 일치하지만 `bold <length> thin`은 일치하지 않습니다.
+> [!NOTE]
+> 병치는 이중 앰퍼샌드보다 우선순위가 높습니다. 즉 `bold thin && <length>`는 `[ bold thin ] && <length>`와 같습니다. 따라서 `bold thin <length>`와 `<length> bold thin`은 일치하지만 `bold <length> thin`은 일치하지 않습니다.
 
 ### 이중 바
 
@@ -131,7 +125,8 @@ bold && <length>
 - `blue yellow`, 하나의 구성 요소는 한 번만 나타나야 합니다.
 - `bold`, 이 키워드는 어느 개체에도 속하지 않는 값입니다.
 
-> **참고:** 이중 앰퍼샌드는 이중 바보다 우선순위가 높습니다. `bold || thin && <length>`는 `bold || [ thin && <length> ]`와 같으며, `bold`, `thin <length>`, `bold thin <length>`, 그리고 `thin <length> bold`와 일치합니다. 하지만 `<length> bold thin`은 일치하지 않는데, `bold`를 생략하지 않으면 `thin && <length>` 구성 요소 이전 또는 다음에 위치해야 하기 때문입니다.
+> [!NOTE]
+> 이중 앰퍼샌드는 이중 바보다 우선순위가 높습니다. `bold || thin && <length>`는 `bold || [ thin && <length> ]`와 같으며, `bold`, `thin <length>`, `bold thin <length>`, 그리고 `thin <length> bold`와 일치합니다. 하지만 `<length> bold thin`은 일치하지 않는데, `bold`를 생략하지 않으면 `thin && <length>` 구성 요소 이전 또는 다음에 위치해야 하기 때문입니다.
 
 ### 단일 바
 
@@ -157,7 +152,8 @@ bold && <length>
 - `center 3%`, 오직 하나의 구성 요소만 나타나야 합니다.
 - `3em 4.5em`, 구성 요소는 한 번만 나타나야 합니다.
 
-> **참고:** 이중 바는 단일 바보다 우선순위가 높으며 `bold | thin || <length>`는 `bold | [ thin || <length> ]`와 같습니다. `bold`, `thin`, `<length>`, `<length> thin`, `thin <length>`는 일치하지만, `|` 결합자는 좌우 중 단 하나만 선택할 수 있기 때문에 `bold <length>`는 일치하지 않습니다.
+> [!NOTE]
+> 이중 바는 단일 바보다 우선순위가 높으며 `bold | thin || <length>`는 `bold | [ thin || <length> ]`와 같습니다. `bold`, `thin`, `<length>`, `<length> thin`, `thin <length>`는 일치하지만, `|` 결합자는 좌우 중 단 하나만 선택할 수 있기 때문에 `bold <length>`는 일치하지 않습니다.
 
 ## 구성 요소 값 배수
 

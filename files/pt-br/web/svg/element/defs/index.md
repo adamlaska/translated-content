@@ -1,14 +1,8 @@
 ---
 title: defs
 slug: Web/SVG/Element/defs
-tags:
-  - Element
-  - Elemento
-  - SVG
-  - SVG Container
-  - tag
-translation_of: Web/SVG/Element/defs
 ---
+
 {{SVGRef}}
 
 A especificação do SVG permite que objetos gráficos sejam definidos para reuso posteriormente. Recomenda-se que, sempre que possível, os elementos referenciados sejam definidos dentro da tag `defs`. A definição destes elementos dentro de uma tag `defs` promove o entendimento do conteúdo do SVG e, consequentemente, promove a acessibilidade. Elementos gráficos definidos dentro da tag `defs` não serão diretamente renderizados. Você pode utilizar a tag {{ SVGElement("use") }} para renderizar tais elementos na janela de visualização.
@@ -21,7 +15,7 @@ A especificação do SVG permite que objetos gráficos sejam definidos para reus
 
 ```xml
 <svg width="80px" height="30px" viewBox="0 0 80 30"
-     xmlns="http://www.w3.org/2000/svg">
+     xmlns="https://www.w3.org/2000/svg">
 
   <defs>
     <linearGradient id="Gradient01">
@@ -39,10 +33,10 @@ A especificação do SVG permite que objetos gráficos sejam definidos para reus
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/en/SVG/Attribute#ConditionalProccessing) »
-- [Atributos centrais](/en/SVG/Attribute#Core) »
-- [Atributos de eventos gráficos](/en/SVG/Attribute#GraphicalEvent) »
-- [Atributos de apresentação](/en/SVG/Attribute#Presentation) »
+- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
+- [Atributos centrais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -50,15 +44,15 @@ A especificação do SVG permite que objetos gráficos sejam definidos para reus
 
 ### Atributos específicos
 
-_Não existem atributos específicos_
+_Não existem atributos específicos._
 
 ## DOM Interface
 
-Este elemento implementa a interface [`SVGDefsElement`](/en/DOM/SVGDefsElement).
+Este elemento implementa a interface [`SVGDefsElement`](/pt-BR/docs/DOM/SVGDefsElement).
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.defs")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,18 +1,8 @@
 ---
 title: SpeechSynthesis
 slug: Web/API/SpeechSynthesis
-tags:
-  - API
-  - Elocução
-  - Experimental
-  - Fala
-  - Interface
-  - Referencia
-  - SpeechSynthesis
-  - Web Speech API
-  - sintetização
-translation_of: Web/API/SpeechSynthesis
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 A interface **`SpeechSynthesis`** da [Web Speech API](/pt-BR/docs/Web/API/Web_Speech_API) é a interface controladora para o serviço de fala; este pode ser usado para obter informações sobre as vozes sintetizadas disponíveis no dispositivo, reproduzir e pausar uma elocução, além de outros comandos.
@@ -50,37 +40,37 @@ _`SpeechSynthesis` também herda métodos da sua interface pai, {{domxref("Event
 
 ## Exemplos
 
-Na nossa demonstração básica [Speech synthesiser demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis), nós primeiro pegamos uma referência para o controlador SpeechSynthesis usando `window.speechSynthesis`. Após definir algumas variáveis necessárias, nós obtemos uma lista de vozes disponíveis usando o método {{domxref("SpeechSynthesis.getVoices()")}} usando-as para popular um menu de seleção de forma que o usuário possa escolher a voz que desejar.
+Na nossa demonstração básica [Speech synthesiser demo](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis), nós primeiro pegamos uma referência para o controlador SpeechSynthesis usando `window.speechSynthesis`. Após definir algumas variáveis necessárias, nós obtemos uma lista de vozes disponíveis usando o método {{domxref("SpeechSynthesis.getVoices()")}} usando-as para popular um menu de seleção de forma que o usuário possa escolher a voz que desejar.
 
 Dentro do tratamento `inputForm.onsubmit`, nós impedimos a submissão do formulário com [preventDefault()](/pt-BR/docs/Web/API/Event/preventDefault), instanciamos uma {{domxref("SpeechSynthesisUtterance")}} contendo o texto presente no {{htmlelement("input")}}, atribuímos a voz da elocução para a voz selecionada no elemento {{htmlelement("select")}}, e iniciamos a reprodução da elocução através do método {{domxref("SpeechSynthesis.speak()")}}.
 
 ```js
 var synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('.txt');
-var voiceSelect = document.querySelector('select');
+var inputForm = document.querySelector("form");
+var inputTxt = document.querySelector(".txt");
+var voiceSelect = document.querySelector("select");
 
-var pitch = document.querySelector('#pitch');
-var pitchValue = document.querySelector('.pitch-value');
-var rate = document.querySelector('#rate');
-var rateValue = document.querySelector('.rate-value');
+var pitch = document.querySelector("#pitch");
+var pitchValue = document.querySelector(".pitch-value");
+var rate = document.querySelector("#rate");
+var rateValue = document.querySelector(".rate-value");
 
 var voices = [];
 
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for(i = 0; i < voices.length ; i++) {
-    var option = document.createElement('option');
-    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+  for (i = 0; i < voices.length; i++) {
+    var option = document.createElement("option");
+    option.textContent = voices[i].name + " (" + voices[i].lang + ")";
 
-    if(voices[i].default) {
-      option.textContent += ' -- DEFAULT';
+    if (voices[i].default) {
+      option.textContent += " -- DEFAULT";
     }
 
-    option.setAttribute('data-lang', voices[i].lang);
-    option.setAttribute('data-name', voices[i].name);
+    option.setAttribute("data-lang", voices[i].lang);
+    option.setAttribute("data-name", voices[i].name);
     voiceSelect.appendChild(option);
   }
 }
@@ -90,13 +80,13 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
   speechSynthesis.onvoiceschanged = populateVoiceList;
 }
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = function (event) {
   event.preventDefault();
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+  var selectedOption = voiceSelect.selectedOptions[0].getAttribute("data-name");
+  for (i = 0; i < voices.length; i++) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }
@@ -105,18 +95,16 @@ inputForm.onsubmit = function(event) {
   synth.speak(utterThis);
 
   inputTxt.blur();
-}
+};
 ```
 
 ## Especificações
 
-| Especificação                                                                            | Situação                             | Comentários |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Speech API', '#tts-section', 'SpeechSynthesis')}} | {{Spec2('Web Speech API')}} |             |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.SpeechSynthesis")}}
+{{Compat}}
 
 ## Veja também
 

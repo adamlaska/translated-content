@@ -1,54 +1,47 @@
 ---
 title: String.prototype.trim()
-slug: Web/JavaScript/Reference/Global_Objects/String/Trim
+slug: Web/JavaScript/Reference/Global_Objects/String/trim
 ---
 
 {{JSRef}}
 
-**`trim()`** 方法会从一个字符串的两端删除空白字符。在这个上下文中的空白字符是所有的空白字符 (space, tab, no-break space 等) 以及所有行终止符字符（如 LF，CR 等）。
+{{jsxref("String")}} 的 **`trim()`** 方法会从字符串的两端移除空白字符，并返回一个新的字符串，而不会修改原始字符串。
 
-{{EmbedInteractiveExample("pages/js/string-trim.html")}}
+要返回一个仅从一端修剪空白字符的新字符串，请使用 {{jsxref("String.prototype.trimStart()", "trimStart()")}} 或 {{jsxref("String.prototype.trimEnd()", "trimEnd()")}}。
+
+{{InteractiveExample("JavaScript Demo: String.trim()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trim());
+// Expected output: "Hello world!";
+```
 
 ## 语法
 
-```plain
-str.trim()
+```js-nolint
+trim()
 ```
 
 ### 返回值
 
-一个代表调用字符串两端去掉空白的新字符串。
+一个新的字符串，表示从 `str` 的开头和结尾去除空白字符后的结果。空白字符定义为[空白符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#空白符)加上[行终止符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#行终止符)。
 
-## 描述
+如果 `str` 的开头和结尾都没有空白字符，仍然会返回一个新的字符串（实际上是 `str` 的副本）。
 
-`trim()` 方法返回一个从两头去掉空白字符的字符串，并不影响原字符串本身。
+## 示例
 
-## 例子
+### 使用 trim()
 
-### 使用 `trim()`
-
-下面的例子中将显示小写的字符串 'foo':
+下面的示例从 `str` 的两端去除空白字符：
 
 ```js
-var orig = '   foo  ';
-console.log(orig.trim()); // 'foo'
-
-// 另一个 .trim() 例子，只从一边删除
-
-var orig = 'foo    ';
-console.log(orig.trim()); // 'foo'
-```
-
-## 兼容旧环境
-
-如果 `trim()` 不存在，可以在所有代码前执行下面代码
-
-```js
-if (!String.prototype.trim) {
-  String.prototype.trim = function () {
-    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
-  };
-}
+const str = "   foo  ";
+console.log(str.trim()); // 'foo'
 ```
 
 ## 规范

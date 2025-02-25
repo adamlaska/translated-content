@@ -1,16 +1,8 @@
 ---
 title: background-clip
 slug: Web/CSS/background-clip
-tags:
-  - CSS
-  - Diseño
-  - Fondo CSS
-  - Propiedad CSS
-  - Referencia
-  - Referência(2)
-  - Web
-translation_of: Web/CSS/background-clip
 ---
+
 {{ CSSRef() }}
 
 ## Resumen
@@ -50,23 +42,33 @@ background-clip: inherit
 
 ```html
 <p class="border-box">The yellow background extends behind the border.</p>
-<p class="padding-box">The yellow background extends to the inside edge of the border.</p>
-<p class="content-box">The yellow background extends only to the edge of the content box.</p>
+<p class="padding-box">
+  The yellow background extends to the inside edge of the border.
+</p>
+<p class="content-box">
+  The yellow background extends only to the edge of the content box.
+</p>
 ```
 
 ### Contenido CSS
 
 ```css
 p {
-   border: 5px navy;
-   border-style: dotted double;
-   margin: 2em;
-   padding: 2em;
-   background: #F8D575;
+  border: 5px navy;
+  border-style: dotted double;
+  margin: 2em;
+  padding: 2em;
+  background: #f8d575;
 }
-.border-box { background-clip: border-box; }
-.padding-box { background-clip: padding-box; }
-.content-box { background-clip: content-box; }
+.border-box {
+  background-clip: border-box;
+}
+.padding-box {
+  background-clip: padding-box;
+}
+.content-box {
+  background-clip: content-box;
+}
 ```
 
 #### Salida
@@ -75,15 +77,13 @@ p {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                                   | Comentario |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip') }} | {{ Spec2('CSS3 Backgrounds') }} |            |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.background-clip")}}
+{{Compat}}
 
 ## Ver también
 
 - {{ cssxref("clip") }}
-- [Modelo de caja CSS](/es/docs/Web/CSS/box_model)
+- [Modelo de caja CSS](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

@@ -1,17 +1,18 @@
 ---
 title: keyup
 slug: Web/API/Element/keyup_event
-original_slug: Web/API/Document/keyup_event
 ---
 
-當鍵盤上的手指離開按鍵時，`keyup事件會被觸發。`
+{{APIRef}}
+
+當鍵盤上的手指離開按鍵時，`keyup` 事件會被觸發。
 
 ## 基本資料
 
 - 詳述
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-keyup)
+  - : [DOM L3](https://www.w3.org/TR/uievents/#event-type-keyup)
 - 介面
-  - : [KeyboardEvent](/zh-TW/docs/DOM/KeyboardEvent)
+  - : [KeyboardEvent](/zh-TW/docs/Web/API/KeyboardEvent)
 - Bubbles
   - : Yes
 - Cancelable
@@ -27,7 +28,7 @@ original_slug: Web/API/Document/keyup_event
 
 ## Related Events
 
-- {{event("keydown")}}
-- {{event("keyup")}}
-- {{event("keypress")}}
-- {{event("input")}}
+- [`keydown`](/zh-TW/docs/Web/API/Element/keydown_event)
+- [`keyup`](/zh-TW/docs/Web/API/Element/keyup_event)
+- [`keypress`](/zh-TW/docs/Web/API/Element/keypress_event)
+- [`input`](/zh-TW/docs/Web/API/Element/input_event)

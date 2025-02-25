@@ -1,14 +1,8 @@
 ---
 title: 'Django Tutorial Parte 2: Criando o "esqueleto" de um site'
 slug: Learn/Server-side/Django/skeleton_website
-tags:
-  - Artigo
-  - Guía
-  - Iniciante
-  - Python
-  - locallibrary
-translation_of: Learn/Server-side/Django/skeleton_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
 O segundo artigo do tutorial de Django mostra uma forma de criar o "esqueleto" de um website, permitindo que você possa ampliá-lo com caracteristicas especificas do site, caminhos (patchs), modelos (models), visualizações (views) e templates.
@@ -18,7 +12,7 @@ O segundo artigo do tutorial de Django mostra uma forma de criar o "esqueleto" d
     <tr>
       <th scope="row">Pré-requisitos:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/development_environment"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/development_environment"
           >Configurar um ambiente de desenvolvimento Django</a
         >. Ter lido
         <a
@@ -46,7 +40,8 @@ O processo é direto:
 1. Use a ferramenta `django-admin` para criar a pasta do projeto, arquivos de template básicos, e o script de gestão do projeto (**manage.py**).
 2. Use o script **manage.py** para criar um ou mais _aplicativos_.
 
-    > **Nota:** Um website pode consistir de uma ou mais áreas, como por exemplo, site, blog, wiki, área de download, etc. Django te encoraja a desenvolver esses componentes como aplicativos separados, que podem então ser reutilizados em diferentes projetos, caso seja necessário.
+   > [!NOTE]
+   > Um website pode consistir de uma ou mais áreas, como por exemplo, site, blog, wiki, área de download, etc. Django te encoraja a desenvolver esses componentes como aplicativos separados, que podem então ser reutilizados em diferentes projetos, caso seja necessário.
 
 3. Registre os novos aplicativos para inclui-los no projeto.
 4. Conecte o mapeador de url/path para cada aplicativo.
@@ -64,7 +59,7 @@ As próximas seções discutem esse processo em detalhes e mostram como você po
 
 ## Criando o projeto
 
-Primeiro abra o prompt de comando/terminal t(enha certeza que está em seu [ambiente virtual)](/pt-BR/docs/Learn/Server-side/Django/ambiente_de_desenvolvimento), navegue até o diretório que deseja colocar seus aplicativos Django (coloque em um lugar fácil de achar, como dentro da pasta _documentos_), e crie uma pasta para seu novo website (nesse caso: _django_projects_). Acesse então a pasta usando o comando cd:
+Primeiro abra o prompt de comando/terminal t(enha certeza que está em seu [ambiente virtual)](/pt-BR/docs/Learn/Server-side/Django/development_environment), navegue até o diretório que deseja colocar seus aplicativos Django (coloque em um lugar fácil de achar, como dentro da pasta _documentos_), e crie uma pasta para seu novo website (nesse caso: _django_projects_). Acesse então a pasta usando o comando cd:
 
 ```bash
 mkdir locallibrary
@@ -113,7 +108,8 @@ Agora execute o seguinte comando para criar o _catálogo_ da aplicação que far
 python3 manage.py startapp catalog
 ```
 
-> **Nota:** O comando acima é para Linux/macOS X. No windows o comando deve ser: `py -3 manage.py startapp catalog`
+> [!NOTE]
+> O comando acima é para Linux/macOS X. No windows o comando deve ser: `py -3 manage.py startapp catalog`
 >
 > Se você está trabalhando com o Windows, substitua `python3` por `py -3` ao longo deste módulo.
 >
@@ -142,7 +138,8 @@ Além disso, nós temos:
 - Uma pasta _migrations_, usada para guardar "_migrações_" — arquivos que permitem atualizar automaticamente seu banco de dados à medida que você modifica seus models.
 - **\_\_init\_\_.py** — Um arquivo em branco criado de modo que Django/Python reconheça a pasta como um [Python Package](https://docs.python.org/3/tutorial/modules.html#packages) e permita que você use seus objetos dentro de outras partes do projeto.
 
-> **Nota:** Você notou o que falta na lista de arquivos acima? Apesar de existir um lugar para suas views e seus models, não há nenhum lugar para colocar seus mapeamentos de URL, templates ou arquivos estáticos. Nós iremos te ensinar como criá-los mais adiante (isso não é necessário em todos websites, mas precisaremos em nosso exemplo).
+> [!NOTE]
+> Você notou o que falta na lista de arquivos acima? Apesar de existir um lugar para suas views e seus models, não há nenhum lugar para colocar seus mapeamentos de URL, templates ou arquivos estáticos. Nós iremos te ensinar como criá-los mais adiante (isso não é necessário em todos websites, mas precisaremos em nosso exemplo).
 
 ## Registrando o aplicativo de catálogo
 
@@ -164,7 +161,8 @@ INSTALLED_APPS = [
 
 A nova linha especifica o objeto de configuração do aplicativo (`CatalogConfig`) que foi gerado em **/locallibrary/catalog/apps.py** onde a aplicação foi criada.
 
-> **Nota:** Você deve ter notado que existem vários outros `INSTALLED_APPS` (e `MIDDLEWARE`, pelo final do arquivo de configuração). Eles permitem suporte para o [site de administração do Django](/pt-BR/docs/Learn/Server-side/Django/Admin_site) e, como resultado, várias funcionalidades que ele utiliza (incluindo seções, autenticação etc).
+> [!NOTE]
+> Você deve ter notado que existem vários outros `INSTALLED_APPS` (e `MIDDLEWARE`, pelo final do arquivo de configuração). Eles permitem suporte para o [site de administração do Django](/pt-BR/docs/Learn/Server-side/Django/Admin_site) e, como resultado, várias funcionalidades que ele utiliza (incluindo seções, autenticação etc).
 
 ## Especificando o Banco de Dados
 
@@ -228,7 +226,8 @@ urlpatterns = [
 
 Os mapeamentos de URL são gerenciados através da variável `urlpatterns` que é uma lista Python de funções `path()`. Cada função `path()` associa um padrão de URL para uma _view específica_, que será exibida quando o padrão for correspondido, ou com outra lista de testes de padrões de URL (no segundo caso, o padrão vem da "URL base" para padrões definidos no módulo target). A lista `urlpatterns` define inicialmente uma função única que mapeia todas URLs com o padrão admin para o módulo `admin.site.urls`, que contém as próprias definições de mapeamento de URL da área de administração do aplicativo.
 
-> **Nota:** A rota em `path()` é uma string que define um padrão de URL para correspondência. Essa string pode incluir um nome de variável (entre tags), e.g. `'catalog/<id>/'`. Esse padrão corresponderá a uma URL como **/catalog/**_any_chars_**/** e passa _any_chars_ para a view como uma string com paramêtros nome `id`). Nós discutiremos métodos de caminho e padrões de rota ainda mais em tópicos posteriores
+> [!NOTE]
+> A rota em `path()` é uma string que define um padrão de URL para correspondência. Essa string pode incluir um nome de variável (entre tags), e.g. `'catalog/<id>/'`. Esse padrão corresponderá a uma URL como **/catalog/**_any_chars_**/** e passa _any_chars_ para a view como uma string com paramêtros nome `id`). Nós discutiremos métodos de caminho e padrões de rota ainda mais em tópicos posteriores
 
 Adicione as linhas abaixo no fim do arquivo a fim de adicionar um novo item à lista `urlpatterns`. Esse novo item inclui um `path()` que encaminha solicitações com o padrão `catalog/` para o módulo `catalog.urls` (o arquivo com a URL relativa **/catalog/urls.py**).
 
@@ -277,7 +276,8 @@ from django.conf.urls.static import static
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ```
 
-> **Nota:** Existem várias maneiras de estender a lista `urlpatterns` (acima nós acrecentamos uma nova lista de itens usando o operador `+=` para separar claramente o velho do novo código). Poderiamos ter apenas incluído esse novo padrão de mapeamento na definição da lista original.
+> [!NOTE]
+> Existem várias maneiras de estender a lista `urlpatterns` (acima nós acrecentamos uma nova lista de itens usando o operador `+=` para separar claramente o velho do novo código). Poderiamos ter apenas incluído esse novo padrão de mapeamento na definição da lista original.
 >
 > ```python
 > urlpatterns = [
@@ -324,13 +324,15 @@ O comando `makemigrations` _cria_ (mas não aplica) as migrações para todos ap
 
 O comando `migrate` aplica as migrações em seu banco de dados (Django rastreia quais foram adicionados ao banco de dados atual).
 
-> **Nota:** Leia [Migrations](https://docs.djangoproject.com/en/2.0/topics/migrations/) (Documentação Django) para informações adicionais sobre os comandos de migração menos usados.
+> [!NOTE]
+> Leia [Migrations](https://docs.djangoproject.com/en/2.0/topics/migrations/) (Documentação Django) para informações adicionais sobre os comandos de migração menos usados.
 
 ### Testando o website
 
 Durante o desenvolvimento você pode testar o website usando o _webserver de desenvolvimento_, e vê-lo em seu navegador local.
 
-> **Nota:** O web server de desenvolvimento não tem performance ou desempenho suficiente para uso em produção, mas é uma maneira bem fácil de atualizar seu website Django e utilizá-lo durante o desenvolvimento para conseguir um teste rápido e conveniente. Por padrão, o site é "hospedado" em seu computador local (`http://127.0.0.1:8000/)`, mas você também pode especificar que outros computadores da rede acessem-o. Para mais informações acesse [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/2.0/ref/django-admin/#runserver) (Documentação Django).
+> [!NOTE]
+> O web server de desenvolvimento não tem performance ou desempenho suficiente para uso em produção, mas é uma maneira bem fácil de atualizar seu website Django e utilizá-lo durante o desenvolvimento para conseguir um teste rápido e conveniente. Por padrão, o site é "hospedado" em seu computador local (`http://127.0.0.1:8000/)`, mas você também pode especificar que outros computadores da rede acessem-o. Para mais informações acesse [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/2.0/ref/django-admin/#runserver) (Documentação Django).
 
 Execute o _web server de desenvolvimento_ com o comando `runserver` (no mesmo diretório de **manage.py**):
 
@@ -348,15 +350,17 @@ python3 manage.py runserver
 
 Com o servidor funcionando, você pode ver seu site colocando o endereço `http://127.0.0.1:8000/` em seu navegador local. Você deve ver uma página de erro como essa:
 
-![Django Debug page for Django 2.0](https://mdn.mozillademos.org/files/15729/django_404_debug_page.png)
+![Django Debug page for Django 2.0](django_404_debug_page.png)
 
 Não se assuste! Essa página de erro é esperada, pois nós não temos nehuma página ou url definida no módulo `catalogs.urls` (que é para onde somos redirecionados quando usamos a URL para a raíz do site).
 
-> **Nota:** A página acima demontra um ótimo recurso do Django — o log de depuração automatizado. Uma tela de erro será exibida com informações referentes ao erro sempre que uma página não consiga ser encontrada, ou caso o código tenha algum erro. Nesse caso poderemos ver que a URL que nós fornecemos não corresponde a nenhum de nossos padrões de URL (como listado). O log será desativado durante a produção (quando colocamos nosso site online na WEB), nesse caso uma página menos informativa (porém, mais amigável ao usuário) será exibida.
+> [!NOTE]
+> A página acima demontra um ótimo recurso do Django — o log de depuração automatizado. Uma tela de erro será exibida com informações referentes ao erro sempre que uma página não consiga ser encontrada, ou caso o código tenha algum erro. Nesse caso poderemos ver que a URL que nós fornecemos não corresponde a nenhum de nossos padrões de URL (como listado). O log será desativado durante a produção (quando colocamos nosso site online na WEB), nesse caso uma página menos informativa (porém, mais amigável ao usuário) será exibida.
 
 No momento basta saber que o Django está funcionando!
 
-> **Nota:** Você deve executar novamente as migrações e testar o site sempre que fizer alguma mudança significante. Não demora muito!
+> [!NOTE]
+> Você deve executar novamente as migrações e testar o site sempre que fizer alguma mudança significante. Não demora muito!
 
 ## Desafio
 
@@ -376,21 +380,3 @@ Como o escopo para o [website Local Library](/pt-BR/docs/Learn/Server-side/Djang
 - [Aplicativos](https://docs.djangoproject.com/en/2.0/ref/applications/#configuring-applications) (Documentação Django). Contém informações de como configurar aplicativos.
 
 {{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
-
-## Neste módulo
-
-- [Introdução ao Django](/pt-BR/docs/Learn/Server-side/Django/Introduction)
-- [Configurando um ambiente de desenvolvimento Django](/pt-BR/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial Django: Website de uma Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Parte 2: Criando a base do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Parte 3: Usando _models_](/pt-BR/docs/Learn/Server-side/Django/Models)
-- [Django Parte 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
-- [Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
-- [Django Parte 6: Lista genérica e _detail views_](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
-- [Django Parte 7: Framework de Sessões](/pt-BR/docs/Learn/Server-side/Django/Sessions)
-- [Django Parte 8: Autenticação de Usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
-- [Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
-- [Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
-- [Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)
-- [Segurança de aplicações web Django](/pt-BR/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog)

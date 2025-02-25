@@ -39,9 +39,9 @@ slug: Web/API/Worklet
     <tr>
       <td>{{domxref("AudioWorklet")}}</td>
       <td>カスタムオーディオノードでの音声処理のために使用します。</td>
-      <td>ウェブ音声レンダリングスレッド</td>
+      <td>ウェブオーディオレンダリングスレッド</td>
       <td>
-        <a href="https://webaudio.github.io/web-audio-api/#AudioWorklet">ウェブ音声 API</a>
+        <a href="https://webaudio.github.io/web-audio-api/#AudioWorklet">ウェブオーディオ API</a>
       </td>
     </tr>
     <tr>
@@ -89,7 +89,7 @@ _Worklet インターフェイスでは、プロパティは定義されてい�
 
 ## 関連情報
 
-- [Houdini: Demystifying CSS](https://developer.chrome.com/blog/houdini/) on Google Developers (May 2016)
+- [Houdini: Demystifying CSS](https://developer.chrome.com/docs/css-ui/houdini) on Google Developers (May 2016)
 - [AudioWorklet :: What, Why, and How](https://www.youtube.com/watch?v=g1L4O1smMC0&t=1m33s) on YouTube (November 2017)
 - [Enter AudioWorklet](https://developer.chrome.com/blog/audio-worklet/) on Google Developers (December 2017)
 - [Animation Worklet - HTTP203 Advent](https://www.youtube.com/watch?v=ZPkMMShYxKU&t=0m19s) on YouTube (December 2017)

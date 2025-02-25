@@ -1,14 +1,10 @@
 ---
 title: PHP
 slug: Glossary/PHP
-tags:
-  - Back End
-  - Iniciante
-  - Introdução
-  - PHP
-translation_of: Glossary/PHP
-original_slug: Glossario/PHP
 ---
+
+{{GlossarySidebar}}
+
 PHP (um inicialismo recursivo para PHP: Hypertext Preprocessor) é uma linguagem de script do lado do servidor de código aberto que pode ser utilizada junto com HTML para construir aplicações web e sites dinâmicos.
 
 HTML pode ser usando dentro do PHP, mas não vice versa.
@@ -44,7 +40,7 @@ A melhor coisa em usar o PHP é que ele é extremamente simples para um iniciant
 ?>
 ```
 
-Conheça mais sobre [variáveis](/pt-BR/docs/Glossario/PHP) em PHP
+Conheça mais sobre [variáveis](/pt-BR/docs/Glossary/PHP) em PHP
 
 ### Tratando Formulários com PHP
 
@@ -53,6 +49,6 @@ Conheça mais sobre [variáveis](/pt-BR/docs/Glossario/PHP) em PHP
 ## Saber mais
 
 - [Website oficial](http://php.net/)
-- {{Interwiki ("wikipedia", "PHP")}} na Wikipedia
+- [PHP](https://pt.wikipedia.org/wiki/PHP) na Wikipedia
 - [PHP](https://en.wikibooks.org/wiki/PHP_Programming) no Wikilivros
 - [Introdução ao PHP W3Schools](https://www.w3schools.com/PhP/php_intro.asp)

@@ -1,12 +1,8 @@
 ---
 title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
-tags:
-  - CSS
-  - JavaScript
-  - querySelector
-translation_of: Web/API/Document/querySelectorAll
 ---
+
 {{ ApiRef("DOM") }}
 
 ## Introdução
@@ -42,15 +38,15 @@ Lança uma exceção `SYNTAX_ERR` se o grupo especificado de seletores for invá
 
 `querySelectorAll()` foi introduzida na WebApps API.
 
-Navegadores baseados em _WebKit_ têm um _bug_: quando a string `seletores` contém um [pseudo-elemento CSS](/pt-BR/docs/CSS/Pseudo-elements), a {{ jsxref("NodeList") }} retornada não esta vazia, neste caso ela contém o elemento {{ HTMLElement("html") }}.
+Navegadores baseados em _WebKit_ têm um _bug_: quando a string `seletores` contém um [pseudo-elemento CSS](/pt-BR/docs/Web/CSS/Pseudo-elements), a {{ jsxref("NodeList") }} retornada não esta vazia, neste caso ela contém o elemento {{ HTMLElement("html") }}.
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.querySelectorAll")}}
+{{Compat}}
 
 ## Especificação
 
-- [API Selectors](http://www.w3.org/TR/selectors-api/)
+- [API Selectors](https://www.w3.org/TR/selectors-api/)
 
 ## Veja também
 

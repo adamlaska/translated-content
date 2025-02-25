@@ -1,8 +1,8 @@
 ---
 title: WebGLRenderingContext.canvas
 slug: Web/API/WebGLRenderingContext/canvas
-translation_of: Web/API/WebGLRenderingContext/canvas
 ---
+
 {{APIRef("WebGL")}}
 
 `Свойство WebGLRenderingContext.canvas` доступно только для чтения. Возвращает ссылку на объекты {{domxref("HTMLCanvasElement")}} или {{domxref("OffscreenCanvas")}} связанные с установленным контекстом отрисовки. Если объект {{HTMLElement("canvas")}} или {{domxref("OffscreenCanvas")}} не связан с контекстом, то возвращается значение {{jsxref("null")}}.
@@ -30,8 +30,8 @@ Given this {{HTMLElement("canvas")}} element:
 You can get back a reference to it from the `WebGLRenderingContext` using the `canvas` property:
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 gl.canvas; // HTMLCanvasElement
 ```
 
@@ -41,21 +41,19 @@ Example using the experimental {{domxref("OffscreenCanvas")}} object.
 
 ```js
 var offscreen = new OffscreenCanvas(256, 256);
-var gl = offscreen.getContext('webgl');
+var gl = offscreen.getContext("webgl");
 gl.canvas; // OffscreenCanvas
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                            | Status                   | Comment             |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('WebGL', "#DOM-WebGLRenderingContext-canvas", "WebGLRenderingContext.canvas")}} | {{Spec2('WebGL')}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("CanvasRenderingContext2D.canvas")}}
 - {{domxref("OffscreenCanvas")}}

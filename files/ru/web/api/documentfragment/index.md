@@ -1,8 +1,8 @@
 ---
 title: DocumentFragment
 slug: Web/API/DocumentFragment
-translation_of: Web/API/DocumentFragment
 ---
+
 {{ APIRef("DOM") }}
 
 Интерфейс DocumentFragment представляет собой минимальный объект документа, который не имеет родителя. Он используется как лёгкая версия {{domxref ("Document")}}, чтобы хранить хорошо сформированные или потенциально не хорошо формированные фрагменты XML.
@@ -33,7 +33,7 @@ _Этот интерфейс не имеет определённых свойс
 
 ## Методы
 
-_Этот интерфейс наследует методы его родителя, {{domxref("Node")}}_, и реализует их из интерфейса {{domxref("ParentNode")}}_\_\_._
+_Этот интерфейс наследует методы его родителя, {{domxref("Node")}}_, и реализует их из интерфейса {{domxref("ParentNode")}}.
 
 - {{domxref("DocumentFragment.find()")}} {{experimental_inline}}
   - : Возвращает первое совпадение {{domxref("Element")}} в дереве `DocumentFragment`.
@@ -53,10 +53,10 @@ _Этот интерфейс наследует методы его родите
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Интерфейсы DOM.](/ru/docs/DOM/DOM_Reference)
+- [Интерфейсы DOM.](/ru/docs/Web/API/Document_Object_Model)

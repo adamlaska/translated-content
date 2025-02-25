@@ -1,9 +1,10 @@
 ---
 title: Primitivo
 slug: Glossary/Primitive
-translation_of: Glossary/Primitive
-original_slug: Glossario/Primitivo
 ---
+
+{{GlossarySidebar}}
+
 ## Resumo
 
 Um **primitivo** (valor primitivo, tipo de dados primitivo) é um dado que não é representado através de um {{Glossary("Objeto")}} e, por consequência, não possui métodos.
@@ -30,7 +31,7 @@ Todos os primitivos são **imutáveis** (não podem ter o seu valor modificado).
 À exceção do `null` e do `undefined`, todos os primitivos tem um objeto wrapper equivalente:
 
 - {{jsxref("String")}} para o primitivo string.
-- {{jsxref("Number")}} para o primitivo .
+- {{jsxref("Number")}} para o primitivo Number.
 - {{jsxref("Boolean")}} para o primitivo Boolean.
 - {{jsxref("Symbol")}} para o primitivo Symbol.
 

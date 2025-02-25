@@ -1,16 +1,18 @@
 ---
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
-translation_of: Web/HTML/Global_attributes/itemref
-original_slug: Web/HTML/Atributos_Globales/itemref
 ---
+
+{{HTMLSidebar("Global_attributes")}}
+
 ## Resumen
 
 Las propiedades que no son descendientes de un elemento con el atributo `itemscope` pueden ser asociadas con el elemento usando un **itemref** . **Itemref** provee una lista de ids de los elementos (no `itemids`) con propiedades adicionales en otras partes dentro del documento .
 
 El atributo itemref puede ser solo especificado en elementos que tienen un atributo itemscope especificado .
 
-> **Nota:** el atributo itemref no es parte del modelo de micro datos . Es solamente un constructor sintáctico que ayuda a los autores en el ingreso de anotaciones a las páginas donde los datos que se van a anotar no siguen una estructura de arbol conveniente . Por ejemplo , permite a los autores marcar los datos en una tabla para que cada columna defina un item separado mientras se mantienen las propiedades en las celdas .
+> [!NOTE]
+> El atributo itemref no es parte del modelo de micro datos . Es solamente un constructor sintáctico que ayuda a los autores en el ingreso de anotaciones a las páginas donde los datos que se van a anotar no siguen una estructura de arbol conveniente . Por ejemplo , permite a los autores marcar los datos en una tabla para que cada columna defina un item separado mientras se mantienen las propiedades en las celdas .
 
 ## Ejemplo
 
@@ -18,11 +20,11 @@ El atributo itemref puede ser solo especificado en elementos que tienen un atrib
 
 ```html
 <div itemscope id="amanda" itemref="a b"></div>
-<p id="a">Name: <span itemprop="name">Amanda</span> </p>
+<p id="a">Name: <span itemprop="name">Amanda</span></p>
 <div id="b" itemprop="band" itemscope itemref="c"></div>
 <div id="c">
-    <p>Band: <span itemprop="name">Jazz Band</span> </p>
-    <p>Size: <span itemprop="size">12</span> players</p>
+  <p>Band: <span itemprop="name">Jazz Band</span></p>
+  <p>Size: <span itemprop="size">12</span> players</p>
 </div>
 ```
 
@@ -82,7 +84,7 @@ El atributo itemref puede ser solo especificado en elementos que tienen un atrib
 
 ### Resultado
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/HTML/Global_attributes/itemref') }}
+{{EmbedLiveSample('', '', '')}}
 
 ## Especificación
 

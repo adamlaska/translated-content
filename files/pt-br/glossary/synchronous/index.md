@@ -1,13 +1,10 @@
 ---
 title: Síncrono
 slug: Glossary/Synchronous
-tags:
-  - Glossário
-  - Mecanismos Web
-  - Web
-translation_of: Glossary/Synchronous
-original_slug: Glossario/Sincrono
 ---
+
+{{GlossarySidebar}}
+
 **Síncrono** refere-se a comunicação em tempo real onde cada parte recebe ( e se necessário, processa e responde) mensagens instantaneamente (ou o mais próximo possível do instantâneo).
 
 Um exemplo humano é o telefone — durante uma chamada telefônica você costuma responder para outra pessoa imediatamente.
@@ -19,4 +16,4 @@ Muitos comandos de programação são também síncronos — por exemplo quando 
 ### Technical reference
 
 - {{glossary("Assíncrono")}}
-- [Synchronous and asynchronous requests](/pt-BR/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) using the [XMLHttpRequest()](/pt-BR/docs/Web/API/XMLHttpRequest) {{glossary("API")}}
+- [Synchronous and asynchronous requests](/pt-BR/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests) using the [XMLHttpRequest()](/pt-BR/docs/Web/API/XMLHttpRequest) {{glossary("API")}}

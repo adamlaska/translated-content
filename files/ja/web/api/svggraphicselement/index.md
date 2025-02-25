@@ -9,7 +9,8 @@ slug: Web/API/SVGGraphicsElement
 
 {{InheritanceDiagram(600, 120)}}
 
-> **メモ:** このインターフェイスは SVG 2 で導入され、 SVG 1.1 で導入された {{domxref("SVGLocatable")}} および {{domxref("SVGTransformable")}} インターフェイスを置き換えています。
+> [!NOTE]
+> このインターフェイスは SVG 2 で導入され、 SVG 1.1 で導入された {{domxref("SVGLocatable")}} および {{domxref("SVGTransformable")}} インターフェイスを置き換えています。
 
 ## プロパティ
 
@@ -31,10 +32,8 @@ _このインターフェイスは親である {{domxref("SVGElement")}} から�
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                     | 備考     |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName("SVG2", "types.html#InterfaceSVGGraphicsElement", "SVGGraphicsElement")}} | {{Spec2("SVG2")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.SVGGraphicsElement")}}
+{{Compat}}

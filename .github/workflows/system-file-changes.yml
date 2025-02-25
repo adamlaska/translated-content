@@ -7,8 +7,11 @@ name: System file changes
 on:
   pull_request_target:
     paths:
-      - ".github/workflows/**"
-      - ".github/CODEOWNERS"
+      - ".github/**"
+      - package.json
+      - yarn.lock
+
+permissions: {}
 
 jobs:
   block:

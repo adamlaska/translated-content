@@ -1,68 +1,66 @@
 ---
 title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
+l10n:
+  sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
 ---
+
 {{JSRef}}
 
-**`startsWith()`** 메소드는 어떤 문자열이 특정 문자로 시작하는지 확인하여 결과를 `true` 혹은 `false`로 반환합니다.
+**`startsWith()`**는 {{jsxref("String")}} 값의 메서드로, 어떤 문자열의 문자로 시작하는지 확인하여 결과를 적절하게 `true` 혹은 `false`로 반환합니다.
+
+{{InteractiveExample("JavaScript Demo: String.startsWith()")}}
+
+```js interactive-example
+const str1 = "Saturday night plans";
+
+console.log(str1.startsWith("Sat"));
+// Expected output: true
+
+console.log(str1.startsWith("Sat", 3));
+// Expected output: false
+```
 
 ## 구문
 
-```js
-str.startsWith(searchString[, position])
+```js-nolint
+startsWith(searchString)
+startsWith(searchString, position)
 ```
 
 ### 매개변수
 
 - `searchString`
-  - : 문자열의 시작 지점에서 탐색할 문자열
+  - : 이 문자열의 시작 부분에서 검색할 문자. [정규식](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)이 될 수 없습니다. 정규식이 아닌 모든 값은 [문자열로 강제로 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)되므로 이를 생략하거나 `undefined`를 전달하면 `startsWith()`가 `"undefined"` 문자열을 검색하게 되는데, 이는 원하는 경우가 거의 없습니다.
 - `position` {{optional_inline}}
-  - : `searchString`을 탐색할 위치. 기본값 0.
+  - : `searchString`이 발견될 것으로 예상되는 시작 위치(`searchString`의 첫 번째 문자의 인덱스)입니다. 기본값은 `0`입니다.
 
 ### 반환 값
 
-문자열이 검색 문자열로 시작하면 `true`, 아니면 `false`.
+대상 문자열이 주어진 문자로 시작하면 `true`, 아니면 `false`.
+
+### 예외
+
+- {{jsxref("TypeError")}}
+  - : `searchString`이 [정규식일 경우](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
 
 ## 설명
 
 `startsWith` 메소드로 어떤 문자열이 다른 문자열로 시작하는지 확인 할 수 있습니다. 대소문자를 구분합니다.
 
-## 예시
+## 예제
 
 ### `startsWith()` 사용하기
 
 ```js
-//startswith
-var str = 'To be, or not to be, that is the question.';
+const str = "To be, or not to be, that is the question.";
 
-console.log(str.startsWith('To be'));         // true
-console.log(str.startsWith('not to be'));     // false
-console.log(str.startsWith('not to be', 10)); // true
+console.log(str.startsWith("To be")); // true
+console.log(str.startsWith("not to be")); // false
+console.log(str.startsWith("not to be", 10)); // true
 ```
 
-## 폴리필
-
-`startsWith` 메소드는 ECMAScript 2015 명세에 포함됐으며, 아직까지 모든 JavaScrpt 구현체가 지원하지 않을 수 있습니다. 그러나 아래 코드 조각을 사용해 폴리필 할 수 있습니다.
-
-```js
-if (!String.prototype.startsWith) {
-  String.prototype.startsWith = function(search, pos) {
-    return this.substr(!pos || pos < 0 ? 0 : +pos, search.length) === search;
-  };
-}
-```
-
-ES2015 명세를 모두 만족하지만, 더 무거운 폴리필은 [Mathias Bynens의 GitHub](https://github.com/mathiasbynens/String.prototype.startsWith) 에서 확인할 수 있습니다.
-
-## 명세
+## 명세서
 
 {{Specifications}}
 
@@ -70,8 +68,9 @@ ES2015 명세를 모두 만족하지만, 더 무거운 폴리필은 [Mathias Byn
 
 {{Compat}}
 
-## 관련 문서
+## 같이 보기
 
+- [`core-js`에서 `String.prototype.startsWith`의 폴리필](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.endsWith()")}}
 - {{jsxref("String.prototype.includes()")}}
 - {{jsxref("String.prototype.indexOf()")}}

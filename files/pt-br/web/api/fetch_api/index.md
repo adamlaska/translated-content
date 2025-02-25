@@ -1,15 +1,8 @@
 ---
 title: Fetch API
 slug: Web/API/Fetch_API
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Referência(2)
-  - XMLHttpRequest
-  - request
-translation_of: Web/API/Fetch_API
 ---
+
 {{DefaultAPISidebar("Fetch API")}}{{ SeeCompatTable() }}
 
 A Fetch API fornece uma interface para buscar recursos (por exemplo, em toda a rede). Parecerá familiar para qualquer pessoa que tenha usado XMLHttpRequest, porém a nova API oferece um conjunto de recursos mais poderoso e flexível.
@@ -28,7 +21,8 @@ Uma vez que uma {{domxref("Response")}} é recuperada, há uma série de método
 
 Você pode criar um pedido e uma resposta diretamente usando os construtores {{domxref("Request.Request","Request()")}} e {{domxref("Response.Response","Response()")}}, mas é improvável que você faça isso diretamente. Em vez disso, é mais provável que sejam criados como resultados de outras ações da API (por exemplo, {{domxref("FetchEvent.respondWith")}} de service workers).
 
-> **Nota:** Encontre mais informações sobre os recursos do Fetch API em [Using Fetch](/pt-BR/docs/Web/API/Fetch_API/Using_Fetch), e conceitos para estudos em [Fetch basic concepts](/pt-BR/docs/Web/API/Fetch_API/Basic_concepts).
+> [!NOTE]
+> Encontre mais informações sobre os recursos do Fetch API em [Using Fetch](/pt-BR/docs/Web/API/Fetch_API/Using_Fetch), e conceitos para estudos em [Fetch basic concepts](/pt-BR/docs/conflicting/Web/API/Fetch_API/Using_Fetch).
 
 ## Fetch Interfaces
 
@@ -48,18 +42,16 @@ Você pode criar um pedido e uma resposta diretamente usando os construtores {{d
 
 ## Especificações
 
-| Especificação                | Status                   | Comentários       |
-| ---------------------------- | ------------------------ | ----------------- |
-| {{SpecName('Fetch')}} | {{Spec2('Fetch')}} | Definição inicial |
+{{Specifications}}
 
-## Navegadores Compatíveis
+## Compatibilidade com navegadores
 
-{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}
+{{Compat}}
 
 ## Veja também
 
-- [ServiceWorker API](/pt-BR/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/pt-BR/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/CORS)
 - [HTTP](/pt-BR/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch basic concepts](/pt-BR/docs/Web/API/Fetch_API/Basic_concepts)
+- [Fetch basic concepts](/pt-BR/docs/conflicting/Web/API/Fetch_API/Using_Fetch)

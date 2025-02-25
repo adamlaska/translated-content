@@ -43,13 +43,11 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                     | 備考     |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('Fetch','#http-access-control-request-headers', 'Access-Control-Request-Headers')}} | {{Spec2("Fetch")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Access-Control-Request-Headers")}}
+{{Compat}}
 
 ## 関連情報
 

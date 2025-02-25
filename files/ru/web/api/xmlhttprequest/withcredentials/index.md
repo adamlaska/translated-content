@@ -1,14 +1,8 @@
 ---
 title: XMLHttpRequest.withCredentials
 slug: Web/API/XMLHttpRequest/withCredentials
-tags:
-  - AJAX
-  - API
-  - XMLHttpRequest
-  - Свойство
-  - Справка
-translation_of: Web/API/XMLHttpRequest/withCredentials
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 Свойство **XMLHttpRequest.withCredentials** это {{jsxref("Boolean")}} который определяет, должны ли создаваться кросс-доменные `Access-Control` запросы с использованием таких идентификационных данных как cookie, авторизационные заголовки или TLS сертификаты. Настройка `withCredentials` бесполезна при запросах на тот же домен.
@@ -23,7 +17,7 @@ translation_of: Web/API/XMLHttpRequest/withCredentials
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://example.com/', true);
+xhr.open("GET", "http://example.com/", true);
 xhr.withCredentials = true;
 xhr.send(null);
 ```
@@ -32,6 +26,6 @@ xhr.send(null);
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}

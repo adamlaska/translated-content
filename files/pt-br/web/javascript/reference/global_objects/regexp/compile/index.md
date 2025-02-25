@@ -1,8 +1,8 @@
 ---
 title: RegExp.prototype.compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 O método **`compile()`** está depreciado, é usado para (re-)compilar uma expressão regular durante a execução de um script. É basicamente o mesmo que o construtor `RegExp`.
@@ -41,20 +41,17 @@ O método de `compilação` é obsoleto. Você pode simplesmente usar o construt
 O exemplo a seguir mostra como recompilar uma expressão regular com um novo padrão e um nova flag.
 
 ```js
-var regexObj = new RegExp('foo', 'gi');
-regexObj.compile('new foo', 'g');
+var regexObj = new RegExp("foo", "gi");
+regexObj.compile("new foo", "g");
 ```
 
 ## Especificações
 
-| Especificação                                                                                                    | Estado                       | Comentario                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}}     | {{Spec2('ES6')}}         | Initial definition. Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers. |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}} | {{Spec2('ESDraft')}} | Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers.                     |
+{{Specifications}}
 
 ## Browser compativeis
 
-{{Compat("javascript.builtins.RegExp.compile")}}
+{{Compat}}
 
 ## Veja também
 

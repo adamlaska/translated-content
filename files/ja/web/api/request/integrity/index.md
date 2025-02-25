@@ -1,45 +1,49 @@
 ---
-title: Request.integrity
+title: "Request: integrity プロパティ"
+short-title: integrity
 slug: Web/API/Request/integrity
+l10n:
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-{{domxref("Request")}} インターフェイスの **`integrity`** 読み取り専用プロパティには、リクエストの [サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity) 値が含まれています。
+**`integrity`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、このリクエストの[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)の値を保持します。
 
-## 構文
+## 値
 
-```js
-var myIntegrity = request.integrity;
-```
-
-### 値
-
-リクエストの [サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity) 値 (例, `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`)。
+`Request` を構築する際に `options.integrity` 引数として渡された値。
 
 完全性が指定されていない場合、 `''` を返します。
 
 ## 例
 
-次のスニペットでは {{domxref("Request.Request()")}} コンストラクタを使用して新しい request を作成し ( script と同じディレクトリにある画像ファイルの場合)、 request の `integrity` 値を変数に保存します:
+次のスニペットでは {{domxref("Request.Request()")}} コンストラクターを使用して新しいリクエストを作成し（スクリプトと同じディレクトリーにある画像ファイルに対して）、次に、そのリクエストの完全性を読み取ります。リクエストは特定の完全性なしに作成されたため、プロパティは空文字列を返します。
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myIntegrity = myRequest.integrity;
+const myRequest = new Request("flowers.jpg");
+console.log(myRequest.integrity); // ""
 ```
 
-## 仕様
+例えば、下記の場合、リクエストは特定の完全性の値で作成されたため、プロパティはその値を返します。なお、完全性の値の検証は行われません。このプロパティは渡された値をそのまま返します。
 
-| 仕様                                                                         | 状態                     | コメント   |
-| ---------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('Fetch','#dom-request-integrity','integrity')}} | {{Spec2('Fetch')}} | 初回定義。 |
+```js
+const myRequest = new Request("flowers.jpg", {
+  integrity: "sha256-abc123",
+});
+console.log(myRequest.integrity); // "sha256-abc123"
+```
 
-## ブラウザーの実装状況
+## 仕様書
 
-{{Compat("api.Request.integrity")}}
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
 
 ## 関連項目
 
-- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

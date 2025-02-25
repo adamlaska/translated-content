@@ -1,15 +1,8 @@
 ---
-title: ':first'
+title: :first
 slug: Web/CSS/:first
-tags:
-  - '@page'
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:first
 ---
+
 {{CSSRef}}La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:first` de [CSS](/es/docs/Web/CSS), utilizada con la [regla-at](/es/docs/Web/CSS/At-rule) {{cssxref("@page")}}, representa la primera página de un documento impreso.
 
 ```css
@@ -20,7 +13,8 @@ translation_of: Web/CSS/:first
 }
 ```
 
-> **Nota:** No puede cambiar todas las propiedades de CSS con esta pseudoclase. Solo puede cambiar los márgenes, {{cssxref("orphans")}}, {{cssxref("widows")}} y saltos de página del documento. Además, solo puede usar unidades de [longitud absoluta](/es/docs/Web/CSS/length#Absolute_length_units) al definir los márgenes. Todas las otras propiedades serán ignoradas.
+> [!NOTE]
+> No puede cambiar todas las propiedades de CSS con esta pseudoclase. Solo puede cambiar los márgenes, {{cssxref("orphans")}}, {{cssxref("widows")}} y saltos de página del documento. Además, solo puede usar unidades de [longitud absoluta](/es/docs/Web/CSS/length#absolute_length_units) al definir los márgenes. Todas las otras propiedades serán ignoradas.
 
 ## Sintaxis
 
@@ -54,7 +48,7 @@ p {
 ```js
 document.querySelector("button").onclick = function () {
   window.print();
-}
+};
 ```
 
 ### Resultado
@@ -65,14 +59,11 @@ Presione el botón "Imprimir!" para imprimir el ejemplo. Las palabras en la prim
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                                   | Comentario          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Paged Media', '#left-right-first', ':first')}} | {{Spec2('CSS3 Paged Media')}} | Ningún cambio.      |
-| {{SpecName('CSS2.1', 'page.html#page-selectors', ':first')}}     | {{Spec2('CSS2.1')}}                 | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.first")}}
+{{Compat}}
 
 ## Ver también
 

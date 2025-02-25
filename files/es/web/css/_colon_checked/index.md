@@ -1,14 +1,8 @@
 ---
-title: ':checked'
+title: :checked
 slug: Web/CSS/:checked
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:checked
 ---
+
 {{ CSSRef() }}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:checked` de [CSS](/es/docs/Web/CSS) representa cualquier **radio** ([\<input type="radio">](/es/docs/Web/HTML/Element/input/radio)), **checkbox** ([\<input type="checkbox">](/es/docs/Web/HTML/Element/input/checkbox)) u **option** ({{ HTMLElement("option") }} en un elemento {{ HTMLElement("select") }}) que está marcado o conmutado a un estado `on`.
@@ -23,7 +17,8 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:checked` de [CSS](/es/docs/
 
 El usuario puede activar este estado marcando/seleccionando un elemento, o desactivándolo desmarcando/deseleccionando el elemento.
 
-> **Nota:** Debido a que los navegadores a menudo tratan las `<option>` s como [elementos reemplazados](/es/docs/Web/CSS/Replaced_element), la medida en que se pueden diseñar con la pseudo-clase `:checked` varía de un navegador a otro.
+> [!NOTE]
+> Debido a que los navegadores a menudo tratan las `<option>` s como [elementos reemplazados](/es/docs/Web/CSS/Replaced_element), la medida en que se pueden diseñar con la pseudo-clase `:checked` varía de un navegador a otro.
 
 ## Sintaxis
 
@@ -37,15 +32,15 @@ El usuario puede activar este estado marcando/seleccionando un elemento, o desac
 
 ```html
 <div>
-  <input type="radio" name="my-input" id="yes">
+  <input type="radio" name="my-input" id="yes" />
   <label for="yes">Yes</label>
 
-  <input type="radio" name="my-input" id="no">
+  <input type="radio" name="my-input" id="no" />
   <label for="no">No</label>
 </div>
 
 <div>
-  <input type="checkbox" name="my-checkbox" id="opt-in">
+  <input type="checkbox" name="my-checkbox" id="opt-in" />
   <label for="opt-in">Check me!</label>
 </div>
 
@@ -101,14 +96,38 @@ Este ejemplo utiliza la pseudoclase `:checked` para permitir al usuario alternar
 
 <table>
   <thead>
-    <tr><th>Columna #1</th><th>Columna #2</th><th>Columna #3</th></tr>
+    <tr>
+      <th>Columna #1</th>
+      <th>Columna #2</th>
+      <th>Columna #3</th>
+    </tr>
   </thead>
   <tbody>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
-    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
-    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
+    <tr>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+    </tr>
+    <tr>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+    </tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
   </tbody>
 </table>
 
@@ -156,20 +175,15 @@ Este ejemplo utiliza la pseudoclase `:checked` para permitir al usuario alternar
 
 ### Galería de imágenes
 
-Puede usar la pseudoclase `:checked` para crear una galería de imágenes con imágenes de tamaño completo que solo se muestran cuando el usuario hace clic en una miniatura. Vea [esta demostración](/@api/deki/files/6268/=css-checked-gallery.zip).
+Puede usar la pseudoclase `:checked` para crear una galería de imágenes con imágenes de tamaño completo que solo se muestran cuando el usuario hace clic en una miniatura. Vea [esta demostración](css-checked-gallery.zip).
 
-> **Nota:** Para un efecto análogo, pero basado en la pseudoclase [`:hover`](/es/docs/CSS/:hover) y sin radioboxes ocultos, vea [esta demostración](/@api/deki/files/6247/=css-gallery.zip), tomada de la página de referencia [:hover](/es/docs/CSS/:hover).
+> [!NOTE]
+> Para un efecto análogo, pero basado en la pseudoclase [`:hover`](/es/docs/Web/CSS/:hover) y sin radioboxes ocultos, vea [esta demostración](css-gallery.zip), tomada de la página de referencia [:hover](/es/docs/Web/CSS/:hover).
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                                   | Comentarios                                           |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', '#selector-checked', ':checked') }} | {{ Spec2('HTML WHATWG') }}     | Ningún cambio.                                        |
-| {{ SpecName('HTML5 W3C', '#selector-checked', ':checked') }}     | {{ Spec2('HTML5 W3C') }}         | Define la semántica con respecto a HTML.              |
-| {{ SpecName('CSS4 Selectors', '#checked', ':checked') }}         | {{ Spec2('CSS4 Selectors') }} | Ningún cambio.                                        |
-| {{ SpecName('CSS3 UI', '#pseudo-checked', ':checked') }}         | {{ Spec2('CSS3 UI') }}             | Enlace al Nivel 3 de Selectores.                      |
-| {{ SpecName('CSS3 Selectors', '#checked', ':checked') }}         | {{ Spec2('CSS3 Selectors') }} | Define la pseudoclase, pero no la semántica asociada. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.checked")}}
+{{Compat}}

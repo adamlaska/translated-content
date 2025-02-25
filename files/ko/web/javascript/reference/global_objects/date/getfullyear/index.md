@@ -1,26 +1,27 @@
 ---
 title: Date.prototype.getFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 ---
+
 {{JSRef}}
 
 **`getFullYear()`** 메서드는 주어진 날짜의 현지 시간 기준 연도를 반환합니다.
 
 {{jsxref("Date.prototype.getYear()", "getYear()")}} 메서드 대신 이 메서드를 사용하세요.
 
-{{EmbedInteractiveExample("pages/js/date-getfullyear.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getFullYear()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getFullYear());
+// Expected output: 1969
+```
 
 ## 구문
 
 ```js
-    dateObj.getFullYear()
+dateObj.getFullYear();
 ```
 
 ### 반환 값

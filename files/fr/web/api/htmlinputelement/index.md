@@ -1,9 +1,6 @@
 ---
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
-translation_of: Web/API/HTMLInputElement
-page-type: web-api-interface
-browser-compat: api.HTMLInputElement
 ---
 
 {{APIRef("HTML DOM")}}
@@ -27,7 +24,7 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
 - [`inputmode`](/fr/docs/Web/API/HTMLInputElement/inputmode)
   - : Fournit une indication au navigateur quant à la configuration de clavier virtuel à utiliser lors de l'édition de cet élément ou de son contenu.
 - [`labels`](/fr/docs/Web/API/HTMLInputElement/labels) {{readonlyInline}}
-  - : Un tableau [`NodeList`](/fr/docs/Web/API/NodeList) contenant une liste des éléments [`<label>`](/fr/docs/Web/HTML/Element/Label) utilisés comme libellés pour cet élément.
+  - : Un tableau [`NodeList`](/fr/docs/Web/API/NodeList) contenant une liste des éléments [`<label>`](/fr/docs/Web/HTML/Element/label) utilisés comme libellés pour cet élément.
 - [`list`](/fr/docs/Web/API/HTMLInputElement/list) {{readonlyInline}}
   - : Un objet [`HTMLElement`](/fr/docs/Web/API/HTMLElement) qui correspond à l'élément ciblé par l'attribut [`list`](/fr/docs/Web/HTML/Element/input#list). Cette propriété peut valoir `null` si aucun élément HTML n'a été trouvé dans le même arbre.
 - [`multiple`](/fr/docs/Web/API/HTMLInputElement/multiple)
@@ -50,17 +47,17 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
 ### Propriétés relatives au formulaire parent
 
 - [`form`](/fr/docs/Web/API/HTMLInputElement/form) {{readonlyInline}}
-  - : Un objet [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement) correspondant à l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) parent.
+  - : Un objet [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement) correspondant à l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) parent.
 - [`formAction`](/fr/docs/Web/API/HTMLInputElement/formAction)
-  - : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`formaction`](/fr/docs/Web/HTML/Element/input#formaction) de l'élément, qui contient l'URI d'un programme traitant les informations envoyées avec l'élément. Cet attribut HTML surcharge l'attribut [`action`](/fr/docs/Web/HTML/Element/Form#action) du formulaire parent.
+  - : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`formaction`](/fr/docs/Web/HTML/Element/input#formaction) de l'élément, qui contient l'URI d'un programme traitant les informations envoyées avec l'élément. Cet attribut HTML surcharge l'attribut [`action`](/fr/docs/Web/HTML/Element/form#action) du formulaire parent.
 - [`formEnctype`](/fr/docs/Web/API/HTMLInputElement/formEnctype)
-  - : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`formenctype`](/fr/docs/Web/HTML/Element/input#formenctype) de l'élément, qui contient le type de contenu utilisé pour envoyer le formulaire au serveur. Cet attribut HTML surcharge l'attribut [`enctype`](/fr/docs/Web/HTML/Element/Form#enctype) du formulaire parent.
+  - : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`formenctype`](/fr/docs/Web/HTML/Element/input#formenctype) de l'élément, qui contient le type de contenu utilisé pour envoyer le formulaire au serveur. Cet attribut HTML surcharge l'attribut [`enctype`](/fr/docs/Web/HTML/Element/form#enctype) du formulaire parent.
 - [`formMethod`](/fr/docs/Web/API/HTMLInputElement/formMethod)
-  - : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`formmethod`](/fr/docs/Web/HTML/Element/input#formmethod) de l'élément, qui contient la méthode HTTP utilisée par le navigateur pour envoyer le formulaire. Cet attribut HTML surcharge l'attribut [`method`](/fr/docs/Web/HTML/Element/Form#method) du formulaire parent.
+  - : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`formmethod`](/fr/docs/Web/HTML/Element/input#formmethod) de l'élément, qui contient la méthode HTTP utilisée par le navigateur pour envoyer le formulaire. Cet attribut HTML surcharge l'attribut [`method`](/fr/docs/Web/HTML/Element/form#method) du formulaire parent.
 - [`formNoValidate`](/fr/docs/Web/API/HTMLInputElement/formNoValidate)
-  - : Un booléen qui permet de lire ou d'écrire l'attribut [`formnovalidate`](/fr/docs/Web/HTML/Element/input#formnovalidate) de l'élément, qui indique que le formulaire n'a pas à être validé lors de l'envoi. Cet attribut HTML surcharge l'attribut [`novalidate`](/fr/docs/Web/HTML/Element/Form#novalidate) du formulaire parent.
+  - : Un booléen qui permet de lire ou d'écrire l'attribut [`formnovalidate`](/fr/docs/Web/HTML/Element/input#formnovalidate) de l'élément, qui indique que le formulaire n'a pas à être validé lors de l'envoi. Cet attribut HTML surcharge l'attribut [`novalidate`](/fr/docs/Web/HTML/Element/form#novalidate) du formulaire parent.
 - [`formTarget`](/fr/docs/Web/API/HTMLInputElement/formTarget)
-  - : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`formtarget`](/fr/docs/Web/HTML/Element/input#formtarget) de l'élément, qui contient un nom ou un mot-clé indiquant où afficher la réponse reçue après l'envoi du formulaire. Cet attribut HTML surcharge l'attribut [`target`](/fr/docs/Web/HTML/Element/Form#target) du formulaire parent.
+  - : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`formtarget`](/fr/docs/Web/HTML/Element/input#formtarget) de l'élément, qui contient un nom ou un mot-clé indiquant où afficher la réponse reçue après l'envoi du formulaire. Cet attribut HTML surcharge l'attribut [`target`](/fr/docs/Web/HTML/Element/form#target) du formulaire parent.
 
 ### Propriétés qui s'appliquent à tous les éléments `<input>` qui ne sont pas masqués
 
@@ -119,7 +116,7 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
 - [`maxLength`](/fr/docs/Web/API/HTMLInputElement/maxLength)
   - : Une valeur numérique de type `unsigned long` qui permet de lire ou d'écrire l'attribut [`maxlength`](/fr/docs/Web/HTML/Element/input#maxlength) de l'élément, qui contient le nombre maximal de caractères (exprimés en codets Unicode) que doit contenir la valeur.
 - [`min`](/fr/docs/Web/API/HTMLInputElement/min)
-- : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`min`](/fr/docs/Web/HTML/Element/input#min) de l'élément, qui contient la valeur minimale (numérique ou temporelle) de la valeur pour ce champ. Cette valeur ne doit pas être supérieure à la valeur maximale portée par l'attribut [`max`](/fr/docs/Web/HTML/Element/input#max).
+  - : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`min`](/fr/docs/Web/HTML/Element/input#min) de l'élément, qui contient la valeur minimale (numérique ou temporelle) de la valeur pour ce champ. Cette valeur ne doit pas être supérieure à la valeur maximale portée par l'attribut [`max`](/fr/docs/Web/HTML/Element/input#max).
 - [`minLength`](/fr/docs/Web/API/HTMLInputElement/minLength)
   - : Une valeur numérique de type `unsigned long` qui permet de lire ou d'écrire l'attribut [`maxlength`](/fr/docs/Web/HTML/Element/input#maxlength) de l'élément, qui contient le nombre minimal de caractères (exprimés en codets Unicode) que doit contenir la valeur.
 - [`pattern`](/fr/docs/Web/API/HTMLInputElement/pattern)
@@ -135,7 +132,7 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
 - [`selectionDirection`](/fr/docs/Web/API/HTMLInputElement/selectionDirection)
   - : Une chaîne de caractères qui permet de lire ou d'écrire la direction selon laquelle la sélection est effectuée. Les valeurs possibles sont&nbsp;: `forward` (la sélection a été effectuée dans le sens d'écriture de la locale courante), `backward` (le sens opposé), ou `none` (la direction est inconnue).
 - [`size`](/fr/docs/Web/API/HTMLInputElement/size)
-  - : Une valeur numérique de type `unsigned long` qui permet de lire ou d'écrire l'attribut [`size`](/fr/docs/Web/HTML/Element/input#size) de l'élément, qui contient la taille visuelle du contrôle. La valeur est exprimée en pixels à moins que [`type`](/fr/docs/Web/HTML/Element/input#type)  vaille `text` ou `password`, auquel cas il s'agit du nombre de caractères. Cet attribut s'applique uniquement lorsque l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) vaut `text`, `search`, `tel`, `url`, `email`, ou `password`.
+  - : Une valeur numérique de type `unsigned long` qui permet de lire ou d'écrire l'attribut [`size`](/fr/docs/Web/HTML/Element/input#size) de l'élément, qui contient la taille visuelle du contrôle. La valeur est exprimée en pixels à moins que [`type`](/fr/docs/Web/HTML/Element/input#type) vaille `text` ou `password`, auquel cas il s'agit du nombre de caractères. Cet attribut s'applique uniquement lorsque l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) vaut `text`, `search`, `tel`, `url`, `email`, ou `password`.
 
 ## Méthodes
 
@@ -158,8 +155,9 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
 - [`checkValidity()`](/fr/docs/Web/API/HTMLInputElement/checkValidity)
   - : Renvoie un booléen qui vaut `false` si l'élément est candidat à la validation des contraintes, mais qu'il ne les respecte pas toutes. Dans ce cas, un évènement [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) est également déclenché sur l'élément. Cette méthode renvoie `true` si l'élément ne participe pas à la validation des contraintes ou si les contraintes sont respectées.
 - [`reportValidity()`](/fr/docs/Web/API/HTMLInputElement/reportValidity)
-  - :  Exécute la méthode `checkValidity()` et, si celle-ci renvoie `false` (si un champ est invalide ou si aucun motif n'a été fourni), fourni la même indication à l'utilisatrice ou l'utilisateur, que celle affichée en cas de champ invalide lorsque le formulaire est envoyé.
+  - : Exécute la méthode `checkValidity()` et, si celle-ci renvoie `false` (si un champ est invalide ou si aucun motif n'a été fourni), fourni la même indication à l'utilisatrice ou l'utilisateur, que celle affichée en cas de champ invalide lorsque le formulaire est envoyé.
 - [`stepDown()`](/fr/docs/Web/API/HTMLInputElement/stepDown)
+
   - : Décrémente la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) de ([`step`](/fr/docs/Web/HTML/Element/input#step) \* n), où n vaut 1 par défaut. Cette méthode déclenche une exception si&nbsp;:
     - Elle n'est pas applicable pour un champ qui a cet attribut [`type`](/fr/docs/Web/HTML/Element/input#type),
     - L'élément n'a pas de valeur pour l'attribut [`step`](/fr/docs/Web/HTML/Element/input#step),
@@ -177,10 +175,10 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
 
 Pour écouter ces évènements, on utilisera la méthode [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) ou on affectera un gestionnaire d'évènements à la propriété `onnomevenement` correspondante de cette interface&nbsp;:
 
-- [`input`](/fr/docs/Web/API/HTMLElement/input_event)
-  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select), or [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea) a changé. On notera qu'à strictement parler, cet évènement est déclenché sur l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) et s'applique également aux éléments qui ont l'attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable). Toutefois, nous l'avons indiqué ici, car il est fréquemment utilisé avec les éléments de formulaire. Également disponible via la propriété [`oninput`](/fr/docs/Web/API/GlobalEventHandlers/oninput).
+- [`input`](/fr/docs/Web/API/Element/input_event)
+  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select), or [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) a changé. On notera qu'à strictement parler, cet évènement est déclenché sur l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) et s'applique également aux éléments qui ont l'attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable). Toutefois, nous l'avons indiqué ici, car il est fréquemment utilisé avec les éléments de formulaire. Également disponible via la propriété [`oninput`](/fr/docs/Web/API/Element/input_event).
 - [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event)
-  - : Déclenché lorsqu'un élément ne respecte pas les contraintes lors de la validation des contraintes. Également disponible via la propriété [`oninvalid`](/fr/docs/Web/API/GlobalEventHandlers/oninvalid).
+  - : Déclenché lorsqu'un élément ne respecte pas les contraintes lors de la validation des contraintes. Également disponible via la propriété [`oninvalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event).
 - [`search`](/fr/docs/Web/API/HTMLInputElement/search_event)
   - : Déclenché lorsqu'une recherche est initiée sur un élément [`<input>`](/fr/docs/Web/HTML/Element/input) qui a `type="search"`. Également disponible via la propriété [`onsearch`](/fr/docs/Web/API/GlobalEventHandlers/onsearch).
 - [`selectionchange`](/fr/docs/Web/API/HTMLInputElement/selectionchange_event) {{experimental_inline}}

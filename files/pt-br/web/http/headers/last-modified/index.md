@@ -1,8 +1,8 @@
 ---
 title: Last-Modified
 slug: Web/HTTP/Headers/Last-Modified
-translation_of: Web/HTTP/Headers/Last-Modified
 ---
+
 {{HTTPSidebar}}
 
 A linha de cabeçalho **`Last-Modified`** do cabeçalho de resposta HTTP contém a data e a hora em que o servidor de origem acredita que o recurso foi modificado pela última vez. É usado como um validador para determinar se um recurso recebido ou armazenado é o mesmo. Menos preciso do que um cabeçalho {{HTTPHeader("ETag")}}, é um mecanismo de retorno. Os pedidos condicionais {{HTTPHeader("If-Modified-Since")}} or {{HTTPHeader("If-Unmodified-Since")}} fazem uso deste campo.
@@ -59,13 +59,13 @@ Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Specifications
 
-| Specification                                        | Title                                                        |
-| ---------------------------------------------------- | ------------------------------------------------------------ |
+| Specification                           | Title                                                        |
+| --------------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7232", "Last-Modified", "2.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Last-Modified")}}
+{{Compat}}
 
 ## See also
 

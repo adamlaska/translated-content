@@ -1,23 +1,19 @@
 ---
 title: border-bottom-color
 slug: Web/CSS/border-bottom-color
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/border-bottom-color
 ---
-<< [Volver](/es/Guía_de_referencia_de_CSS)
+
+{{CSSRef}}
 
 ### Resumen
 
-La propiedad `border-bottom-color` define el color del borde inferior de un elemento, con la ayuda de un valor de color o con la palabra clave `transparent`e.
+La propiedad `border-bottom-color` define el color del borde inferior de un elemento, con la ayuda de un valor de color o con la palabra clave `transparent`.
 
 - {{ Cssxref("initial", "Valor inicial") }}: propiedad {{ Cssxref("color") }}
 - Se aplica a: todos los elementos
 - {{ Cssxref("inheritance", "Valor heredado") }}: non
 - Porcentajes: N/A
-- Medio : {{ Xref_cssvisual() }}
+- Medio : {{cssxref("Media/Visual", "visual")}}
 - {{ Cssxref("computed value", "Valor calculado") }}: como se especifique o si proviene de la propiedad {{ Cssxref("color") }}, será el valor {{ Cssxref("color") }}.
 
 ### Sintaxis
@@ -45,7 +41,7 @@ border-bottom-color: couleur | transparent | inherit
 
 ### Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/border.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border.html)
 
 ```
 element {
@@ -64,24 +60,12 @@ element {
 
 ### Especificaciones
 
-- [CSS 2.1 (en)](http://www.w3.org/TR/CSS21/box.html#propdef-border-bottom-color)
-- [CSS 3 (en)](http://www.w3.org/TR/css3-background/#border-bottom)
+{{Specifications}}
 
-### Compatibilidades
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 4              |
-| Firefox           | 1              |
-| Netscape          | 6              |
-| Opera             | 3.5            |
+{{Compat}}
 
 ### Ver también
 
 {{ Cssxref("border-bottom") }}, {{ Cssxref("border-color") }}, {{ Cssxref("border-bottom-style") }}, {{ Cssxref("border-bottom-width") }}
-
-Categorías
-
-Interwiki Languages
-
-{{ languages( { "de": "de/CSS/border-bottom-color", "en": "en/CSS/border-bottom-color", "fr": "fr/CSS/border-bottom-color", "ja": "ja/CSS/border-bottom-color", "pl": "pl/CSS/border-bottom-color" } ) }}

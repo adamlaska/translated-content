@@ -1,14 +1,8 @@
 ---
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
-tags:
-  - JavaScript
-  - Number
-  - Referencia
-  - Referência(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Number
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number
 ---
+
 {{JSRef}}
 
 **`Number`** es un objeto primitivo envolvente que permite representar y manipular valores numéricos cómo 37 o -9.25. El constructor Number contiene constantes y métodos para trabajar con números. Valores de otro tipo pueden ser convertidos a números usando la función Number().
@@ -17,8 +11,8 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Number
 
 ```js
 new Number(value);
-var a = new Number('123'); // a === 123 es false
-var b = Number('123'); // b === 123 es true
+var a = new Number("123"); // a === 123 es false
+var b = Number("123"); // b === 123 es true
 a instanceof Number; // es true
 b instanceof Number; // es false
 ```
@@ -35,19 +29,19 @@ Los principales usos del objeto `Number(valor)` son convertir un string u otro v
 ### Literal syntax
 
 ```js
-123    // one-hundred twenty-three
-123.0  // same
-123 === 123.0  // true
+123; // one-hundred twenty-three
+123.0; // same
+123 === 123.0; // true
 ```
 
 ### Function syntax
 
 ```js
-Number('123')  // retorna el número 123
-Number('123') === 123  // retorna true
+Number("123"); // retorna el número 123
+Number("123") === 123; // retorna true
 
-Number("unicorn")  // NaN
-Number(undefined)  // NaN
+Number("unicorn"); // NaN
+Number(undefined); // NaN
 ```
 
 ## Constructor
@@ -86,7 +80,7 @@ Number(undefined)  // NaN
   - : Determina si un numero es entero.
 - {{jsxref("Number.isSafeInteger()")}}
   - : Determine si el valor pasado es un entero seguro (número entre `-(253 - 1)` y `253 - 1`).
-- ~~{{jsxref("Number.toInteger()")}} {{obsolete_inline}}~~
+- ~~{{jsxref("Number.toInteger()")}} {{deprecated_inline}}~~
   - : ~~Se usa para evaluar el valor pasado y convertirlo en un entero (or {{jsxref("Global_Objects/Infinity", "Infinity")}}), pero ha sido eliminado.~~
 - {{jsxref("Number.parseFloat()")}}
   - : El valor es el mismo que {{jsxref ("parseFloat", "parseFloat ()")}} del objeto global.
@@ -100,6 +94,7 @@ Todas las instancias `Number` heredan de {{jsxref("Number.prototype")}}. El obje
 ### Métodos
 
 - {{jsxref("Number.prototype.toExponential()" ,"Number.prototype.toExponential(<var>fractionDigits</var>)")}}
+
   - : Devuelve una cadena que representa el número en notación exponencial.
 
 - {{jsxref("Number.prototype.toFixed()", "Number.prototype.toFixed(<var>digits</var>)")}}
@@ -114,11 +109,11 @@ Todas las instancias `Number` heredan de {{jsxref("Number.prototype")}}. El obje
 El siguiente ejemplo utiliza las propiedades del objeto `Number` para asignar valores a varias variables numéricas:
 
 ```js
-const MásgrandeNum    = Number.MAX_VALUE;
-const MáspequeNum     = Number.MIN_VALUE;
-const infinitoNum     = Number.POSITIVE_INFINITY;
-const notInfinitoNum  = Number.NEGATIVE_INFINITY;
-const noEsNum         = Number.NaN;
+const masGrandeNum = Number.MAX_VALUE;
+const masPequeNum = Number.MIN_VALUE;
+const infinitoNum = Number.POSITIVE_INFINITY;
+const notInfinitoNum = Number.NEGATIVE_INFINITY;
+const noEsNum = Number.NaN;
 ```
 
 ### Intervalo de enteros para Number
@@ -132,8 +127,8 @@ Una posible solución es usar {{jsxref ("String")}} en su lugar.
 Los números más grandes se pueden representar usando el tipo {{jsxref ("BigInt")}}.
 
 ```js
-const biggestInt  = Number.MAX_SAFE_INTEGER  //  (253 - 1) =>  9007199254740991
-const smallestInt = Number.MIN_SAFE_INTEGER  // -(253 - 1) => -9007199254740991
+const biggestInt = Number.MAX_SAFE_INTEGER; //  (253 - 1) =>  9007199254740991
+const smallestInt = Number.MIN_SAFE_INTEGER; // -(253 - 1) => -9007199254740991
 ```
 
 ### Ejemplo: Utilizando el objeto `Number` para modificar todos los objetos `Number`
@@ -151,7 +146,7 @@ miNúmero.descripción = "velocidad del viento";
 El siguiente ejemplo convierte el objeto {{jsxref ("Date")}} a un valor numérico usando `Number` como función:
 
 ```js
-var d = new Date('December 17, 1995 03:24:00');
+var d = new Date("December 17, 1995 03:24:00");
 console.log(Number(d));
 ```
 
@@ -160,17 +155,17 @@ Esto muestra "819199440000".
 ### Convierte cadenas numéricas a números
 
 ```js
-Number('123')     // 123
-Number('12.3')    // 12.3
-Number('123e-1')  // 12.3
-Number('')        // 0
-Number('0x11')    // 17
-Number('0b11')    // 3
-Number('0o11')    // 9
-Number('foo')     // NaN
-Number('100a')    // NaN
+Number("123"); // 123
+Number("12.3"); // 12.3
+Number("123e-1"); // 12.3
+Number(""); // 0
+Number("0x11"); // 17
+Number("0b11"); // 3
+Number("0o11"); // 9
+Number("foo"); // NaN
+Number("100a"); // NaN
 
-Number('-Infinity') //-Infinity
+Number("-Infinity"); //-Infinity
 ```
 
 ### Vea También

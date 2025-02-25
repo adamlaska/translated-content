@@ -1,14 +1,8 @@
 ---
 title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - 세제곱근
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 ---
+
 {{JSRef}}
 
 **`Math.cbrt()`** 함수는 주어진 수의 세제곱근을 반환합니다. 즉,
@@ -42,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 ## 구문
 
 ```js
-    Math.cbrt(x)
+Math.cbrt(x);
 ```
 
 ### 매개변수
@@ -71,7 +65,7 @@ Math.cbrt(0); // 0
 Math.cbrt(1); // 1
 Math.cbrt(Infinity); // Infinity
 Math.cbrt(null); // 0
-Math.cbrt(2);  // 1.2599210498948734
+Math.cbrt(2); // 1.2599210498948734
 ```
 
 ## 폴리필
@@ -80,10 +74,10 @@ Math.cbrt(2);  // 1.2599210498948734
 
 ```js
 if (!Math.cbrt) {
-  Math.cbrt = (function(pow) {
-    return function cbrt(){
+  Math.cbrt = (function (pow) {
+    return function cbrt() {
       // ensure negative numbers remain negative:
-      return x < 0 ? -pow(-x, 1/3) : pow(x, 1/3);
+      return x < 0 ? -pow(-x, 1 / 3) : pow(x, 1 / 3);
     };
   })(Math.pow); // localize Math.pow to increase efficiency
 }

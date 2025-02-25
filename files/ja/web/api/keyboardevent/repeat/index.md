@@ -1,6 +1,9 @@
 ---
-title: KeyboardEvent.repeat
+title: "KeyboardEvent: repeat プロパティ"
+short-title: repeat
 slug: Web/API/KeyboardEvent/repeat
+l10n:
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("UI Events")}}

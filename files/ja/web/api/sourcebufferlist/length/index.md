@@ -21,15 +21,13 @@ unsigned long 型の数。
 
 未定
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                             | 状態                                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-sourcebufferlist-length', 'length')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.SourceBufferList.length")}}
+{{Compat}}
 
 ## 関連情報
 

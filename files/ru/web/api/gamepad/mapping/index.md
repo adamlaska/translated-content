@@ -1,8 +1,8 @@
 ---
 title: Gamepad.mapping
 slug: Web/API/Gamepad/mapping
-translation_of: Web/API/Gamepad/mapping
 ---
+
 {{APIRef("Gamepad API")}}
 
 Свойство **`Gamepad.mapping`** интерфейса {{domxref("Gamepad")}} возвращает строковый индикатор, указывающий, изменил ли браузер элементы управления на уже известный шаблон
@@ -30,10 +30,10 @@ A {{domxref("string")}}.
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)
+[Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

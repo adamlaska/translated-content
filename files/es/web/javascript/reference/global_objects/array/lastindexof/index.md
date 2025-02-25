@@ -1,23 +1,23 @@
 ---
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-tags:
-  - Array
-  - Arreglo
-  - ECMAScript 5
-  - JavaScript
-  - Matriz
-  - Prototipo
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/lastIndexOf
 ---
+
 {{JSRef}}
 
 El método **`lastIndexOf()`** devuelve el último índice en el que un cierto elemento puede encontrarse en el arreglo, ó `-1` si el elemento no se encontrara. El arreglo es recorrido en sentido contrario, empezando por el índice `fromIndex`.
 
-{{EmbedInteractiveExample("pages/js/array-lastindexof.html")}}
+{{InteractiveExample("JavaScript Demo: Array.lastIndexOf()")}}
+
+```js interactive-example
+const animals = ["Dodo", "Tiger", "Penguin", "Dodo"];
+
+console.log(animals.lastIndexOf("Dodo"));
+// Expected output: 3
+
+console.log(animals.lastIndexOf("Tiger"));
+// Expected output: 1
+```
 
 ## Sintaxis
 
@@ -38,7 +38,7 @@ El último índice del elemento en el arreglo; `-1` si no se encuentra.
 
 ## Descripción
 
-`lastIndexOf` compara `searchElement` con los elementos del arreglo usando [igualdad estricta](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (el mismo método es usado para la ===, operador triple igualdad).
+`lastIndexOf` compara `searchElement` con los elementos del arreglo usando [igualdad estricta](/es/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) (el mismo método es usado para la ===, operador triple igualdad).
 
 ## Ejemplos
 
@@ -48,10 +48,10 @@ El siguiente ejemplo usa `lastIndexOf` para encontrar valores en un arreglo.
 
 ```js
 var array = [2, 5, 9, 2];
-array.lastIndexOf(2);     // 3
-array.lastIndexOf(7);     // -1
-array.lastIndexOf(2, 3);  // 3
-array.lastIndexOf(2, 2);  // 0
+array.lastIndexOf(2); // 3
+array.lastIndexOf(7); // -1
+array.lastIndexOf(2, 3); // 3
+array.lastIndexOf(2, 2); // 0
 array.lastIndexOf(2, -2); // 0
 array.lastIndexOf(2, -1); // 3
 ```
@@ -62,12 +62,12 @@ El siguiente ejemplo uses `lastIndexOf` encuentra todos los índices de un eleme
 
 ```js
 var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
+var array = ["a", "b", "a", "c", "a", "d"];
+var element = "a";
 var idx = array.lastIndexOf(element);
 while (idx != -1) {
   indices.push(idx);
-  idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
+  idx = idx > 0 ? array.lastIndexOf(element, idx - 1) : -1;
 }
 
 console.log(indices);
@@ -84,14 +84,15 @@ Darse cuenta que en este caso tenemos que tratar `idx == 0` de forma separada po
 // Pasos de producción de ECMA-262, Edición 5, 15.4.4.15
 // Referencia: http://es5.github.io/#x15.4.4.15
 if (!Array.prototype.lastIndexOf) {
-  Array.prototype.lastIndexOf = function(searchElement /*, fromIndex*/) {
-    'use strict';
+  Array.prototype.lastIndexOf = function (searchElement /*, fromIndex*/) {
+    "use strict";
 
     if (this === void 0 || this === null) {
       throw new TypeError();
     }
 
-    var n, k,
+    var n,
+      k,
       t = Object(this),
       len = t.length >>> 0;
     if (len === 0) {
@@ -103,8 +104,7 @@ if (!Array.prototype.lastIndexOf) {
       n = Number(arguments[1]);
       if (n != n) {
         n = 0;
-      }
-      else if (n != 0 && n != (1 / 0) && n != -(1 / 0)) {
+      } else if (n != 0 && n != 1 / 0 && n != -(1 / 0)) {
         n = (n > 0 || -1) * Math.floor(Math.abs(n));
       }
     }
@@ -123,19 +123,11 @@ De nuevo, darse cuenta que esta implementación tiene como objeto la completa co
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                       | Comentario                                          |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.15', 'Array.prototype.lastIndexOf')}}                             | {{Spec2('ES5.1')}}     | Definición inicial. Implementado en JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.lastindexof', 'Array.prototype.lastIndexOf')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-array.prototype.lastindexof', 'Array.prototype.lastIndexOf')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.lastIndexOf")}}
-
-## Notas de compatibilidad
-
-- Desde Firefox 47 {{geckoRelease(47)}}, el método ya no devolverá `-0`. Por ejemplo, `[0].lastIndexOf(0, -0)` siempre devolverá `+0` ({{bug(1242043)}}).
+{{Compat}}
 
 ## Ver también
 

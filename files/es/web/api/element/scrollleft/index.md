@@ -1,16 +1,8 @@
 ---
 title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
-tags:
-  - API
-  - Necesita Tabla de Compatibilidad
-  - Necesita Trabajo de Markup
-  - Necesita tabla de Especificaciones
-  - Propiedad
-  - Referencia
-  - Vista CSSOM
-translation_of: Web/API/Element/scrollLeft
 ---
+
 {{ APIRef }}
 
 La propiedad `Element.scrollLeft` obtiene o establece el número de píxeles que desplaza el contenido de un elemento hacia la izquierda.
@@ -35,38 +27,46 @@ element.scrollLeft = 10;
 
 - Si el elemento no se puede desplazar (por ejemplo, no tiene desbordamiento), `scrollLeft` se establece en 0.
 - Si se establece en un valor menor que 0 (mayor que 0 para elementos de derecha a izquierda), `scrollLeft` se establece en 0.
-- Si se establece en un valor mayor que el máximo que se puede desplazar el contenido,` scrollLeft `se establece en el valor máximo.
+- Si se establece en un valor mayor que el máximo que se puede desplazar el contenido, `scrollLeft` se establece en el valor máximo.
 
 ## Ejemplo
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <style>
-        #container {
-            border: 1px solid #ccc; height: 100px; overflow: scroll; width: 100px;
-        }
-        #content {
-            background-color: #ccc; width: 250px;
-        }
+      #container {
+        border: 1px solid #ccc;
+        height: 100px;
+        overflow: scroll;
+        width: 100px;
+      }
+      #content {
+        background-color: #ccc;
+        width: 250px;
+      }
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var button = document.getElementById('slide');
-            button.onclick = function () {
-                document.getElementById('container').scrollLeft += 20;
-            };
-        }, false);
+      document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+          var button = document.getElementById("slide");
+          button.onclick = function () {
+            document.getElementById("container").scrollLeft += 20;
+          };
+        },
+        false,
+      );
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="container">
-        <div id="content">Lorem ipsum dolor sit amet.</div>
+      <div id="content">Lorem ipsum dolor sit amet.</div>
     </div>
     <button id="slide" type="button">Slide</button>
-</body>
+  </body>
 </html>
 ```
 

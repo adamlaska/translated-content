@@ -1,46 +1,47 @@
 ---
-title: PushSubscription.getKey()
+title: "PushSubscription: getKey() メソッド"
+short-title: getKey()
 slug: Web/API/PushSubscription/getKey
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{SeeCompatTable}}{{APIRef("Push API")}}
+{{APIRef("Push API")}}
 
-{{domxref("PushSubscription")}} インターフェースの `getKey()` メソッドは、サーバに送信されてプッシュメッセージデータを暗号化するために使用される、クライアントパブリックキーを表す {{domxref("ArrayBuffer")}} を返します。
-
-> **メモ:** 現在、Firefox のみの実装であり、まだ　 Push API 仕様には含まれていません。
+`getKey()` は {{domxref("PushSubscription")}} インターフェイスのメソッドで、サーバーに送信されてプッシュメッセージのデータを暗号化するために使用される、クライアントの公開鍵を表す {{jsxref("ArrayBuffer")}} を返します。
 
 ## 構文
 
+```js-nolint
+getKey(name)
 ```
-​var key = subscription.getKey(method);
-```
 
-### パラメーター
+### 引数
 
-- method
+- `method`
 
-  - : クライアントパブリックキーの生成に使用される暗号化メソッドです。現在、`p256dh`のみがオプションです。メソッドには次の値がが選べます：
+  - : クライアントの公開鍵の生成に使用される暗号化方式です。取りうる値は以下の通りです。
 
-    - `p256dh`： P-256 曲線の [楕円曲線ディフィー・ヘルマン鍵共有](https://ja.wikipedia.org/wiki/%E6%A5%95%E5%86%86%E6%9B%B2%E7%B7%9A%E3%83%87%E3%82%A3%E3%83%95%E3%82%A3%E3%83%BC%E3%83%BB%E3%83%98%E3%83%AB%E3%83%9E%E3%83%B3%E9%8D%B5%E5%85%B1%E6%9C%89)（つまり、NIST secp256r1 楕円曲線）。結果としてられるキーは、ANSI X9.62 フォーマットで非圧縮ポイントとなります。
+    - `p256dh`
+      - : P-256 曲線（つまり、NIST secp256r1 楕円曲線）の[楕円曲線ディフィー・ヘルマン](https://ja.wikipedia.org/wiki/%E6%A5%95%E5%86%86%E6%9B%B2%E7%B7%9A%E3%83%87%E3%82%A3%E3%83%95%E3%82%A3%E3%83%BC%E3%83%BB%E3%83%98%E3%83%AB%E3%83%9E%E3%83%B3%E9%8D%B5%E5%85%B1%E6%9C%89)公開鍵です。結果として得られるキーは、ANSI X9.62 フォーマットで非圧縮ポイントとなります。
+    - `auth`
+      - : [Message Encryption for Web Push](https://datatracker.ietf.org/doc/html/draft-ietf-webpush-encryption-08) で記述されている認証秘密です。
 
-### 戻り値
+### 返値
 
-{{domxref("ArrayBuffer")}}。
+{{jsxref("ArrayBuffer")}}。
 
 ## 例
 
-[Push API デモ](https://github.com/chrisdavidmills/push-api-demo/blob/gh-pages/main.js#L51-L116)では、プッシュメッセージデータの暗号化と[サーバ](https://github.com/chrisdavidmills/push-api-demo/blob/gh-pages/server.js)から特定のサブスクライバにプッシュメッセージを送信するために必要な認証を得るために、getKey('p256dh') と {{domxref("PushSubscription.endpoint")}} を呼び出しています。
-
-```
-reg.pushManager.getSubscription()
-  .then(function(subscription) {
-  // プッシュメッセージからサブスクライブ ／ アンサブスクライブ
+```js
+reg.pushManager.getSubscription().then((subscription) => {
+  // プッシュメッセージからサブスクライブ / アンサブスクライブ
   // する任意の UI を有効にする
 
   subBtn.disabled = false;
 
   if (!subscription) {
-    console.log('Not yet subscribed to Push')
+    console.log("Not yet subscribed to Push");
     // プッシュを購読していない場合、ユーザーがプッシュできるように
     // UI を設定する。
     return;
@@ -48,27 +49,23 @@ reg.pushManager.getSubscription()
 
   // プッシュメッセージを購読していることを表示するように
   // UI を設定する。
-  subBtn.textContent = 'Unsubscribe from Push Messaging';
+  subBtn.textContent = "Unsubscribe from Push Messaging";
   isPushEnabled = true;
 
   // 購読ステータスのための UI 要素の設定を含んで状態を初期化し、
   // プッシュ経由でサブスクライバーを更新する。
-  var endpoint = subscription.endpoint;
-  var key = subscription.getKey('p256dh');
+  const endpoint = subscription.endpoint;
+  const key = subscription.getKey("p256dh");
+  const auth = subscription.getKey("auth");
 
-    ...
+  // ...
+});
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                             | 状態                         | コメント                                                                                                                  |
-| -------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Push API')}} | {{Spec2('Push API')}} | これは Push API 仕様ですが、`getKey()` はここに含まれていないことに注意してください。現在は、Firefox だけの実験実装です。 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
-{{Compat("api.PushSubscription.getKey")}}
-
-## 関連項目
-
-- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)
+{{Compat}}

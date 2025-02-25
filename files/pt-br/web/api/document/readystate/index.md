@@ -1,15 +1,9 @@
 ---
 title: Document.readyState
 slug: Web/API/Document/readyState
-tags:
-  - API
-  - HTML DOM
-  - Propriedade
-  - Referencia
-  - eventos
-translation_of: Web/API/Document/readyState
 ---
-{{APIRef("DOM")}} {{ gecko_minversion_header("1.9.2") }}
+
+{{APIRef("DOM")}}
 
 ## Sumário
 
@@ -32,7 +26,7 @@ O `readyState` de um documento pode ser um dos seguintes:
 - `interactive`
   - : O documento terminou de ser carregado e o documento foi analisado, mas sub-recursos, como imagens, folhas de estilo e quadros, ainda estão sendo carregados.
 - `complete`
-  - : O documento e todos os sub-recursos terminaram de carregar. O estado indica que o {{event("load")}} evento está prestes a disparar.
+  - : O documento e todos os sub-recursos terminaram de carregar. O estado indica que o [`load`](/pt-BR/docs/Web/API/Window/load_event) evento está prestes a disparar.
 
 ## Exemplos
 
@@ -98,4 +92,4 @@ document.addEventListener('readystatechange', event => {
 
 ## Veja também
 
-- [document.onreadystatechange](/pt-BR/docs/Web/Events/readystatechange)
+- [document.onreadystatechange](/pt-BR/docs/Web/API/Document/readystatechange_event)

@@ -1,11 +1,8 @@
 ---
 title: short_name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
-tags:
-  - Manifesto
-  - Sort name
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -31,7 +28,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
 
 Nome abreviado (short name) da extensão. Se informado, ele será usado em contextos onde o campo de nome for muito longo. É recomendado que o nome abreviado não deva exceder 12 caracteres. Se o campo do nome abreviado não for incluído no manifest.json, então o nome será usado em vez disso e pode ser truncado.
 
-Isto é um [propriedade localizável](/pt-BR/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+Isto é um [propriedade localizável](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
 ## Exemplo
 
@@ -41,4 +38,4 @@ Isto é um [propriedade localizável](/pt-BR/Add-ons/WebExtensions/International
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.manifest.short_name")}}
+{{Compat}}

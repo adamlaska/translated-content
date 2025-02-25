@@ -1,6 +1,9 @@
 ---
-title: KeyboardEvent.isComposing
+title: "KeyboardEvent: isComposing プロパティ"
+short-title: isComposing
 slug: Web/API/KeyboardEvent/isComposing
+l10n:
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("UI Events")}}

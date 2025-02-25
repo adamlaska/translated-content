@@ -1,6 +1,6 @@
 ---
-title: 'ARIA: main ロール'
-slug: Web/Accessibility/ARIA/Roles/Main_role
+title: "ARIA: main ロール"
+slug: Web/Accessibility/ARIA/Roles/main_role
 ---
 
 メイン (`main`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、文書の主要なコンテンツを示すために使用します。 メインコンテンツ領域は、文書の中心的な話題やアプリケーションの中心的な機能と直接関連したり、それらを拡張するコンテンツで構成されます。
@@ -33,7 +33,7 @@ slug: Web/Accessibility/ARIA/Roles/Main_role
     <!-- 記事のコンテンツ -->
   </div>
 
- <!-- サイドバーとフッター -->
+  <!-- サイドバーとフッター -->
 </body>
 ```
 
@@ -89,12 +89,9 @@ JavaScript によってトリガーされたときにページコンテンツを
 
 - [ランドマークブラウザー拡張](https://matatk.agrip.org.uk/landmarks/) (英語)
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                     | 状態                                             |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#main","ARIA Main Role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_main","Main Landmark Role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 
@@ -104,7 +101,7 @@ TBD
 
 - [\<main>: メイン要素](/ja/docs/Web/HTML/Element/main)
 - [main (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#main)
-- [HTML のセクションとアウトラインの使用](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)
 - [ランドマークロール: ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)

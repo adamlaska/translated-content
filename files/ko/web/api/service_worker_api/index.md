@@ -1,19 +1,9 @@
 ---
 title: Service Worker API
 slug: Web/API/Service_Worker_API
-tags:
-  - API
-  - Landing
-  - Offline
-  - Overview
-  - Reference
-  - Service Workers
-  - Workers
-  - 서비스 워커
-  - 오프라인
-translation_of: Web/API/Service_Worker_API
 ---
-{{ServiceWorkerSidebar}}
+
+{{securecontext_header}}{{APIRef("Service Workers API")}}
 
 서비스 워커는 웹 응용 프로그램, 브라우저, 그리고 (사용 가능한 경우) 네트워크 사이의 프록시 서버 역할을 합니다. 서비스 워커의 개발 의도는 여러가지가 있지만, 그 중에서도 효과적인 오프라인 경험을 생성하고, 네트워크 요청을 가로채서 네트워크 사용 가능 여부에 따라 적절한 행동을 취하고, 서버의 자산을 업데이트할 수 있습니다. 또한 푸시 알림과 백그라운드 동기화 API로의 접근도 제공합니다.
 
@@ -25,9 +15,11 @@ translation_of: Web/API/Service_Worker_API
 
 서비스 워커는 보안 상의 이유로 HTTPS에서만 동작합니다. 네트워크 요청을 수정할 수 있다는 점에서 중간자 공격에 굉장히 취약하기 때문입니다. 또한 Firefox에서는 사생활 보호 모드에서 Service Worker API에 접근할 수 없습니다.
 
-> **참고:** 서비스 워커는 모든 것을 세부적으로 통제할 수 있다는 점에서 [AppCache](http://alistapart.com/article/application-cache-is-a-douchebag) 등 오프라인이나 캐시의 이전 시도보다 우위를 점합니다. 서비스 워커는 개발자의 의도를 짐작하지 않으며, 예측과 빗나갔을 때 망가지지도 않기 때문입니다.
+> [!NOTE]
+> 서비스 워커는 모든 것을 세부적으로 통제할 수 있다는 점에서 [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag) 등 오프라인이나 캐시의 이전 시도보다 우위를 점합니다. 서비스 워커는 개발자의 의도를 짐작하지 않으며, 예측과 빗나갔을 때 망가지지도 않기 때문입니다.
 
-> **참고:** 서비스 워커는 응답을 기다린 후 성공 또는 실패 액션을 실행하는 경우가 많으므로 [프로미스](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)를 적극적으로 사용합니다.
+> [!NOTE]
+> 서비스 워커는 응답을 기다린 후 성공 또는 실패 액션을 실행하는 경우가 많으므로 [프로미스](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)를 적극적으로 사용합니다.
 
 ### 등록
 
@@ -96,7 +88,7 @@ translation_of: Web/API/Service_Worker_API
 - {{DOMxRef("ExtendableEvent")}} {{Experimental_Inline}}
   - : 서비스 워커 생명주기의 일부로서 {{DOMxRef("ServiceWorkerGlobalScope")}}에서 발생하는 `install`과 `activate` 이벤트의 지속시간을 늘립니다. 이로써 데이터베이스 스키마를 업그레이드하거나, 만료된 캐시 항목을 지우는 작업 등이 끝나기 전까지 {{DOMxRef("FetchEvent")}}와 같은 기능 이벤트가 {{DOMxRef("ServiceWorker")}}로 전달되지 않도록 합니다.
 - {{DOMxRef("ExtendableMessageEvent")}} {{Experimental_Inline}}
-  - : The event object of a {{event("message_(ServiceWorker)","message")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
+  - : The event object of a {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
 - {{DOMxRef("FetchEvent")}} {{Experimental_Inline}}
   - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.onfetch")}} handler, `FetchEvent` represents a fetch action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. It contains information about the request and resulting response, and provides the {{DOMxRef("FetchEvent.respondWith", "FetchEvent.respondWith()")}} method, which allows us to provide an arbitrary response back to the controlled page.
 - {{DOMxRef("InstallEvent")}} {{Experimental_Inline}}
@@ -132,9 +124,9 @@ translation_of: Web/API/Service_Worker_API
 
 ## 같이 보기
 
-- [ServiceWorker 쿡북](https://serviceworke.rs)
+- [ServiceWorker 쿡북](https://github.com/mdn/serviceworker-cookbook)
 - [서비스 워커 사용하기](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [서비스 워커 기초 코드 예제](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [웹 워커 사용하기](/ko/docs/Web/API/Web_Workers_API/basic_usage)
+- [웹 워커 사용하기](/ko/docs/Web/API/Web_Workers_API/Using_web_workers)

@@ -1,20 +1,20 @@
 ---
-title: '<summary>: The Disclosure Summary element'
+title: "<summary>: The Disclosure Summary element"
 slug: Web/HTML/Element/summary
-translation_of: Web/HTML/Element/summary
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 The **HTML Disclosure Summary element** (**`<summary>`**) element specifies a summary, caption, or legend for a {{HTMLElement("details")}} element's disclosure box. Clicking the `<summary>` element toggles the state of the parent `<details>` element open and closed.
 
 {{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}
 
-| Permitted content    | [Phrasing content](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content) or one element of [Heading content](/ru/docs/Web/Guide/HTML/Content_categories#Heading_content) |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tag omission         | None, both the start tag and the end tag are mandatory.                                                                                                                         |
-| Permitted parents    | The {{HTMLElement("details")}} element.                                                                                                                               |
-| Permitted ARIA roles | {{ARIARole("button")}}                                                                                                                                                    |
-| DOM interface        | {{domxref("HTMLElement")}}                                                                                                                                            |
+| Permitted content    | [Phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content) or one element of [Heading content](/ru/docs/Web/HTML/Content_categories#heading_content) |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tag omission         | None, both the start tag and the end tag are mandatory.                                                                                                             |
+| Permitted parents    | The {{HTMLElement("details")}} element.                                                                                                                             |
+| Permitted ARIA roles | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>                                                                                 |
+| DOM interface        | {{domxref("HTMLElement")}}                                                                                                                                          |
 
 ## Атрибуты
 
@@ -24,7 +24,7 @@ The **HTML Disclosure Summary element** (**`<summary>`**) element specifies a su
 
 Содержимым элемента `<summary>` может быть любой заголовок, простой текст или HTML, которые можно использовать в абзаце.
 
-Элемент `<summary>` может быть использован в качестве потомка элемента `<details>` . Когда пользователь кликает по элементу summary, его родитель - `<details>` меняет состояние с раскрытого или закрытого на обратное,и тогда {{event("toggle")}} event is sent to the `<details>` element, which can be used to let you know when this state change occurs.
+Элемент `<summary>` может быть использован в качестве потомка элемента `<details>` . Когда пользователь кликает по элементу summary, его родитель - `<details>` меняет состояние с раскрытого или закрытого на обратное,и тогда [`toggle`](/ru/docs/Web/API/HTMLElement/toggle_event) event is sent to the `<details>` element, which can be used to let you know when this state change occurs.
 
 ### Default label text
 
@@ -66,7 +66,7 @@ You can use heading elements in `<summary>`, like this:
 ```html
 <details open>
   <summary><h4>Overview</h4></summary>
-    <ol>
+  <ol>
     <li>Cash on hand: $500.00</li>
     <li>Current invoice: $75.30</li>
     <li>Due date: 5/6/19</li>
@@ -95,17 +95,14 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 {{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                                    | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'interactive-elements.html#the-summary-element', '&lt;summary&gt;')}} | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5.1', 'interactive-elements.html#the-summary-element', '&lt;summary&gt;')}}         | {{Spec2('HTML5.1')}}     | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{HTMLElement("details")}}

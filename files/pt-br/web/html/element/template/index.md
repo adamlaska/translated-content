@@ -1,20 +1,13 @@
 ---
 title: <template>
 slug: Web/HTML/Element/template
-tags:
-  - Componentes
-  - Elemento
-  - HTML
-  - Referência(2)
-  - Web
-  - Web Componentes
-translation_of: Web/HTML/Element/template
 ---
+
 ## Sumário
 
 O elemento **[HTML](/pt-BR/docs/Web/HTML) `<template>`** é um mecanismo para encapsular um conteúdo do lado do cliente que não é renderizado quando a página é carregada, mas que pode ser instanciado posteriormente em tempo de execução usando JavaScript.
 
-Pense no template como um fragmento de conteúdo, que é armazenado para um possível uso futuro no documento. Enquanto o parser processa o conteúdo do elemento **`<template>` **ao carregar a página, isso apenas garante que o conteúdo é válido; porém, o conteúdo do elemento ainda não foi renderizado.
+Pense no template como um fragmento de conteúdo, que é armazenado para um possível uso futuro no documento. Enquanto o parser processa o conteúdo do elemento **`<template>`** ao carregar a página, isso apenas garante que o conteúdo é válido; porém, o conteúdo do elemento ainda não foi renderizado.
 
 <table class="properties">
   <tbody>
@@ -60,7 +53,7 @@ Pense no template como um fragmento de conteúdo, que é armazenado para um poss
     </tr>
     <tr>
       <th scope="row">Tags omitidas</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Elementos pais permitidos</th>
@@ -115,11 +108,10 @@ Agora que a tabela foi criada e o _template_ definido, nós usamos JavaScript pa
 ```js
 // Teste se seu navegador suporta o template HTML checando
 // a presença do atribute content no elemento template .
-if ('content' in document.createElement('template')) {
-
+if ("content" in document.createElement("template")) {
   // Instancie a tabela com o HTML tbody e a row com o template
-  var t = document.querySelector('#productrow'),
-  td = t.content.querySelectorAll("td");
+  var t = document.querySelector("#productrow"),
+    td = t.content.querySelectorAll("td");
   td[0].textContent = "1235646565";
   td[1].textContent = "Stuff";
 
@@ -135,7 +127,6 @@ if ('content' in document.createElement('template')) {
   // Clone a nova row e insira-a na tabela
   var clone2 = document.importNode(t.content, true);
   tb[0].appendChild(clone2);
-
 } else {
   // Ache outro modo de adicionar as rows na tabela, pois
   // o elemento HTML template não é suportado.
@@ -157,17 +148,14 @@ table td {
 
 ## Especificações
 
-| Especificação                                                                                                        | Estado                           | Comentário        |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName('HTML WHATWG','/scripting-1.html#the-template-element','template element')}} | {{Spec2('HTML WHATWG')}} | Sem mudanças      |
-| {{SpecName('HTML5 W3C','/scripting-1.html#the-template-element','template element')}}     | {{Spec2('HTML5 W3C')}}     | Definição Inicial |
+{{Specifications}}
 
 ## Compatibilidade de Navegadores
 
-{{Compat("html.elements.template")}}
+{{Compat}}
 
 ## Veja também
 
 - Web components: {{HTMLElement("content")}}, {{HTMLElement("shadow")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

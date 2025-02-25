@@ -1,22 +1,25 @@
 ---
 title: Date.prototype.setUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototipo
-  - Prototype
-  - Referencia
-  - data
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
 ---
+
 {{JSRef}}
 
 O método **`setUTCMinutes()`** atribui os minutos para uma data específica de acordo com o horário universal.
 
-{{EmbedInteractiveExample("pages/js/date-setutcminutes.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCMinutes()")}}
+
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+
+console.log(date1.getUTCMinutes());
+// Expected output: 15
+
+date1.setUTCMinutes(25);
+
+console.log(date1.getUTCMinutes());
+// Expected output: 25
+```
 
 ## Sintaxe
 
@@ -54,13 +57,11 @@ theBigDay.setUTCMinutes(43);
 
 ## Especificações
 
-| Especificação                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.setutcminutes', 'Date.prototype.setUTCMinutes')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setUTCMinutes")}}
+{{Compat}}
 
 ## Veja também
 

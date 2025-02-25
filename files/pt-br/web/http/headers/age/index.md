@@ -1,10 +1,8 @@
 ---
 title: Age
 slug: Web/HTTP/Headers/Age
-tags:
-  - Cabeçalhos
-translation_of: Web/HTTP/Headers/Age
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho **`Age`** contém o tempo, em segundos, em que o objeto já está no _cache_ de um proxy.
@@ -43,13 +41,13 @@ Age: 24
 
 ## Especificações
 
-| Especificação                            | Título                                          |
-| ---------------------------------------- | ----------------------------------------------- |
+| Especificação                 | Título                                          |
+| ----------------------------- | ----------------------------------------------- |
 | {{RFC("7234", "Age", "5.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Age")}}
+{{Compat}}
 
 ## Veja também
 

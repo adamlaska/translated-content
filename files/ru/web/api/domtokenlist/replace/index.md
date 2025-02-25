@@ -1,8 +1,8 @@
 ---
 title: DOMTokenList.replace()
 slug: Web/API/DOMTokenList/replace
-translation_of: Web/API/DOMTokenList/replace
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`replace()`** интерфейса {{domxref("DOMTokenList")}} заменяет существующий класс на новый класс. Если первый не существует, то `replace()` сразу же возвращает `false`, без добавления нового класса в список классов.
@@ -24,7 +24,8 @@ tokenList.replace(oldToken, newToken);
 
 Boolean, которое будет `true`, если `oldToken` был успешно заменён, или `false` в противном случае.
 
-> **Примечание:** В старых браузерах `replace()` возвращает void.
+> [!NOTE]
+> В старых браузерах `replace()` возвращает void.
 
 ## Примеры
 
@@ -48,7 +49,7 @@ console.log(result);
 if (result) {
   span.textContent = classes;
 } else {
-  span.textContent = 'token not replaced successfully';
+  span.textContent = "token not replaced successfully";
 }
 ```
 
@@ -62,13 +63,13 @@ if (result) {
 
 ```js
 DOMTokenList.prototype.replace = function (a, b) {
-    if (this.contains(a)) {
-        this.add(b);
-        this.remove(a);
-        return true;
-    }
-    return false;
-}
+  if (this.contains(a)) {
+    this.add(b);
+    this.remove(a);
+    return true;
+  }
+  return false;
+};
 ```
 
 ## Спецификации

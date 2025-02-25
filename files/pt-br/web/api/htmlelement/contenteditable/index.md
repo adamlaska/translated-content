@@ -1,8 +1,8 @@
 ---
 title: HTMLElement.contentEditable
 slug: Web/API/HTMLElement/contentEditable
-translation_of: Web/API/HTMLElement/contentEditable
 ---
+
 {{APIRef("HTML DOM")}}
 
 A propriedade **`HTMLElement.contentEditable`** é usada para indicar se o elemento é editável ou não. Esse atributo enumerado pode ter os seguintes valores:
@@ -19,15 +19,13 @@ Você pode usar a propriedade {{domxref( "HTMLElement.isContentEditable")}} para
 editable = element.contentEditable element.contentEditable= "true"
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                                | Status                           | Comentário         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'interaction.html#contenteditable', 'contenteditable')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.HTMLElement.contentEditable")}}
+{{Compat}}
 
 ## Veja também
 

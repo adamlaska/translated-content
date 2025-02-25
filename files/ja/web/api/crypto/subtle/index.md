@@ -1,31 +1,30 @@
 ---
-title: Crypto.subtle
+title: "Crypto: subtle プロパティ"
+short-title: subtle
 slug: Web/API/Crypto/subtle
+l10n:
+  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
-{{APIRef("Web Crypto API")}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-**`Crypto.subtle`** 読み取り専用プロパティは、暗号化操作ができる {{domxref("SubtleCrypto")}} オブジェクトを返します。
+**`Crypto.subtle`** 読み取り専用プロパティは、低水準の暗号化操作をができる {{domxref("SubtleCrypto")}} オブジェクトを返します。
 
-## 構文
+## 値
 
-```
-var crypto = crypto.subtle;
-```
+ウェブ暗号 API の低レベル暗号機能を操作するために使用できる {{domxref("SubtleCrypto")}} オブジェクトです。
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                               | 策定状況                                 | 備考       |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ---------- |
-| {{ SpecName('Web Crypto API', '#dfn-Crypto', 'Crypto.subtle') }} | {{ Spec2('Web Crypto API') }} | 初期定義。 |
+{{Specifications}}
 
-## ブラウザーの実装状況
+## ブラウザーの互換性
 
-{{Compat("api.Crypto.subtle")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("Crypto")}}.
-- {{domxref("SubtleCrypto")}}.
-- [Compatibility test page](https://vibornoff.github.io/webcrypto-examples/index.html).
-- [Shim for IE11 and Safari](https://github.com/vibornoff/webcrypto-shim).
+- {{domxref("Crypto")}}
+- {{domxref("SubtleCrypto")}}
+- [Compatibility test page](https://vibornoff.github.io/webcrypto-examples/index.html)
+- [Shim for IE11 and Safari](https://github.com/vibornoff/webcrypto-shim)

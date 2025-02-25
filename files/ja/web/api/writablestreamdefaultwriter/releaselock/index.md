@@ -1,57 +1,61 @@
 ---
-title: WritableStreamDefaultWriter.releaseLock()
+title: "WritableStreamDefaultWriter: releaseLock() メソッド"
+short-title: releaseLock()
 slug: Web/API/WritableStreamDefaultWriter/releaseLock
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Streams")}}{{SeeCompatTable}}
+{{APIRef("Streams")}}
 
-{{domxref("WritableStreamDefaultWriter")}} インターフェイスの **`releaseLock()`** メソッドは、対応するストリームのライターのロックを解除します。 ロックを解除すると、ライターはアクティブではなくなります。 ロックを解除したときに関連するストリームにエラーが発生した場合、ライターはこれ以降同じようにエラーが発生したように見えます。 そうでない場合、ライターは閉じられたように見えます。
+**`releaseLock()`** は {{domxref("WritableStreamDefaultWriter")}} インターフェイスのメソッドで、対応するストリームのライターのロックを解除します。 ロックを解除すると、ライターはアクティブではなくなります。 ロックを解除したときに関連するストリームにエラーが発生した場合、ライターはこれ以降同じようにエラーが発生したように見えます。 そうでない場合、ライターは閉じられたように見えます。
 
 ## 構文
 
-```
-writableStreamDefaultWritere.releaseLock()
+```js-nolint
+releaseLock()
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
-`undefined`。
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
 ```js
-const writableStream = new WritableStream({
-  write(chunk) {
-    ...
+const writableStream = new WritableStream(
+  {
+    write(chunk) {
+      // ...
+    },
+    close() {
+      // ...
+    },
+    abort(err) {
+      // ...
+    },
   },
-  close() {
-    ...
-  },
-  abort(err) {
-    ...
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
-...
+// ...
 
 const writer = writableStream.getWriter();
 
-...
+// ...
 
 // 必要に応じて、ストリームのライターのロックを解除します
 writer.releaseLock();
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                         | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Streams','#default-reader-release-lock','releaseLock()')}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.WritableStreamDefaultWriter.releaseLock")}}
+{{Compat}}

@@ -37,9 +37,9 @@ function* gen() {
 
 const g = gen();
 
-g.next();        // { value: 1, done: false }
-g.return('foo'); // { value: "foo", done: true }
-g.next();        // { value: undefined, done: true }
+g.next(); // { value: 1, done: false }
+g.return("foo"); // { value: "foo", done: true }
+g.next(); // { value: undefined, done: true }
 ```
 
 `return(value)` がすでに "完了" の状態のジェネレーターで呼び出されると、ジェネレーターは "完了" の状態のままになります。
@@ -64,13 +64,11 @@ g.return(1); // { value: 1, done: true }
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-generator.prototype.return', 'Generator.prototype.return')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Generator.return")}}
+{{Compat}}
 
 ## 関連情報
 

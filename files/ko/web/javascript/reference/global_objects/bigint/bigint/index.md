@@ -1,13 +1,8 @@
 ---
 title: BigInt() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
-tags:
-  - BigInt
-  - Constructor
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 ---
+
 {{JSRef}}
 
 **`BigInt()`** 생성자는 {{jsxref("BigInt")}} 객체를 생성합니다.
@@ -15,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 ## 구분
 
 ```js
-    BigInt(value);
+BigInt(value);
 ```
 
 ### 매개변수

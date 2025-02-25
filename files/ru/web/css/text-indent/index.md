@@ -1,8 +1,8 @@
 ---
 title: text-indent
 slug: Web/CSS/text-indent
-translation_of: Web/CSS/text-indent
 ---
+
 {{CSSRef}}
 
 Свойство `text-indent` определяет размер отступа (пустого места) перед строкой в текстовом блоке. По умолчанию это свойство управляет отступом только первой строкой блока, однако ключевые слова `hanging` и `each-line` могут изменить данное поведение.
@@ -14,17 +14,17 @@ translation_of: Web/CSS/text-indent
 ## Синтаксис
 
 ```css
+/* Ключевые слова */
+text-indent: 5em each-line;
+text-indent: 5em hanging;
+text-indent: 5em hanging each-line;
+
 /* значение <length> */
 text-indent: 3mm;
 text-indent: 40px;
 
 /* значение <percentage> зависит от ширины блока*/
 text-indent: 15%;
-
-/* значения ключевых слов */
-text-indent: 5em each-line;
-text-indent: 5em hanging;
-text-indent: 5em hanging each-line;
 
 /* международные значения */
 text-indent: inherit;
@@ -52,10 +52,14 @@ text-indent: unset;
 ### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
 ```
 
 ### CSS
@@ -69,15 +73,19 @@ p {
 
 {{ EmbedLiveSample('Simple_indent','100%','100%') }}
 
-## Пример со значением <`percentage>`
+## Пример со значением \<percentage>
 
 ### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
 ```
 
 ### CSS
@@ -91,7 +99,7 @@ p {
 
 {{ EmbedLiveSample('Percentage_indent_example','100%','100%') }}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

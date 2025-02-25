@@ -1,8 +1,8 @@
 ---
 title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
+
 {{JSRef}}
 
 O método **`Object.getPrototypeOf()`** retorna o prototype (isto é, o valor da propriedade interna `[[Prototype]]`) do objeto especificado.
@@ -37,25 +37,22 @@ Object.getPrototypeOf("foo");
 // String.prototype                  (código ES6)
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                    | Status                   | Comentário         |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('ES5.1', '#sec-15.2.3.2', 'Object.getPrototypeOf')}}             | {{Spec2('ES5.1')}} | definição inicial. |
-| {{SpecName('ES6', '#sec-object.getprototypeof', 'Object.getProtoypeOf')}} | {{Spec2('ES6')}}     |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.getPrototypeOf")}}
+{{Compat}}
 
 ## Notas específicas para o Opera
 
-Embora as versões mais antigas do Opera não suportem `Object.getPrototypeOf()`, ele suporta a propriedade não oficial {{jsxref("Object.proto", "__proto__")}} desde de a sua versão 10.50.
+Embora as versões mais antigas do Opera não suportem `Object.getPrototypeOf()`, ele suporta a propriedade não oficial [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) desde de a sua versão 10.50.
 
 ## Veja também
 
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}} {{experimental_inline}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - John Resig's post on [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/)
 - {{jsxref("Reflect.getPrototypeOf()")}}

@@ -1,14 +1,8 @@
 ---
 title: letter-spacing
 slug: Web/CSS/letter-spacing
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - 글자 간격
-translation_of: Web/CSS/letter-spacing
 ---
+
 {{CSSRef}}
 
 **`letter-spacing`** [CSS](/ko/docs/Web/CSS) 속성은 글자 사이의 간격을 조절합니다.
@@ -24,7 +18,7 @@ letter-spacing: normal;
 /* <length> 값 */
 letter-spacing: 0.3em;
 letter-spacing: 3px;
-letter-spacing: .3px;
+letter-spacing: 0.3px;
 
 /* 전역 값 */
 letter-spacing: inherit;
@@ -58,11 +52,21 @@ letter-spacing: unset;
 ### CSS
 
 ```css
-.normal   { letter-spacing: normal; }
-.em-wide  { letter-spacing: 0.4em; }
-.em-wider { letter-spacing: 1em; }
-.em-tight { letter-spacing: -0.05em; }
-.px-wide  { letter-spacing: 6px; }
+.normal {
+  letter-spacing: normal;
+}
+.em-wide {
+  letter-spacing: 0.4em;
+}
+.em-wider {
+  letter-spacing: 1em;
+}
+.em-tight {
+  letter-spacing: -0.05em;
+}
+.px-wide {
+  letter-spacing: 6px;
+}
 ```
 
 ### 결과

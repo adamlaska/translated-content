@@ -1,14 +1,8 @@
 ---
-title: ':last-child'
+title: :last-child
 slug: Web/CSS/:last-child
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:last-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:last-child`** de [CSS](/es/docs/Web/CSS) representa el último elemento entre un grupo de elementos hermanos.
@@ -21,7 +15,8 @@ p:last-child {
 }
 ```
 
-> **Nota:** Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
+> [!NOTE]
+> Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
 
 ## Sintaxis
 
@@ -67,7 +62,8 @@ p:last-child {
 <ul>
   <li>Artículo 1</li>
   <li>Artículo 2</li>
-  <li>Artículo 3
+  <li>
+    Artículo 3
     <ul>
       <li>Artículo 3.1</li>
       <li>Artículo 3.2</li>
@@ -96,14 +92,11 @@ ul li:last-child {
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                               | Comentarios                                             |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#last-child', ':last-child')}} | {{Spec2('CSS4 Selectors')}} | Los elementos coincidentes no requieren tener un padre. |
-| {{SpecName('CSS3 Selectors', '#last-child', ':last-child')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.last-child")}}
+{{Compat}}
 
 ## Ver también
 

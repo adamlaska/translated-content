@@ -32,13 +32,11 @@ TBC
 
 ## 仕様書
 
-| 仕様                                                                                                         | ステータス                               | 備考     |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('GamepadExtensions', '#dom-gamepadhapticactuator-pulse', 'pulse()')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.GamepadHapticActuator.pulse")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -23,13 +23,11 @@ TBD
 
 ## 仕様書
 
-| 仕様                                                                                                                 | ステータス                               | 備考     |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('GamepadExtensions', '#dom-gamepadpose-hasorientation', 'hasOrientation')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.GamepadPose.hasOrientation")}}
+{{Compat}}
 
 ## 関連情報
 

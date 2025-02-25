@@ -64,13 +64,11 @@ main > div {
 
 ## 仕様書
 
-| 仕様書                                                                                                                               | 状態                                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ---- |
-| {{SpecName('CSS Overscroll Behavior', '#propdef-overscroll-behavior-x', 'overscroll-behavior-x')}} | {{Spec2('CSS Overscroll Behavior')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.overscroll-behavior-x")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,59 +1,63 @@
 ---
-title: WritableStream.abort()
+title: "WritableStream: abort() メソッド"
+short-title: abort()
 slug: Web/API/WritableStream/abort
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-{{domxref("WritableStream")}} インターフェイスの **`abort()`** メソッドはストリームを中止し、プロデューサーがストリームに正常に書き込むことができなくなり、キューに入れられた書き込みが破棄されてすぐにエラー状態に移行することを通知します。
+**`abort()`** は {{domxref("WritableStream")}} インターフェイスのメソッドで、ストリーミングを中止し、プロデューサーがストリームに正常に書き込むことができなくなり、キューに入れられた書き込みが破棄されてすぐにエラー状態に移行することを通知します。
 
 ## 構文
 
+```js-nolint
+abort(reason)
 ```
-var promise = writableStream.abort(reason);
-```
 
-### パラメーター
+### 引数
 
-- reason
-  - : 人間が読むことができる中止の理由を提供する {{domxref("DOMString")}}。
+- `reason`
+  - : 人間が読むことのできる文字列で、中止した理由を提供します。
 
-### 戻り値
+### 返値
 
-{{jsxref("Promise")}}。 `reason` パラメーターで指定された値で満たされます。
+{{jsxref("Promise")}} です。 `reason` 引数で指定された値で履行されます。
 
 ### 例外
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : 中止しようとしているストリームは {{domxref("WritableStream")}} ではないか、ロックされています。
 
 ## 例
 
 ```js
-const writableStream = new WritableStream({
-  write(chunk) {
-    ...
+const writableStream = new WritableStream(
+  {
+    write(chunk) {
+      // ...
+    },
+    close() {
+      // ...
+    },
+    abort(err) {
+      // ...
+    },
   },
-  close() {
-    ...
-  },
-  abort(err) {
-    ...
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
-...
+// ...
 
 // 必要に応じて、後でストリームを中止します
 writableStream.abort();
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                         | 状態                         | コメント |
-| ------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("Streams","#ws-abort","abort()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.WritableStream.abort")}}
+{{Compat}}

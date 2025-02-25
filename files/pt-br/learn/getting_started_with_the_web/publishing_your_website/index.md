@@ -1,19 +1,8 @@
 ---
 title: Publicando seu site
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
-tags:
-  - Codificação em Script
-  - FTP
-  - GitHub
-  - Iniciante
-  - Motor de Apps do Google
-  - Web
-  - l10n:prioridade
-  - publicação
-  - servidor web
-translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
-original_slug: Aprender/Getting_started_with_the_web/Publicando_seu_site
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
@@ -28,14 +17,14 @@ Publicar um site não é um tópico simples, principalmente porque há muitas ma
 
 Para ter mais controle sobre o conteúdo e a aparência do site, a maioria das pessoas escolhe comprar hospedagem na web e um nome de domínio:
 
-- Hospedagem é um espaço para arquivos alugado no [servidor](/pt-BR/docs/Learn/Common_questions/o_que_e_um_web_server) de uma compania de hospedagem. O servidor disponibiliza o conteúdo do site para os usuários que o visitam.
-- Um [nome de domínio](/pt-BR/docs/Learn/Common_questions/What_is_a_domain_name) é o endereço único onde pessoas encontram seu site, como `http://www.mozilla.org`, ou `http://www.bbc.co.uk`. Você aluga seu nome de domínio por tantos anos quanto desejar por meio de um **registrador de domínio**.
+- Hospedagem é um espaço para arquivos alugado no [servidor](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) de uma compania de hospedagem. O servidor disponibiliza o conteúdo do site para os usuários que o visitam.
+- Um [nome de domínio](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name) é o endereço único onde pessoas encontram seu site, como `http://www.mozilla.org`, ou `http://www.bbc.co.uk`. Você aluga seu nome de domínio por tantos anos quanto desejar por meio de um **registrador de domínio**.
 
 Muitos sites profissionais ficam online dessa maneira.
 
 Você vai precisar ainda de um programa de {{Glossary("FTP", "Protocolo de Transferência de Arquivos (FTP)")}} (veja [Quanto custa: software](/pt-BR/docs/Learn/Common_questions/Quanto_custa_fazer_algo_web#Software) para mais detalhes) para transferir os arquivos do site ao servidor. Programas FTP variam, mas geralmente você tem que logar no servidor usando detalhes fornecidos por sua empresa de hospedagem (ex. nome de usuário, senha, nome de host). Então, o programa mostra para você os arquivos locais e do servidor em duas janelas, para que você possa transferí-los ao servidor e de volta para o computador:
 
-![](https://mdn.mozillademos.org/files/9469/ftp.jpg)
+![](ftp.jpg)
 
 #### Dicas para encontrar hospedagem e domínios
 
@@ -49,7 +38,7 @@ Você vai precisar ainda de um programa de {{Glossary("FTP", "Protocolo de Trans
 Algumas ferramentas permitem que você publique seu site online:
 
 - [Github](https://github.com/) é um site de "codificação social". Ele permite que você faça upload de repositórios de código para armazenamento no **sistema de controle de versão** [Git](http://git-scm.com/)**.** Você pode então colaborar em projetos de código, e o sistema é open-source por padrão, o que significa que todo mundo pode encontrar seu código Github, usá-lo, aprender com ele e se aprimorar. O Gitub tem um recurso muito útil chamado [GitHub Pages](https://pages.github.com/), que permite expor o código do site ao vivo na web.
-- O [Google App Engine](https://cloud.google.com/appengine/) é uma plataforma poderosa que permite criar e executar aplicativos na infraestrutura do Google, seja para criar um aplicativo da Web de várias camadas a partir do zero ou para hospedar um site estático. Veja [Como você hospeda seu website no Google App Engine?](/pt-BR/docs/Learn/Common_questions/Como_voce_hospeda_seu_site_Google_App_Engine) Para maiores informações.
+- O [Google App Engine](https://cloud.google.com/appengine/) é uma plataforma poderosa que permite criar e executar aplicativos na infraestrutura do Google, seja para criar um aplicativo da Web de várias camadas a partir do zero ou para hospedar um site estático. Veja [Como você hospeda seu website no Google App Engine?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) Para maiores informações.
 
 Diferente da maioria das hospedagens, essas ferramentas geralmentre são gratuitas, mas você tem um conjunto limitado de recursos.
 
@@ -59,12 +48,12 @@ Há um número grande de web apps que emulam um ambiente de desenvolvimento de s
 
 Tente codificar com alguns desses exemplos, e veja qual se encaixa melhor para você:
 
-- [JSFiddle](http://jsfiddle.net/)
-- [Thimble](https://thimble.mozilla.org/pt-BR/)
-- [JSBin](http://jsbin.com/)
+- [JSFiddle](https://jsfiddle.net/)
+- [Glitch](https://glitch.com/)
+- [JS Bin](https://jsbin.com/)
 - [CodePen](https://codepen.io/)
 
-![](https://mdn.mozillademos.org/files/9471/jsbin-screen.png)
+![](jsbin-screen.png)
 
 ## Publicando via Github
 
@@ -73,34 +62,25 @@ Agora vamos mostrar como publicar seu site facilmente por meio das páginas do G
 1. Primeiro de tudo, [inscreva-se no GitHub](https://github.com) e verifique seu e-mail.
 2. Em seguida, você precisa [criar um repositório](https:/github.com/new) para colocar seus arquivos.
 3. Nesta página, na caixa _Repository name_ (nome do repositório), digite username.github.io, onde _username_ é o seu nome de usuário. Então, por exemplo, nosso amigo bobsmith entraria em bobsmith.github.io. Além disso, marque _Initialize this repository with a README_ (inicializar este repositório com um README) e então clique em _Create repository_ (Criar repositório).
-4. ![](https://mdn.mozillademos.org/files/9479/github-create-repo.png)
+4. ![](github-create-repo.png)
 5. Arraste e solte o conteúdo da pasta do site no seu repositório e clique em _Commit changes_ (confirmar alterações).
 
-    > **Nota:** Nota: Certifique-se que sua pasta possui um arquivo `index.html`.
+   > [!NOTE]
+   > Nota: Certifique-se que sua pasta possui um arquivo `index.html`.
 
 6. Navegue em seu navegador até _username_.github.io para ver seu site online. Por exemplo, para o usuário _chrisdavidmills_, vá para [_chrisdavidmills_.github.io](http://chrisdavidmills.github.io/).
 
-> **Nota:** Nota: Pode levar alguns minutos para seu site ficar online. Se ele não funcionar imediatamente, talvez seja necessário aguardar alguns minutos e tentar novamente.
+> [!NOTE]
+> Nota: Pode levar alguns minutos para seu site ficar online. Se ele não funcionar imediatamente, talvez seja necessário aguardar alguns minutos e tentar novamente.
 
 Para aprender mais, consulte a [Ajuda do Github Pages](https://help.github.com/en/categories/github-pages-basics) (em inglês).
 
 ## Leitura complementar
 
-- [O que é um servidor web](/pt-BR/docs/Learn/Common_questions/o_que_e_um_web_server)
-- [Entendendo nomes de domínio](/pt-BR/docs/Learn/Common_questions/What_is_a_domain_name)
+- [O que é um servidor web](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [Entendendo nomes de domínio](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
 - [Quanto custa fazer algo na web?](/pt-BR/docs/Learn/Common_questions/Quanto_custa_fazer_algo_web)
 - [Publicar um site](https://www.codecademy.com/learn/deploy-a-website): Um bom tutorial da Codecademy que vai um pouco além e mostra algumas técnicas adicionais.
 - [Hospedagem baratas ou gratuitas de sites estáticos](https://alignedleft.com/resources/cheap-web-hosting), por Scott Murray, tem algumas idéias úteis sobre serviços disponíveis.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
-
-## Neste módulo
-
-- [Instalando os programas básicos](/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos)
-- [Comp será o seu site?](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer)
-- [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos)
-- [HTML básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico)
-- [CSS básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico)
-- [JavaScript básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/JavaScript_basico)
-- [Publicando seu website](/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site)
-- [Como a web funciona](/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona)

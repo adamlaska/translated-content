@@ -1,8 +1,8 @@
 ---
 title: HTMLImageElement.srcset
 slug: Web/API/HTMLImageElement/srcset
-translation_of: Web/API/HTMLImageElement/srcset
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} свойство **`srcset`** это строка, которая определяет один или несколько **строк с источниками изображений**, разделённые запятыми (`,`) и условия для их использования. Каждая строка предлагаемого изображения содержит **URL** картинки и опциональные **ширину** или **пиксельную плотность** которые указывают при каких условия это изображение должно быть использовано вместо основной картинки обозначенной свойством {{domxref("HTMLImageElement.src", "src")}}.
@@ -57,9 +57,13 @@ The HTML below indicates that the default image is the 200 pixel wide version of
 
 ```html
 <div class="box">
-  <img src="/files/16797/clock-demo-200px.png"
-       alt="Clock"
-       srcset="/files/16864/clock-demo-200px.png 1x, /files/16797/clock-demo-400px.png 2x">
+  <img
+    src="/files/16797/clock-demo-200px.png"
+    alt="Clock"
+    srcset="
+      /files/16864/clock-demo-200px.png 1x,
+      /files/16797/clock-demo-400px.png 2x
+    " />
 </div>
 ```
 
@@ -105,11 +109,11 @@ For additional examples, see our guide to [responsive images](/ru/docs/Learn/HTM
 
 {{Specifications}}
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Images in HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [Responsive images](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)

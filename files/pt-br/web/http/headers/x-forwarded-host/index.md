@@ -1,15 +1,8 @@
 ---
 title: X-Forwarded-Host
 slug: Web/HTTP/Headers/X-Forwarded-Host
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Não padronizado
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/X-Forwarded-Host
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho **`X-Forwarded-Host`** (XFH) é um cabeçalho padrão de fato para identificar o _host_ original requisitado pelo cliente no cabeçalho de requisição HTTP {{HTTPHeader("Host")}}.
@@ -56,7 +49,7 @@ Não pertence a nenhuma especificação atualmente. A versão padronizada do cab
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.X-Forwarded-Host")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,15 +1,10 @@
 ---
 title: BeforeInstallPromptEvent.prompt()
 slug: Web/API/BeforeInstallPromptEvent/prompt
-tags:
-  - API
-  - BeforeInstallPromptEvent
-  - Experimental
-  - Method
-  - Reference
-  - prompt
-translation_of: Web/API/BeforeInstallPromptEvent/prompt
 ---
+
+{{APIRef}}{{SeeCompatTable}}{{Non-standard_header}}
+
 Метод **`prompt()`** интерфейса {{domxref("BeforeInstallPromptEvent")}} позволяет разработчику показывать подсказку об установке в любое время по своему выбору.
 
 ## Синтаксис
@@ -45,6 +40,6 @@ window.addEventListener("beforeinstallprompt", function(e) {
 });
 ```
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}

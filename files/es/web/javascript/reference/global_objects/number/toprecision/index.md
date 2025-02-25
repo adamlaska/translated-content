@@ -1,14 +1,28 @@
 ---
 title: Number.prototype.toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toPrecision
 ---
+
 {{JSRef}}
 
 El método **`toPrecision()`** devuelve una cadena que representa un objeto {{jsxref("Number")}} según la precisión especificada.
 
-{{EmbedInteractiveExample("pages/js/number-toprecision.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toPrecision()")}}
+
+```js interactive-example
+function precise(x) {
+  return x.toPrecision(4);
+}
+
+console.log(precise(123.456));
+// Expected output: "123.5"
+
+console.log(precise(0.004));
+// Expected output: "0.004000"
+
+console.log(precise(1.23e5));
+// Expected output: "1.230e+5"
+```
 
 ## Sintaxis
 
@@ -39,34 +53,29 @@ Si el parámetro `precision` es omitido, se comporta como {{jsxref("Number.proto
 ```js
 var numObj = 5.123456;
 
-console.log(numObj.toPrecision());    // logs '5.123456'
-console.log(numObj.toPrecision(5));   // logs '5.1235'
-console.log(numObj.toPrecision(2));   // logs '5.1'
-console.log(numObj.toPrecision(1));   // logs '5'
+console.log(numObj.toPrecision()); // logs '5.123456'
+console.log(numObj.toPrecision(5)); // logs '5.1235'
+console.log(numObj.toPrecision(2)); // logs '5.1'
+console.log(numObj.toPrecision(1)); // logs '5'
 
-numObj = 0.000123
+numObj = 0.000123;
 
-console.log(numObj.toPrecision());    // logs '0.000123'
-console.log(numObj.toPrecision(5));   // logs '0.00012300'
-console.log(numObj.toPrecision(2));   // logs '0.00012'
-console.log(numObj.toPrecision(1));   // logs '0.0001'
+console.log(numObj.toPrecision()); // logs '0.000123'
+console.log(numObj.toPrecision(5)); // logs '0.00012300'
+console.log(numObj.toPrecision(2)); // logs '0.00012'
+console.log(numObj.toPrecision(1)); // logs '0.0001'
 
 // observe que bajo algunas circunstancias el valor retornado es en notación exponencial
 console.log((1234.5).toPrecision(2)); // logs '1.2e+3'
 ```
 
-## Especificaciónes
+## Especificaciones
 
-| Especificación                                                                                                               | Estado                       | Comentario                                          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                     | {{Spec2('ES3')}}         | Primera definición. Implementada en JavaScript 1.5. |
-| {{SpecName('ES5.1', '#sec-15.7.4.7', 'Number.prototype.toPrecision')}}                                 | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-number.prototype.toprecision', 'Number.prototype.toPrecision')}}         | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-number.prototype.toprecision', 'Number.prototype.toPrecision')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.toPrecision")}}
+{{Compat}}
 
 ## Vea También
 

@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/max
 
 **`Math.max()`** 函数返回作为输入参数的最大数字，如果没有参数，则返回 -{{jsxref("Infinity")}}。
 
-{{EmbedInteractiveExample("pages/js/math-max.html")}}
+{{InteractiveExample("JavaScript Demo: Math.max()")}}
+
+```js interactive-example
+console.log(Math.max(1, 3, 2));
+// Expected output: 3
+
+console.log(Math.max(-1, -3, -2));
+// Expected output: -1
+
+const array1 = [1, 3, 2];
+
+console.log(Math.max(...array1));
+// Expected output: 3
+```
 
 ## 语法
 
@@ -60,7 +73,7 @@ function getMaxOfArray(numArray) {
 }
 ```
 
-[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)是编写 `apply` 解决方案的一种更简短的方法，可以最大限度地利用数组:
+[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)是编写 `apply` 解决方案的一种更简短的方法，可以最大限度地利用数组：
 
 ```js
 const arr = [1, 2, 3];

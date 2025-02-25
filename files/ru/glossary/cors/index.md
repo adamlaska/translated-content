@@ -1,9 +1,10 @@
 ---
 title: CORS
 slug: Glossary/CORS
-translation_of: Glossary/CORS
-original_slug: Глоссарий/CORS
 ---
+
+{{GlossarySidebar}}
+
 **CORS** (Cross-Origin Resource Sharing, рус. "Совместное использование ресурсов между разными источниками") - это система, состоящая из отправки [HTTP заголовков](/ru/docs/Web/HTTP/Headers), которые определяют: заблокировать или выполнить запрос к ограниченному ресурсу на веб-странице из другого домена, отличного от домена происхождения запрашиваемого ресурса.
 
 The [same-origin security policy (рус. "правило ограничения домена")](/ru/docs/Web/Security/Same-origin_policy) по умолчанию запрещает междоменные запросы. CORS предоставляет веб-серверам возможность контролировать междоменные запросы и позволяет производить безопасный обмен данными между разными доменами.
@@ -12,8 +13,7 @@ The [same-origin security policy (рус. "правило ограничения
 
 ### Основная база знаний
 
-- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Access_control_CORS) на MDN
-- {{Interwiki("wikipedia", "Cross-origin resource sharing")}} на Wikipedia
+- [HTTP access control (CORS)](/ru/docs/Web/HTTP/CORS) на MDN
 
 ### CORS заголовки
 

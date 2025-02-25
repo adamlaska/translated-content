@@ -1,8 +1,8 @@
 ---
 title: Symbol.asyncIterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
 ---
+
 {{JSRef}}
 
 O **`Symbol.asyncIterator`** é um símbolo conhecido que especifica o padrão AsyncIterator para um objeto. Se essa propriedade é configurada em um objeto, é um iterável assíncrono e pode ser usado in um [`for await...of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for-await...of) loop.
@@ -21,21 +21,21 @@ Você consegue definir seu próprio iterável assíncrono configurando a proprie
 
 ```js
 const myAsyncIterable = {
-    async* [Symbol.asyncIterator]() {
-        yield "hello";
-        yield "async";
-        yield "iteration!";
-    }
+  async *[Symbol.asyncIterator]() {
+    yield "hello";
+    yield "async";
+    yield "iteration!";
+  },
 };
 
 (async () => {
-    for await (const x of myAsyncIterable) {
-        console.log(x);
-        // resultado esperado:
-        //    "hello"
-        //    "async"
-        //    "iteration!"
-    }
+  for await (const x of myAsyncIterable) {
+    console.log(x);
+    // resultado esperado:
+    //    "hello"
+    //    "async"
+    //    "iteration!"
+  }
 })();
 ```
 
@@ -47,13 +47,11 @@ Não há atualmente objetos Javascript built-in que tenha a chave `[Symbol.async
 
 ## Especificações
 
-| Especificação                                                                                        |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.asynciterator', 'Symbol.asyncIterator')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{compat("javascript.builtins.Symbol.asyncIterator")}}
+{{Compat}}
 
 ## Vejá também
 

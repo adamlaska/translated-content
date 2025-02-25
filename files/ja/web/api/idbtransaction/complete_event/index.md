@@ -36,39 +36,46 @@ slug: Web/API/IDBTransaction/complete_event
 
 ```js
 // データベースを開く
-const DBOpenRequest = window.indexedDB.open('toDoList', 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onupgradeneeded = event => {
+DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
-    console.log('Error creating database');
+    console.log("データベース作成エラー");
   };
 
   // このデータベースの objectStore を作成
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 
   // define what data items the objectStore will contain
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 };
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   const db = DBOpenRequest.result;
 
-  // DB の読み書きトランザクションを開き、データを追加する準備ができる
-  const transaction = db.transaction(['toDoList'], 'readwrite');
+  // DB の読み書きトランザクションを開き、データを追加する準備をする
+  const transaction = db.transaction(["toDoList"], "readwrite");
 
   // `complete` のためのリスナーを追加
-  transaction.addEventListener('complete', event => {
-    console.log('Transaction was competed');
+  transaction.addEventListener("complete", (event) => {
+    console.log("トランザクション完了");
   });
 
-  const objectStore = transaction.objectStore('toDoList');
-  const newItem = { taskTitle: 'my task', hours: 10, minutes: 10, day: 10, month: 'January', year: 2019 };
+  const objectStore = transaction.objectStore("toDoList");
+  const newItem = {
+    taskTitle: "my task",
+    hours: 10,
+    minutes: 10,
+    day: 10,
+    month: "January",
+    year: 2019,
+  };
   const objectStoreRequest = objectStore.add(newItem);
 };
 ```
@@ -77,48 +84,55 @@ DBOpenRequest.onsuccess = event => {
 
 ```js
 // データベースを開く
-const DBOpenRequest = window.indexedDB.open('toDoList', 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onupgradeneeded = event => {
+DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
-    console.log('Error creating database');
+    console.log("データベース作成エラー");
   };
 
   // このデータベースの objectStore を作成
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 
   // objectStore がどのようなデータアイテムを含むかを定義
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 };
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   const db = DBOpenRequest.result;
 
   // DB の読み書きトランザクションを開き、データを追加する準備ができる
-  const transaction = db.transaction(['toDoList'], 'readwrite');
+  const transaction = db.transaction(["toDoList"], "readwrite");
 
   // `complete` のためのリスナーを追加
-  transaction.oncomplete = event => {
-    console.log('Transaction was competed');
+  transaction.oncomplete = (event) => {
+    console.log("トランザクション完了");
   };
 
-  const objectStore = transaction.objectStore('toDoList');
-  const newItem = { taskTitle: 'my task', hours: 10, minutes: 10, day: 10, month: 'January', year: 2019 };
+  const objectStore = transaction.objectStore("toDoList");
+  const newItem = {
+    taskTitle: "my task",
+    hours: 10,
+    minutes: 10,
+    day: 10,
+    month: "January",
+    year: 2019,
+  };
   const objectStoreRequest = objectStore.add(newItem);
 };
 ```
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBTransaction.complete_event")}}
+{{Compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/IndexedDB/Using_IndexedDB)
+- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - {{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}} イベントハンドラープロパティ

@@ -1,8 +1,8 @@
 ---
 title: Navigator.getGamepads()
 slug: Web/API/Navigator/getGamepads
-translation_of: Web/API/Navigator/getGamepads
 ---
+
 {{APIRef("Gamepad API")}}{{SeeCompatTable}}
 
 **`Navigator.getGamepads()`** метод, возвращающий массив {{ domxref("Gamepad") }} объектов, по одному для каждого геймпада, подключённому к устройству.
@@ -16,11 +16,15 @@ translation_of: Web/API/Navigator/getGamepads
 ## Пример
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
+window.addEventListener("gamepadconnected", function (e) {
   var gp = navigator.getGamepads()[0];
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-  gp.index, gp.id,
-  gp.buttons.length, gp.axes.length);
+  console.log(
+    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    gp.index,
+    gp.id,
+    gp.buttons.length,
+    gp.axes.length,
+  );
 });
 ```
 
@@ -28,10 +32,10 @@ window.addEventListener("gamepadconnected", function(e) {
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)
+- [Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

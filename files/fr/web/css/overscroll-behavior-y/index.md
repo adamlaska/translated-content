@@ -1,19 +1,14 @@
 ---
 title: overscroll-behavior-y
 slug: Web/CSS/overscroll-behavior-y
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/overscroll-behavior-y
 ---
 
 {{CSSRef}}
 
 La propriété CSS **`overscroll-behavior-y`** permet de contrôler le comportement de l'agent utilisateur lorsqu'on atteint la limite de la zone de défilement sur l'axe vertical.
 
-> **Note :** Voir {{cssxref("overscroll-behavior")}} pour plus de détails.
+> [!NOTE]
+> Voir {{cssxref("overscroll-behavior")}} pour plus de détails.
 
 ## Syntaxe
 
@@ -58,7 +53,7 @@ La propriété `overscroll-behavior-x` est définie avec un des mots-clés défi
 }
 ```
 
-Voir {{cssxref("overscroll-behavior")}}  pour un exemple complet et plus de détails.
+Voir {{cssxref("overscroll-behavior")}} pour un exemple complet et plus de détails.
 
 ## Spécifications
 

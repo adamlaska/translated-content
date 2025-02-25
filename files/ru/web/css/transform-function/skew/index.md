@@ -1,9 +1,8 @@
 ---
 title: skew()
 slug: Web/CSS/transform-function/skew
-translation_of: Web/CSS/transform-function/skew()
-original_slug: Web/CSS/transform-function/skew()
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) функция **`skew()`** трансформирует элемент, наклоняя его в 2D-пространстве.
@@ -150,9 +149,9 @@ div {
 
 {{EmbedLiveSample("Используя_два_угла", 200, 200)}}
 
-## Поддержка браузеров
+## Совместимость с браузерами
 
-Please see the [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) data type for compatibility info.
+{{Compat}}
 
 ## Смотрите также
 

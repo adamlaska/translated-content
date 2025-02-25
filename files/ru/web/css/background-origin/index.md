@@ -1,8 +1,8 @@
 ---
 title: background-origin
 slug: Web/CSS/background-origin
-translation_of: Web/CSS/background-origin
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`background-origin`** устанавливает _область расположения фона_. Другими словами, оно устанавливает исходную позицию изображения, установленную с помощью свойства {{cssxref("background-image")}}.
@@ -11,12 +11,13 @@ translation_of: Web/CSS/background-origin
 
 Обратите внимание, что `background-origin` игнорируется, когда {{cssxref("background-attachment")}} является `fixed`.
 
-> **Примечание:** Сокращение {{cssxref("background")}} сбрасывает значения этого свойства к его начальному значению, если оно не указано.
+> [!NOTE]
+> Сокращение {{cssxref("background")}} сбрасывает значения этого свойства к его начальному значению, если оно не указано.
 
 ## Синтаксис
 
 ```css
-/* Ключевые значения */
+/* Ключевые слова */
 background-origin: border-box;
 background-origin: padding-box;
 background-origin: content-box;
@@ -48,7 +49,7 @@ background-origin: unset;
 .example {
   border: 10px double;
   padding: 10px;
-  background: url('image.jpg');
+  background: url("image.jpg");
   background-position: center left;
   background-origin: content-box;
 }
@@ -58,7 +59,7 @@ background-origin: unset;
 #example2 {
   border: 4px solid black;
   padding: 10px;
-  background: url('image.gif');
+  background: url("image.gif");
   background-repeat: no-repeat;
   background-origin: border-box;
 }
@@ -66,8 +67,11 @@ background-origin: unset;
 
 ```css
 div {
-  background-image: url('logo.jpg'), url('mainback.png'); /* Applies two images to the background */
-  background-position: top right, 0px 0px;
+  background-image:
+    url("logo.jpg"), url("mainback.png"); /* Applies two images to the background */
+  background-position:
+    top right,
+    0px 0px;
   background-origin: content-box, padding-box;
 }
 ```
@@ -78,7 +82,7 @@ div {
 
 {{cssinfo}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

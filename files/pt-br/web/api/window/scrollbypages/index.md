@@ -1,8 +1,8 @@
 ---
 title: Window.scrollByPages()
 slug: Web/API/Window/scrollByPages
-translation_of: Web/API/Window/scrollByPages
 ---
+
 {{ ApiRef() }}{{Non-standard_header}}
 
 ### Resumo
@@ -32,7 +32,7 @@ window.scrollByPages(-1);
 
 ### Notas
 
-Veja também [window.scrollBy](/en/DOM/window.scrollBy), [window.scrollByLines](/en/DOM/window.scrollByLines), [window.scroll](/en/DOM/window.scroll), [window.scrollTo](/en/DOM/window.scrollTo).
+Veja também [window.scrollBy](/pt-BR/docs/DOM/window.scrollBy), [window.scrollByLines](/pt-BR/docs/DOM/window.scrollByLines), [window.scroll](/pt-BR/docs/DOM/window.scroll), [window.scrollTo](/pt-BR/docs/DOM/window.scrollTo).
 
 ### Specification
 

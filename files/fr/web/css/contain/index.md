@@ -1,12 +1,6 @@
 ---
 title: contain
 slug: Web/CSS/contain
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/contain
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -31,11 +25,12 @@ contain: unset;
 
 Cette propriété s'avère utile pour les pages qui contiennent de nombreux composants indépendants et permet de limiter la portée des règles sur le reste de la page.
 
-> **Note :** Lorsqu'elle est appliquée avec une valeur `paint`, `strict` ou `content`, cette propriété crée :
+> [!NOTE]
+> Lorsqu'elle est appliquée avec une valeur `paint`, `strict` ou `content`, cette propriété crée :
 >
-> - un nouveau [bloc englobant](/fr/docs/Web/CSS/A_Propos_Du_Bloc_Conteneur) (le bloc servant de référence pour les éléments fils dont la position sera absolue ou `fixed`)
-> - un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Comprendre_z-index/Empilement_de_couches)
-> - un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/Block_formatting_context).
+> - un nouveau [bloc englobant](/fr/docs/Web/CSS/Containing_block) (le bloc servant de référence pour les éléments fils dont la position sera absolue ou `fixed`)
+> - un nouveau [contexte d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+> - un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context).
 
 ## Syntaxe
 
@@ -52,7 +47,7 @@ Cette propriété s'avère utile pour les pages qui contiennent de nombreux comp
 - `layout`
   - : Cette valeur indique qu'aucun élément en dehors de l'élément, ne peut impacter sa disposition interne et réciproquement.
 - `style`
-  - : Cette valeur indique que les propriétés ayant un effet sur un un élément et ses descendants voire plus sont bien limitées à l'élément englobant.
+  - : Cette valeur indique que les propriétés ayant un effet sur un élément et ses descendants voire plus sont bien limitées à l'élément englobant.
 - `paint`
   - : Cette valeur indique que les éléments descendants de l'élément ne sont pas affichés en dehors de ses limites. Si un élément est en dehors de l'écran ou n'est pas visible, cette valeur assure que les éléments descendants ne sont pas visibles non plus.
 

@@ -1,16 +1,29 @@
 ---
 title: Object.prototype.isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
-tags:
-  - Objeto
-  - Prototipo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 ---
+
 {{JSRef}}
 
 O método **`isPrototypeOf()`** checa se um objeto existe em na cadeia de protótipos de um outro objeto.
 
 > **Nota:** `isPrototypeOf()` difere do operador {{jsxref("Operators/instanceof", "instanceof")}}. Na expressão "`objeto instanceof UmaFuncaoQualquer`", a cadeia de protótipos do `objeto` é comparada com `UmaFuncaoQualquer.prototype`, e não com a própria função `UmaFuncaoQualquer`.
+
+{{InteractiveExample("JavaScript Demo: Object.prototype.isPrototypeOf()")}}
+
+```js interactive-example
+function Foo() {}
+function Bar() {}
+
+Bar.prototype = Object.create(Foo.prototype);
+
+const bar = new Bar();
+
+console.log(Foo.prototype.isPrototypeOf(bar));
+// Expected output: true
+console.log(Bar.prototype.isPrototypeOf(bar));
+// Expected output: true
+```
 
 ## Sintaxe
 
@@ -40,7 +53,7 @@ Em outras palavras, você pode descobrir se um objeto x (já instanciado) é her
 
 ## Exemplos
 
-Este exemplo demonstra que `Baz.prototype`, `Bar.prototype`, `Foo.prototype` e`Object.prototype` estão na cadeia de protótipos de `baz` , ou seja, baz herda atributos de Baz, Bar e Foo:
+Este exemplo demonstra que `Baz.prototype`, `Bar.prototype`, `Foo.prototype` e `Object.prototype` estão na cadeia de protótipos de `baz` , ou seja, baz herda atributos de Baz, Bar e Foo:
 
 ```js
 function Foo() {}
@@ -50,11 +63,21 @@ function Baz() {}
 Bar.prototype = Object.create(Foo.prototype);
 Baz.prototype = Object.create(Bar.prototype);
 
-var baz = new Baz();
+const foo = new Foo();
+const bar = new Bar();
+const baz = new Baz();
 
+// cadeia de protótipos:
+// foo: Foo <- Object
+// bar: Bar <- Foo <- Object
+// baz: Baz <- Bar <- Foo <- Object
 console.log(Baz.prototype.isPrototypeOf(baz)); // true
+console.log(Baz.prototype.isPrototypeOf(bar)); // false
+console.log(Baz.prototype.isPrototypeOf(foo)); // false
 console.log(Bar.prototype.isPrototypeOf(baz)); // true
+console.log(Bar.prototype.isPrototypeOf(foo)); // false
 console.log(Foo.prototype.isPrototypeOf(baz)); // true
+console.log(Foo.prototype.isPrototypeOf(bar)); // true
 console.log(Object.prototype.isPrototypeOf(baz)); // true
 ```
 
@@ -68,22 +91,17 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 }
 ```
 
-## Specificações
+## Especificações
 
-| Especificação                                                                                                                    | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES3')}}                                                                                                         | {{Spec2('ES3')}}         | Initial definition. |
-| {{SpecName('ES5.1', '#sec-15.2.4.6', 'Object.prototype.isPrototypeOf')}}                                 | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES6', '#sec-object.prototype.isprototypeof', 'Object.prototype.isPrototypeOf')}}     | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ESDraft', '#sec-object.prototype.isprototypeof', 'Object.prototype.isPrototypeOf')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.isPrototypeOf")}}
+{{Compat}}
 
 ## Veja também
 
 - {{jsxref("Operators/instanceof", "instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

@@ -1,13 +1,8 @@
 ---
 title: Object() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
-tags:
-  - Constructor
-  - JavaScript
-  - Object
-  - Reference
-browser-compat: javascript.builtins.Object.Object
 ---
+
 {{JSRef}}
 
 **`Object`의 생성자**는 주어진 값를 객체 래퍼로 만들어 줍니다.
@@ -21,8 +16,8 @@ browser-compat: javascript.builtins.Object.Object
 ## 구문
 
 ```js
-new Object()
-new Object(value)
+new Object();
+new Object(value);
 ```
 
 ### 매개변수
@@ -35,10 +30,10 @@ new Object(value)
 ### 새로운 객체 생성
 
 ```js
-let o = new Object()
-o.foo = 42
+let o = new Object();
+o.foo = 42;
 
-console.log(o)
+console.log(o);
 // Object { foo: 42 }
 ```
 
@@ -47,15 +42,15 @@ console.log(o)
 다음 예제는 빈 `객체`를 `o` 변수에 저장합니다 :
 
 ```js
-let o = new Object()
+let o = new Object();
 ```
 
 ```js
-let o = new Object(undefined)
+let o = new Object(undefined);
 ```
 
 ```js
-let o = new Object(null)
+let o = new Object(null);
 ```
 
 ## 명세

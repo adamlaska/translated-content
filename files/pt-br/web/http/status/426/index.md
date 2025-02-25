@@ -1,8 +1,8 @@
 ---
 title: 426 Upgrade Required
 slug: Web/HTTP/Status/426
-translation_of: Web/HTTP/Status/426
 ---
+
 {{HTTPSidebar}}
 
 O status HTTP **`426 Upgrade Required`** indica que o servidor recusa o processamento da requisição usando o protocolo atual mas poderá ser processado caso o cliente atualize para um protocolo diferente.
@@ -29,8 +29,8 @@ This service requires use of the HTTP/2.0 protocol
 
 ## Especificações
 
-| Especificação                                                        | Título                                                        |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                                      | Título                                                        |
+| -------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "426 Upgrade Required" , "6.5.15")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Ver também

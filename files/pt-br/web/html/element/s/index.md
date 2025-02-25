@@ -1,9 +1,9 @@
 ---
 title: <s>
 slug: Web/HTML/Element/s
-translation_of: Web/HTML/Element/s
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 O **elemento HTML `<s>`** renderiza um texto tachado ou uma linha cortando o texto. Use o elemento `<s>` para representar texto que não sejam relevante ou que não estam corretos. Não é apropriado o uso do `<s>` indicar edições no texto; para indicar edições no texto utilize {{HTMLElement("del")}} e {{HTMLElement("ins")}}, que são elementos mais apropriados.
 
@@ -106,18 +106,15 @@ s::after {
 Algumas pessoas que usam leitores de tela que desativam deliberadamente o anúncio de conteúdo que criados com muita verbosidade. Por esse motivo, é importante não abusar dessa técnica e aplicá-la apenas nas situações em que o desconhecimento do conteúdo foi eliminado e que afetaria negativamente a compreensão.
 
 - [Nota curta sobre como deixar sua marca (mais acessível) | O Grupo Paciello](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-- [Ajustando estilos de texto | Adrian Roselli](http://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [Ajustando estilos de texto | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## Especificações
 
-| Especificação                                                                                            | Estado                           | Comentário |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','semantics.html#the-s-element','s element')}}             | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C','text-level-semantics.html#the-s-element','s element')}} | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.s")}}
+{{Compat}}
 
 ## Veja mais
 

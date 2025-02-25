@@ -1,15 +1,16 @@
 ---
 title: ANGLE_instanced_arrays
 slug: Web/API/ANGLE_instanced_arrays
-translation_of: Web/API/ANGLE_instanced_arrays
 ---
+
 {{APIRef("WebGL")}}
 
 Расширение **ANGLE_instanced_arrays** является частью API WebGL и позволяет рисовать один и тот же объект или группы похожих объектов несколько раз, если они используют одни и те же данные вершин, количество примитивов и тип.
 
 Доступ к WebGL расширениям можно получить с помощью метода {{domxref("WebGLRenderingContext.getExtension()")}}. Для получения дополнительной информации см. также в [Использование расширений](/ru/docs/Web/API/WebGL_API/Using_Extensions) в [WebGL руководстве](/ru/docs/Web/API/WebGL_API/Tutorial).
 
-> **Примечание:** Это расширение доступно только для {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} контекстов. В {{domxref ("WebGL2RenderingContext", "WebGL2", "", 1)}}, функциональность этого расширения доступна в контексте WebGL2 по умолчанию, а константы и методы доступны без суффикса " `ANGLE` ".
+> [!NOTE]
+> Это расширение доступно только для {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} контекстов. В {{domxref ("WebGL2RenderingContext", "WebGL2", "", 1)}}, функциональность этого расширения доступна в контексте WebGL2 по умолчанию, а константы и методы доступны без суффикса " `ANGLE` ".
 >
 > Несмотря на название "ANGLE", это расширение работает на любом устройстве, если аппаратное обеспечение поддерживает его, а не только на Windows при использовании библиотеки ANGLE . "ANGLE" просто указывает, что это расширение было написано авторами библиотеки ANGLE.
 
@@ -36,14 +37,14 @@ translation_of: Web/API/ANGLE_instanced_arrays
 Включение расширения:
 
 ```js
-var ext = gl.getExtension('ANGLE_instanced_arrays');
+var ext = gl.getExtension("ANGLE_instanced_arrays");
 ```
 
 ## Спецификации
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -1,10 +1,8 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
-tags:
-  - фильтры
-translation_of: Web/CSS/filter-function
 ---
+
 {{cssref}}
 
 [Тип данных](/ru/docs/Web/CSS/CSS_Types) [CSS](/ru/docs/Web/CSS) **`<filter-function>`** представляет собой графический эффект, который может изменить внешний вид входного изображения. Он используется в свойствах {{cssxref("filter")}} и {{cssxref("backdrop-filter")}}.
@@ -23,7 +21,7 @@ translation_of: Web/CSS/filter-function
   - : Применяет к изображению тень.
 - {{cssxref("filter-function/grayscale", "grayscale()")}}
   - : Преобразует изображение к тонам серого.
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}​​​​​​​
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
   - : Изменяет оттенок изображения за счёт поворота на цветовом круге.
 - {{cssxref("filter-function/invert", "invert()")}}
   - : Инвертирует цвета изображения.
@@ -34,11 +32,9 @@ translation_of: Web/CSS/filter-function
 - {{cssxref("filter-function/sepia", "sepia()")}}
   - : Преобразует изображение в сепию.
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                                     | Статус                               | Комментарии         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('Filters 1.0', '#typedef-filter-function', '&lt;filter-function&gt;') }} | {{ Spec2('Filters 1.0') }} | Первое определение. |
+{{Specifications}}
 
 ## Смотрите также
 

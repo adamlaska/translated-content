@@ -1,12 +1,8 @@
 ---
 title: Métodos de requisição HTTP
 slug: Web/HTTP/Methods
-tags:
-  - HTTP
-  - Métodos
-  - Verbos
-translation_of: Web/HTTP/Methods
 ---
+
 > _Nota: O conteúdo original publicado em inglês no Mozilla Developer Network utiliza o termo "resource", mantido na tradução, que refere-se a qualquer destino válido ao executar uma conexão usando o protocolo HTTP. Na língua portuguesa, ao falar sobre requisições, o termo é pouco usado com essa finalidade ou contexto._
 
 {{HTTPSidebar}}
@@ -34,14 +30,14 @@ O protocolo HTTP define um conjunto de **métodos de requisição** responsávei
 
 ## Especificações
 
-| Especificação                                        | Título                                                        | Comentário                                                                   |
-| ---------------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Especificação                           | Título                                                        | Comentário                                                                   |
+| --------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | {{RFC("7231", "Request methods", "4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content | Especifica os métodos GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE. |
-| {{RFC("5789", "Patch method", "2")}}     | PATCH Method for HTTP                                         | Especifica o método PATCH.                                                   |
+| {{RFC("5789", "Patch method", "2")}}    | PATCH Method for HTTP                                         | Especifica o método PATCH.                                                   |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http/methods")}}
+{{Compat}}
 
 ## Veja também
 

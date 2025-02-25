@@ -1,24 +1,19 @@
 ---
 title: Element.namespaceURI
 slug: Web/API/Element/namespaceURI
-tags:
-  - API
-  - Compatibilidad de los navegadores
-  - DOM
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Element/namespaceURI
 ---
+
 {{APIRef}}
 
 La propiedad `Element.namespaceURI` unicamente de lectura devuelve la URI namespace de el elemento, `o la anula si el elemento no está en un` namespace.
 
-> **Nota:** Antes de DOM4 esta API fué definida dentro de la interfaz {{domxref("Node")}}.
+> [!NOTE]
+> Antes de DOM4 esta API fué definida dentro de la interfaz {{domxref("Node")}}.
 
 ## Síntaxis
 
 ```js
-namespace = element.namespaceURI
+namespace = element.namespaceURI;
 ```
 
 ## Ejemplo
@@ -26,8 +21,11 @@ namespace = element.namespaceURI
 En este snippet, un elemento está siendo examinado por su {{domxref("localName")}} y su `namespaceURI`. Si el `namespaceURI` devuelve el XUL namespace y el `localName` devuelve "browser", entonces se entiende que el nodo es XUL `<browser/>`.
 
 ```js
-if (element.localName == "browser" &&
-    element.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
+if (
+  element.localName == "browser" &&
+  element.namespaceURI ==
+    "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+) {
   // this is a XUL browser
 }
 ```
@@ -36,7 +34,7 @@ if (element.localName == "browser" &&
 
 Esto no es un valor calculado resultante de una búsqueda de un namespace, basado en un examen de las declaraciones del namespace en el campo de aplicación. La URI del namespace de un nodo se congela en el momento de creación del nodo.
 
-En Firefox 3.5 y versiones anteriores, la URI del namespace para elementos HTML en documentos HTML `es nula`. En versiones posteriores, de conformidad con HTML5, es [`https://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) como en XHTML. {{gecko_minversion_inline("1.9.2")}}
+En Firefox 3.5 y versiones anteriores, la URI del namespace para elementos HTML en documentos HTML `es nula`. En versiones posteriores, de conformidad con HTML5, es [`https://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) como en XHTML.
 
 Se puede crear un elemento con el `namespaceURI` especificado utilizando el método DOM Level 2 [document.createElementNS](/es/docs/Web/API/Document/createElementNS).
 

@@ -1,13 +1,6 @@
 ---
 title: IntersectionObserverEntry
 slug: Web/API/IntersectionObserverEntry
-tags:
-  - API
-  - Interface
-  - Intersection Observer
-  - IntersectionObserver
-  - IntersectionObserverEntry
-translation_of: Web/API/IntersectionObserverEntry
 ---
 
 {{SeeCompatTable}}{{APIRef("Intersection Observer API")}}
@@ -25,13 +18,13 @@ Les instances de `IntersectionObserverEntry` sont délivrées à une fonction de
 - {{domxref("IntersectionObserverEntry.intersectionRect")}} {{readonlyinline}}
   - : Retourne un {{domxref("DOMRectReadOnly")}} représentant la partie visible de l'élément cible.
 - {{domxref("IntersectionObserverEntry.isIntersecting")}} {{ReadOnlyInline}}
-  - : Retourne une valeur booléenne valant `true` si l'élément cible s'entrecoupe avec la zone d'intersection de l'élément racine. S'il vaut `true`, alors `IntersectionObserverEntry` décrit une transition vers un état d'intersection ;  S'il vaut `false`, alors la transition se fait d'un état d'intersection à un état de non-intersection.
+  - : Retourne une valeur booléenne valant `true` si l'élément cible s'entrecoupe avec la zone d'intersection de l'élément racine. S'il vaut `true`, alors `IntersectionObserverEntry` décrit une transition vers un état d'intersection ; S'il vaut `false`, alors la transition se fait d'un état d'intersection à un état de non-intersection.
 - {{domxref("IntersectionObserverEntry.rootBounds")}} {{readonlyinline}}
   - : Retourne un {{domxref("DOMRectReadOnly")}} pour la zone d'intersection de l'élément racine.
 - {{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}
   - : L'{{domxref("Element")}} dont l'intersection avec la racine a changé d'état.
 - {{domxref("IntersectionObserverEntry.time")}} {{readonlyinline}}
-  - : Un {{domxref("DOMHighResTimeStamp")}} indiquant l'instant auquel l'intersection a été enregistrée, relative au [temps originel](/fr/docs/Web/API/DOMHighResTimeStamp#The_time_origin) de l'`IntersectionObserver`.
+  - : Un {{domxref("DOMHighResTimeStamp")}} indiquant l'instant auquel l'intersection a été enregistrée, relative au [temps originel](/fr/docs/Web/API/DOMHighResTimeStamp#the_time_origin) de l'`IntersectionObserver`.
 
 ## Méthodes
 

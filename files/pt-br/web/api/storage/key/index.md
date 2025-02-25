@@ -1,8 +1,8 @@
 ---
 title: Storage.key()
 slug: Web/API/Storage/key
-translation_of: Web/API/Storage/key
 ---
+
 {{APIRef("Web Storage API")}}
 
 O método **`key()`** da interface {{domxref("Storage")}}, quando passado um número n, retorna o nome da n-ésima chave no dado objeto `Storage`. A ordem das chaves é definida pelo user-agent, então não deve-se confiar nela.
@@ -37,22 +37,21 @@ function forEachKey(callback) {
 A função a seguir itera sobre as chaves do armazenamento local e obtém o valor de cada chave:
 
 ```js
-for(var i =0; i < localStorage.length; i++){
+for (var i = 0; i < localStorage.length; i++) {
   console.log(localStorage.getItem(localStorage.key(i)));
 }
 ```
 
-> **Nota:** Pra ver um exemplo real, consulte nossa [Demonstração de armazenamento na Web](https://mdn.github.io/dom-examples/web-storage/).
+> [!NOTE]
+> Pra ver um exemplo real, consulte nossa [Demonstração de armazenamento na Web](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Especificações
 
-| Especificação                                                                                            | Estado                           | Comentário |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-key', 'Storage.key')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Storage.key")}}
+{{Compat}}
 
 ## Veja também
 

@@ -44,13 +44,11 @@ Cross-Origin-Resource-Policy: same-origin
 
 ## 仕様書
 
-| 仕様書                                                                           | 状態                                                                         | 備考     |
-| -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------- |
-| {{SpecName("Fetch", '#cross-origin-resource-policy-header')}} | {{Spec2("Fetch", '#cross-origin-resource-policy-header')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Cross-Origin-Resource-Policy")}}
+{{Compat}}
 
 ## 関連情報
 

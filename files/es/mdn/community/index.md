@@ -1,9 +1,8 @@
 ---
 title: Enviar feedback sobre MDN
 slug: MDN/Community
-translation_of: MDN/Contribute/Feedback
-original_slug: MDN/Contribute/Feedback
 ---
+
 {{MDNSidebar}}
 
 ¡Bienvenido a la Red de Desarrolladores de Mozilla! si tienes algunas sugerencias, o estás teniendo problemas usando MDN, estás en el lugar correcto. El mismo hecho de que muestres interés en ofrecer feedback, te hace más parte de la comunidad de Mozilla, y te agradecemos de antemano tu interés.
@@ -17,7 +16,7 @@ Para empezar, si has localizado un problema en la documentación, deberías sent
 Para obtener más información sobre comó contribuir a la documentación MDN consulte:
 
 - [Comenzando](/es/docs/Project:Getting_started)
-- [Contribuir a MDN](/es/docs/MDN/Contribute)
+- [Contribuir a MDN](/es/docs/MDN/Community/Contributing)
 - [La interfaz de edición MDN](/es/docs/MDN/Contribute/Editor)
 
 ## Únete a la conversación

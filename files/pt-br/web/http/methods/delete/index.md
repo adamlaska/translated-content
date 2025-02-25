@@ -1,13 +1,8 @@
 ---
 title: DELETE
 slug: Web/HTTP/Methods/DELETE
-tags:
-  - HTTP
-  - Método HTTP
-  - Método de requisição
-  - Referencia
-translation_of: Web/HTTP/Methods/DELETE
 ---
+
 {{HTTPSidebar}}O **método de requisição HTTP DELETE** remove o recurso especificado.
 
 <table class="properties">
@@ -77,13 +72,13 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Especificações
 
-| Especificação                                | Título                                                                    |
-| -------------------------------------------- | ------------------------------------------------------------------------- |
+| Especificação                      | Título                                                                    |
+| ---------------------------------- | ------------------------------------------------------------------------- |
 | {{RFC("7231", "DELETE", "4.3.5")}} | Protocolo de Transferência de Hipertexto (HTTP/1.1): Semântica e conteúdo |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.methods.DELETE")}}
+{{Compat}}
 
 ## Veja também
 

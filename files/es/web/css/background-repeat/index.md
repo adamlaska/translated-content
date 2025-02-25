@@ -1,15 +1,8 @@
 ---
 title: background-repeat
 slug: Web/CSS/background-repeat
-tags:
-  - CSS
-  - CSS:Referencias
-  - Fondos CSS
-  - Propiedades de CSS
-  - Referências
-  - Todas_las_Categorías
-translation_of: Web/CSS/background-repeat
 ---
+
 {{CSSRef}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`background-repeat`** define como se repiten los fondos del documento. Un fondo de imagen puede ser repetido sobre el eje horizontal, el eje vertical, ambos ejes, o no estar repetido.
@@ -64,9 +57,9 @@ Por defecto, las imágenes repetidas son ajustadas al tamaño del elemento, pero
 
     | `repeat`    | La imagen se repite hasta cubrir todo el fondo existente. La última imagen debe ser recortada si no encaja.                                                                                                                                                                                                                                                                                                                                                                                                        |
     | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-    | `space`     | La imagen se repite lo máximo posible sin recortarse. La primera y última imagen son fijadas a cada lado del elemento, y el espacio blanco es distribuido igualmente entre las imágenes. La propiedad {{cssxref("background-position")}} es ignorada a menos que una sola imagen pueda ser desplegada sin recortar. El único caso donde se recorta usando `space` es cuando no hay suficiente sitio para desplegar una imagen.                                                                           |
+    | `space`     | La imagen se repite lo máximo posible sin recortarse. La primera y última imagen son fijadas a cada lado del elemento, y el espacio blanco es distribuido igualmente entre las imágenes. La propiedad {{cssxref("background-position")}} es ignorada a menos que una sola imagen pueda ser desplegada sin recortar. El único caso donde se recorta usando `space` es cuando no hay suficiente sitio para desplegar una imagen.                                                                                     |
     | `round`     | Como el espacio permitido aumenta, las imágenes repetidas se estrechan (sin dejar huecos) hasta que haya espacio suficiente (espacio restante >= la mitad del ancho de la imagen) para que otra sea añadida. Cuando la próxima imagen es añadida, todas las demás son comprimidas al espacio disponible. Ejemplo: Una imagen con un ancho inicial de 260px, se repite 3 veces, debería estirarse hasta que el tamaño sea de 300px, luego otra imagen debe ser añadida. Luego deberían comprimirse hasta los 225px. |
-    | `no-repeat` | La imagen no se repite (y por lo tanto el area coloreada de la imagen de fondo no debe ser rellenada completamente). La posición del fondo no repetido es definida por la propiedad de CSS {{cssxref("background-position")}}.                                                                                                                                                                                                                                                                           |
+    | `no-repeat` | La imagen no se repite (y por lo tanto el area coloreada de la imagen de fondo no debe ser rellenada completamente). La posición del fondo no repetido es definida por la propiedad de CSS {{cssxref("background-position")}}.                                                                                                                                                                                                                                                                                     |
 
 ### Sintaxis formal
 
@@ -78,25 +71,32 @@ Por defecto, las imágenes repetidas son ajustadas al tamaño del elemento, pero
 
 ```html
 <ol>
-  <li>no-repeat
+  <li>
+    no-repeat
     <div class="one"></div>
   </li>
-  <li>repeat
+  <li>
+    repeat
     <div class="two"></div>
   </li>
-  <li>repeat-x
+  <li>
+    repeat-x
     <div class="three"></div>
   </li>
-  <li>repeat-y
+  <li>
+    repeat-y
     <div class="four"></div>
   </li>
-  <li>space
+  <li>
+    space
     <div class="five"></div>
   </li>
-  <li>round
+  <li>
+    round
     <div class="six"></div>
   </li>
-  <li>repeat-x, repeat-y (multiple images)
+  <li>
+    repeat-x, repeat-y (multiple images)
     <div class="seven"></div>
   </li>
 </ol>
@@ -115,9 +115,9 @@ li {
   margin-bottom: 12px;
 }
 div {
-    background-image: url(https://mdn.mozillademos.org/files/12005/starsolid.gif);
-    width: 160px;
-    height: 70px;
+  background-image: url(star-solid.gif);
+  width: 160px;
+  height: 70px;
 }
 
 /* Background repeats */
@@ -142,32 +142,26 @@ div {
 
 /* Multiple images */
 .seven {
-  background-image:  url(https://mdn.mozillademos.org/files/12005/starsolid.gif),
-                     url(https://developer.mozilla.org/static/img/favicon32.png);
-  background-repeat: repeat-x,
-                     repeat-y;
+  background-image: url(star-solid.gif), url(favicon32.png);
+  background-repeat: repeat-x, repeat-y;
   height: 144px;
 }
 ```
 
 ### Resultado
 
-En este ejemplo,cada elemento de la listcoincide con un valor diferente de`background-repeat`.
+En este ejemplo,cada elemento de la listcoincide con un valor diferente de `background-repeat`.
 
 {{EmbedLiveSample('Examples', 240, 560)}}
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                                   | Comentario                                                                                                                                                                                                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-background-repeat', 'background-repeat')}}         | {{Spec2('CSS3 Backgrounds')}} | Añade soporte para diferentes imágenes de fondo, el atributo de doble valor equivalente permite un comportamiento de repetición diferente para las direcciones verticales y horizontales, las palabras clave `space` y `round` , y para fondos en elementos en la misma línea mediante la definición precisa de la zona disponible del fondo. |
-| {{SpecName('CSS2.1', 'colors.html#propdef-background-repeat', 'background-repeat')}} | {{Spec2('CSS2.1')}}                 | Sin cambios significativos.                                                                                                                                                                                                                                                                                                                   |
-| {{SpecName('CSS1', '#background-repeat', 'background-repeat')}}                             | {{Spec2('CSS1')}}                 | Definición inicial.                                                                                                                                                                                                                                                                                                                           |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.background-repeat")}}
+{{Compat}}
 
 ## Mira también
 
-- [Usando diferentes fondos](/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Usando diferentes fondos](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

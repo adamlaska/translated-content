@@ -1,8 +1,8 @@
 ---
 title: window.cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
-translation_of: Web/API/Window/cancelAnimationFrame
 ---
+
 {{APIRef}}
 
 Метод **`window.cancelAnimationFrame()`** останавливает анимацию, запланированную с помощью {{domxref("window.requestAnimationFrame()")}}.
@@ -21,18 +21,22 @@ window.cancelAnimationFrame(requestID);
 ## Примеры
 
 ```js
-var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-                            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+var requestAnimationFrame =
+  window.requestAnimationFrame ||
+  window.mozRequestAnimationFrame ||
+  window.webkitRequestAnimationFrame ||
+  window.msRequestAnimationFrame;
 
-var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+var cancelAnimationFrame =
+  window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
-var start = window.mozAnimationStartTime;  // Поддерживается только FF. В других браузерах можно использовать Date.now().
+var start = window.mozAnimationStartTime; // Поддерживается только FF. В других браузерах можно использовать Date.now().
 
 var myReq;
 
 function step(timestamp) {
   var progress = timestamp - start;
-  d.style.left = Math.min(progress / 10, 200) + 'px';
+  d.style.left = Math.min(progress / 10, 200) + "px";
   if (progress < 2000) {
     // Важно обновлять requestId при каждом запросе requestAnimationFrame
     myReq = requestAnimationFrame(step);
@@ -43,13 +47,13 @@ myReq = requestAnimationFrame(step);
 cancelAnimationFrame(myReq);
 ```
 
+## Спецификации
+
+{{Specifications}}
+
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Спецификация
-
-- {{spec("https://www.w3.org/TR/html51/webappapis.html#animation-frames", "Timing control for script-based animations: cancelAnimationFrame", "WD")}}
 
 ## Смотрите также
 

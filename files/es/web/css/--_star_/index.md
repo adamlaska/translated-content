@@ -1,8 +1,8 @@
 ---
-title: 'Propiedades personalizadas (--*): variables CSS'
+title: "Propiedades personalizadas (--*): variables CSS"
 slug: Web/CSS/--*
-translation_of: Web/CSS/--*
 ---
+
 {{CSSRef}}
 
 Los nombres de las propiedades que tiene el prefijo `--`, como `--ejemplo-nombre`, representan las _propiedades personalizadas_ que contienen un valor que puede ser usado en otras declaraciones usando la función {{cssxref("var")}}.
@@ -22,7 +22,8 @@ Las propiedades personalizadas tienen como alcance los elementos en los que se d
 - `<declaración-valor>`
   - : Este valor coincide con cualquier secuencia de uno o más tokens, siempre que la secuencia no contenga un token no permitido.
 
-> **Nota:** Los nombres de las propiedades personalizadas distinguen entre mayúsculas y minúsculas — `--mi-color` se tratará como una propiedad personalizada separada de `--Mi-color`.
+> [!NOTE]
+> Los nombres de las propiedades personalizadas distinguen entre mayúsculas y minúsculas — `--mi-color` se tratará como una propiedad personalizada separada de `--Mi-color`.
 
 ### Sintaxis formal
 
@@ -33,10 +34,16 @@ Las propiedades personalizadas tienen como alcance los elementos en los que se d
 ### HTML
 
 ```html
-<p id="firstParagraph">Este párrafo debe tener un fondo azul y un texto amarillo.</p>
-<p id="secondParagraph">Este párrafo debe tener un fondo amarillo y un texto azul.</p>
+<p id="firstParagraph">
+  Este párrafo debe tener un fondo azul y un texto amarillo.
+</p>
+<p id="secondParagraph">
+  Este párrafo debe tener un fondo amarillo y un texto azul.
+</p>
 <div id="container">
-  <p id="thirdParagraph">Este párrafo debe tener un fondo verde y un texto amarillo.</p>
+  <p id="thirdParagraph">
+    Este párrafo debe tener un fondo verde y un texto amarillo.
+  </p>
 </div>
 ```
 
@@ -74,15 +81,13 @@ Las propiedades personalizadas tienen como alcance los elementos en los que se d
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                               | Comentario          |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS3 Variables", "#defining-variables", "--*")}} | {{Spec2("CSS3 Variables")}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.custom-property")}}
+{{Compat}}
 
 ## Ver también
 
-- [Usando variables CSS](/es/docs/Web/CSS/Using_CSS_variables)
+- [Usando variables CSS](/es/docs/Web/CSS/Using_CSS_custom_properties)
 - La función {{cssxref("var")}}

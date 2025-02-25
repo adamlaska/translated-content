@@ -1,24 +1,16 @@
 ---
-title: '::-webkit-progress-value'
+title: ::-webkit-progress-value
 slug: Web/CSS/::-webkit-progress-value
-tags:
-  - CSS
-  - No estándar(2)
-  - Pseudo-elemento
-  - Referencia
-translation_of: Web/CSS/::-webkit-progress-value
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen
 
 El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::-webkit-progress-value`** representa la parte rellena de la barra del elemento {{HTMLElement("progress")}}. Es hija del pseudo-elemento {{cssxref("::-webkit-progress-bar")}}.
 
-> **Nota:** para que `::-webkit-progress-value` tenga efecto en el elemento \<progress> {{cssxref("-webkit-appearance")}} deberá tener _none_ como valor.
-
-## Especificaciones
-
-No es parte de ninguna especificación. Es un elemento propietario y específico de WebKit/Blink.
+> [!NOTE]
+> Para que `::-webkit-progress-value` tenga efecto en el elemento \<progress> {{cssxref("-webkit-appearance")}} deberá tener _none_ como valor.
 
 ## Ejemplo
 
@@ -37,7 +29,7 @@ progress {
 ### Contenido HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 ## Resultado
@@ -46,11 +38,15 @@ progress {
 
 Una barra de progreso con el estilo indicado anteriormente será similar a esta:
 
-![](https://mdn.mozillademos.org/files/13490/progress-value.png)
+![](progress-value.png)
 
-## Compatibilidad con los distintos navegadores
+## Especificaciones
 
-{{Compat("css.selectors.-webkit-progress-value")}}
+No es parte de ninguna especificación. Es un elemento propietario y específico de WebKit/Blink.
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver además
 

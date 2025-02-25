@@ -1,13 +1,8 @@
 ---
 title: border-image-repeat
 slug: Web/CSS/border-image-repeat
-tags:
-  - Bordes CSS
-  - CSS
-  - Propiedades CSS
-  - Referencia
-translation_of: Web/CSS/border-image-repeat
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -62,14 +57,13 @@ border-image-repeat: unset;
   height: 80px;
   margin-bottom: 10px;
   border: 30px solid;
-  border-image: url("https://mdn.mozillademos.org/files/4127/border.png") 27;
+  border-image: url("border.png") 27;
   border-image-repeat: stretch; /* Puede ser modificado en el ejemplo en vivo */
 }
 ```
 
 ```html hidden
-<div id="borderImageRepetition">
-</div>
+<div id="borderImageRepetition"></div>
 <select id="repetition">
   <option value="stretch">stretch</option>
   <option value="repeat">repeat</option>
@@ -83,7 +77,8 @@ border-image-repeat: unset;
 ```js hidden
 var repetition = document.getElementById("repetition");
 repetition.addEventListener("change", function (evt) {
-  document.getElementById("borderImageRepetition").style.borderImageRepeat = evt.target.value;
+  document.getElementById("borderImageRepetition").style.borderImageRepeat =
+    evt.target.value;
 });
 ```
 
@@ -91,13 +86,11 @@ repetition.addEventListener("change", function (evt) {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estatus                                  | Comentarios        |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Backgrounds', '#border-image-repeat', 'border-image-repeat')}} | {{Spec2('CSS3 Backgrounds')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-image-repeat")}}
+{{Compat}}
 
 ## Véase también
 

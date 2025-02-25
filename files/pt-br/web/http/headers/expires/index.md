@@ -1,10 +1,8 @@
 ---
 title: Expires
 slug: Web/HTTP/Headers/Expires
-tags:
-  - Cabeçalhos
-translation_of: Web/HTTP/Headers/Expires
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho **`Expires`** contém a data/hora após a qual a resposta é considerada velha.
@@ -51,13 +49,13 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Especificações
 
-| Especificação                                | Título                                          |
-| -------------------------------------------- | ----------------------------------------------- |
+| Especificação                     | Título                                          |
+| --------------------------------- | ----------------------------------------------- |
 | {{RFC("7234", "Expires", "5.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Expires")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,19 +1,16 @@
 ---
 title: CanvasRenderingContext2D.lineJoin
 slug: Web/API/CanvasRenderingContext2D/lineJoin
-tags:
-  - API
-  - Canvas
-  - Property
-translation_of: Web/API/CanvasRenderingContext2D/lineJoin
 ---
+
 {{APIRef}}
 
-Свойство **`CanvasRenderingContext2D`\*\***`.lineJoin`\*\* предоставляемое Canvas 2D API определяет форму вершин в которых линии сходятся. Длина линий должна быть ненулевой.
+Свойство **`CanvasRenderingContext2D.lineJoin`** предоставляемое Canvas 2D API определяет форму вершин в которых линии сходятся. Длина линий должна быть ненулевой.
 
 Смотрите также главу [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) в [Canvas Tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
 
-> **Примечание:** Lines can be drawn with the {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
+> [!NOTE]
+> Lines can be drawn with the {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
 ## Синтаксис
 
@@ -25,7 +22,7 @@ ctx.lineJoin = "bevel" || "round" || "miter";
 
 Свойство может принимать три значения: `round`, `bevel` и `miter`. По умолчанию установлено значение `miter`. Имейте ввиду, что свойство никак не повлияет на линии направленные в одну сторону, потому что не будет создана зона пересечения.
 
-![](https://mdn.mozillademos.org/files/237/Canvas_linejoin.png)
+![](canvas_linejoin.png)
 
 - `round`
   - : Скругляет углы за счёт добавления сектора с центром в точке пересечения линий и радиусом равным толщине линии.
@@ -48,12 +45,12 @@ ctx.lineJoin = "bevel" || "round" || "miter";
 
 #### JavaScript
 
-```html
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.lineWidth = 20;
-ctx.lineJoin = 'round';
+ctx.lineJoin = "round";
 ctx.beginPath();
 ctx.moveTo(20, 20);
 ctx.lineTo(190, 100);
@@ -74,9 +71,9 @@ ctx.stroke();
 <canvas id="canvas" width="150" height="150"></canvas>
 ```
 
-```html
-var ctx = document.getElementById('canvas').getContext('2d');
-var lineJoin = ['round', 'bevel', 'miter'];
+```js
+var ctx = document.getElementById("canvas").getContext("2d");
+var lineJoin = ["round", "bevel", "miter"];
 ctx.lineWidth = 10;
 
 for (let i = 0; i < lineJoin.length; i++) {
@@ -91,7 +88,7 @@ for (let i = 0; i < lineJoin.length; i++) {
 }
 ```
 
-{{EmbedLiveSample("Разница_между_значениями_lineJoin", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}
+{{EmbedLiveSample("Разница_между_значениями_lineJoin", "180", "180", "canvas_linejoin.png")}}
 
 ## Спецификации
 
@@ -100,10 +97,6 @@ for (let i = 0; i < lineJoin.length; i++) {
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Особенность WebKit/Blink
-
-- В браузерах на базе Webkit и Blink помимо этого свойства, также поддерживается нестандартный метод `ctx.setLineJoin()`.
 
 ## Смотрите также
 

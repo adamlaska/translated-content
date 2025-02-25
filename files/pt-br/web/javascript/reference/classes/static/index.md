@@ -1,14 +1,8 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
-tags:
-  - Classes
-  - ECMAScript 2015
-  - Experimental
-  - JavaScript
-  - Static
-translation_of: Web/JavaScript/Reference/Classes/static
 ---
+
 {{jsSidebar("Classes")}}
 
 A palavra chave **static** define um método estático para a classe. Métodos estáticos não são chamados na instâncias da classe. Em vez disso, eles são chamados na própria classe. Geralmente, são funções utilitárias, como funções para criar ou clonar objetos.
@@ -32,10 +26,10 @@ Para chamar um método estático dentro de outro método estático da mesma clas
 ```js
 class ChamadaDoMetodoEstatico {
   static metodoEstatico() {
-    return 'O método estático foi chamado';
+    return "O método estático foi chamado";
   }
   static outroMetodoEstatico() {
-    return this.metodoEstatico() + ' de outro método estático';
+    return this.metodoEstatico() + " de outro método estático";
   }
 }
 ChamadaDoMetodoEstatico.metodoEstatico();
@@ -50,7 +44,7 @@ ChamadaDoMetodoEstatico.outroMetodoEstatico();
 Métodos estáticos não são diretamente acessíveis utilizando-se `this` a partir de métodos não estáticos. É necessário chamá-los usando o nome da classe:
 
 ```js
-nomeDaClasse.nomeDoMetodoEstatico()
+nomeDaClasse.nomeDoMetodoEstatico();
 ```
 
 ou chamando o método como uma propriedade do construtor:
@@ -70,7 +64,7 @@ class ChamadaDoMetodoEstatico {
   }
 
   static MetodoEstatico() {
-    return 'O método estático foi chamado.';
+    return "O método estático foi chamado.";
   }
 }
 ```
@@ -102,13 +96,11 @@ console.log(tp.tripple()); //Logs 'tp.tripple is not a function'.
 
 ## Especificações
 
-| Especificação                                                                                | Status                   | Comentário         |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2015')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.classes.static")}}
+{{Compat}}
 
 ## Veja também
 

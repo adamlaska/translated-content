@@ -1,8 +1,8 @@
 ---
 title: AudioBuffer
 slug: Web/API/AudioBuffer
-translation_of: Web/API/AudioBuffer
 ---
+
 {{APIRef("Web Audio API")}}
 
 ## Сводка
@@ -47,9 +47,13 @@ var channels = 2;
 // Создаёт пустой двухсекундный стерео-буфер
 // с частотой звука AudioContext (sample rate)
 var frameCount = audioCtx.sampleRate * 2.0;
-var myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleRate);
+var myArrayBuffer = audioCtx.createBuffer(
+  channels,
+  frameCount,
+  audioCtx.sampleRate,
+);
 
-button.onclick = function() {
+button.onclick = function () {
   // Заполняет буфер белыми шумами;
   // просто случайные значения от -1.0 до 1.0
   for (var channel = 0; channel < channels; channel++) {
@@ -75,19 +79,16 @@ button.onclick = function() {
 
   // Начать воспроизведение с источника
   source.start();
-
-}
+};
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
 ## Совместимость с браузерами
 
 {{Compat}}
-
-##
 
 ## Смотрите также
 

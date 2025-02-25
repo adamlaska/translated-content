@@ -1,14 +1,8 @@
 ---
 title: Allow
 slug: Web/HTTP/Headers/Allow
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de Entidade
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Allow
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta **`Allow`** lista um conjunto de métodos suportados pelo recurso.
@@ -47,8 +41,8 @@ Allow: GET, POST, HEAD
 
 ## Especificações
 
-| Especificação                                | Título                                                        |
-| -------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                     | Título                                                        |
+| --------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Allow", "7.4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Veja também

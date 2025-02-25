@@ -1,15 +1,12 @@
 ---
 title: decimal-format
 slug: Web/XSLT/Element/decimal-format
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/decimal-format
-original_slug: Web/XSLT/decimal-format
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:decimal-format>` 요소는
-_`format-number( )`_
+`format-number( )`
 함수를 써서 숫자를 문자열로 바꿀 때 쓰는 기호와 문자를 정의합니다.
 
 ### 문법
@@ -64,7 +61,7 @@ _`format-number( )`_
 
 ### 정의
 
-[XSLT section 12.3, Number Formatting](http://www.w3.org/TR/xslt#format-number)
+[XSLT section 12.3, Number Formatting](https://www.w3.org/TR/xslt#format-number)
 
 ### Gecko 지원
 

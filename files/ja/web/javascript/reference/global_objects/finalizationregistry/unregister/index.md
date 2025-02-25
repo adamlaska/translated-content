@@ -34,32 +34,32 @@ registry.unregister(unregisterToken);
 
 ```js
 class Thingy {
-    #cleanup = label => {
-    //         ^^^^^−−−−− held value
-        console.error(
-            `The \`release\` method was never called for the object with the label "${label}"`
-        );
-    };
-    #registry = new FinalizationRegistry(this.#cleanup);
+  #cleanup = (label) => {
+    //        ^^^^^−−−−− held value
+    console.error(
+      `The \`release\` method was never called for the object with the label "${label}"`,
+    );
+  };
+  #registry = new FinalizationRegistry(this.#cleanup);
 
-    /**
-     * Constructs a `Thingy` instance. Be sure to call `release` when you're done with it.
-     *
-     * @param   label       A label for the `Thingy`.
-     */
-    constructor(label) {
-        //                            vvvvv−−−−− held value
-        this.#registry.register(this, label, this);
-        //          target −−−−−^^^^         ^^^^−−−−− unregister token
-    }
+  /**
+   * Constructs a `Thingy` instance. Be sure to call `release` when you're done with it.
+   *
+   * @param   label       A label for the `Thingy`.
+   */
+  constructor(label) {
+    //                            vvvvv−−−−− held value
+    this.#registry.register(this, label, this);
+    //          target −−−−−^^^^         ^^^^−−−−− unregister token
+  }
 
-    /**
-     * Releases resources held by this `Thingy` instance.
-     */
-    release() {
-        this.#registry.unregister(this);
-        //                        ^^^^−−−−− unregister token
-    }
+  /**
+   * Releases resources held by this `Thingy` instance.
+   */
+  release() {
+    this.#registry.unregister(this);
+    //                        ^^^^−−−−− unregister token
+  }
 }
 ```
 
@@ -102,13 +102,11 @@ class Thingy {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WeakRefs', '#sec-finalization-registry.prototype.unregister', 'FinalizationRegistry.prototype.unregister')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.FinalizationRegistry.unregister")}}
+{{Compat}}
 
 ## 関連情報
 

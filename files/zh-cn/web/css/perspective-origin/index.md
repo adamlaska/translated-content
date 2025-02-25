@@ -5,7 +5,7 @@ slug: Web/CSS/perspective-origin
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/CSS) 属性 **`perspective-origin`** 指定了观察者的位置，用作 {{cssxref("perspective")}} 属性的消失点。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`perspective-origin`** 指定了观察者的位置，用作 {{cssxref("perspective")}} 属性的消失点。
 
 {{EmbedInteractiveExample("pages/css/perspective-origin.html")}}
 
@@ -48,11 +48,11 @@ perspective-origin: unset;
     - `center`, 关键字，50% 的简记。
     - `bottom`, 关键字，100% 的简记。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 举例
+## 示例
 
 ### 修改 perspective origin
 
@@ -60,7 +60,7 @@ perspective-origin: unset;
 
 #### 结果
 
-{{EmbedLiveSample('Changing_the_perspective_origin', '100%', 700)}}
+{{EmbedLiveSample('修改 perspective origin', '100%', 700)}}
 
 #### HTML
 
@@ -328,7 +328,7 @@ perspective-origin: unset;
 .top {
   background: rgba(196, 196, 0, 0.7);
   transform: rotateX(90deg) translateZ(50px);
-  -webkit-transform: rotateX(90deg) translateZ(50px)
+  -webkit-transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
@@ -338,8 +338,10 @@ perspective-origin: unset;
 }
 
 /* Make the table a little nicer */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;
@@ -356,6 +358,6 @@ th, p, td {
 
 {{Compat}}
 
-## 相关连接
+## 参见
 
-- [Using CSS Transforms](/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS Transforms](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

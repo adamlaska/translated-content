@@ -1,16 +1,8 @@
 ---
 title: will-change
 slug: Web/CSS/will-change
-tags:
-  - CSS
-  - CSS Will-change
-  - CSS3
-  - Propriedade CSS
-  - Referência(2)
-  - Transições
-  - otimização de css
-translation_of: Web/CSS/will-change
 ---
+
 {{CSSRef}}
 
 ## Sumário
@@ -35,9 +27,9 @@ O uso adequado dessa propriedade pode ser um pouco complicado:
 will-change: auto;
 will-change: scroll-position;
 will-change: contents;
-will-change: transform;        /* Exemplo de <custom-ident> */
-will-change: opacity;          /* Exemplo de <custom-ident> */
-will-change: left, top;        /* Exemplo de dois <animateable-feature> */
+will-change: transform; /* Exemplo de <custom-ident> */
+will-change: opacity; /* Exemplo de <custom-ident> */
+will-change: left, top; /* Exemplo de dois <animateable-feature> */
 
 /* Valores globais */
 will-change: inherit;
@@ -74,19 +66,19 @@ O `<animateable-feature>` pode ser um dos seguintes valores:
 O exemplo acima adiciona a propriedade `will-change` diretamente no estilo, o que irá fazer com que o navegador mantenha a otimização em memória por muito mais tempo que o necessário e nós já vimos que isso deve ser evitado. Abaixo outro exemplo mostrando como aplicar o `will-change` através de script, o que provavelmente é o que você deve fazer na maioria dos casos.
 
 ```js
-var el = document.getElementById('element');
+var el = document.getElementById("element");
 
 // Set will-change quando ocorre hover no elemento
-el.addEventListener('mouseenter', hintBrowser);
-el.addEventListener('animationEnd', removeHint);
+el.addEventListener("mouseenter", hintBrowser);
+el.addEventListener("animationEnd", removeHint);
 
 function hintBrowser() {
   // As propriedades otimizáveis que vão mudar no bloco de animações
-  this.style.willChange = 'transform, opacity';
+  this.style.willChange = "transform, opacity";
 }
 
 function removeHint() {
-  this.style.willChange = 'auto';
+  this.style.willChange = "auto";
 }
 ```
 
@@ -100,10 +92,8 @@ Entretanto pode ser apropriado incluir `will-change` no seu estilo css para uma 
 
 ## Especificações
 
-| Especificação                                                                        | Estado                               | Comentário         |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('CSS Will Change', '#will-change', 'will-change')}} | {{Spec2('CSS Will Change')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.will-change")}}
+{{Compat}}

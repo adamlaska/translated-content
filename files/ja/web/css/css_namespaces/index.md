@@ -1,6 +1,6 @@
 ---
 title: CSS 名前空間
-slug: Web/CSS/CSS_Namespaces
+slug: Web/CSS/CSS_namespaces
 ---
 
 {{CSSRef}}
@@ -15,12 +15,10 @@ slug: Web/CSS/CSS_Namespaces
 
 ## 仕様書
 
-| 仕様書                          | 状態                         | 備考     |
-| ------------------------------- | ---------------------------- | -------- |
-| {{SpecName("CSS3 Namespaces")}} | {{Spec2("CSS3 Namespaces")}} | 関連情報 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
 ### `@namespace` ルール
 
-{{Compat("css.at-rules.namespace")}}
+{{Compat}}

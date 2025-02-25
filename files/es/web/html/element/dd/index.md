@@ -1,21 +1,9 @@
 ---
 title: dd
 slug: Web/HTML/Element/dd
-tags:
-  - Contenido agrupado HTML
-  - Definición
-  - Detalles
-  - Detalles de descripción
-  - Elemento
-  - HTML
-  - Lista de descripciones
-  - Referencia
-  - Web
-  - dd
-translation_of: Web/HTML/Element/dd
-original_slug: Web/HTML/Elemento/dd
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El **elemento HTML `<dd>`** provee detalles acerca de o la definición de un término precedente ({{HTMLElement("dt")}}) en una lista de descripciones ({{HTMLElement("dl")}}).
 
@@ -80,26 +68,22 @@ La fuente para este ejemplo interactivo esta almacenado en un repositorio GitHub
 
 ## Atributos
 
-Los atributos de este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
+Los atributos de este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("nowrap")}} {{Non-standard_inline}}
+- `nowrap` {{Non-standard_inline}}
   - : Si el valor de este atributo es definido como `yes`, el texto de la definición no se encapsulará. El valor por defecto es `no`.
 
 ## Ejemplo
 
-Para un ejemplo, ver [ejemplos \<dl>](/es/docs/Web/HTML/Elemento/dl#Examples).
+Para un ejemplo, ver [ejemplos \<dl>](/es/docs/Web/HTML/Element/dl#examples).
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estatus                          | Comentarios |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-dd-element', '&lt;dd&gt;')}}     | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-dd-element', '&lt;dd&gt;')}} | {{Spec2('HTML5 W3C')}}     |             |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dd&gt;')}}                 | {{Spec2('HTML4.01')}}     |             |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.dd")}}
+{{Compat}}
 
 ## Ver también
 

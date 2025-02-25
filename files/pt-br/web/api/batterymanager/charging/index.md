@@ -1,12 +1,8 @@
 ---
 title: BatteryManager.charging
 slug: Web/API/BatteryManager/charging
-tags:
-  - API
-  - Battery API
-  - Propriedade
-translation_of: Web/API/BatteryManager/charging
 ---
+
 {{APIRef("Battery API")}}
 
 Um valor Booleano que indica se a bateria está sendo ou não carregada no momento.
@@ -21,11 +17,11 @@ No retorno, `charging` indica se a bateria está sendo carregada no momento; se 
 
 ## Especificações
 
-{{page("/pt-BR/docs/Web/API/BatteryManager","Specifications")}}
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{page("/pt-BR/docs/Web/API/BatteryManager","Browser_compatibility")}}
+{{Compat}}
 
 ## Veja também
 

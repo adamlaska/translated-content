@@ -1,6 +1,6 @@
 ---
 title: CSSOM View
-slug: Web/CSS/CSSOM_View
+slug: Web/CSS/CSSOM_view
 ---
 
 {{CSSRef}}
@@ -15,17 +15,15 @@ slug: Web/CSS/CSSOM_View
 
 ## ガイド
 
-- [座標系](/ja/docs/Web/CSS/CSSOM_View/Coordinate_systems)
+- [座標系](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems)
   - : モニター上のウィンドウ、モバイル機器のビューポート、印刷時の紙上の位置などのディスプレイコンテキストにおける位置を特定するために使われる座標系についてのガイドです。
 
 ## 仕様書
 
-| 仕様書                     | 状態                    | 備考     |
-| -------------------------- | ----------------------- | -------- |
-| {{SpecName('CSSOM View')}} | {{Spec2('CSSOM View')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
 ### `scroll-behavior` プロパティ
 
-{{Compat("css.properties.scroll-behavior")}}
+{{Compat}}

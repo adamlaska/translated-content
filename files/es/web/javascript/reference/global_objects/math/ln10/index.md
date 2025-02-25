@@ -1,21 +1,26 @@
 ---
 title: Math.LN10
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN10
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN10
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/LN10
 ---
+
 {{JSRef}}
 
 La propiedad **`Math.LN10`** representa el logaritmo natural de 10, aproximadamente 2.302:
 
 <math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN10</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>2.302</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN10}} = \ln(10) \approx 2.302</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-ln10.html")}}{{js_property_attributes(0, 0, 0)}}
+{{InteractiveExample("JavaScript Demo: Math.LN10")}}
+
+```js interactive-example
+function getNatLog10() {
+  return Math.LN10;
+}
+
+console.log(getNatLog10());
+// Expected output: 2.302585092994046
+```
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Descripción
 
@@ -29,7 +34,7 @@ La función siguiente devuelve el logaritmo natural de 10:
 
 ```js
 function getNatLog10() {
-   return Math.LN10
+  return Math.LN10;
 }
 
 getNatLog10(); // 2.302585092994046
@@ -37,16 +42,11 @@ getNatLog10(); // 2.302585092994046
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                       | Comentario                                          |
-| ------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.2', 'Math.LN10')}}     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-math.ln10', 'Math.LN10')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-math.ln10', 'Math.LN10')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.LN10")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,15 +1,15 @@
 ---
 title: AnalyserNode
 slug: Web/API/AnalyserNode
-translation_of: Web/API/AnalyserNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 `AnalyserNode` интерфейс который предоставляет частоту (frequency) в реальном времени. Элемент {{domxref("AudioNode")}} который пропускает аудиопоток неизменным от ввода (input) до вывода (output), но позволяет использовать генерируемые данные, обрабатывать или создавать аудиовизуализацию.
 
 `AnalyserNode` имеет только один ввод и один вывод. Узел работает даже если вывод не подсоединён.
 
-![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](https://mdn.mozillademos.org/files/12970/fttaudiodata_en.svg)
+![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](fttaudiodata_en.svg)
 
 <table class="properties">
   <tbody>
@@ -52,7 +52,7 @@ translation_of: Web/API/AnalyserNode
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("AnalyserNode.fftSize")}}
-  - : Is an unsigned long value representing the size of the FFT ([Fast Fourier Transform](http://en.wikipedia.org/wiki/Fast_Fourier_transform "/en-US/docs/")) to be used to determine the frequency domain.
+  - : Is an unsigned long value representing the size of the FFT ([Fast Fourier Transform](http://en.wikipedia.org/wiki/Fast_Fourier_transform)) to be used to determine the frequency domain.
 - {{domxref("AnalyserNode.frequencyBinCount")}} {{readonlyInline}}
   - : Is an unsigned long value half that of the FFT size. This generally equates to the number of data values you will have to play with for the visualization.
 - {{domxref("AnalyserNode.minDecibels")}}
@@ -67,9 +67,11 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 - {{domxref("AnalyserNode.getFloatFrequencyData()")}}
+
   - : Copies the current frequency data into a {{domxref("Float32Array")}} array passed into it.
 
 - {{domxref("AnalyserNode.getByteFrequencyData()")}}
+
   - : Copies the current frequency data into a {{domxref("Uint8Array")}} (unsigned byte array) passed into it.
 
 - {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
@@ -79,14 +81,15 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 ## Examples
 
-> **Примечание:** See the guide [Visualizations with Web Audio API](/ru/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) for more information on creating audio visualizations.
+> [!NOTE]
+> See the guide [Visualizations with Web Audio API](/ru/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) for more information on creating audio visualizations.
 
 ### Basic usage
 
 The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 
 ```js
-var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
 // ...
@@ -103,7 +106,6 @@ var canvasCtx = canvas.getContext("2d");
 // draw an oscilloscope of the current audio source
 
 function draw() {
-
   requestAnimationFrame(draw);
 
   analyser.getByteTimeDomainData(dataArray);
@@ -116,13 +118,12 @@ function draw() {
 
   canvasCtx.beginPath();
 
-  var sliceWidth = canvas.width * 1.0 / bufferLength;
+  var sliceWidth = (canvas.width * 1.0) / bufferLength;
   var x = 0;
 
   for (var i = 0; i < bufferLength; i++) {
-
     var v = dataArray[i] / 128.0;
-    var y = v * canvas.height / 2;
+    var y = (v * canvas.height) / 2;
 
     if (i === 0) {
       canvasCtx.moveTo(x, y);
@@ -140,16 +141,14 @@ function draw() {
 draw();
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                        | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#the-analysernode-interface', 'AnalyserNode')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [Using the Web Audio API](/ru/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

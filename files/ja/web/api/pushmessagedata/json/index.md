@@ -1,46 +1,43 @@
 ---
-title: PushMessageData.json()
+title: "PushMessageData: json() メソッド"
+short-title: json()
 slug: Web/API/PushMessageData/json
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Push API")}}{{SeeCompatTable()}}
+{{APIRef("Push API")}}
 
-{{domxref("PushMessageData")}} インターフェースの **`json()`**メソッドは、プッシュメッセージデータを [JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) オブジェクトとして抜き出します。
+**`json()`** は {{domxref("PushMessageData")}} インターフェイスのメソッドで、プッシュメッセージのデータを [JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) 文字列として解釈し、結果を返します。
 
 ## 構文
 
-```js
-var myJson = PushEvent.data.json();
+```js-nolint
+json()
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
-[JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) オブジェクト。
+プッシュイベントのデータを JSON として解釈した結果です。これは JSON で表現されるあらゆるものになり得ます。オブジェクト、配列、文字列、数値などです。
 
 ## 例
 
 ```js
-self.addEventListener('push', function(event) {
-  var jsonObj = event.data.json();
+self.addEventListener("push", (event) => {
+  const myData = event.data.json();
 
   // JSON を使って何かを実行する
 });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                         | 状態                         | コメント   |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('Push API', '#widl-PushMessageData-json-JSON', 'json()')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
-{{Compat("api.PushMessageData.json")}}
-
-## 関連項目
-
-- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)
+{{Compat}}

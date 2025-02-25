@@ -1,8 +1,8 @@
 ---
 title: bookmarks
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 ---
+
 {{AddonSidebar}}
 
 A API [WebExtensions](/pt-BR/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} permite uma extensão interagir e manipular o sistema de favoritos do navegador. Você pode pode usá-lo para favoritar páginas, obter favoritos existentes e, editar, remover ou organizar os favoritos.
@@ -64,11 +64,11 @@ Para utilizar esta API, uma extensão deve ser requisitada para o "bookmarks" [p
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.api.bookmarks")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **Nota:** **Agradecimentos**Esta API é baseada na API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks) . Esta documentação é derivada do [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) no código do Chromium.Os dados de compatibilidade do Microsoft Edge são fornecidos pela Microsoft Corporation e aqui estão sob a Creative Commons Attribution 3.0 United States License.
+> **Nota:** **Agradecimentos**Esta API é baseada na API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks) . Esta documentação é derivada do [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) no código do Chromium.Os dados de compatibilidade do Microsoft Edge são fornecidos pela Microsoft Corporation e aqui estão sob a Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

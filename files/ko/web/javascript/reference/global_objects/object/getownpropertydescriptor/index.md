@@ -1,13 +1,8 @@
 ---
 title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-tags:
-  - ECMAScript5
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 **`Object.getOwnPropertyDescriptor()`** 메서드는 주어진 객체 _자신의 속성_(즉, 객체에 직접 제공하는 속성, 객체의 프로토타입 체인을 따라 존재하는 덕택에 제공하는 게 아닌)에 대한 속성 설명자(descriptor)를 반환합니다.
@@ -15,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
 ## 구문
 
 ```js
-Object.getOwnPropertyDescriptor(obj, prop)
+Object.getOwnPropertyDescriptor(obj, prop);
 ```
 
 ### 매개변수
@@ -53,17 +48,25 @@ Object.getOwnPropertyDescriptor(obj, prop)
 ```js
 var o, d;
 
-o = { get foo() { return 17; } };
-d = Object.getOwnPropertyDescriptor(o, 'foo');
+o = {
+  get foo() {
+    return 17;
+  },
+};
+d = Object.getOwnPropertyDescriptor(o, "foo");
 // d는 { configurable: true, enumerable: true, get: /* getter 함수 */, set: undefined }
 
 o = { bar: 42 };
-d = Object.getOwnPropertyDescriptor(o, 'bar');
+d = Object.getOwnPropertyDescriptor(o, "bar");
 // d는 { configurable: true, enumerable: true, value: 42, writable: true }
 
 o = {};
-Object.defineProperty(o, 'baz', { value: 8675309, writable: false, enumerable: false });
-d = Object.getOwnPropertyDescriptor(o, 'baz');
+Object.defineProperty(o, "baz", {
+  value: 8675309,
+  writable: false,
+  enumerable: false,
+});
+d = Object.getOwnPropertyDescriptor(o, "baz");
 // d는 { value: 8675309, writable: false, enumerable: false, configurable: false }
 ```
 

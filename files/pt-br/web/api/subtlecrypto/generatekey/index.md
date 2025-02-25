@@ -1,14 +1,8 @@
 ---
 title: SubtleCrypto.generateKey()
-slug: Web/API/SubtleCrypto/GenerateKey
-tags:
-  - API
-  - Referencia
-  - SubtleCrypto
-  - Web Crypto API
-  - metodo
-translation_of: Web/API/SubtleCrypto/generateKey
+slug: Web/API/SubtleCrypto/generateKey
 ---
+
 {{APIRef("Web Crypto API")}}
 
 O método **`SubtleCrypto.generateKey()`** retorna como {{jsxref("Promise")}} de uma recentemente gerada {{domxref("CryptoKey")}}, para algoritmos simétricos, ou uma {{domxref("CryptoKeyPair")}}, contendo duas keys recentemente geradas, para algoritmos assimétricos, que combina com o algoritmo, o uso e a extractividade são dados como parâmetro.
@@ -21,7 +15,7 @@ var result = crypto.subtle.generateKey(algo, extractable, keyUsages);
 
 ### Parâmetros
 
-- _`algo`_ é um objeto do dicionário definindo a função utilizada da geração da key. algo suportados são : [AES-CBC](/pt-BR/docs/Web/API/Web_Crypto_API/Supported_algorithms#AES-CBC), `AES-CTR`, `AES-GCM`, `RSA-OAEP`, `AES-KW`, `HMAC`, `RSASSA-PKCS1-v1_5`, `ECDSA`, `ECDH`, e `DH`. Os formatos de objetos do dicionário são:
+- _`algo`_ é um objeto do dicionário definindo a função utilizada da geração da key. algo suportados são : [AES-CBC](/pt-BR/docs/Web/API/SubtleCrypto#aes-cbc), `AES-CTR`, `AES-GCM`, `RSA-OAEP`, `AES-KW`, `HMAC`, `RSASSA-PKCS1-v1_5`, `ECDSA`, `ECDH`, e `DH`. Os formatos de objetos do dicionário são:
 
   - `"name"`, o qual corresponde com um dos algo's suportados listados acima,
   - `"modulusLength"`, o qual corresponde com o número de dígitos usado nos módulos
@@ -50,23 +44,21 @@ var result = crypto.subtle.generateKey(algo, extractable, keyUsages);
 
 A {{jsxref("Promise")}} é rejeitada quando a seguinte exceção é encontrada:
 
-- [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) quando _`keyUsages`_ está vazia mas a key gerada simetricamente é do tipo `"secret"` ou `"private"` ou o componente privado gerado do par de key assimétrica está vazio.
+- [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) quando `keyUsages` está vazia mas a key gerada simetricamente é do tipo `"secret"` ou `"private"` ou o componente privado gerado do par de key assimétrica está vazio.
 
 ## Especificações
 
-| Especificação                                                                                                                            | Status                                   | Commentário        |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-generateKey', 'SubtleCrypto.generateKey()') }} | {{ Spec2('Web Crypto API') }} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.SubtleCrypto.generateKey")}}
+{{Compat}}
 
 ## Veja também
 
 - {{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.
 - {{domxref("SubtleCrypto")}}, a interface a qual ele pertence.
 
-### Dicionário:
+### Dicionário
 
 "Key" = "Chave"

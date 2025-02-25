@@ -1,12 +1,8 @@
 ---
 title: SVGTextElement
 slug: Web/API/SVGTextElement
-tags:
-  - SVG
-  - Text
-  - Текст
-translation_of: Web/API/SVGTextElement
 ---
+
 {{APIRef("SVG")}}
 
 Интерфейс **`SVGTextElement`** соответствует элементам {{SVGElement("text")}}.
@@ -23,12 +19,9 @@ _Этот интерфейс не реализует никаких конкре
 
 ## Характеристики
 
-| Спецификация                                                                                             | Статус                   | Коммент                                                                  |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------ |
-| {{SpecName("SVG2", "text.html#InterfaceSVGTextElement", "SVGTextElement")}}     | {{Spec2("SVG2")}} | Удалён реализованный интерфейс {{domxref("SVGTransformable")}}. |
-| {{SpecName("SVG1.1", "text.html#InterfaceSVGTextElement", "SVGTextElement")}} | {{Spec2("SVG1.1")}} | Начальное определение                                                    |
+{{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

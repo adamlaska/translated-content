@@ -25,13 +25,11 @@ TBD.
 
 ## 仕様書
 
-| 仕様                                                                                                                         | ステータス                               | 備考     |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('GamepadExtensions', '#gamepadhapticactuator-interface', 'GamepadHapticActuator')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.GamepadHapticActuator")}}
+{{Compat}}
 
 ## 関連情報
 

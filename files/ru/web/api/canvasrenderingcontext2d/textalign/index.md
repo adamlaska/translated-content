@@ -1,17 +1,11 @@
 ---
 title: CanvasRenderingContext2D.textAlign
 slug: Web/API/CanvasRenderingContext2D/textAlign
-tags:
-  - API
-  - Canvas
-  - Выравнивание
-  - Значение
-  - Текст
-translation_of: Web/API/CanvasRenderingContext2D/textAlign
 ---
+
 {{APIRef}}
 
-Свойство **`CanvasRenderingContext2D`\*\***`.textAlign`\*\* Canvas 2D API определяет текущее выравнивание текста, использованное при прорисовке. Но следует помнить, что выравнивание основывается на значении x метода {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}}. Так что, если значение `textAlign` равно `"center"`, то текст будет прорисован в `x - (width / 2)`.
+Свойство **`CanvasRenderingContext2D.textAlign`** Canvas 2D API определяет текущее выравнивание текста, использованное при прорисовке. Но следует помнить, что выравнивание основывается на значении x метода {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}}. Так что, если значение `textAlign` равно `"center"`, то текст будет прорисован в `x - (width / 2)`.
 
 ## Синтаксис
 
@@ -32,13 +26,13 @@ ctx.textAlign = "left" || "right" || "center" || "start" || "end";
 - `end`
   - : Выравнивание текста в конце строки (правостороннее выравнивание для языков, направленных слева направо, левостороннее - для направленных справа налево
 
-По умолчанию значение `textAlign `установлено как "start".
+По умолчанию значение `textAlign` установлено как "start".
 
 ## Примеры
 
 ### Использование значения `textAlign`
 
-Довольно простой сниппет использования значения `textAlign `для изменения выравнивания текста.
+Довольно простой сниппет использования значения `textAlign` для изменения выравнивания текста.
 
 #### HTML
 
@@ -49,12 +43,12 @@ ctx.textAlign = "left" || "right" || "center" || "start" || "end";
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-ctx.font = '48px serif';
-ctx.textAlign = 'left';
-ctx.strokeText('Hello world', 0, 100);
+ctx.font = "48px serif";
+ctx.textAlign = "left";
+ctx.strokeText("Hello world", 0, 100);
 ```
 
 Отредактируйте приведённый ниже код и посмотрите, как обновляется ваше обновление на холсте:
@@ -68,15 +62,16 @@ ctx.strokeText('Hello world', 0, 100);
 <textarea id="code" class="playable-code">
 ctx.font = '48px serif';
 ctx.textAlign = 'left';
-ctx.strokeText('Hello world', 0, 100);</textarea>
+ctx.strokeText('Hello world', 0, 100);</textarea
+>
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
 var code = textarea.value;
 
 function drawCanvas() {
@@ -84,17 +79,17 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawCanvas);
-window.addEventListener('load', drawCanvas);
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
 ```
 
 {{ EmbedLiveSample('Playable_code', 700, 360) }}

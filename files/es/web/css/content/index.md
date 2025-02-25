@@ -1,13 +1,11 @@
 ---
 title: content
 slug: Web/CSS/content
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/content
 ---
-<< [Volver](es/Gu%c3%ada_de_referencia_de_CSS)
+
+{{CSSRef}}
+
+<< [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
 
 ### Resumen
 
@@ -17,7 +15,7 @@ La propiedad `content` se usa junto con los pseudo-elementos `:before` y `:after
 
 En **CSS3**
 
-- Value: {{ mediawiki.external(' &lt;uri&gt; \',\' ') }}\</uri>\* {{ mediawiki.external(' normal | none | inhibit | &lt;content-list&gt; ') }}\</content-list>
+- Value: [ &lt;uri&gt; \',\' ]\</uri>\* [ normal | none | inhibit | &lt;content-list&gt; ]\</content-list>
 - Valor inicial: normal
 - Se aplica a: todos los elementos y a `::before, ::after, ::alternate, ::marker, ::line-marker, áreas de margin y @footnote`.
 - {{ Cssxref("inheritance", "Valor heredado") }}: no
@@ -55,11 +53,10 @@ content: attr(alt)
 
 ### Ver también
 
-[(CSS2 en)](http://www.w3.org/TR/REC-CSS2/generate.html#content)
-[(CSS2 1 en)](http://www.w3.org/TR/CSS21/generate.html#content)
-[(CSS3 en)](http://www.w3.org/TR/css3-content/#inserting3)
+[(CSS2 en)](https://www.w3.org/TR/REC-CSS2/generate.html#content)
+[(CSS2 1 en)](https://www.w3.org/TR/CSS21/generate.html#content)
+[(CSS3 en)](https://www.w3.org/TR/css3-content/#inserting3)
 
 Categorías
 
 Interwiki Languages
-

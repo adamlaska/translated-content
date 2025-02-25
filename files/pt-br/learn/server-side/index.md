@@ -1,19 +1,8 @@
 ---
 title: Programação de site do lado do servidor
 slug: Learn/Server-side
-tags:
-  - Beginner
-  - CodingScripting
-  - Intro
-  - Landing
-  - Learn
-  - NeedsTranslation
-  - Server
-  - Server-side programming
-  - Topic
-  - TopicStub
-translation_of: Learn/Server-side
 ---
+
 {{LearnSidebar}}
 
 O tópico de _**Websites Dinâmicos - Programação do lado do servidor**_ é uma série de módulos que mostram como criar sites dinâmicos; sites que fornecem informações personalizadas em resposta a solicitações HTTP. Os módulos fornecem uma introdução genérica à programação do lado do servidor, juntamente com guias específicos de nível iniciante sobre como usar os frameworks web Django (Python) e Express (Node.js / JavaScript) para criar aplicativos básicos.
@@ -30,9 +19,9 @@ Um conhecimento básico de conceitos de programação (ou de uma linguagem de pr
 
 Você precisará entender "como a web funciona". Recomendamos que você leia primeiro os seguintes tópicos:
 
-- [O que é um servidor web?](/pt-BR/docs/Learn/Common_questions/What_is_a_web_server)
-- [Qual software eu preciso para construir um website?](/pt-BR/docs/Learn/Common_questions/What_software_do_I_need)
-- [Como você faz o upload de arquivos para um servidor web?](/pt-BR/docs/Learn/Common_questions/Upload_files_to_a_web_server)
+- [O que é um servidor web?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [Qual software eu preciso para construir um website?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- [Como você faz o upload de arquivos para um servidor web?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
 
 Com essa compreensão básica, você estará pronto para percorrer os módulos desta seção.
 

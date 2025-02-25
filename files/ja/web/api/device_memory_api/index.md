@@ -25,19 +25,17 @@ var RAM = navigator.deviceMemory;
 
 ## 仕様書
 
-| 仕様書                            | 状態                               | 備考             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("Device Memory")}} | {{Spec2("Device Memory")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
 ### JavaScript インターフェイス
 
-{{Compat("api.Navigator.deviceMemory")}}
+{{Compat}}
 
 ### クライアントヒント拡張機能
 
-{{Compat("http.headers.Device-Memory")}}
+{{Compat}}
 
 ## 関連情報
 

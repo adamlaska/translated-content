@@ -1,11 +1,8 @@
 ---
 title: Deprecated and obsolete features
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
-tags:
-  - Depreciado
-  - Obsoleto
-translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 ---
+
 {{JsSidebar("More")}}
 
 Esta página lista funcionalidades do JavaScript que foram descontinuadas (ou seja, continuam disponíveis mas têm remoção planejada) e obsoletas (ou seja, não estão mais disponíveis).
@@ -18,30 +15,30 @@ Estas _features_ descontinuadas ainda podem ser usadas, mas com cautela, porque 
 
 As propriedades a seguir foram descontinuadas. Isto não afeta o uso delas em {{jsxref("String.replace", "replacement strings", "", 1)}}:
 
-| Propriedade                                                      | Descrição                                                                                                                                                                |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{jsxref("RegExp.n", "$1-$9")}}                         | Encontra _substrings_ dentro de parênteses. **Atenção:** Usar estas propriedades pode resultar em problemas, porque extensões do navegador podem modifica-las. Evite-as! |
-| {{jsxref("RegExp.input", "$_")}}                     | Ver `input`.                                                                                                                                                             |
-| {{jsxref("RegExp.multiline", "$*")}}                 | Ver `multiline`.                                                                                                                                                         |
-| {{jsxref("RegExp.lastMatch", "$&amp;")}}             | Ver `lastMatch`.                                                                                                                                                         |
-| {{jsxref("RegExp.lastParen", "$+")}}                 | Ver `lastParen`.                                                                                                                                                         |
-| {{jsxref("RegExp.leftContext", "$`")}}             | Ver `leftContext`.                                                                                                                                                       |
-| {{jsxref("RegExp.rightContext", "$'")}}             | Ver `rightContext`.                                                                                                                                                      |
-| {{jsxref("RegExp.input", "input")}}                 | A string encontrada por uma expressão regular.                                                                                                                           |
-| {{jsxref("RegExp.lastMatch", "lastMatch")}}         | Os últimos caracteres encontrados.                                                                                                                                       |
-| {{jsxref("RegExp.lastParen", "lastParen")}}         | A última _substring_ entre parênteses que foi encontrada.                                                                                                                |
-| {{jsxref("RegExp.leftContext", "leftContext")}} | A penúltima _substring_ encontrada.                                                                                                                                      |
+| Propriedade                                       | Descrição                                                                                                                                                                |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{jsxref("RegExp.n", "$1-$9")}}                   | Encontra _substrings_ dentro de parênteses. **Atenção:** Usar estas propriedades pode resultar em problemas, porque extensões do navegador podem modifica-las. Evite-as! |
+| {{jsxref("RegExp.input", "$_")}}                  | Ver `input`.                                                                                                                                                             |
+| {{jsxref("RegExp.multiline", "$*")}}              | Ver `multiline`.                                                                                                                                                         |
+| {{jsxref("RegExp.lastMatch", "$&amp;")}}          | Ver `lastMatch`.                                                                                                                                                         |
+| {{jsxref("RegExp.lastParen", "$+")}}              | Ver `lastParen`.                                                                                                                                                         |
+| {{jsxref("RegExp.leftContext", "$`")}}            | Ver `leftContext`.                                                                                                                                                       |
+| {{jsxref("RegExp.rightContext", "$'")}}           | Ver `rightContext`.                                                                                                                                                      |
+| {{jsxref("RegExp.input", "input")}}               | A string encontrada por uma expressão regular.                                                                                                                           |
+| {{jsxref("RegExp.lastMatch", "lastMatch")}}       | Os últimos caracteres encontrados.                                                                                                                                       |
+| {{jsxref("RegExp.lastParen", "lastParen")}}       | A última _substring_ entre parênteses que foi encontrada.                                                                                                                |
+| {{jsxref("RegExp.leftContext", "leftContext")}}   | A penúltima _substring_ encontrada.                                                                                                                                      |
 | {{jsxref("RegExp.rightContext", "rightContext")}} | A _substring_ que segue a que foi encontrada por último.                                                                                                                 |
 
 As propriedades a seguir pertencem a instâncias de um `RegExp`, não mais ao objeto `RegExp`:
 
-| Propriedades                                                 | Descrição                                                                                                                    |
-| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("RegExp.global", "global")}}             | Determina se deve ou não testar a expressão regular com todas as combinações possíveis em uma _string_ ou só com a primeira. |
+| Propriedades                                  | Descrição                                                                                                                    |
+| --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("RegExp.global", "global")}}         | Determina se deve ou não testar a expressão regular com todas as combinações possíveis em uma _string_ ou só com a primeira. |
 | {{jsxref("RegExp.ignoreCase", "ignoreCase")}} | Determina se deve ou não ignorar a capitalização ao tentar encontrar uma combinação em uma _string_.                         |
-| {{jsxref("RegExp.lastIndex", "lastIndex")}}     | O índince que aponta o começo da próxima combinação.                                                                         |
-| {{jsxref("RegExp.multiline", "multiline")}}     | Determina se deve ou não procurar por _strings_ em várias linhas diferentes.                                                 |
-| {{jsxref("RegExp.source", "source")}}             | O texto do padrão.                                                                                                           |
+| {{jsxref("RegExp.lastIndex", "lastIndex")}}   | O índince que aponta o começo da próxima combinação.                                                                         |
+| {{jsxref("RegExp.multiline", "multiline")}}   | Determina se deve ou não procurar por _strings_ em várias linhas diferentes.                                                 |
+| {{jsxref("RegExp.source", "source")}}         | O texto do padrão.                                                                                                           |
 
 ### Métodos RegExp
 
@@ -66,7 +63,7 @@ As propriedades a seguir pertencem a instâncias de um `RegExp`, não mais ao ob
 
 - {{jsxref("Object.watch", "watch")}} e {{jsxref("Object.unwatch", "unwatch")}} foram descontinuados. No lugar deles, use {{jsxref("Proxy")}} .
 - `__iterator__` foi descontinuado.
-- {{jsxref("Object.noSuchMethod", "__noSuchMethod__")}} foi descontinuado. Use {{jsxref("Proxy")}} em seu lugar.
+- `Object.prototype.__noSuchMethod__` foi descontinuado. Use {{jsxref("Proxy")}} em seu lugar.
 
 ### Métodos de data
 
@@ -83,10 +80,10 @@ As propriedades a seguir pertencem a instâncias de um `RegExp`, não mais ao ob
 - [Proxy.create](/pt-BR/docs/Archive/Web/Old_Proxy_API) e [Proxy.createFunction](/pt-BR/docs/Archive/Web/Old_Proxy_API) foram descontinuadas. Use {{jsxref("Proxy")}} no lugar delas.
 - As armadilhas a seguir ficaram obsoletas:
 
-  - `hasOwn` ({{bug(980565)}}, Firefox 33).
-  - `getEnumerablePropertyKeys` ({{bug(783829)}}, Firefox 37)
-  - `getOwnPropertyNames` ({{bug(1007334)}}, Firefox 33)
-  - `keys` ({{bug(1007334)}}, Firefox 33)
+  - `hasOwn` ([Erro do Firefox 980565](https://bugzil.la/980565), Firefox 33).
+  - `getEnumerablePropertyKeys` ([Erro do Firefox 783829](https://bugzil.la/783829), Firefox 37)
+  - `getOwnPropertyNames` ([Erro do Firefox 1007334](https://bugzil.la/1007334), Firefox 33)
+  - `keys` ([Erro do Firefox 1007334](https://bugzil.la/1007334), Firefox 33)
 
 ### let
 
@@ -109,26 +106,20 @@ Estas _features_ obsoletas foram totamente removidas do JavaScript e não podem 
 
 ### Object
 
-| Property                                                                                 | Description                                                                    |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| {{jsxref("Global_Objects/Object/count", "__count__")}}                 | Returns the number of enumerable properties directly on a user-defined object. |
-| {{jsxref("Global_Objects/Object/Parent", "__parent__")}}             | Points to an object's context.                                                 |
-| {{jsxref("Global_Objects/Object/eval", "Object.prototype.eval()")}} | Evaluates a string of JavaScript code in the context of the specified object.  |
-| {{jsxref("Object.observe()")}}                                                 | Asynchronously observing the changes to an object.                             |
-| {{jsxref("Object.unobserve()")}}                                             | Remove observers.                                                              |
-| {{jsxref("Object.getNotifier()")}}                                             | Creates an object that allows to synthetically trigger a change.               |
+- The [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors are deprecated. Use [`Object.getPrototypeOf`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf) and [`Object.setPrototypeOf`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) instead. This does not apply to the `__proto__` literal key in object literals.
+- The [`Object.prototype.__defineGetter__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), [`Object.prototype.__defineSetter__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__), [`Object.prototype.__lookupGetter__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__), and [`Object.prototype.__lookupSetter__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) methods are deprecated. Use [`Object.getOwnPropertyDescriptor`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) and [`Object.defineProperty`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) instead.
 
 ### Function
 
-| Property                                                             | Description                 |
-| -------------------------------------------------------------------- | --------------------------- |
+| Property                                             | Description                 |
+| ---------------------------------------------------- | --------------------------- |
 | {{jsxref("Global_Objects/Function/arity", "arity")}} | Number of formal arguments. |
 
 ### Array
 
-| Property                                 | Description                                 |
-| ---------------------------------------- | ------------------------------------------- |
-| {{jsxref("Array.observe()")}} | Asynchronously observing changes to Arrays. |
+| Property                        | Description                                 |
+| ------------------------------- | ------------------------------------------- |
+| {{jsxref("Array.observe()")}}   | Asynchronously observing changes to Arrays. |
 | {{jsxref("Array.unobserve()")}} | Remove observers.                           |
 
 ### Number

@@ -1,12 +1,8 @@
 ---
 title: column-span
 slug: Web/CSS/column-span
-tags:
-  - CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/column-span
 ---
+
 {{CSSRef}}
 
 La propiedad **`column-span`** [CSS](/es/docs/Web/CSS) hace posible que un elemento se extienda sobre todas las columnas cuando su valor se establece a `all`.
@@ -50,9 +46,10 @@ En este ejemplo, la cabecera se expande sobre todas las columnas del artículo.
 ```html
 <article>
   <h2>My Very Special Columns</h2>
-  <p>This is a bunch of text split into three columns
-     using the CSS `columns` property. The text
-     is equally distributed over the columns.</p>
+  <p>
+    This is a bunch of text split into three columns using the CSS `columns`
+    property. The text is equally distributed over the columns.
+  </p>
 </article>
 ```
 
@@ -74,12 +71,8 @@ h2 {
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                               | Comentario          |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('CSS3 Multicol', '#column-span', 'column-span')}} | {{Spec2('CSS3 Multicol')}} | Definición inicial. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.column-span")}}
+{{Compat}}

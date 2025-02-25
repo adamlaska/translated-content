@@ -1,13 +1,8 @@
 ---
 title: border-image-width
 slug: Web/CSS/border-image-width
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/border-image-width
 ---
+
 {{CSSRef}}
 
 **`border-image-width`** [CSS](/ko/docs/Web/CSS) 속성은 요소 [테두리 이미지](/ko/docs/Web/CSS/border-image)의 너비를 설정합니다.
@@ -70,17 +65,20 @@ border-image-width: unset;
 
 다음 예제는 아래의 가로 90픽셀, 세로 90픽셀 이미지를 사용해 테두리 이미지를 생성합니다.
 
-![](https://mdn.mozillademos.org/files/10470/border.png)
+![](border.png)
 
 원본 이미지의 각 원은 가로 30픽셀, 세로 30픽셀입니다.
 
 ### HTML
 
 ```html
-<p>밤을 쉬이 봄이 무성할 릴케 듯합니다. 토끼, 써 이런 하나에 듯합니다. 이네들은 나는 패, 듯합니다.
-   나는 보고, 딴은 토끼, 이런 멀리 듯합니다. 청춘이 가을로 둘 버리었습니다. 걱정도 밤이 나는 애기
-   오는 언덕 경, 계십니다. 멀리 까닭이요, 나는 별빛이 듯합니다. 소녀들의 벌레는 걱정도 까닭이요,
-   북간도에 쓸쓸함과 오면 것은 어머님, 까닭입니다.</p>
+<p>
+  밤을 쉬이 봄이 무성할 릴케 듯합니다. 토끼, 써 이런 하나에 듯합니다. 이네들은
+  나는 패, 듯합니다. 나는 보고, 딴은 토끼, 이런 멀리 듯합니다. 청춘이 가을로 둘
+  버리었습니다. 걱정도 밤이 나는 애기 오는 언덕 경, 계십니다. 멀리 까닭이요,
+  나는 별빛이 듯합니다. 소녀들의 벌레는 걱정도 까닭이요, 북간도에 쓸쓸함과 오면
+  것은 어머님, 까닭입니다.
+</p>
 ```
 
 ### CSS
@@ -88,7 +86,7 @@ border-image-width: unset;
 ```css
 p {
   border: 20px solid;
-  border-image: url("https://mdn.mozillademos.org/files/10470/border.png") 30 round;
+  border-image: url("border.png") 30 round;
   border-image-width: 16px;
   padding: 40px;
 }

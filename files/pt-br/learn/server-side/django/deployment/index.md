@@ -1,16 +1,8 @@
 ---
-title: 'Tutorial Django Parte 11: Hospedando Django para produção'
+title: "Tutorial Django Parte 11: Hospedando Django para produção"
 slug: Learn/Server-side/Django/Deployment
-tags:
-  - Codificação de Scripts
-  - Deploy do django
-  - Fazendo deploy
-  - Iniciante
-  - django
-  - servidor web
-translation_of: Learn/Server-side/Django/Deployment
-original_slug: Learn/Server-side/Django/Hospedagem
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
 Agora que criou (e testou) um fantástico website de Biblioteca Local, vai querer instalá-lo em um servidor web público para que possa ser acessado pelo pessoal da biblioteca e membros através da Internet. Este artigo fornece uma visão geral de como poderá encontrar um servidor de hospedagem para instalar o seu web site, e o que precisa fazer para ter o seu site web pronto para produção.
@@ -69,7 +61,8 @@ O computador/servidor pode estar localizado em suas instalações e conectado à
 
 Esse tipo de hardware de computação/rede acessível remotamente é conhecido como _Infraestrutura como Serviço_ (IaaS). Muitos fornecedores de IaaS fornecem opções para pré-instalar um sistema operacional específico, no qual você deve instalar os outros componentes de seu ambiente de produção. Outros fornecedores permitem que você selecione ambientes com mais recursos, talvez incluindo uma configuração completa de Django e servidor web.
 
-> **Nota:** Ambientes pré-construídos podem tornar a configuração do seu site muito fácil porque reduzem a configuração, mas as opções disponíveis podem limitar você a um servidor desconhecido (ou outros componentes) e podem ser baseadas em uma versão mais antiga do sistema operacional. Freqüentemente, é melhor instalar você mesmo os componentes, para obter os que deseja e, quando precisar atualizar partes do sistema, tenha uma ideia de por onde começar!
+> [!NOTE]
+> Ambientes pré-construídos podem tornar a configuração do seu site muito fácil porque reduzem a configuração, mas as opções disponíveis podem limitar você a um servidor desconhecido (ou outros componentes) e podem ser baseadas em uma versão mais antiga do sistema operacional. Freqüentemente, é melhor instalar você mesmo os componentes, para obter os que deseja e, quando precisar atualizar partes do sistema, tenha uma ideia de por onde começar!
 
 Outros provedores de hospedagem oferecem suporte a Django como parte de uma oferta de _Plataforma como Serviço_ (PaaS). Nesse tipo de hospedagem, você não precisa se preocupar com a maior parte do seu ambiente de produção (servidor da web, servidor de aplicativos, balanceadores de carga), pois a plataforma host cuida disso para você (junto com a maior parte do que você precisa fazer para para dimensionar seu aplicativo). Isso torna a implantação muito fácil, porque você só precisa se concentrar em seu aplicativo da web e não em toda a outra infraestrutura de servidor.
 
@@ -107,7 +100,7 @@ O [esqueleto do site do Django](/pt-BR/docs/Learn/Server-side/Django/skeleton_we
 
 As configurações críticas que você deve verificar são:
 
-- `DEBUG`. Isso deve ser definido como `False` em produção (`DEBUG = False`). Isso impede que o rastreamento de depuração sensível/confidencial e as informações variáveis ​​sejam exibidas.
+- `DEBUG`. Isso deve ser definido como `False` em produção (`DEBUG = False`). Isso impede que o rastreamento de depuração sensível/confidencial e as informações variáveis sejam exibidas.
 - `SECRET_KEY`. Este é um grande valor aleatório usado para proteção contra CSRF etc. É importante que a chave usada na produção não esteja no controle de origem ou acessível fora do servidor de produção. Os documentos do Django sugerem que isso pode ser melhor carregado de uma variável de ambiente ou lido de um arquivo somente servidor.
 
   ```python
@@ -122,7 +115,7 @@ As configurações críticas que você deve verificar são:
       SECRET_KEY = f.read().strip()
   ```
 
-Vamos mudar o aplicativo LocalLibrary para que possamos ler nosso `SECRET_KEY` e `DEBUG` variáveis ​​de variáveis ​​de ambiente se forem definidas, mas caso contrário, use os valores padrão no arquivo de configuração.
+Vamos mudar o aplicativo LocalLibrary para que possamos ler nosso `SECRET_KEY` e `DEBUG` variáveis de variáveis de ambiente se forem definidas, mas caso contrário, use os valores padrão no arquivo de configuração.
 
 Abra **/locallibrary/settings.py**, desative o original `SECRET_KEY`configuração e adicione as novas linhas conforme mostrado abaixo em **negrito**. Durante o desenvolvimento, nenhuma variável de ambiente será especificada para a chave, então o valor padrão será usado (não importa qual chave você usa aqui, ou se a chave "vaza", porque você não a usará na produção).
 
@@ -141,7 +134,7 @@ Em seguida, comente o existente `DEBUG` configuração e adicione a nova linha m
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 ```
 
-O valor do `DEBUG` será `True` por padrão, mas será apenas `False` se o valor do `DJANGO_DEBUG` variável de ambiente é definida para `False`. Observe que as variáveis ​​de ambiente são strings e não tipos Python. Portanto, precisamos comparar strings. A única maneira de definir o `DEBUG` variável para `False` é realmente configurá-lo para a string `False`
+O valor do `DEBUG` será `True` por padrão, mas será apenas `False` se o valor do `DJANGO_DEBUG` variável de ambiente é definida para `False`. Observe que as variáveis de ambiente são strings e não tipos Python. Portanto, precisamos comparar strings. A única maneira de definir o `DEBUG` variável para `False` é realmente configurá-lo para a string `False`
 
 Você pode definir a variável de ambiente como False, emitindo o seguinte comando:
 
@@ -197,7 +190,8 @@ In order to get our application to work on Heroku we'll need to put our Django w
 
 Once we've done all that we can set up a Heroku account, get the Heroku client, and use it to install our website.
 
-> **Nota:** The instructions below reflect how to work with Heroku at time of writing. If Heroku significantly change their processes, you may wish to instead check their setup documents: [Getting Started on Heroku with Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction).
+> [!NOTE]
+> The instructions below reflect how to work with Heroku at time of writing. If Heroku significantly change their processes, you may wish to instead check their setup documents: [Getting Started on Heroku with Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction).
 
 That's all the overview you need in order to get started (see [How Heroku works](https://devcenter.heroku.com/articles/how-heroku-works) for a more comprehensive guide).
 
@@ -205,7 +199,8 @@ That's all the overview you need in order to get started (see [How Heroku works]
 
 Heroku is closely integrated with the **git** source code version control system, using it to upload/synchronise any changes you make to the live system. It does this by adding a new heroku "remote" repository named _heroku_ pointing to a repository for your source on the Heroku cloud. During development you use git to store changes on your "master" repository. When you want to deploy your site, you sync your changes to the Heroku repository.
 
-> **Nota:** If you're used to following good software development practices you are probably already using git or some other SCM system. If you already have a git repository, then you can skip this step.
+> [!NOTE]
+> If you're used to following good software development practices you are probably already using git or some other SCM system. If you already have a git repository, then you can skip this step.
 
 There are a lot of ways to work with git, but one of the easiest is to first set up an account on [Github](https://github.com/), create the repository there, and then sync to it locally:
 
@@ -213,10 +208,10 @@ There are a lot of ways to work with git, but one of the easiest is to first set
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
 3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
 
-    - Enter a new repository name (e.g. _django_local_library_), and description (e.g. "Local Library website written in Django".
-    - Choose **Python** in the _Add .gitignore_ selection list.
-    - Choose your preferred license in the _Add license_ selection list.
-    - Check **Initialize this repository with a README**.
+   - Enter a new repository name (e.g. _django_local_library_), and description (e.g. "Local Library website written in Django".
+   - Choose **Python** in the _Add .gitignore_ selection list.
+   - Choose your preferred license in the _Add license_ selection list.
+   - Check **Initialize this repository with a README**.
 
 4. Press **Create repository**.
 5. Click the green "**Clone or download**" button on your new repo page.
@@ -227,65 +222,65 @@ Now that the repository ("repo") is created we are going to want to clone it on 
 1. Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
 2. Open a command prompt/terminal and clone your repository using the URL you copied above:
 
-    ```bash
-    git clone https://github.com/<your_git_user_id>/django_local_library.git
-    ```
+   ```bash
+   git clone https://github.com/<your_git_user_id>/django_local_library.git
+   ```
 
-    This will create the repository in a new folder in the current working directory.
+   This will create the repository in a new folder in the current working directory.
 
 3. Navigate into the new repo.
 
-    ```bash
-    cd django_local_library
-    ```
+   ```bash
+   cd django_local_library
+   ```
 
 The final steps are to copy your application into this local project directory and then add (or "push", in git lingo) the local repository to your remote Github repository:
 
 1. Copy your Django application into this folder (all the files at the same level as **manage.py** and below, **not** their containing locallibrary folder).
 2. Open the **.gitignore** file, copy the following lines into the bottom of it, and then save (this file is used to identify files that should not be uploaded to git by default).
 
-    ```
-    # Text backup files
-    *.bak
+   ```
+   # Text backup files
+   *.bak
 
-    # Database
-    *.sqlite3
-    ```
+   # Database
+   *.sqlite3
+   ```
 
 3. Open a command prompt/terminal and use the `add` command to add all files to git. This adds the files which aren't ignored by the **.gitignore** file to the "staging area".
 
-    ```bash
-    git add -A
-    ```
+   ```bash
+   git add -A
+   ```
 
 4. Use the `status` command to check that all files you are about to `commit` are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
 
-    ```
-    > git status
-    On branch master
-    Your branch is up-to-date with 'origin/master'.
-    Changes to be committed:
-      (use "git reset HEAD <file>..." to unstage)
+   ```
+   > git status
+   On branch master
+   Your branch is up-to-date with 'origin/master'.
+   Changes to be committed:
+     (use "git reset HEAD <file>..." to unstage)
 
-            modified:   .gitignore
-            new file:   catalog/__init__.py
-            ...
-            new file:   catalog/migrations/0001_initial.py
-            ...
-            new file:   templates/registration/password_reset_form.html
-    ```
+           modified:   .gitignore
+           new file:   catalog/__init__.py
+           ...
+           new file:   catalog/migrations/0001_initial.py
+           ...
+           new file:   templates/registration/password_reset_form.html
+   ```
 
 5. When you're satisfied, `commit` the files to your local repository. This is essentially equivalent to signing off on the changes and making them an official part of the local repository.
 
-    ```bash
-    git commit -m "First version of application moved into github"
-    ```
+   ```bash
+   git commit -m "First version of application moved into github"
+   ```
 
 6. At this point, the remote repository has not been changed. Synchronise (`push`) your local repository to the remote Github repository using the following command:
 
-    ```
-    git push origin master
-    ```
+   ```
+   git push origin master
+   ```
 
 When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.
 
@@ -317,7 +312,8 @@ While we won't need _Gunicorn_ to serve our LocalLibrary application during deve
 
 Install _Gunicorn_ locally on the command line using _pip_ (which we installed when [setting up the development environment](/pt-BR/docs/Learn/Server-side/Django/development_environment)):
 
-> **Nota:** Note: Make sure that you're in your Python virtual environment (use the `workon [name-of-virtual-environment]` command) before you install _Gunicorn_ and further modules with _pip_, or you might experience problems with importing these modules in your **/locallibrary/settings.py** file in the later sections.
+> [!NOTE]
+> Note: Make sure that you're in your Python virtual environment (use the `workon [name-of-virtual-environment]` command) before you install _Gunicorn_ and further modules with _pip_, or you might experience problems with importing these modules in your **/locallibrary/settings.py** file in the later sections.
 
 ```bash
 pip3 install gunicorn
@@ -329,7 +325,7 @@ We can't use the default SQLite database on Heroku because it is file-based, and
 
 The Heroku mechanism for handling this situation is to use a [database add-on](https://elements.heroku.com/addons#data-stores) and configure the web application using information from an environment [configuration variable](https://devcenter.heroku.com/articles/config-vars), set by the add-on. There are quite a lot of database options, but we'll use the [hobby tier](https://devcenter.heroku.com/articles/heroku-postgres-plans#plan-tiers) of the _Heroku postgres_ database as this is free, supported by Django, and automatically added to our new Heroku apps when using the free hobby dyno plan tier.
 
-The database connection information is supplied to the web dyno using a configuration variable named `DATABASE_URL`. Rather than hard-coding this information into Django, Heroku recommends that developers use the [dj-database-url](https://warehouse.python.org/project/dj-database-url/) package to parse the `DATABASE_URL` environment variable and automatically convert it to Django’s desired configuration format. In addition to installing the _dj-database-url_ package we'll also need to install [psycopg2](http://initd.org/psycopg/), as Django needs this to interact with Postgres databases.
+The database connection information is supplied to the web dyno using a configuration variable named `DATABASE_URL`. Rather than hard-coding this information into Django, Heroku recommends that developers use the [dj-database-url](https://warehouse.python.org/project/dj-database-url/) package to parse the `DATABASE_URL` environment variable and automatically convert it to Django's desired configuration format. In addition to installing the _dj-database-url_ package we'll also need to install [psycopg2](http://initd.org/psycopg/), as Django needs this to interact with Postgres databases.
 
 ##### dj-database-url (Django database configuration from environment variable)
 
@@ -350,7 +346,7 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 ```
 
-> **Nota:**
+> [!NOTE]
 >
 > - We'll still be using SQLite during development because the `DATABASE_URL` environment variable will not be set on our development computer.
 > - The value `conn_max_age=500` makes the connection persistent, which is far more efficient than recreating the connection on every request cycle. However, this is optional and can be removed if needed.
@@ -374,7 +370,8 @@ However, you don't need to do this — you don't need PostgreSQL active on the l
 
 During development we used Django and the Django development web server to serve our static files (CSS, JavaScript, etc.). In a production environment we instead typically serve static files from a content delivery network (CDN) or the web server.
 
-> **Nota:** Serving static files via Django/web application is inefficient because the requests have to pass through unnecessary additional code (Django) rather than being handled directly by the web server or a completely separate CDN. While this doesn't matter for local use during development, it would have a significant performance impact if we were to use the same approach in production.
+> [!NOTE]
+> Serving static files via Django/web application is inefficient because the requests have to pass through unnecessary additional code (Django) rather than being handled directly by the web server or a completely separate CDN. While this doesn't matter for local use during development, it would have a significant performance impact if we were to use the same approach in production.
 
 To make it easy to host static files separately from the Django web application, Django provides the _collectstatic_ tool to collect these files for deployment (there is a settings variable that defines where the files should be collected when _collectstatic_ is run). Django templates refer to the hosting location of the static files relative to a settings variable (`STATIC_URL`), so that this can be changed if the static files are moved to another host/server.
 
@@ -462,7 +459,8 @@ psycopg2-binary==2.7.7
 whitenoise==4.1.2
 ```
 
-> **Nota:** Make sure that a **psycopg2** line like the one above is present! Even if you didn't install this locally then you should still add it to **requirements.txt**.
+> [!NOTE]
+> Make sure that a **psycopg2** line like the one above is present! Even if you didn't install this locally then you should still add it to **requirements.txt**.
 
 #### Runtime
 
@@ -472,7 +470,8 @@ The **runtime.txt** file, if defined, tells Heroku which programming language to
 python-3.7.0
 ```
 
-> **Nota:** Heroku only supports a small number of [Python runtimes](https://devcenter.heroku.com/articles/python-support#supported-python-runtimes) (at time of writing, this includes the one above). Heroku will use a supported runtime irrespective of the value specified in this file.
+> [!NOTE]
+> Heroku only supports a small number of [Python runtimes](https://devcenter.heroku.com/articles/python-support#supported-python-runtimes) (at time of writing, this includes the one above). Heroku will use a supported runtime irrespective of the value specified in this file.
 
 #### Re-test and save changes to Github
 
@@ -520,7 +519,8 @@ To create the app we run the "create" command in the root directory of our repos
 heroku create
 ```
 
-> **Nota:** You can name the remote if you like by specifying a value after "create". If you don't then you'll get a random name. The name is used in the default URL.
+> [!NOTE]
+> You can name the remote if you like by specifying a value after "create". If you don't then you'll get a random name. The name is used in the default URL.
 
 We can then push our app to the Heroku repository as shown below. This will upload the app, package it in a dyno, run collectstatic, and start the site.
 
@@ -580,9 +580,10 @@ You can check out the configuration variables for the site using the `heroku con
 DATABASE_URL: postgres://uzfnbcyxidzgrl:j2jkUFDF6OGGqxkgg7Hk3ilbZI@ec2-54-243-201-144.compute-1.amazonaws.com:5432/dbftm4qgh3kda3
 ```
 
-If you recall from the section on [getting the website ready to publish](#Getting_your_website_ready_to_publish), we have to set environment variables for `DJANGO_SECRET_KEY` and `DJANGO_DEBUG`. Let's do this now.
+If you recall from the section on [getting the website ready to publish](#getting_your_website_ready_to_publish), we have to set environment variables for `DJANGO_SECRET_KEY` and `DJANGO_DEBUG`. Let's do this now.
 
-> **Nota:** The secret key needs to be really secret! One way to generate a new key is to use the [Django Secret Key Generator](https://www.miniwebtool.com/django-secret-key-generator/).
+> [!NOTE]
+> The secret key needs to be really secret! One way to generate a new key is to use the [Django Secret Key Generator](https://www.miniwebtool.com/django-secret-key-generator/).
 
 We set `DJANGO_SECRET_KEY` using the `config:set` command (as shown below). Remember to use your own secret key!
 
@@ -618,7 +619,8 @@ git push origin master
 git push heroku master
 ```
 
-> **Nota:** After the site update to Heroku completes, enter a URL that does not exist (e.g. **/catalog/doesnotexist/**). Previously this would have displayed a detailed debug page, but now you should just see a simple "Not Found" page.
+> [!NOTE]
+> After the site update to Heroku completes, enter a URL that does not exist (e.g. **/catalog/doesnotexist/**). Previously this would have displayed a detailed debug page, but now you should just see a simple "Not Found" page.
 
 ### Debugging
 
@@ -676,21 +678,3 @@ The next step is to read our last few articles, and then complete the assessment
   - [Other Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/pt-BR/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/pt-BR/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/pt-BR/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/pt-BR/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/pt-BR/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/pt-BR/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/pt-BR/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/pt-BR/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/pt-BR/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/pt-BR/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog)

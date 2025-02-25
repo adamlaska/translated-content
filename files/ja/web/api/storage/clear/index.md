@@ -1,6 +1,9 @@
 ---
-title: Storage.clear()
+title: "Storage: clear() メソッド"
+short-title: clear()
 slug: Web/API/Storage/clear
+l10n:
+  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
 {{APIRef("Web Storage API")}}
@@ -9,40 +12,43 @@ slug: Web/API/Storage/clear
 
 ## 構文
 
+```js-nolint
+clear()
 ```
-storage.clear();
-```
+
+### 引数
+
+なし。
 
 ### 返値
 
-{{jsxref("undefined")}} です。
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
-以下の関数はローカルストレージに 3 個のデータアイテムを作成して、 `clear()` を使用してすべて削除します。
+以下の関数はローカルストレージに 3 個のデータアイテムを作成した後、 `clear()` を使用してすべて削除します。
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'miGato.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "miGato.png");
 
   localStorage.clear();
 }
 ```
 
-> **メモ:** 実際の例としては、 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> [!NOTE]
+> 現実世界の例としては、 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-clear', 'Storage.clear')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Storage.clear")}}
+{{Compat}}
 
 ## 関連情報
 
-[Web Storage API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

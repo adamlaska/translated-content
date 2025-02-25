@@ -1,21 +1,23 @@
 ---
 title: String.prototype.toLocaleUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
-tags:
-  - Internacionalização
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - toLocaleUpperCase()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 ---
+
 {{JSRef}}
 
 O método `toLocaleUpperCase()` retorna o valor da string em maiúsculas, de acordo com qualquer mapeamento de caixa de texto específico da localidade.
 
-{{EmbedInteractiveExample("pages/js/string-tolocaleuppercase.html")}}
+{{InteractiveExample("JavaScript Demo: String.toLocaleUpperCase()")}}
+
+```js interactive-example
+const city = "istanbul";
+
+console.log(city.toLocaleUpperCase("en-US"));
+// Expected output: "ISTANBUL"
+
+console.log(city.toLocaleUpperCase("TR"));
+// Expected output: "İSTANBUL"
+```
 
 ## Sintaxe
 
@@ -51,26 +53,23 @@ Observe também que a conversão não é necessariamente um mapeamento de caract
 ### Usando `toLocaleUpperCase()`
 
 ```js
-'alfabeto'.toLocaleUpperCase(); // 'ALFABETO'
+"alfabeto".toLocaleUpperCase(); // 'ALFABETO'
 
-'Gesäß'.toLocaleUpperCase(); // 'GESÄSS'
+"Gesäß".toLocaleUpperCase(); // 'GESÄSS'
 
-'i\u0307'.toLocaleUpperCase('lt-LT'); // 'I'
+"i\u0307".toLocaleUpperCase("lt-LT"); // 'I'
 
-let locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
-'i\u0307'.toLocaleUpperCase(locales); // 'I'
+let locales = ["lt", "LT", "lt-LT", "lt-u-co-phonebk", "lt-x-lietuva"];
+"i\u0307".toLocaleUpperCase(locales); // 'I'
 ```
 
 ## Especificações
 
-| Especificação                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}}     |
-| {{SpecName('ES Int Draft', '#sup-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.toLocaleUpperCase")}}
+{{Compat}}
 
 ## Veja também
 

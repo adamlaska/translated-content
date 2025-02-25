@@ -1,29 +1,41 @@
 ---
 title: String.prototype.trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
-original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimLeft
 ---
 
-{{JSRef}}**`trimStart()` **方法从字符串的开头删除空格。`trimLeft()` 是此方法的别名。{{EmbedInteractiveExample("pages/js/string-trimstart.html")}}
+{{JSRef}}
+
+{{jsxref("String")}} 的 **`trimStart()`** 方法会从字符串的开头移除空白字符，并返回一个新的字符串，而不会修改原始字符串。`trimLeft()` 是该方法的别名。
+
+{{InteractiveExample("JavaScript Demo: String.trimStart()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trimStart());
+// Expected output: "Hello world!   ";
+```
 
 ## 语法
 
-```plain
-str.trimStart();
-str.trimLeft();
+```js-nolint
+trimStart()
+
+trimLeft()
 ```
 
 ### 返回值
 
-一个新字符串，表示从其开头（左端）除去空格的调用字符串。
+一个新的字符串，表示从 `str` 的开头（左侧）去除空白字符后的结果。空白字符定义为[空白符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#空白符)加上[行终止符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#行终止符)。
 
-## 描述
-
-`trimStart()` / `trimLeft()` 方法移除原字符串左端的连续空白符并返回一个新字符串，并不会直接修改原字符串本身。
+如果 `str` 的开头没有空白字符，仍然会返回一个新的字符串（实际上是 `str` 的副本）。
 
 ### 别名
 
-为了与 {{jsxref("String.prototype.padStart")}} 等函数保持一致，标准方法名称为`trimStart`。但是，出于 Web 兼容性原因，`trimLeft` 仍然是 `trimStart` 的别名。在某些引擎中，这意味着：
+在 {{jsxref("String/trim", "trim()")}} 标准化后，引擎也实现了非标准的 `trimLeft` 方法。然而，为了与 {{jsxref("String/padStart", "padStart()")}} 保持一致，在该方法标准化时，选择了 `trimStart` 作为其名称。出于 Web 兼容性的考虑，`trimLeft` 仍然作为 `trimStart` 的别名，它们引用的是完全相同的函数对象。在某些引擎中，这意味着：
 
 ```js
 String.prototype.trimLeft.name === "trimStart";
@@ -31,69 +43,30 @@ String.prototype.trimLeft.name === "trimStart";
 
 ## 示例
 
-### 使用 `trimStart()`
+### 使用 trimStart()
 
-下面的例子输出了小写的字符串 `"foo "`：
+下面的示例从 `str` 的开头去除空白字符，但不会去除结尾的空白字符。
 
 ```js
-var str = "   foo  ";
+let str = "   foo  ";
 
 console.log(str.length); // 8
 
-str = str.trimStart()    // 等同于 str = str.trimLeft();
+str = str.trimStart();
 console.log(str.length); // 5
-console.log(str);        // "foo  "
+console.log(str); // 'foo  '
 ```
 
 ## 规范
 
-| 规范                                                                                                                                                        | 状态    | 备注                          |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ----------------------------- |
-| [`String.prototype.{trimStart,trimEnd}`](https://github.com/tc39/proposal-string-left-right-trim/#stringprototypetrimstart--stringprototypetrimend)proposal | Stage 4 | Expected to be part of ES2019 |
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## Polyfill
-
-```js
-// https://github.com/FabioVergani/js-Polyfill_String-trimStart
-
-(function(w){
-    var String=w.String, Proto=String.prototype;
-
-    (function(o,p){
-        if(p in o?o[p]?false:true:true){
-            var r=/^\s+/;
-            o[p]=o.trimLeft||function(){
-                return this.replace(r,'')
-            }
-        }
-    })(Proto,'trimStart');
-
-})(window);
-
-
-/*
-ES6:
-(w=>{
-    const String=w.String, Proto=String.prototype;
-
-    ((o,p)=>{
-        if(p in o?o[p]?false:true:true){
-            const r=/^\s+/;
-            o[p]=o.trimLeft||function(){
-                return this.replace(r,'')
-            }
-        }
-    })(Proto,'trimStart');
-
-})(window);
-*/
-```
-
 ## 参见
 
+- [`core-js` 中 `String.prototype.trimStart` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.trim()")}}
 - {{jsxref("String.prototype.trimEnd()")}}

@@ -1,18 +1,8 @@
 ---
 title: EffectTiming
 slug: Web/API/KeyframeEffect/KeyframeEffect
-tags:
-  - API
-  - Animation
-  - Dictionary
-  - EffectTiming
-  - Experimental
-  - animate
-  - web animation
-  - web animation api
-translation_of: Web/API/EffectTiming
-original_slug: Web/API/EffectTiming
 ---
+
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
 Словарь **`EffectTiming`**, входящий в состав [Web Animations API](/ru/docs/Web/API/Web_Animations_API), используется в {{domxref("Element.animate()")}}, {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly", "KeyframeEffectReadOnly()")}}, и {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}} для описания временных свойств анимационных эффектов. Все эти свойства необязательные, хотя без установки `duration` анимация не будет воспроизводиться.
@@ -42,7 +32,7 @@ original_slug: Web/API/EffectTiming
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

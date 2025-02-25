@@ -1,35 +1,30 @@
 ---
 title: Referência JavaScript
 slug: Web/JavaScript/Reference
-tags:
-  - JavaScript
-  - Referencia
-translation_of: Web/JavaScript/Reference
 ---
-## [Sobre essa Referência](/pt-BR/docs/JavaScript/Reference/About)
 
-{{page("/pt-BR/docs/JavaScript/Reference/About")}}
+## [Sobre essa Referência](/pt-BR/docs/conflicting/Web/JavaScript/Reference)
 
-## [Objetos Globais](/pt-BR/docs/JavaScript/Reference/Global_Objects)
+<!-- TODO: page macro not supported: page("/pt-BR/docs/JavaScript/Reference/About") -->
 
-{{page('/pt-BR/docs/JavaScript/Reference/Global_Objects', 'Standard global objects (by category)')}}
+## [Objetos Globais](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects)
 
-## [Funções e escopo de função](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope)
+<!-- TODO: page macro not supported: page('/pt-BR/docs/JavaScript/Reference/Global_Objects', 'Standard global objects (by category)') -->
 
-- [`argumentos`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments)
-- [Modo Strict](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
+## [Funções e escopo de função](/pt-BR/docs/Web/JavaScript/Reference/Functions)
 
-## [Declarações](/pt-BR/docs/JavaScript/Reference/Statements)
+- [`argumentos`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)
+- [Modo Strict](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)
 
-{{page('/pt-BR/docs/JavaScript/Reference/Statements')}}
+## [Declarações](/pt-BR/docs/Web/JavaScript/Reference/Statements)
 
-## [Operadores e outras palavras-chave](/pt-BR/docs/JavaScript/Reference/Operators)
+<!-- TODO: page macro not supported: page('/pt-BR/docs/JavaScript/Reference/Statements') -->
 
-{{page('/pt-BR/docs/JavaScript/Reference/Operators')}}
+## [Operadores e outras palavras-chave](/pt-BR/docs/Web/JavaScript/Reference/Operators)
 
 ## Comentários
 
-- [Comentários de código](/pt-BR/docs/JavaScript/Reference/Code_comments) (`//` and `/* */`)
+- [Comentários de código](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Comments) (`//` and `/* */`)
 
 ## [E4X (extensão)](/pt-BR/docs/E4X){{deprecated_inline}}
 
@@ -48,6 +43,6 @@ Construtores Globais:
 - [XML()](/pt-BR/docs/E4X:XML)
 - [XMLList()](/pt-BR/docs/E4X:XMLList)
 
-## [Apêndice A - Palavras Reservadas](/pt-BR/docs/JavaScript/Reference/Reserved_Words)
+## [Apêndice A - Palavras Reservadas](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords)
 
-## [Apêndice B - Funcionalidades Obsoletas](/pt-BR/docs/JavaScript/Reference/Deprecated_and_obsolete_features)
+## [Apêndice B - Funcionalidades Obsoletas](/pt-BR/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)

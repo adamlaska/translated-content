@@ -1,8 +1,8 @@
 ---
 title: Navigator.cookieEnabled
 slug: Web/API/Navigator/cookieEnabled
-translation_of: Web/API/Navigator/cookieEnabled
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 `navigator.cookieEnabled` retorna um valor _Booleano_ que indica quando _cookies_ estão habilitados ou não. A propriedade é de apenas leitura.
@@ -13,7 +13,7 @@ translation_of: Web/API/Navigator/cookieEnabled
 var cookieEnabled = navigator.cookieEnabled;
 ```
 
-- `cookieEnabled` é um [Booleano](/pt-BR/docs/Glossario/Booleano): `true` ou `false`.
+- `cookieEnabled` é um [Booleano](/pt-BR/docs/Glossary/Boolean): `true` ou `false`.
 
 ## Exemplo
 
@@ -25,10 +25,8 @@ if (!navigator.cookieEnabled) {
 
 ## Especificações
 
-| Especificação                                                                                                                            | Status                           | Comentário         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("HTML WHATWG", "webappapis.html#dom-navigator-cookieenabled", "Navigator.cookieEnabled")}} | {{Spec2("HTML WHATWG")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Navigator.cookieEnabled")}}
+{{Compat}}

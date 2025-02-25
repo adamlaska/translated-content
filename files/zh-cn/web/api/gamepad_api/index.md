@@ -23,7 +23,7 @@ slug: Web/API/Gamepad_API
 - {{domxref("GamepadPose")}}
   - : 表示控制器的位置方向（例如，在 3D 空间中的位置和方向）于 [WebVR](/zh-CN/docs/Web/API/WebVR_API) 控制器中。
 
-另请参阅 [Gamepad 接口扩展](/zh-CN/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad)，来获取上方的功能的相关信息。
+另请参阅 [Gamepad 接口扩展](/zh-CN/docs/Web/API/Gamepad#experimental_extensions_to_gamepad)，来获取上方的功能的相关信息。
 
 ### 其他接口扩展
 
@@ -35,9 +35,9 @@ slug: Web/API/Gamepad_API
 #### Window 事件
 
 - {{domxref("Window.ongamepadconnected")}}
-  - : 表示当控制器连接时（当{{event('gamepadconnected')}} 事件触发时）运行的处理程序。
+  - : 表示当控制器连接时（当[`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 事件触发时）运行的处理程序。
 - {{domxref("Window.ongamepaddisconnected")}}
-  - : 表示当控制器断开连接时（当{{event('gamepaddisconnected')}} 事件触发时）运行的处理程序。
+  - : 表示当控制器断开连接时（当[`gamepaddisconnected`](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event) 事件触发时）运行的处理程序。
 
 ## 教程与指南
 
@@ -52,7 +52,7 @@ slug: Web/API/Gamepad_API
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [The Gamepad API](https://hacks.mozilla.org/2013/12/the-gamepad-api/) by Ted Mielczarek and Robert Nyman
 - [简单的 API 演示页面](http://luser.github.io/gamepadtest/) ([源码](https://github.com/luser/gamepadtest))

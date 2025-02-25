@@ -1,8 +1,8 @@
 ---
 title: Animation.currentTime
 slug: Web/API/Animation/currentTime
-translation_of: Web/API/Animation/currentTime
 ---
+
 {{APIRef("Web Animations")}}{{SeeCompatTable}}
 
 A propriedade **`Animation.currentTime`** da [Web Animations API](/pt-BR/docs/Web/API/Web_Animations_API) retorna e altera o tempo atual da animação em milésimos de segundos, seja estando em execução ou pausada.
@@ -22,7 +22,7 @@ Um número que representará no tempo atual da animação em milésimos de segun
 
 ## Examples
 
-No [jogo Drink Me/Eat Me](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010), O tamanho da Alice é animado e pode crescer ou diminuir. No início do jogo, o tamanho dela foi colocado entre os dois extremos do animation's `currentTime` no meio do [`KeyframeEffect`'s duration](/pt-BR/docs/Web/API/Web_Animations_API/Animation_timing_options), desta maneira:
+No [jogo Drink Me/Eat Me](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010), O tamanho da Alice é animado e pode crescer ou diminuir. No início do jogo, o tamanho dela foi colocado entre os dois extremos do animation's `currentTime` no meio do [`KeyframeEffect`'s duration](/pt-BR/docs/Web/API/KeyframeEffect/KeyframeEffect), desta maneira:
 
 ```js
 aliceChange.currentTime = aliceChange.effect.timing.duration / 2;
@@ -38,13 +38,11 @@ animation.currentTime =
 
 ## Especificações
 
-| Especificações                                                                                       | Status                               | Comentário |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('Web Animations', '#dom-animation-currenttime', 'currentTime')}} | {{Spec2("Web Animations")}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Animation.currentTime")}}
+{{Compat}}
 
 ## Veja também
 

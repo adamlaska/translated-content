@@ -1,15 +1,11 @@
 ---
 title: max-width
 slug: Web/CSS/max-width
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/max-width
 ---
+
 {{CSSRef}}
 
-**`max-width`** [CSS](/ko/docs/CSS) 속성은 요소의 최대 너비를 설정합니다. `max-width`는 {{cssxref("width")}} 속성의 [사용값](/ko/docs/Web/CSS/used_value)이 자신의 값보다 커지는걸 방지합니다.
+**`max-width`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 최대 너비를 설정합니다. `max-width`는 {{cssxref("width")}} 속성의 [사용값](/ko/docs/Web/CSS/used_value)이 자신의 값보다 커지는걸 방지합니다.
 
 {{EmbedInteractiveExample("pages/css/max-width.html")}}
 
@@ -42,7 +38,7 @@ max-width: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 고정 길이로 나타낸 최대 너비.
 - {{cssxref("&lt;percentage&gt;")}}
-  - [: 컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 너비에 대한 백분율로 나타낸 최대 너비.
+  - [: 컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 너비에 대한 백분율로 나타낸 최대 너비.
 
 #### 키워드 값
 
@@ -92,9 +88,7 @@ max-width: unset;
 
 ```html
 <div id="parent">
-    <div id="child">
-        Child Text
-    </div>
+  <div id="child">Child Text</div>
 </div>
 ```
 
@@ -104,7 +98,7 @@ max-width: unset;
   width: 300px;
 }
 
-#child  {
+#child {
   background: gold;
   width: 100%;
   max-width: -moz-fit-content;
@@ -133,5 +127,5 @@ max-width: unset;
 
 ## 같이 보기
 
-- [박스 모델 입문](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [박스 모델 입문](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("box-sizing")}}, {{cssxref("width")}}, {{ Cssxref("min-width") }}

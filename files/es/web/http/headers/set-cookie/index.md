@@ -1,15 +1,8 @@
 ---
 title: Set-Cookie
 slug: Web/HTTP/Headers/Set-Cookie
-tags:
-  - Cookies
-  - HTTP
-  - Referencia
-  - Respuesta
-  - encabezado
-  - samesite
-translation_of: Web/HTTP/Headers/Set-Cookie
 ---
+
 {{HTTPSidebar}}La cabecera de respuesta HTTP **Set-Cookie** se usa para enviar cookies desde el servidor al agente de usuario, así el agente de usuario puede enviarlos de vuelta al servidor.Para más información, visite la [guía para cookies HTTP](/es/docs/Web/HTTP/Cookies).
 
 <table class="properties">
@@ -68,7 +61,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     - Un `<cookie-name>` puede ser cualquier cosa excepto caracteres de control (CTLs) o espacios y tabulaciones. Tampoco debe contener caracteres de separación como los siguientes: `( ) < > @ , ; : \ " / [ ] ? = { }`.
     - Un `<cookie-value>` opcionalmente puede ser establecido dentro de comillas dobles y se permite usar cualquier caracter US-ASCII excluyendo CTLs, espacios en blanco, comillas dobles, comas, punto y coma y la barra invertida. **Codificación:** Muchas implementaciones realizan codificación de URL sobre los valores de la cookie, aunque esto no es requerido por la especificación RFC. Esto ayuda a satisfacer los requerimientos sobre los caracteres permitidos para \<cookie-value>.
-    - **`Prefijo __Secure-`**: Las cookies cuyo nombre comience por `__Secure-` (los guiones forman parte del prefijo) deben ser establecidas con la bandera `secure`y deben provenir de una página segura (HTTPS).
+    - **`Prefijo __Secure-`**: Las cookies cuyo nombre comience por `__Secure-` (los guiones forman parte del prefijo) deben ser establecidas con la bandera `secure` y deben provenir de una página segura (HTTPS).
     - **`Prefijo __Host-`**: Las cookies cuyo nombre comience por `__Host-` deben ser establecidas con la bandera `secure`, provenir de una página segura (HTTPS), no deben tener especificado un dominio (y por tanto no son enviadas a subdominios) y la ruta debe ser "/".
 
 - Expires=\<date> {{optional_inline}}
@@ -77,7 +70,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     Si no está especificado, la cookie tendrá el tiempo de vida de una **session cookie.** Una sesión finaliza cuando el cliente lo culmina, esto quiere decir que la sesión será removida en ese punto.
 
-    > **Advertencia:** Sin embargo, muchos navegadores web tiene una caracteristica llamada "restaurar" que almacenará todas tus pestañas para tenerlas lista cuando el navegador sea usado nuevamente. Las cookies de sesión tambien estarán presentes como si nunca se hubiera cerrado el navegador.
+    > [!WARNING]
+    > Sin embargo, muchos navegadores web tiene una caracteristica llamada "restaurar" que almacenará todas tus pestañas para tenerlas lista cuando el navegador sea usado nuevamente. Las cookies de sesión tambien estarán presentes como si nunca se hubiera cerrado el navegador.
 
     Cuando una fecha de Expires es definida, la fecha límite es relativa al _cliente_ donde la cookie se define, no en el servidor.
 
@@ -98,13 +92,14 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
   - : Una cookie segura es sólo enviada al servidor cuando una petición es enviada con el esquema `https:`. (Sin embargo, información confidencial nunca debería ser almacenada en Cookies HTTP, como todo el mecanismo es However, confidential information should never be stored in HTTP Cookies, ya que todo el mecanismo es inherentemente inseguro y no encripta ninguna información.)
 
-    > **Nota:** Sitios inseguros (`http:`) no puenden almacenar directivas "seguras" apartir de Chrome 52+ y Firefox 52+.
+    > [!NOTE]
+    > Sitios inseguros (`http:`) no puenden almacenar directivas "seguras" apartir de Chrome 52+ y Firefox 52+.
 
 - `HttpOnly` {{optional_inline}}
   - : Impide que el código JavaScript acceda a la cookie. Por ejemplo, a través de la propiedad {{domxref("Document.cookie")}}, y la API {{domxref("XMLHttpRequest")}}, o la API {{domxref("Request")}}. Esto mitiga los ataques contra scripts cross-site ({{Glossary("XSS")}}).
 - `SameSite=<samesite-value>` {{optional_inline}}
 
-  - :&#x20;
+  - : &#x20;
 
     - `Strict`
     - `Lax`
@@ -112,7 +107,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     Afirma que una cookie no debe ser enviada con peticiones cruzadas, proveiendo alguna protección contra ataques de falsificación de solicitudes cruzadas ({{Glossary("CSRF")}}).
 
-    > **Nota:** Los navegadores haciendo migraciones para que el comportamiento por defecto de las cookies en lugar de [default sea `SameSite=Lax`](https://www.chromestatus.com/feature/5088147346030592). Si una cookie necesita ser enviada en peticiones cruzadas, se tiene que optar por no restringir el mismo sitio (SameSite) usando la directiva `None`. La directiva `None` requiere el atributo [`Secure`](#Secure).
+    > [!NOTE]
+    > Los navegadores haciendo migraciones para que el comportamiento por defecto de las cookies en lugar de [default sea `SameSite=Lax`](https://www.chromestatus.com/feature/5088147346030592). Si una cookie necesita ser enviada en peticiones cruzadas, se tiene que optar por no restringir el mismo sitio (SameSite) usando la directiva `None`. La directiva `None` requiere el atributo [`Secure`](#secure).
 
 ## Ejemplos
 
@@ -160,7 +156,8 @@ Los nombres de las cookies prefijadas con `__Secure-` o `__Host-` pueden ser sol
 
 Además, cookies con el prefijo `__Host-` deben tener una ruta de `/` (significando cualquier ruta del huésped) y no debe tener un atributo `Domain`.
 
-> **Advertencia:** Para clientes que no implementan prefijos para las cookies, no se puede contar con que estas garantías adicionales, y las cookies prefijadas sean aceptadas.
+> [!WARNING]
+> Para clientes que no implementan prefijos para las cookies, no se puede contar con que estas garantías adicionales, y las cookies prefijadas sean aceptadas.
 
 ```
 // Ambas aceptadas al venir de un origen seguro (HTTPS)
@@ -179,14 +176,11 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 ## Especificaciones
 
-| Especificación                                                                                   | Título                                                        |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("6265", "Set-Cookie", "4.1")}}                                                 | Mecanismo de gestión del estado HTTP                          |
-| [draft-ietf-httpbis-rfc6265bis-05](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-05) | Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies |
+{{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Set-Cookie", 5)}}
+{{Compat}}
 
 ## Notas de compatibilidad
 

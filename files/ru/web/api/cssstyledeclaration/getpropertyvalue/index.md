@@ -1,8 +1,8 @@
 ---
 title: CSSStyleDeclaration.getPropertyValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyValue
-translation_of: Web/API/CSSStyleDeclaration/getPropertyValue
 ---
+
 {{ APIRef("CSSOM") }}
 
 **CSSStyleDeclaration.getPropertyValue()** интерфейс метода, который возвращает {{domxref('DOMString')}}, указанного CSS-свойства.
@@ -27,13 +27,13 @@ var value = style.getPropertyValue(property);
 
 ```js
 var declaration = document.styleSheets[0].rules[0].style;
-var value = declaration.getPropertyValue('margin'); // "1px 2px"
+var value = declaration.getPropertyValue("margin"); // "1px 2px"
 ```
 
 ## Спецификации
 
 {{Specifications}}
 
-**Браузерная совместимость**
+## Совместимость с браузерами
 
 {{Compat}}

@@ -1,22 +1,22 @@
 ---
 title: Date.prototype.getFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
-tags:
-  - Fecha
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getFullYear
 ---
+
 {{JSRef}}
 
 El método **`getFullYear()`** devuelve el año de la fecha indicada acorde a la hora local.
 
 Usa este método en lugar del método {{jsxref("Date.prototype.getYear()", "getYear()")}}.
 
-{{EmbedInteractiveExample("pages/js/date-getfullyear.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getFullYear()", "shorter")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getFullYear());
+// Expected output: 1969
+```
 
 ## Sintaxis
 
@@ -45,13 +45,11 @@ var year = today.getFullYear();
 
 ## Especificaciones
 
-| Especificación                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.getfullyear', 'Date.prototype.getFullYear')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.getFullYear")}}
+{{Compat}}
 
 ## Ver también
 

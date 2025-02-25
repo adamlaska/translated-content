@@ -1,38 +1,50 @@
 ---
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray
-browser-compat: javascript.builtins.TypedArray
 ---
 
 {{JSRef}}
 
-Un objet **_TypedArray_** décrit une vue organisée à la façon d'un tableau pour manipuler [un tampon (_buffer_) de données binaires](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). `TypedArray` n'est pas une propriété globale, il n'existe pas non plus de constructeur `TypedArray`.  En revanche, plusieurs propriétés globales existent et leurs valeurs permettent de construire des tableaux typés (<i lang="en">typed arrays</i>) avec différents types de données. Ceux-ci sont listés ci-après. Les pages suivantes permettent de décrire les propriétés et méthodes qui peuvent être utilisées sur les différents tableaux typés.
+Un objet **_TypedArray_** décrit une vue organisée à la façon d'un tableau pour manipuler [un tampon (_buffer_) de données binaires](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). `TypedArray` n'est pas une propriété globale, il n'existe pas non plus de constructeur `TypedArray`. En revanche, plusieurs propriétés globales existent et leurs valeurs permettent de construire des tableaux typés (<i lang="en">typed arrays</i>) avec différents types de données. Ceux-ci sont listés ci-après. Les pages suivantes permettent de décrire les propriétés et méthodes qui peuvent être utilisées sur les différents tableaux typés.
 
-{{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray Constructor")}}
+
+```js interactive-example
+// Create a TypedArray with a size in bytes
+const typedArray1 = new Int8Array(8);
+typedArray1[0] = 32;
+
+const typedArray2 = new Int8Array(typedArray1);
+typedArray2[1] = 42;
+
+console.log(typedArray1);
+// Expected output: Int8Array [32, 0, 0, 0, 0, 0, 0, 0]
+
+console.log(typedArray2);
+// Expected output: Int8Array [32, 42, 0, 0, 0, 0, 0, 0]
+```
 
 ## Description
 
-ECMAScript 2015 (ES6) définit un constructeur `%TypedArray%` qui est un `[[Prototype]]` de tous les constructeurs _TypedArray_. Ce constructeur n'est pas accessible directement. Il n'existe pas de  `%TypedArray%` global ou de propriété `TypedArray`.  Il est uniquement accessible via `Object.getPrototypeOf(Int8Array.prototype)` ou avec les méthodes semblables. L'ensemble des différents constructeurs *TypedArray*s hérite de propriétés communes de la fonction `%TypedArray%`. De plus, tous les prototypes des tableaux typés (_TypedArray_`.prototype`) ont `%TypedArray%.prototype` pour `[[Prototype]]`.
+ECMAScript 2015 (ES6) définit un constructeur `%TypedArray%` qui est un `[[Prototype]]` de tous les constructeurs _TypedArray_. Ce constructeur n'est pas accessible directement. Il n'existe pas de `%TypedArray%` global ou de propriété `TypedArray`. Il est uniquement accessible via `Object.getPrototypeOf(Int8Array.prototype)` ou avec les méthodes semblables. L'ensemble des différents constructeurs *TypedArray*s hérite de propriétés communes de la fonction `%TypedArray%`. De plus, tous les prototypes des tableaux typés (_TypedArray_`.prototype`) ont `%TypedArray%.prototype` pour `[[Prototype]]`.
 
 Lorsqu'on crée une instance de _TypedArray_ (par exemple, une instance de `Int8Array` ou autre), un tampon de mémoire tableau est créé en interne par le moteur (si un objet `ArrayBuffer` est passé en argument, c'est celui-ci qui est utilisé). C'est l'adresse de cette mémoire tampon qui est sauvegardée comme une propriété interne à l'objet. Toutes les méthodes de `%TypedArray%.prototype` utiliseront ensuite cet espace pour les opérations.
 
 ### Objets _TypedArray_
 
-| Type                                     | Intervalle de valeurs                                                     | Taille en octets | Description                                                                        | Type Web IDL          | Type C équivalent               |
-| ---------------------------------------- | --------------------------------------------------------------- | ------------- | ---------------------------------------------------------------------------------- | --------------------- | ------------------------------- |
-| [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)         | `-128` à `127`                                                 | 1             | Entier sur 8 bits signé en complément à deux                                               | `byte`                | `int8_t`                        |
-| [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)         | `0` à `255`                                                    | 1             | Entier non-signé sur 8 bits                                                             | `octet`               | `uint8_t`                       |
-| [`Uint8ClampedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) | `0` à `255`                                                    | 1             | Entier non-signé sur 8 bits (écrété)                                                   | `octet`               | `uint8_t`                       |
-| [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)         | `-32768` à `32767`                                             | 2             | Entier sur 16 bits, signé en complément à deux                                             | `short`               | `int16_t`                       |
-| [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)         | `0` à `65535`                                                  | 2             | Entier non-signé sur 16 bits                                                            | `unsigned short`      | `uint16_t`                      |
-| [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)         | `-2147483648` à `2147483647`                                   | 4             | Entier sur 32 bits, signé en complément à deux                                             | `long`                | `int32_t`                       |
-| [`Uint32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)         | `0` à `4294967295`                                             | 4             | Entier sur 32 bits non-signé                                                            | `unsigned long`       | `uint32_t`                      |
-| [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)     | `-3.4E38` à `3.4E38` avec `1.2E-38` le plus petit nombre positif  | 4             | Nombre flottant sur 32 bits au format IEEE avec 7 chiffres significatifs (par exemple `1.234567`)          | `unrestricted float`  | `float`                         |
-| [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)     | `-1.8E308` à `1.8E308` avec `5E-324` le plus petit nombre positif | 8             | Nombre flottant sur 64 bits au format IEEE avec 16 chiffres significatifs (par exemple `1.23456789012345`) | `unrestricted double` | `double`                        |
-| [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)     | `-2^63` à `2^63 - 1`                                           | 8             | Entier sur 64 bits, signé en complément à deux integer                                             | `bigint`              | `int64_t (signed long long)`    |
-| [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)     | `0` à `2^64 - 1`                                               | 8             | Entier sur 64 bits non-signé                                                            | `bigint`              | `uint64_t (unsigned long long)` |
+| Type                                                                                      | Intervalle de valeurs                                             | Taille en octets | Description                                                                                                | Type Web IDL          | Type C équivalent               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------- | --------------------- | ------------------------------- |
+| [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)                 | `-128` à `127`                                                    | 1                | Entier sur 8 bits signé en complément à deux                                                               | `byte`                | `int8_t`                        |
+| [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)               | `0` à `255`                                                       | 1                | Entier non-signé sur 8 bits                                                                                | `octet`               | `uint8_t`                       |
+| [`Uint8ClampedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) | `0` à `255`                                                       | 1                | Entier non-signé sur 8 bits (écrété)                                                                       | `octet`               | `uint8_t`                       |
+| [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)               | `-32768` à `32767`                                                | 2                | Entier sur 16 bits, signé en complément à deux                                                             | `short`               | `int16_t`                       |
+| [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)             | `0` à `65535`                                                     | 2                | Entier non-signé sur 16 bits                                                                               | `unsigned short`      | `uint16_t`                      |
+| [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)               | `-2147483648` à `2147483647`                                      | 4                | Entier sur 32 bits, signé en complément à deux                                                             | `long`                | `int32_t`                       |
+| [`Uint32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)             | `0` à `4294967295`                                                | 4                | Entier sur 32 bits non-signé                                                                               | `unsigned long`       | `uint32_t`                      |
+| [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)           | `-3.4E38` à `3.4E38` avec `1.2E-38` le plus petit nombre positif  | 4                | Nombre flottant sur 32 bits au format IEEE avec 7 chiffres significatifs (par exemple `1.234567`)          | `unrestricted float`  | `float`                         |
+| [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)           | `-1.8E308` à `1.8E308` avec `5E-324` le plus petit nombre positif | 8                | Nombre flottant sur 64 bits au format IEEE avec 16 chiffres significatifs (par exemple `1.23456789012345`) | `unrestricted double` | `double`                        |
+| [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)         | `-2^63` à `2^63 - 1`                                              | 8                | Entier sur 64 bits, signé en complément à deux integer                                                     | `bigint`              | `int64_t (signed long long)`    |
+| [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)       | `0` à `2^64 - 1`                                                  | 8                | Entier sur 64 bits non-signé                                                                               | `bigint`              | `uint64_t (unsigned long long)` |
 
 ## Constructeur
 
@@ -58,7 +70,7 @@ Où _TypedArray_ est un constructeur donné pour un type de tableau typé exista
   - : Lorsque le constructeur est appelé avec un argument `longueur`, un tampon de mémoire interne sous forme de tableau est créé et dont la taille est `longueur` multipliée par `BYTES_PER_ELEMENT` octets. Chaque élément du tableau contient des zéros.
 - `tableauType`
   - : Lorsque le constructeur est appelé avec un argument `tableauType`, `tableauType` est copié dans un nouveau tableau typé. Pour un tableay typé **dont le type n'est pas [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)**, le paramètre peut être un objet de n'importe quel type de tableau typé en dehors de `BigInt64Array` (par exemple [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)). L'inverse est aussi valable, pour obtenir un tableau typé `BigInt64Array`, le paramètre devra nécessairement être de type `BigInt64Array`.
-  Chaque valeur contenue dans `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé sera la même que celle de l'argument `tableauType`.
+    Chaque valeur contenue dans `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé sera la même que celle de l'argument `tableauType`.
 - `objet`
   - : Lorsque le constructeur est appelé avec un objet comme argument, un nouveau tableau typé est créé à la façon de la méthode `TypedArray.from()`.
 - `buffer`, `decalageOctet`, `longueur`
@@ -68,7 +80,7 @@ Où _TypedArray_ est un constructeur donné pour un type de tableau typé exista
 
 - [`TypedArray.BYTES_PER_ELEMENT`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)
   - : Renvoie un nombre indiquant la taille, exprimée en octets, de chaque élément du tableau typé.
-- [`TypedArray.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name)
+- [`TypedArray.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name)
   - : Renvoie la chaîne de caractères correspondant au nom du constructeur (par exemple, `"Int8Array"`).
 - [`get TypedArray[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@species)
   - : La fonction de construction utilisée pour créer des objets dérivés.
@@ -127,9 +139,9 @@ Où _TypedArray_ est un constructeur donné pour un type de tableau typé exista
 - [`TypedArray.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/map)
   - : Crée un nouveau tableau dont les éléments sont les résultats de l'appel de la fonction passée en argument pour chaque élément du tableau original. Voir aussi [`Array.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 - [`TypedArray.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduce)
-  - : Applique une fonction avec un accumulateur pour chaque valeur du tableau (de gauche à droite), afin de le réduire à une seule valeur. Voir aussi [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce).
+  - : Applique une fonction avec un accumulateur pour chaque valeur du tableau (de gauche à droite), afin de le réduire à une seule valeur. Voir aussi [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce).
 - [`TypedArray.prototype.reduceRight()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight)
-  - : Applique une fonction avec un accumulateur pour chaque valeur du tableau (de droite à gauche), afin de le réduire à une seule valeur. Voir aussi [`Array.prototype.reduceRight()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight).
+  - : Applique une fonction avec un accumulateur pour chaque valeur du tableau (de droite à gauche), afin de le réduire à une seule valeur. Voir aussi [`Array.prototype.reduceRight()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight).
 - [`TypedArray.prototype.reverse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reverse)
   - : Inverse l'ordre des éléments d'un tableau (le premier devenant le dernier, le dernier devenant le premier et ainsi de suite). Voir aussi [`Array.prototype.reverse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse).
 - [`TypedArray.prototype.set()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/set)
@@ -179,17 +191,17 @@ console.log(int16[0]); // 42
 
 // Les propriétés indexées sur les prototypes ne sont pas consultées
 Int8Array.prototype[20] = "toto";
-(new Int8Array(32))[20]; // 0
+new Int8Array(32)[20]; // 0
 // y compris en dehors des limites
 Int8Array.prototype[20] = "toto";
-(new Int8Array(8))[20]; // undefined
+new Int8Array(8)[20]; // undefined
 // ou avec des index négatifs
 Int8Array.prototype[-1] = "toto";
-(new Int8Array(8))[-1]; // undefined
+new Int8Array(8)[-1]; // undefined
 
 // Mais il est possible d'utiliser des propriétés nommées
 Int8Array.prototype.toto = "truc";
-(new Int8Array(32)).toto; // "truc" 
+new Int8Array(32).toto; // "truc"
 ```
 
 ### Impossibles à geler
@@ -239,7 +251,7 @@ const i32 = new Int32Array(new ArrayBuffer(4));
 ## Voir aussi
 
 - [Une prothèse d'émulation pour les tableaux typés avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Typed_arrays)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 - [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)
 - [TextDecoder](/fr/docs/Web/API/TextDecoder), une API utilitaire pour décoder des chaînes de caractères à partir de données numériques

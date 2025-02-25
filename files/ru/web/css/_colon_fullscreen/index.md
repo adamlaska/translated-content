@@ -1,13 +1,8 @@
 ---
-title: ':fullscreen'
+title: :fullscreen
 slug: Web/CSS/:fullscreen
-tags:
-  - Вёрстка
-  - полноэкранный режим
-  - псевдокласс
-  - экран
-translation_of: Web/CSS/:fullscreen
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) [Псевдокласс](/ru/docs/Web/CSS/%D0%9F%D1%81%D0%B5%D0%B2%D0%B4%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B) **`:fullscreen`** соответствует элементу, который в данный момент находится в полноэкранном режиме. Если в полноэкранном режиме находятся несколько элементов, то выбираются все они.
@@ -31,9 +26,11 @@ HTML выглядит так:
 ```html
 <h1>MDN Web Docs Demo: :fullscreen pseudo-class</h1>
 
-<p>This demo uses the <code>:fullscreen</code> pseudo-class to automatically
+<p>
+  This demo uses the <code>:fullscreen</code> pseudo-class to automatically
   change the style of a button used to toggle full-screen mode on and off,
-  entirely using CSS.</p>
+  entirely using CSS.
+</p>
 
 <button id="fs-toggle">Toggle Fullscreen</button>
 ```
@@ -62,15 +59,15 @@ HTML выглядит так:
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Fullscreen API](/ru/docs/Web/API/Fullscreen_API)
 - [Guide to the Fullscreen API](/ru/docs/Web/API/Fullscreen_API/Guide)
 - {{cssxref(":not")}}
 - {{cssxref("::backdrop")}}
 - DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreenElement") }}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}} attribute
+- [`allowfullscreen`](/ru/docs/Web/HTML/Element/iframe#allowfullscreen) attribute

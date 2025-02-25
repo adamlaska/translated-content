@@ -1,17 +1,8 @@
 ---
 title: CSS - Perguntas frequentes
 slug: Learn/CSS/Howto/CSS_FAQ
-tags:
-  - CSS
-  - Exemplo
-  - FAQ
-  - Guía
-  - Perguntas
-  - Perguntas Frequentes
-  - Web
-translation_of: Learn/CSS/Howto/CSS_FAQ
-original_slug: Learn/CSS/Howto/CSS_Perguntas_Frequentes
 ---
+
 ## Por que meu CSS, que é válido, não é renderizado corretamente?
 
 Navegadores usam a declaração de `DOCTYPE` para decidir se devem exibir o documento usando um modo compatível com os padrões da web ou com padrões de navegadores antigos. Usar corretamente a declaração de um `DOCTYPE` moderno no início do seu documento HTML melhorará a forma como o navegador trata os padrões utilizados no documento.
@@ -31,16 +22,16 @@ Esta é uma lista das declarações de `DOCTYPE` mais usadas e que acionarão o 
                    uso desta declaração é recomendada */
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+"https://www.w3.org/TR/html4/loose.dtd">
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
+"https://www.w3.org/TR/html4/strict.dtd">
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+"https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+"https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
 Sempre que possível, use a declaração de `DOCTYPE` HTML5.
@@ -67,9 +58,10 @@ Geralmente é recomendável que se utilize classes sempre que possível, utiliza
 
 - Usar classes torna seu código extensível — Mesmo que você tenha apenas um elemento a ser estilizado agora, você pode querer adicionar as mesmas regras a outros elementos futuramente.
 - Classes permitem que você estilize diversos elementos. Sendo assim, classes podem ajudar a desenvolver folhas de estilo menores; mais enchutas, já que regras podem ser facilmente reutilizadas entre elementos. Isso não só ajuda na manutenção da folha de estilo, como também agiliza a renderização de páginas, principalmente em conexões lentas.
-- Seletores de classes tem menor [especificidade](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Specificity) do que seletores de id, o que torna as regras de estilização mais fáceis de serem sobrepostas.
+- Seletores de classes tem menor [especificidade](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity) do que seletores de id, o que torna as regras de estilização mais fáceis de serem sobrepostas.
 
-> **Nota:** Veja [Seletores](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Selectors) para mais informações.
+> [!NOTE]
+> Veja [Seletores](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors) para mais informações.
 
 ## Como eu redefino o valor padrão de uma propriedade?
 
@@ -77,21 +69,29 @@ Inicialmente CSS não propiciava a diretiva "default" e a única forma de redefi
 
 ```css
 /* A cor padrão do cabeçalho é preta */
-h1 { color: red; }
-h1 { color: black; }
+h1 {
+  color: red;
+}
+h1 {
+  color: black;
+}
 ```
 
-Isso mudou com CSS 2; a diretiva [initial](/es/CSS/initial) agora é um valor válido para uma propriedade CSS. Ela redefine tal propriedade para seu valor padrão, o qual é definido nas especificações CSS para tal propriedade.
+Isso mudou com CSS 2; a diretiva [initial](/pt-BR/docs/Web/CSS/initial) agora é um valor válido para uma propriedade CSS. Ela redefine tal propriedade para seu valor padrão, o qual é definido nas especificações CSS para tal propriedade.
 
 ```css
 /* A cor padrão do cabeçalho é preta */
-h1 { color: red; }
-h1 { color: initial; }
+h1 {
+  color: red;
+}
+h1 {
+  color: initial;
+}
 ```
 
 ## Como eu derivo um estilo de outro?
 
-CSS não exatamente permite que um estilo seja definido com os termos de outro. (Veja [as notas de Eric Meyer sobre a posição do grupo de trabalho a respeito do assunto](http://archivist.incutio.com/viewlist/css-discuss/2685)). Entretanto, é possível atingir o mesmo efeito designando diversas classes a um elemento, e [Variáveis CSS](/pt-BR/docs/Web/CSS/Using_CSS_variables) agora providenciam uma forma de definir informações sobre um estilo em um lugar e reutilizar estas informações em diversos outros lugares.
+CSS não exatamente permite que um estilo seja definido com os termos de outro. (Veja [as notas de Eric Meyer sobre a posição do grupo de trabalho a respeito do assunto](http://archivist.incutio.com/viewlist/css-discuss/2685)). Entretanto, é possível atingir o mesmo efeito designando diversas classes a um elemento, e [Variáveis CSS](/pt-BR/docs/Web/CSS/Using_CSS_custom_properties) agora providenciam uma forma de definir informações sobre um estilo em um lugar e reutilizar estas informações em diversos outros lugares.
 
 ## Como eu aplico diversas classes a um elemento?
 
@@ -99,13 +99,16 @@ Elementos HTML podem ter diversas classes designadas a si, com as classes sendo 
 
 ```html
 <style type="text/css">
-  .news { background: black; color: white; }
-  .today { font-weight: bold; }
+  .news {
+    background: black;
+    color: white;
+  }
+  .today {
+    font-weight: bold;
+  }
 </style>
 
-<div class="news today">
-... content of today's news ...
-</div>
+<div class="news today">... content of today's news ...</div>
 ```
 
 Caso a mesma propriedade seja declara em mais de uma regra, o conflito é resolvido primeiro pela ordem de especificidade e depois através da ordem das declarações CSS, com o último valor definido da propriedade sendo considerado. A ordem em que o nome das classes aparece no atributo `class` é irrelevante.
@@ -120,13 +123,19 @@ A forma como estilos CSS são aplicados a elementos HTML depende também da hier
 
 ```html
 <style type="text/css">
-  .news { color: black; }
-  .corpName { font-weight: bold; color: red; }
+  .news {
+    color: black;
+  }
+  .corpName {
+    font-weight: bold;
+    color: red;
+  }
 </style>
 
 <!-- O texto do item news é preto, mas o nome da corporação é vermelho e em negrito -->
 <div class="news">
-   (Reuters) <span class="corpName">General Electric</span> (GE.NYS) announced on Thursday...
+  (Reuters) <span class="corpName">General Electric</span> (GE.NYS) announced on
+  Thursday...
 </div>
 ```
 
@@ -138,18 +147,22 @@ Em folhas de estilo CSS, a ordem **é** importante. Se você definir uma proprie
 
 ```html
 <style>
-  #stockTicker { font-weight: bold; }
-  .stockSymbol { color: red; }
+  #stockTicker {
+    font-weight: bold;
+  }
+  .stockSymbol {
+    color: red;
+  }
   /*  outras regras             */
   /*  outras regras             */
   /*  outras regras             */
-  .stockSymbol { font-weight: normal; }
+  .stockSymbol {
+    font-weight: normal;
+  }
 </style>
 
 <!-- Boa parte do texto está em negrito, exceto "GE", que é vermelho e não está em negrito -->
-<div id="stockTicker">
-   NYS: <span class="stockSymbol">GE</span> +1.0 ...
-</div>
+<div id="stockTicker">NYS: <span class="stockSymbol">GE</span> +1.0 ...</div>
 ```
 
 Para evitar que este tipo de problema, tente definir regras apenas uma vez para um determinado seletor e agrupe as regras para aquele seletor.
@@ -160,21 +173,26 @@ Utilizar propriedades reduzidas para definir regra de estilização é interessa
 
 ```html
 <style>
-   #stockTicker { font-size: 12px; font-family: Verdana; font-weight: bold; }
-   .stockSymbol { font: 14px Arial; color: red; }
+  #stockTicker {
+    font-size: 12px;
+    font-family: Verdana;
+    font-weight: bold;
+  }
+  .stockSymbol {
+    font: 14px Arial;
+    color: red;
+  }
 </style>
 
-<div id="stockTicker">
-   NYS: <span class="stockSymbol">GE</span> +1.0 ...
-</div>
+<div id="stockTicker">NYS: <span class="stockSymbol">GE</span> +1.0 ...</div>
 ```
 
 No exemplo anterior o problema ocorre em regras pertencentes a diferentes elementos. Mas também poderia acontecer para o mesmo elemento, pois a ordem das regras **é** importante.
 
 ```css
 #stockTicker {
-   font-weight: bold;
-   font: 12px Verdana;  /* font-weight agora está definido como "normal" */
+  font-weight: bold;
+  font: 12px Verdana; /* font-weight agora está definido como "normal" */
 }
 ```
 
@@ -184,14 +202,22 @@ O seletor curinga `*` faz referência a qualquer elemento, e deve ser usado com 
 
 ```html
 <style>
-   body * { font-weight: normal; }
-   #stockTicker { font: 12px Verdana; }
-   .corpName { font-weight: bold; }
-   .stockUp { color: red; }
+  body * {
+    font-weight: normal;
+  }
+  #stockTicker {
+    font: 12px Verdana;
+  }
+  .corpName {
+    font-weight: bold;
+  }
+  .stockUp {
+    color: red;
+  }
 </style>
 
 <div id="section">
-   NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0 ...
+  NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0 ...
 </div>
 ```
 
@@ -201,19 +227,25 @@ O uso do seletor \* também deve ser minimizado por ser um seletor lento, especi
 
 ### Especificidade em CSS
 
-Quando multiplas regras são aplicadas a um elemento, a regra a ser renderizada depende de sua [especificidade](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Specificity). O estilo _inline_ (regras de estilo definidas no atributo `style` de um elemento HTML) tem a mais alta especificidade e irá sobrepor qualquer seletor. Seletores de ID tem a segunda mais alta especificidade, com seletores de classes vindo logo após e, eventualmente, seletores de elementos (tags). Tendo isso em mente, a cor do texto da {{htmlelement("div")}} abaixo terá a cor vermelha.
+Quando multiplas regras são aplicadas a um elemento, a regra a ser renderizada depende de sua [especificidade](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity). O estilo _inline_ (regras de estilo definidas no atributo `style` de um elemento HTML) tem a mais alta especificidade e irá sobrepor qualquer seletor. Seletores de ID tem a segunda mais alta especificidade, com seletores de classes vindo logo após e, eventualmente, seletores de elementos (tags). Tendo isso em mente, a cor do texto da {{htmlelement("div")}} abaixo terá a cor vermelha.
 
 ```html
 <style>
-   div { color: black; }
-   #orange { color: orange; }
-   .green { color: green; }
+  div {
+    color: black;
+  }
+  #orange {
+    color: orange;
+  }
+  .green {
+    color: green;
+  }
 </style>
 
 <div id="orange" class="green" style="color: red;">Isso é vermelho</div>
 ```
 
-As regras se tornam mais complicadas quando o seletor tem diversas partes. Informações mais detalhadas sobre como a especificidade de seletores é calculada podem ser encontradas nas [Especificações CSS 2.1, capítulo 6.4.3](http://www.w3.org/TR/CSS21/cascade.html#specificity).
+As regras se tornam mais complicadas quando o seletor tem diversas partes. Informações mais detalhadas sobre como a especificidade de seletores é calculada podem ser encontradas nas [Especificações CSS 2.1, capítulo 6.4.3](https://www.w3.org/TR/CSS21/cascade.html#specificity).
 
 ## O que as propriedades -moz-\*, -ms-\*, -webkit-\*, -o-\* e -khtml-\* fazem?
 
@@ -231,9 +263,11 @@ Caso você precise usar propriedades prefixadas em seu trabalho, você deve decl
 transform: rotate(90deg);
 ```
 
-> **Nota:** Para mais informações em como lhe dar com propriedades prefixadas, veja [Lidando com problemas comuns em HTML e CSS — Lidando com prefixos CSS](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes) do nosso módulo [Teste Cross-browsing](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing).
+> [!NOTE]
+> Para mais informações em como lhe dar com propriedades prefixadas, veja [Lidando com problemas comuns em HTML e CSS — Lidando com prefixos CSS](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes) do nosso módulo [Teste Cross-browsing](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing).
 
-> **Nota:** Veja a página [Extenções CSS Mozilla](/pt-BR/docs/CSS/CSS_Reference/Mozilla_Extensions) para mais informações sobre propriedades CSS prefixadas da Mozilla.
+> [!NOTE]
+> Veja a página [Extenções CSS Mozilla](/pt-BR/docs/Web/CSS/Mozilla_Extensions) para mais informações sobre propriedades CSS prefixadas da Mozilla.
 
 ## Como `z-index` está relacionado a posicionamento?
 
@@ -241,4 +275,5 @@ A propriedade `z-index` especifica a ordem dos elementos da pilha.
 
 Um elemento com z-index/ordem na pilha maior sempre será renderizado à frente de um elemento com um z-index/ordem de pilha menor. `z-index` funcionará apenas em elementos que tenham uma posição especificada (Ou seja, só funcionará caso o elemento tenha `position:absolute`, `position:relative` ou `position:fixed`).
 
-> **Nota:** Para mais informações, veja nosso artigo de aprendizado sobre [Posicionamento](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning), e em particular a seção [Introduzindo z-index](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning#Introducing_z-index).
+> [!NOTE]
+> Para mais informações, veja nosso artigo de aprendizado sobre [Posicionamento](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning), e em particular a seção [Introduzindo z-index](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning#Introducing_z-index).

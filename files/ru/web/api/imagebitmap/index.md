@@ -1,16 +1,8 @@
 ---
 title: ImageBitmap
 slug: Web/API/ImageBitmap
-tags:
-  - API
-  - Canvas
-  - ImageBitmap
-  - Interface
-  - Reference
-  - Интерфейс
-  - Ссылка
-translation_of: Web/API/ImageBitmap
 ---
+
 {{APIRef("Canvas API")}}
 
 Интерфейс **`ImageBitmap`** представляет собой bitmap изображение которое может быть нарисовано на {{HTMLElement("canvas")}} без чрезмерной задержки. Создать его можно несколькими способами используя {{domxref("ImageBitmapFactories.createImageBitmap", "createImageBitmap()")}}. `ImageBitmap` предоставляет асинхронный и ресурсоэффективный метод подготовки текстур для рендеринга в WebGL.
@@ -31,11 +23,11 @@ translation_of: Web/API/ImageBitmap
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Полезные ссылки
+## Смотрите также
 
 - {{domxref("ImageBitmapFactories.createImageBitmap()")}}
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}
