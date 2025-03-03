@@ -1,14 +1,8 @@
 ---
 title: arguments.length
 slug: Web/JavaScript/Reference/Functions/arguments/length
-tags:
-  - Funciones
-  - JavaScript
-  - Propiedades
-  - argumentos
-translation_of: Web/JavaScript/Reference/Functions/arguments/length
-original_slug: Web/JavaScript/Referencia/Funciones/arguments/length
 ---
+
 {{jsSidebar("Functions")}}
 
 La propiedad **`arguments.length`** contiene el número de argumentos pasados a una función.
@@ -39,20 +33,16 @@ function adder(base /*, n2, ... */) {
 }
 ```
 
-> **Nota:** Tenga en cuenta la diferencia entre {{jsxref("Function.length")}} y arguments.length
+> [!NOTE]
+> Tenga en cuenta la diferencia entre {{jsxref("Function.length")}} y arguments.length
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                       | Comentario                                         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.1 |
-| {{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}                                         | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
-## Compatibilidad con los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.functions.arguments.length")}}
+{{Compat}}
 
 ## Véase también
 

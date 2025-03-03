@@ -1,20 +1,28 @@
 ---
 title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Protocols
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/set
-original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap/set
 ---
+
 {{JSRef}}
 
 El método **`set()`** añade un nuevo elemento con su `key` y `value` específicos al objeto `WeakMap`.
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-set.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.set()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+const object2 = {};
+
+weakmap1.set(object1, "foo");
+weakmap1.set(object2, "bar");
+
+console.log(weakmap1.get(object1));
+// Expected output: "foo"
+
+console.log(weakmap1.get(object2));
+// Expected output: "bar"
+```
 
 ## Sintaxis
 
@@ -42,25 +50,18 @@ var wm = new WeakMap();
 var obj = {};
 
 // Agregando nuevos elementos a WeakMap
-wm.set(obj, 'foo').set(window, 'bar'); // encadenamiento
+wm.set(obj, "foo").set(window, "bar"); // encadenamiento
 // Actualiza el un elemento en el objeto WeakMap
-wm.set(obj, 'baz');
+wm.set(obj, "baz");
 ```
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                       | Comentarios         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}} | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.WeakMap.set")}}
-
-## Notas específicas de Firefox
-
-- Antes de Firefox 33 {{geckoRelease("33")}}, `WeakMap.prototype.set` devolvía `undefined` y no permitía el encadenamiento. Esto ha sido corregido ({{bug(1031632)}}). Este comportamiento puede encontrarse también en Chrome/v8 ([fallo](https://code.google.com/p/v8/issues/detail?id=3410)).
+{{Compat}}
 
 ## Vea también
 

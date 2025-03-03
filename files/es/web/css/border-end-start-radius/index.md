@@ -1,8 +1,8 @@
 ---
 title: border-end-start-radius
 slug: Web/CSS/border-end-start-radius
-translation_of: Web/CSS/border-end-start-radius
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`border-end-start-radius`** define un radio del borde lógico en un elemento, que se asigna a un radio de borde físico que depende de los elementos {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
@@ -65,17 +65,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                                           | Estado                                           | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-end-start-radius", "border-end-start-radius")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-{{CSSInfo}}
+## Compatibilidad con navegadores
 
-## Compatibilidad en navegadores
-
-{{Compat("css.properties.border-end-start-radius")}}
+{{Compat}}
 
 ## Mira también
 

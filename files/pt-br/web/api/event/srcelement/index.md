@@ -1,8 +1,8 @@
 ---
 title: Event.srcElement
 slug: Web/API/Event/srcElement
-translation_of: Web/API/Event/srcElement
 ---
+
 {{ApiRef("DOM")}}
 
 {{ Non-standard_header() }}
@@ -17,7 +17,7 @@ Microsoft [tem uma descrição na MSDN](<https://msdn.microsoft.com/en-us/librar
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Event.srcElement")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,19 +1,8 @@
 ---
 title: Clases
 slug: Web/JavaScript/Reference/Classes
-tags:
-  - Classes
-  - ECMAScript 2015
-  - Herencia
-  - Intermedio
-  - JavaScript
-  - NeedsContent
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Classes
-original_slug: Web/JavaScript/Referencia/Classes
 ---
+
 {{JsSidebar("Classes")}}
 
 Las clases de javascript, introducidas en ECMAScript 2015, son una mejora sintáctica sobre la herencia basada en prototipos de JavaScript. La sintaxis de las clases **no** introduce un nuevo modelo de herencia orientada a objetos en JavaScript. Las clases de JavaScript proveen una sintaxis mucho más clara y simple para crear objetos y lidiar con la herencia.
@@ -72,7 +61,8 @@ console.log(Rectangulo.name);
 // output: "Rectangulo2"
 ```
 
-> **Nota:** Las **expresiones** de clase están sujetas a las mismas restricciones de elevación que se describen en la sección [Class declarations](#class_declarations).
+> [!NOTE]
+> Las **expresiones** de clase están sujetas a las mismas restricciones de elevación que se describen en la sección [Class declarations](#class_declarations).
 
 ## Cuerpo de la clase y definición de métodos
 
@@ -84,7 +74,7 @@ El cuerpo de las _declaraciones de clase_ y las _expresiones de clase_ son ejecu
 
 ### Constructor
 
-El método [`constructor`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) es un método especial para crear e inicializar un objeto creado con una `clase`. Solo puede haber un método especial con el nombre "constructor" en una clase. Si esta contiene mas de una ocurrencia del método **`constructor`**, se arrojará un _Error_ {{jsxref("SyntaxError")}}
+El método [`constructor`](/es/docs/Web/JavaScript/Reference/Classes/constructor) es un método especial para crear e inicializar un objeto creado con una `clase`. Solo puede haber un método especial con el nombre "constructor" en una clase. Si esta contiene mas de una ocurrencia del método **`constructor`**, se arrojará un _Error_ {{jsxref("SyntaxError")}}
 
 Un **constructor** puede usar la _palabra reservada_ **`super`** para llamar al **constructor** de una _superclase_
 
@@ -94,16 +84,16 @@ Vea también [métodos definidos](/es/docs/Web/JavaScript/Reference/Functions/Me
 
 ```js
 class Rectangulo {
-  constructor (alto, ancho) {
+  constructor(alto, ancho) {
     this.alto = alto;
     this.ancho = ancho;
   }
   // Getter
   get area() {
-     return this.calcArea();
-   }
+    return this.calcArea();
+  }
   // Método
-  calcArea () {
+  calcArea() {
     return this.alto * this.ancho;
   }
 }
@@ -115,27 +105,27 @@ console.log(cuadrado.area); // 100
 
 ### Métodos estáticos
 
-La _palabra clave_ [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) define un método estático para una clase. Los métodos estáticos son llamados sin instanciar su clase y **no** pueden ser llamados mediante una instancia de clase. Los métodos estáticos son a menudo usados para crear funciones de utilidad para una aplicación.
+La _palabra clave_ [`static`](/es/docs/Web/JavaScript/Reference/Classes/static) define un método estático para una clase. Los métodos estáticos son llamados sin instanciar su clase y **no** pueden ser llamados mediante una instancia de clase. Los métodos estáticos son a menudo usados para crear funciones de utilidad para una aplicación.
 
 ```js
 class Punto {
-  constructor ( x , y ){
+  constructor(x, y) {
     this.x = x;
     this.y = y;
   }
 
-  static distancia ( a , b) {
+  static distancia(a, b) {
     const dx = a.x - b.x;
     const dy = a.y - b.y;
 
-    return Math.sqrt ( dx * dx + dy * dy );
+    return Math.sqrt(dx * dx + dy * dy);
   }
 }
 
 const p1 = new Punto(5, 5);
 const p2 = new Punto(10, 10);
 
-console.log (Punto.distancia(p1, p2)); // 7.0710678118654755
+console.log(Punto.distancia(p1, p2)); // 7.0710678118654755
 ```
 
 ### "Boxing" con prototipos y métodos estáticos
@@ -185,7 +175,7 @@ hablar(); // global object
 
 ## Subclases con `extends`
 
-La palabra clave [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) es usada en _declaraciones de clase_ o _expresiones de clase_ para crear una clase hija.
+La palabra clave [`extends`](/es/docs/Web/JavaScript/Reference/Classes/extends) es usada en _declaraciones de clase_ o _expresiones de clase_ para crear una clase hija.
 
 ```js
 class Animal {
@@ -194,13 +184,13 @@ class Animal {
   }
 
   hablar() {
-    console.log(this.nombre + ' hace un ruido.');
+    console.log(this.nombre + " hace un ruido.");
   }
 }
 
 class Perro extends Animal {
   hablar() {
-    console.log(this.nombre + ' ladra.');
+    console.log(this.nombre + " ladra.");
   }
 }
 ```
@@ -208,21 +198,21 @@ class Perro extends Animal {
 También se pueden extender las clases tradicionales basadas en funciones:
 
 ```js
-function Animal (nombre) {
+function Animal(nombre) {
   this.nombre = nombre;
 }
 Animal.prototype.hablar = function () {
-  console.log(this.nombre + 'hace un ruido.');
-}
+  console.log(this.nombre + "hace un ruido.");
+};
 
 class Perro extends Animal {
   hablar() {
     super.hablar();
-    console.log(this.nombre + ' ladra.');
+    console.log(this.nombre + " ladra.");
   }
 }
 
-var p = new Perro('Mitzie');
+var p = new Perro("Mitzie");
 p.hablar();
 ```
 
@@ -264,19 +254,21 @@ Por ejemplo, cuando se usan metodos del tipo {{jsxref("Array.map", "map()")}} qu
 ```js
 class MyArray extends Array {
   // Sobreescribe species sobre el constructor padre Array
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 
-var a = new MyArray(1,2,3);
-var mapped = a.map(x => x * x);
+var a = new MyArray(1, 2, 3);
+var mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## Llamadas a súperclases con `super`
 
-La palabra clave [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super) es usada para llamar funciones del objeto padre.
+La palabra clave [`super`](/es/docs/Web/JavaScript/Reference/Operators/super) es usada para llamar funciones del objeto padre.
 
 ```
 class Gato {
@@ -304,35 +296,35 @@ Subclases abstractas or _mix-ins_ son plantillas de clases. Una clase ECMAScript
 Una función con una clase padre como entrada y una subclase extendiendo la clase padre como salida puede ser usado para implementar mix-ins en EMCAScript:
 
 ```js
-var calculatorMixin = Base => class extends Base {
-  calc() { }
-};
+var calculatorMixin = (Base) =>
+  class extends Base {
+    calc() {}
+  };
 
-var randomizerMixin = Base => class extends Base {
-  randomize() { }
-};
+var randomizerMixin = (Base) =>
+  class extends Base {
+    randomize() {}
+  };
 ```
 
 Una clase que use este método puede ser escrita tal que así:
 
 ```js
-class Foo { }
-class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
+class Foo {}
+class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
 ```
 
 ## Especificaciones
 
-| Specification                                                                                | Status                   | Comment             |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2015')}} | Initial definition. |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## Ver también
 
-- [Funciones](/es/docs/Web/JavaScript/Referencia/Funciones)
+- [Funciones](/es/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Statements/class", "class declaration")}}
 - {{jsxref("Operators/class", "class expression")}}
 - {{jsxref("Operators/super", "super")}}

@@ -1,15 +1,8 @@
 ---
-title: ':focus'
+title: :focus
 slug: Web/CSS/:focus
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-translation_of: Web/CSS/:focus
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`:focus`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 양식의 입력 칸 등 포커스를 받은 요소를 나타냅니다. 보통 사용자가 요소를 클릭 또는 탭하거나, 키보드 <kbd>Tab</kbd> 키로 선택했을 때 발동합니다.
@@ -32,8 +25,8 @@ input:focus {
 ### HTML
 
 ```html
-<input class="red-input" value="저는 포커스를 받으면 빨갛게 됩니다."><br>
-<input class="blue-input" value="저는 포커스를 받으면 파랗게 됩니다.">
+<input class="red-input" value="저는 포커스를 받으면 빨갛게 됩니다." /><br />
+<input class="blue-input" value="저는 포커스를 받으면 파랗게 됩니다." />
 ```
 
 ### CSS

@@ -1,36 +1,29 @@
 ---
-title: ServiceWorkerGlobalScope.registration
+title: "ServiceWorkerGlobalScope: registration プロパティ"
+short-title: registration
 slug: Web/API/ServiceWorkerGlobalScope/registration
+l10n:
+  sourceCommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
-{{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **`registration`** 読み取り専用プロパティは、Service Worker の登録を表す {{domxref("ServiceWorkerRegistration")}} オブジェクトの参照を返します。
+**`registration`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、サービスワーカーの登録を表す {{domxref("ServiceWorkerRegistration")}} オブジェクトの参照を返します。
 
-## 構文
-
-```js
-serviceWorkerRegistration = self.registration
-```
-
-### 値
+## 値
 
 {{domxref("ServiceWorkerRegistration")}} オブジェクト。
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                                                         | ステータス                           | コメント   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
-| {{SpecName('Service Workers', '#service-worker-global-scope-registration', 'ServiceWorkerGlobalScope.registration')}} | {{Spec2('Service Workers')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ServiceWorkerGlobalScope.registration")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Using Service Workers](/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [Using web workers](/ja/docs/Web/Guide/Performance/Using_web_workers)
+- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
+- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)

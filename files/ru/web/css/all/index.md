@@ -1,13 +1,13 @@
 ---
 title: all
 slug: Web/CSS/all
-translation_of: Web/CSS/all
 ---
+
 {{CSSRef}}
 
 ## Описание
 
-Сокращённое свойство CSS\_ \_**`all`** сбрасывает все свойства, кроме {{cssxref("unicode-bidi")}} и {{cssxref("direction")}}, до их начального или унаследованного значения.
+Сокращённое свойство CSS **`all`** сбрасывает все свойства, кроме {{cssxref("unicode-bidi")}} и {{cssxref("direction")}}, до их начального или унаследованного значения.
 
 {{cssinfo}}
 
@@ -45,18 +45,21 @@ all: revert;
 
 ## Примеры
 
-**HTML**
+### HTML
 
 ```html
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
-**CSS**
+### CSS
 
 ```css
 html {
   font-size: small;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   color: blue;
 }
 
@@ -71,28 +74,50 @@ blockquote {
 #### No `all` property
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-html { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
+html {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
 ```
 
 {{EmbedLiveSample("ex0", "200", "125")}}
 
-{{HTMLElement("blockquote")}} использует стили браузера по умолчанию вместе с определённым фоном и цветом текста. Он также ведёт себя как _block_ элемент\_ \_: текст, который следует за ним, находится под ним.
+{{HTMLElement("blockquote")}} использует стили браузера по умолчанию вместе с определённым фоном и цветом текста. Он также ведёт себя как _block_ элемент : текст, который следует за ним, находится под ним.
 
 #### `all:unset`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-html { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: unset; }
+html {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
+blockquote {
+  all: unset;
+}
 ```
 
 {{EmbedLiveSample("ex1", "200", "125")}}
@@ -102,13 +127,25 @@ blockquote { all: unset; }
 #### `all:initial`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-html { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: initial; }
+html {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
+blockquote {
+  all: initial;
+}
 ```
 
 {{EmbedLiveSample("ex2", "200", "125")}}
@@ -118,13 +155,25 @@ blockquote { all: initial; }
 #### `all:inherit`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-html { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue; color: red; }
-blockquote { all: inherit; }
+html {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
+blockquote {
+  all: inherit;
+}
 ```
 
 {{EmbedLiveSample("ex3", "200", "125")}}

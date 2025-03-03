@@ -1,8 +1,8 @@
 ---
 title: isolation
 slug: Web/CSS/isolation
-translation_of: Web/CSS/isolation
 ---
+
 {{CSSRef}}
 
 A propriedade CSS **`isolation`** define se o elemento deve criar um novo {{glossary("stacking context")}}.
@@ -52,7 +52,7 @@ Uma das palavras-chave listadas abaixo.
 
 ```css
 .a {
-  background-color: rgb(0,255,0);
+  background-color: rgb(0, 255, 0);
 }
 #b {
   width: 200px;
@@ -77,13 +77,11 @@ Uma das palavras-chave listadas abaixo.
 
 ## Especificações
 
-| Specification                                                                | Status                               | Comment            |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{ SpecName('Compositing', '#isolation', 'Isolation') }} | {{ Spec2('Compositing') }} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.isolation")}}
+{{Compat}}
 
 ## Veja também
 

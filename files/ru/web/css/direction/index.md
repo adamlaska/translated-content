@@ -1,8 +1,8 @@
 ---
 title: direction
 slug: Web/CSS/direction
-translation_of: Web/CSS/direction
 ---
+
 {{CSSRef}}
 
 The **`direction`** CSS property sets the direction of text, table columns, and horizontal overflow. Use `rtl` for languages written from right to left (like Hebrew or Arabic), and `ltr` for those written from left to right (like English and most other languages).
@@ -57,18 +57,15 @@ blockquote {
 }
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                    | Status                                   | Comment             |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Writing Modes', '#direction', 'direction')}} | {{Spec2('CSS3 Writing Modes')}} | No change.          |
-| {{SpecName('CSS2.1', 'visuren.html#direction', 'direction')}} | {{Spec2('CSS2.1')}}                 | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("writing-mode")}}

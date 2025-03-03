@@ -1,21 +1,19 @@
 ---
 title: col
 slug: Web/HTML/Element/col
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/col
-original_slug: Web/HTML/Elemento/col
 ---
+
+{{HTMLSidebar}}
+
 ### Definición
 
 - Permite especificar propiedades para una columna o un grupo de ellas.
+
   - : **Sus etiquetas son**: `<col>` (solo tiene una).
-  
+
     **Crea una caja**: No.
 
-    **Está definido como**: Elemento [para tablas.](es/HTML/Elemento/Tipos_de_elementos#para_tablas).
+    **Está definido como**: Elemento [para tablas.](/es/docs/HTML/Elemento/Tipos_de_elementos#para_tablas).
 
     **Puede contener**: Nada.
 
@@ -237,7 +235,7 @@ original_slug: Web/HTML/Elemento/col
       <td>Carácter que se usará como punto de alineación.</td>
       <td>
         Un carácter, Uno de estos:
-        {{ mediawiki.external('ISO10646') }}.
+        [ISO10646].
       </td>
       <td>Lo fija el navegador.</td>
     </tr>
@@ -304,7 +302,8 @@ Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html
 
 ---
 
-> **Nota:** Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
 

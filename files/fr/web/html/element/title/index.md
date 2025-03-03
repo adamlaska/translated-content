@@ -1,21 +1,15 @@
 ---
-title: '<title> : l''élément de titre du document'
+title: "<title> : l'élément de titre du document"
 slug: Web/HTML/Element/title
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/title
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément **`<title>`** définit le titre du document (qui est affiché dans la barre de titre du navigateur ou dans l'onglet de la page). Cet élément ne peut contenir que du texte, les balises qu'il contiendrait seraient ignorées.
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -55,10 +49,11 @@ Les personnes utilisant des outils d'assistance peuvent utiliser le titre de la 
 
 Mettre à jour la valeur de `title` afin de refléter un changement d'état important (un problème de validation d'un formulaire par exemple) peut également s'avérer utile :
 
-#### Exemple
-
 ```html
-<title>2 erreurs sur votre commande - Restaurant chinois Maison bleue - Commande en ligne</title>
+<title>
+  2 erreurs sur votre commande - Restaurant chinois Maison bleue - Commande en
+  ligne
+</title>
 ```
 
 - [Comprendre les règles WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)

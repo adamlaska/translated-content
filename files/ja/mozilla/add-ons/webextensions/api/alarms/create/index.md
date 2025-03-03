@@ -3,7 +3,7 @@ title: alarms.create()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 新しいアラームを生成します。
 
@@ -11,9 +11,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/alarms/create
 
 ```js
 browser.alarms.create(
-  name,              // 文字列
-  alarmInfo          // オブジェクト
-)
+  name, // 文字列
+  alarmInfo, // オブジェクト
+);
 ```
 
 ### 引数
@@ -39,7 +39,7 @@ browser.alarms.create(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.alarms.create")}}
+{{Compat}}
 
 ## 例
 
@@ -49,7 +49,7 @@ browser.alarms.create(
 const delayInMinutes = 5;
 
 chrome.alarms.create({
-  delayInMinutes
+  delayInMinutes,
 });
 ```
 
@@ -61,7 +61,7 @@ const periodInMinutes = 2;
 
 chrome.alarms.create("my-periodic-alarm", {
   delayInMinutes,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 
@@ -73,13 +73,15 @@ const periodInMinutes = 2;
 
 chrome.alarms.create("my-periodic-alarm", {
   when,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 
-> **メモ:** この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,4 +108,4 @@ chrome.alarms.create("my-periodic-alarm", {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

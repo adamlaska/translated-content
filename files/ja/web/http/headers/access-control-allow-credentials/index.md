@@ -55,7 +55,7 @@ Access-Control-Allow-Credentials: true
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://example.com/', true);
+xhr.open("GET", "http://example.com/", true);
 xhr.withCredentials = true;
 xhr.send(null);
 ```
@@ -64,19 +64,17 @@ xhr.send(null);
 
 ```js
 fetch(url, {
-  credentials: 'include'
-})
+  credentials: "include",
+});
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                               | 状態                     | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName('Fetch','#http-access-control-allow-credentials', 'Access-Control-Allow-Credentials')}} | {{Spec2("Fetch")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Access-Control-Allow-Credentials")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,14 +1,8 @@
 ---
 title: border-spacing
 slug: Web/CSS/border-spacing
-tags:
-  - CSS
-  - CSS Property
-  - CSS Tables
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/border-spacing
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`border-spacing`** 속성은 인접한 표 칸의 테두리 간격을 지정합니다. {{cssxref("border-collapse")}}가 `separate`여야 적용됩니다.
@@ -63,13 +57,19 @@ border-spacing: unset;
 ```html
 <table>
   <tr>
-    <td>1</td><td>2</td><td>3</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
   </tr>
   <tr>
-    <td>4</td><td>5</td><td>6</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
   </tr>
   <tr>
-    <td>7</td><td>8</td><td>9</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
   </tr>
 </table>
 ```
@@ -100,7 +100,7 @@ td {
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

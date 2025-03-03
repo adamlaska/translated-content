@@ -1,5 +1,5 @@
 ---
-title: ':checked'
+title: :checked
 slug: Web/CSS/:checked
 ---
 
@@ -15,9 +15,12 @@ slug: Web/CSS/:checked
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-checked.html", "tabbed-shorter")}}
+
 ユーザーは要素をチェック/選択することでこの状態にすることができ、要素のチェックや選択を外すとこの状態から外れます。
 
-> **メモ:** ブラウザーは `<option>` を[置換要素](/ja/docs/Web/CSS/Replaced_element)として扱うことが多いので、 `:checked` 擬似クラスでスタイルが適用される部分の大きさはブラウザーによって異なります。
+> [!NOTE]
+> ブラウザーは `<option>` を[置換要素](/ja/docs/Web/CSS/Replaced_element)として扱うことが多いので、 `:checked` 擬似クラスでスタイルが適用される部分の大きさはブラウザーによって異なります。
 
 ## 構文
 
@@ -33,15 +36,15 @@ slug: Web/CSS/:checked
 
 ```html
 <div>
-  <input type="radio" name="my-input" id="yes">
+  <input type="radio" name="my-input" id="yes" />
   <label for="yes">Yes</label>
 
-  <input type="radio" name="my-input" id="no">
+  <input type="radio" name="my-input" id="no" />
   <label for="no">No</label>
 </div>
 
 <div>
-  <input type="checkbox" name="my-checkbox" id="opt-in">
+  <input type="checkbox" name="my-checkbox" id="opt-in" />
   <label for="opt-in">Check me!</label>
 </div>
 
@@ -97,14 +100,38 @@ option:checked {
 
 <table>
   <thead>
-    <tr><th>Column #1</th><th>Column #2</th><th>Column #3</th></tr>
+    <tr>
+      <th>Column #1</th>
+      <th>Column #2</th>
+      <th>Column #3</th>
+    </tr>
   </thead>
   <tbody>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
-    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
-    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
+    <tr>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+    </tr>
+    <tr>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+    </tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
   </tbody>
 </table>
 
@@ -149,12 +176,6 @@ option:checked {
 #### 結果
 
 {{EmbedLiveSample("Toggling_elements_with_a_hidden_checkbox", "auto", 220)}}
-
-### 画像ギャラリー
-
-`:checked` 擬似クラスを使って、ユーザーがサムネイルをクリックしたときだけフルサイズの画像が表示される画像ギャラリーを構築できます。実行してみるには[このデモ](/@api/deki/files/6268/=css-checked-gallery.zip)を参照してください。
-
-> **メモ:** 似たような効果で、 [`:hover`](/ja/docs/Web/CSS/:hover) 擬似クラスを使用して隠しラジオボタンを使わないものについては、 [`:hover`](/ja/docs/Web/CSS/:hover) のリファレンスページからの[このデモ](/@api/deki/files/6247/=css-gallery.zip)を参照してください。
 
 ## 仕様書
 

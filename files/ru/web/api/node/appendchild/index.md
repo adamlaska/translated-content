@@ -1,14 +1,10 @@
 ---
 title: Node.appendChild
 slug: Web/API/Node/appendChild
-tags:
-  - API
-  - DOM
-  - DOM Element Mehods
-  - Method
-  - WebAPI
-translation_of: Web/API/Node/appendChild
 ---
+
+{{APIRef("DOM")}}
+
 ## Аннотация
 
 **`Node.appendChild()`** добавляет узел в конец списка дочерних элементов указанного родительского узла. Если данный дочерний элемент является ссылкой на существующий узел в документе, то функция `appendChild()` перемещает его из текущей позиции в новую позицию (нет необходимости удалять узел из родительского узла перед добавлением его к какому-либо другому узлу).
@@ -17,7 +13,9 @@ translation_of: Web/API/Node/appendChild
 
 Если данный дочерний элемент является {{domxref("DocumentFragment")}}, то все содержимое {{domxref("DocumentFragment")}} перемещается в дочерний список указанного родительского узла.
 
-> **Примечание:** **Доступен новый API!** > [`ParentNode.append()`](/ru/docs/Web/API/ParentNode/append) поддерживает несколько аргументов и добавляемые строки.
+> [!NOTE]
+> Доступен новый API!
+> [`ParentNode.append()`](/ru/docs/Web/API/Element/append) поддерживает несколько аргументов и добавляемые строки.
 
 ## Синтаксис
 
@@ -25,7 +23,7 @@ translation_of: Web/API/Node/appendChild
 var child = element.appendChild(child);
 ```
 
-- `element` родительский [элемент](/ru/docs/DOM/element).
+- `element` родительский [элемент](/ru/docs/Web/API/Element).
 - `child` это элемент вставляется в конец `element`.
 
 ### Возвращаемое значение
@@ -37,7 +35,9 @@ var child = element.appendChild(child);
 Цепочка может работать не так, как ожидалось, из-за того, что `appendChild()` возвращает дочерний элемент:
 
 ```js
-let aBlock = document.createElement('block').appendChild( document.createElement('b') );
+let aBlock = document
+  .createElement("block")
+  .appendChild(document.createElement("b"));
 ```
 
 Присваивает переменной `aBlock` элемент `<b></b>`, а не `<block></block>`, как вы могли ожидать.
@@ -50,9 +50,13 @@ var p = document.createElement("p");
 document.body.appendChild(p);
 ```
 
-## Спецификация
+## Спецификации
 
-- [DOM Level 3 Core: appendChild](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-184E7107)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
 
 ## Смотрите также
 

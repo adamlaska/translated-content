@@ -1,16 +1,8 @@
 ---
 title: Referência de elementos SVG
 slug: Web/SVG/Element
-tags:
-  - Desenho
-  - Design Responsivo
-  - Elementos
-  - Gráficos Vetoriais
-  - Referência SVG
-  - SVG
-  - l10n:prioridade
-translation_of: Web/SVG/Element
 ---
+
 « [SVG](/pt-BR/docs/Web/SVG) / [SVG Attribute reference](/pt-BR/docs/Web/SVG/Attribute) »
 
 Os desenhos e imagens SVG são criados usando uma grande variedade de elementos dedicados a construção, desenho e leiaute de imagens e diagramas vetoriais. Aqui você encontrará documentação de referência para cada um dos elementos SVG.
@@ -212,7 +204,8 @@ Os desenhos e imagens SVG são criados usando uma grande variedade de elementos 
 
 ## Elementos obsoletos e descontinuados
 
-> **Aviso:** Aviso: Esses são elementos SVG antigos que foram descontinuados e não devem ser usados. Você nunca deve usá-los em novos projetos e deve susbstituí-los em projetos antigos o mais rápido possível. Eles estão listados aqui apenas para fins informativos.
+> [!WARNING]
+> Esses são elementos SVG antigos que foram descontinuados e não devem ser usados. Você nunca deve usá-los em novos projetos e deve susbstituí-los em projetos antigos o mais rápido possível. Eles estão listados aqui apenas para fins informativos.
 
 ### A
 
@@ -250,6 +243,6 @@ Os desenhos e imagens SVG são criados usando uma grande variedade de elementos 
 
 - [Referência de atributos SVG](/pt-BR/docs/Web/SVG/Attribute)
 - [SVG Tutorial](/pt-BR/docs/Web/SVG/Tutorial)
-- [SVG interface reference](/pt-BR/docs/DOM/Referencia_do_DOM#SVG_interfaces)
+- [SVG interface reference](/pt-BR/docs/Web/API/Document_Object_Model#svg_interfaces)
 
 {{SVGRef}}

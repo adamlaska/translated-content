@@ -1,17 +1,8 @@
 ---
 title: Introdução ao Django
 slug: Learn/Server-side/Django/Introduction
-tags:
-  - Aprender
-  - Codificação
-  - Iniciante
-  - Introdução
-  - Programação do lado do servidor
-  - Python
-  - django
-translation_of: Learn/Server-side/Django/Introduction
-original_slug: Learn/Server-side/Django/Introdução
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 
 Neste primeiro artigo do Django, respondemos a pergunta "O que é o Django?" e daremos uma visão geral do que torna este framework web especial. Vamos descrever os principais recursos, incluindo algumas das funcionalidades avançadas que não teremos tempo para abordar detalhadamente neste módulo. Também mostraremos alguns dos principais blocos de construção de um aplicativo Django (embora neste momento você ainda não tenha um ambiente de desenvolvimento para testá-lo).
@@ -24,7 +15,7 @@ Neste primeiro artigo do Django, respondemos a pergunta "O que é o Django?" e d
         <p>
           Conhecimentos básicos em computação. Um entendimento geral de
               <a
-                href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps"
+                href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/First_steps"
                 >programação de websites do lado do servidor</a
               >
               e, em particular, a mecânica de
@@ -66,7 +57,7 @@ Django ajuda você a escrever programas que são:
     O Django ativa a proteção contra muitas vulnerabilidades por padrão, incluindo SQL injection (injeção de SQL), cross-site scripting, cross-site request forgery (Falsificação de solicitação entre sites), e clickjacking ("furto de click") (veja [Segurança de sites](/pt-BR/docs/Learn/Server-side/First_steps/Website_security) para mais detalhes de tais ataques).
 
 - Escalável
-  - : Django usa uma arquitetura baseada em componentes “[shared-nothing](https://en.wikipedia.org/wiki/Shared_nothing_architecture)” ("nada-compartilhado") (cada parte da arquitetura é independente das outras, e consequentemente podem ser substituídas ou mudadas caso necessário). Ter uma separação clara entre as partes diferentes significa que pode se escalar para um tráfego aumentado adicionando hardware em qualquer nível: servidores de cache, servidores de banco de dados ou servidores de aplicação. Alguns dos sites mais ocupados escalaram o Django com sucesso para cumprir com as suas demandas (ex: Instagram e Disqus).
+  - : Django usa uma arquitetura baseada em componentes "[shared-nothing](https://en.wikipedia.org/wiki/Shared_nothing_architecture)" ("nada-compartilhado") (cada parte da arquitetura é independente das outras, e consequentemente podem ser substituídas ou mudadas caso necessário). Ter uma separação clara entre as partes diferentes significa que pode se escalar para um tráfego aumentado adicionando hardware em qualquer nível: servidores de cache, servidores de banco de dados ou servidores de aplicação. Alguns dos sites mais ocupados escalaram o Django com sucesso para cumprir com as suas demandas (ex: Instagram e Disqus).
 - Sustentável
   - : O código do Django é escrito usando princípios de design e padrões que encorajam a criação de codigo sustentável (que facilita a manutenção) e reusável. Em particular, isso utiliza o principio DRY - Don't Repeat Yourself (Não Repita a Si Mesmo) para que não haja duplicações desnecessárias, reduzindo a quantidade de código. O Django também promove o agrupamento de funcionalidades relacionadas para aplicativos reusáveis e, em um nível mais baixo, grupos de código relacionados para modulos (juntamente as linhas do padrão [MVC - Model View Controller](https://pt.wikipedia.org/wiki/MVC)).
 - Portável
@@ -78,7 +69,8 @@ Django foi inicialmente desenvolvido entre 2003 e 2005 por um time de web que er
 
 Django continou a crescer e aprimorar, desde seu lançamento (1.0) em Setembro de 2008 até a versão recentemente lançada 2.0 em 2017. Cada lançamento adicionou novas funcionalidades e consertou falhas, variando entre suportar novos tipos de banco de dados, mecanismos de template e caches, até a adição de funções view "genéricas" e classes (que reduzem a quantidade de código que os desenvolvedores tem que escrever para um número de tarefas de programação).
 
-> **Nota:** Cheque as [notas de lançamento](https://docs.djangoproject.com/pt-br/2.1/releases/) no site do Django para ver o que mudou nas versões mais recentes, e quanto trabalho esta sendo feito para tornar o Django melhor.
+> [!NOTE]
+> Cheque as [notas de lançamento](https://docs.djangoproject.com/pt-br/2.1/releases/) no site do Django para ver o que mudou nas versões mais recentes, e quanto trabalho esta sendo feito para tornar o Django melhor.
 
 Django é um projeto de código aberto, colaborativo e próspero, com milhares de usuários contribuindo. Embora ainda tenha alguns recursos que refletem sua origem, Django evoluiu para um framework versátil que é capaz de desenvovler qualquer tipo de website.
 
@@ -113,7 +105,8 @@ Aplicativos web feitos com Django geralmente agrupam o código que manipula cada
 - **Models (Modelos):** Modelos são objetos em Python que definem a estrutura dos dados de um aplicativo, e fornecem mecanismos para gerenciar (adicionar, modificar e excluir) e consultar registros no banco de dados.
 - **Templates:** Um template é um arquivo de texto que define a estrutura ou o layout de um arquivo (como uma página HTML), com espaços reservados usados para representar o conteúdo real. Uma _view_ pode criar dinamicamente uma página HTML usando um template HTML, preenchendo-a com dados de um _model (modelo)_. Um template pode ser usado para definir a estrutura de qualquer tipo de arquivo; não precisa ser HTML!
 
-> **Nota:** Django refere a essa organização como uma arquitetura nomeada "Model View Template (MVT)" ("Modelo Vista Template"). Ela tem muitas semelhanças com a familiar arquitetura [Model View Controller (Modelo Vista Controlador)](https://pt.wikipedia.org/wiki/MVC).
+> [!NOTE]
+> Django refere a essa organização como uma arquitetura nomeada "Model View Template (MVT)" ("Modelo Vista Template"). Ela tem muitas semelhanças com a familiar arquitetura [Model View Controller (Modelo Vista Controlador)](https://pt.wikipedia.org/wiki/MVC).
 
 As seções abaixo lhe darão uma idéia de como essas partes principais de um aplicativo do Django se parecerão (nos vamos entrar em mais detalhes mais tarde no curso, assim que configurarmos um ambiente de desenvolvimento).
 
@@ -173,7 +166,8 @@ def index(requisito):
     return HttpResponse('Um oi do Django!')
 ```
 
-> **Nota:** Um pouquinho de Python:
+> [!NOTE]
+> Um pouquinho de Python:
 >
 > - [Módulos do Python](https://docs.python.org/3/tutorial/modules.html) são "bibliotecas" de funções, armazenadas em arquivos separados, que podemos utilizar em nosso código. Aqui nós importamos apenas o objeto `HttpResponse` do módulo `django.http` para que possamos usá-lo em nossa view: `from django.http import HttpResponse`. Existem outras maneiras de importar alguns ou todos os objetos de um módulo.
 > - As funções em Python são declaradas usando a palavra-chave `def` como mostrado acima, com parâmetros nomeados listados entre parênteses após o nome da função; a linha inteira termina em dois pontos. Observe como as próximas linhas são todas **recuadas**. O recuo é importante, pois especifica que as linhas de código estão dentro desse bloco específico (a indentação obrigatória é um recurso chave do Python e é um dos motivos pelos quais o código Python é tão fácil de ler).
@@ -222,7 +216,8 @@ class Time(models.Model):
     time_nivel = models.CharField(max_length=3,choices=TIME_NIVEIS,default='A11') # choices-opções / default-padrão
 ```
 
-> **Nota:** Um pouquinho de Python:
+> [!NOTE]
+> Um pouquinho de Python:
 >
 > - O Python suporta "programação orientada a objetos", um estilo de programação onde organizamos nosso código em objetos, que incluem dados e funções relacionadas para operar nesses dados. Os objetos também podem herdar/estender/derivar de outros objetos, permitindo que um comportamento comum entre objetos relacionados seja compartilhado. Em Python, usamos a palavra-chave `class` (classe) para definir o "blueprint" (modelo/planta/plano) de um objeto. Podemos criar várias _instâncias_ específicas do tipo de objeto com base no modelo da classe.
 >
@@ -320,21 +315,3 @@ Parabéns, você completou o primeiro passo em sua jornada no Django! Agora voc�
 Você já viu algum código real do Django acima, mas, diferentemente do código do lado do cliente, você precisa configurar um ambiente de desenvolvimento para executá-lo. Esse é o nosso próximo passo.
 
 {{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
-
-## Neste módulo
-
-- [Introdução ao Django](/pt-BR/docs/Learn/Server-side/Django/Introdução)
-- [Configurando um ambiente de desenvolvimento](/pt-BR/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial Django: Website de uma Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Parte 2: Criando a base do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Parte 3: Usando _models_](/pt-BR/docs/Learn/Server-side/Django/Models)
-- [Django Parte 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
-- [Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
-- [Django Parte 6: Lista genérica e _detail views_](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
-- [Django Parte 7: Framework de Sessões](/pt-BR/docs/Learn/Server-side/Django/Sessions)
-- [Django Parte 8: Autenticação de Usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
-- [Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
-- [Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
-- [Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)
-- [Segurança de aplicações web Django](/pt-BR/docs/Learn/Server-side/Django/web_application_security)
-- [Criando um mini blog Django](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog)

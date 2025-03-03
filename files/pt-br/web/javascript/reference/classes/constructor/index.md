@@ -1,14 +1,8 @@
 ---
 title: constructor
 slug: Web/JavaScript/Reference/Classes/constructor
-tags:
-  - Classes
-  - ECMAScript6
-  - Experimental
-  - JavaScript orientado a objetos
-  - Nova versão JavaScript
-translation_of: Web/JavaScript/Reference/Classes/constructor
 ---
+
 O construtor é um método especial para criar e inicializar um objeto criado a partir de uma classe.
 
 ## Sintaxe
@@ -39,7 +33,7 @@ class Quadrado extends Poligono {
     super(comprimento, comprimento);
     // Nas classes filhas, super() deve ser chamado antes de usar o this. Sem ele
     // vai ocorrer um erro de referência. O this agora se refere a classe filha Quadrado
-    this.nome = 'Quadrado';
+    this.nome = "Quadrado";
   }
 
   // os atributos a seguir são herdados da classe pai Poligono: altura, comprimento e area.
@@ -72,10 +66,7 @@ constructor(...args) {
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                       | Comentário        |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
-| {{SpecName('ES6', '#sec-static-semantics-constructormethod', 'Constructor Method')}}     | {{Spec2('ES6')}}         | Definição inicial |
-| {{SpecName('ESDraft', '#sec-static-semantics-constructormethod', 'Constructor Method')}} | {{Spec2('ESDraft')}} |                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

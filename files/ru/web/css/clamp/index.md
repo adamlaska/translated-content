@@ -1,9 +1,8 @@
 ---
 title: clamp()
 slug: Web/CSS/clamp
-translation_of: Web/CSS/clamp()
-original_slug: Web/CSS/clamp()
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS)-функция **`clamp()`** задаёт значение в диапазоне между указанными нижней и верхней границами. Функция принимает три аргумента: минимальное значение, предпочитаемое значение и максимально допустимое. Может использоваться везде, где допускается применение {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, или {{CSSxRef("&lt;integer&gt;")}}.
@@ -61,14 +60,15 @@ _Максимальное значение_ – наибольшее значе�
 `clamp()` позволяет вам установить размер шрифта, который изменяется в зависимости от ширины области видимости, но не уменьшается ниже и не увеличивается выше заданного размера. Она имеет тот же эффект, что и в [Fluid Typography](https://css-tricks.com/snippets/css/fluid-typography/), но в одну строку и без использования медиавыражений.
 
 ```css
-p { font-size: clamp(1rem, 2.5vw, 1.5rem); }
+p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
 ```
 
 ```html
 <p>
-If 2.5vw is less than 1rem, the font-size will be 1rem.
-If 2.5vw is greater than 1.5rem, the font-size will be 1.5rem.
-Otherwise, it will be 2.5vw.
+  If 2.5vw is less than 1rem, the font-size will be 1rem. If 2.5vw is greater
+  than 1.5rem, the font-size will be 1.5rem. Otherwise, it will be 2.5vw.
 </p>
 ```
 
@@ -78,19 +78,17 @@ Otherwise, it will be 2.5vw.
 
 TBD
 
-## Specifications
+## Спецификации
 
-| Specification                                                                | Status                           | Comment             |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("CSS4 Values", "#calc-notation", "clamp()")}} | {{Spec2('CSS4 Values')}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{CSSxRef("calc")}}
 - {{CSSxRef("max")}}
 - {{CSSxRef("min")}}
-- [CSS Values](/ru/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS Values](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)

@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 
 **`delete()`** メソッドは、`WeakSet` オブジェクトから指定された要素を取り除きます。
 
-{{EmbedInteractiveExample("pages/js/weakset-prototype-delete.html")}}
+{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.delete()")}}
+
+```js interactive-example
+const weakset1 = new WeakSet();
+const object1 = {};
+
+weakset1.add(object1);
+
+console.log(weakset1.has(object1));
+// Expected output: true
+
+weakset1.delete(object1);
+
+console.log(weakset1.has(object1));
+// Expected output: false
+```
 
 ## 構文
 
@@ -34,21 +49,19 @@ var obj = {};
 
 ws.add(window);
 
-ws.delete(obj);    // false を返します。削除する obj が見つかりません。
+ws.delete(obj); // false を返します。削除する obj が見つかりません。
 ws.delete(window); // true を返します。正常に削除されます。
 
-ws.has(window);    // false を返します。 window はもう WeakSet の中にないからです。
+ws.has(window); // false を返します。 window はもう WeakSet の中にないからです。
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakset.prototype.delete', 'WeakSet.prototype.delete')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakSet.delete")}}
+{{Compat}}
 
 ## 関連情報
 

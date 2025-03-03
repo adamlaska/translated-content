@@ -1,25 +1,19 @@
 ---
 title: Element.prefix
 slug: Web/API/Element/prefix
-tags:
-  - API
-  - Compatibilidad de los Navegadores en Móviles
-  - Compatibilidad de los navegadores
-  - DOM
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Element/prefix
 ---
+
 {{APIRef}}
 
-La propiedad `Element.prefix` unicamente de lectura devuelve el namespace prefix de el elemento especificado, o` null si no hay especificado `prefix .
+La propiedad `Element.prefix` unicamente de lectura devuelve el namespace prefix de el elemento especificado, o `null` si no hay especificado prefix.
 
-> **Nota:** Antes de DOM4 esta API fué definida dentro de la interfaz {{domxref("Node")}}.
+> [!NOTE]
+> Antes de DOM4 esta API fué definida dentro de la interfaz {{domxref("Node")}}.
 
 ## Síntaxis
 
 ```js
-string = element.prefix
+string = element.prefix;
 ```
 
 ## Ejemplos

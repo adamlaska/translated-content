@@ -1,9 +1,9 @@
 ---
 title: Window.getSelection()
 slug: Web/API/Window/getSelection
-translation_of: Web/API/Window/getSelection
 ---
-{{ ApiRef() }}
+
+{{APIRef}}
 
 ## Коротко
 
@@ -25,10 +25,10 @@ selection = window.getSelection();
 
 ```js
 function foo() {
-    var selObj = window.getSelection();
-    alert(selObj);
-    var selRange = selObj.getRangeAt(0);
-    // вернёт диапазон Range
+  var selObj = window.getSelection();
+  alert(selObj);
+  var selRange = selObj.getRangeAt(0);
+  // вернёт диапазон Range
 }
 ```
 
@@ -38,7 +38,7 @@ function foo() {
 
 В JavaScript при попытке передать в функцию, принимающую строку (как на пример {{ Domxref("window.alert()") }} или же {{ Domxref("document.write()") }}), функция попробует сделать из любого параметра строку, даже если этот параметр является объектом, функцией со своими методами и свойствами.
 
-В приведённом выше примере `selObj.toString() автоматически задействуется, когда мы передаём в `{{domxref("window.alert()")}} переменную selObj как параметр, который должен быть строкой. Однако мы не можем использовать свойства и метода объекта String, как на пример : [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length "JS/String.length"), [`substr`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr "JS/String.substr"). В следствии чего, вам необходимо будет применить вручную метод `toString(), как тут:`
+В приведённом выше примере `selObj.toString() автоматически задействуется, когда мы передаём в`{{domxref("window.alert()")}} переменную selObj как параметр, который должен быть строкой. Однако мы не можем использовать свойства и метода объекта String, как на пример : [`length`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/length), [`substr`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/substr). В следствии чего, вам необходимо будет применить вручную метод `toString(), как тут:`
 
 ```js
 var selectedText = selObj.toString();
@@ -59,11 +59,9 @@ var selectedText = selObj.toString();
 
 {{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
-
-##
 
 ## Смотрите также
 

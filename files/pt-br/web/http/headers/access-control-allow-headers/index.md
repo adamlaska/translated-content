@@ -1,15 +1,8 @@
 ---
 title: Access-Control-Allow-Headers
 slug: Web/HTTP/Headers/Access-Control-Allow-Headers
-tags:
-  - CORS
-  - Cabeçalho de Resposta
-  - HTTP
-  - Reference
-  - cabeçalho
-  - header
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta **`Access-Control-Allow-Headers`** é usado na resposta à uma {{glossary("preflight request")}} na qual incluí o cabeçalho {{HTTPHeader("Access-Control-Request-Headers")}} para indicar quais cabeçalhos HTTP podem ser utilizados durante a requisição efetiva.
@@ -103,13 +96,11 @@ Se o método requisitado não é suportado, o servidor irá responder com um err
 
 ## Especificações
 
-| Especificação                                                                                                            | Status                   | Comentário        |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ----------------- |
-| {{SpecName('Fetch','#http-access-control-allow-headers', 'Access-Control-Allow-Headers')}} | {{Spec2("Fetch")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Headers")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,14 +1,8 @@
 ---
 title: Content-Range
 slug: Web/HTTP/Headers/Content-Range
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de Resposta
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Content-Range
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta HTTP **`Content-Range`** indica em que lugar uma mensagem parcial pertence em uma mensagem completa no corpo.
@@ -59,13 +53,13 @@ Content-Range: bytes 200-1000/67589
 
 ## Especificações
 
-| Especificação                                        | Título                                                 |
-| ---------------------------------------------------- | ------------------------------------------------------ |
+| Especificação                           | Título                                                 |
+| --------------------------------------- | ------------------------------------------------------ |
 | {{RFC("7233", "Content-Range", "4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Range")}}
+{{Compat}}
 
 ## Veja também
 

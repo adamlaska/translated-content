@@ -1,12 +1,8 @@
 ---
 title: 302 Found
 slug: Web/HTTP/Status/302
-tags:
-  - Codigo de Estado
-  - HTTP
-  - Redirecionamento
-translation_of: Web/HTTP/Status/302
 ---
+
 {{HTTPSidebar}}
 
 O código de estado HyperText Transfer Protocol (HTTP) **`302 Found`** indica que o recurso foi temporariamente movido para a URL informada pelo cabeçalho {{HTTPHeader("Localização")}}. Os navegadores redirecionar para essa página porém os motores de busca não atualizam o link inicial.
@@ -23,13 +19,13 @@ Em casos onde você deseja que o método utilizado altere para {{HTTPMethod("GET
 
 ## Especificações
 
-| Especificação                                        | Título                                                        |
-| ---------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                          | Título                                                        |
+| -------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "302 Found" , "6.4.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.302")}}
+{{Compat}}
 
 ## Veja também
 

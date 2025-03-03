@@ -1,13 +1,13 @@
 ---
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
-translation_of: Web/API/CSSStyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSSStyleSheet`** interface представляет одну [CSS](/ru/docs/Web/CSS) таблицу стилей. CSS таблица наследует свойства и методы от родителя, {{domxref("StyleSheet")}}.
 
-Таблица стилей состоит (правил)_{{domxref("CSSRule", "rules", "", 1)}}_, таких как _{{domxref("CSSStyleRule", "style rules", "", 1)}}\_\_ _("`h1,h2 { font-size: 16pt }"`),_и различных_ (`@import`, `@media`, ...), etc. **`CSSStyleSheet`** interface позволяет получать и изменять список правил в таблице стилей.
+Таблица стилей состоит (правил) _{{domxref("CSSRule", "rules", "", 1)}}_, таких как _{{domxref("CSSStyleRule", "style rules", "", 1)}}_ ("`h1,h2 { font-size: 16pt }"`), _и различных_ (`@import`, `@media`, ...), etc. **`CSSStyleSheet`** interface позволяет получать и изменять список правил в таблице стилей.
 
 Смотрите [Notes](#notes) секцию о различных способах получения **`CSSStyleSheet`** object.
 
@@ -48,25 +48,22 @@ A `CSSStyleSheet` object is created and inserted into the document's `styleSheet
 
 A (possibly incomplete) list of ways a style sheet can be associated with a document follows:
 
-| Reason for the style sheet to be associated with the document                                  | Appears in `document. styleSheets` list | Getting the owner element/rule given the style sheet object          | The interface for the owner object                                                                                              | Getting the CSSStyleSheet object from the owner                          |
-| ---------------------------------------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| {{HTMLElement("style")}} and {{HTMLElement("link")}} elements in the document | Yes                                     | {{domxref("StyleSheet.ownerNode", ".ownerNode")}}     | {{domxref("HTMLLinkElement")}}, {{domxref("HTMLStyleElement")}}, or {{domxref("SVGStyleElement")}} | {{domxref("LinkStyle.sheet", ".sheet")}}                     |
-| CSS {{cssxref("@import")}} rule in other style sheets applied to the document            | Yes                                     | {{domxref("CSSStyleSheet.ownerRule", ".ownerRule")}} | {{domxref("CSSImportRule")}}                                                                                            | {{domxref("CSSImportRule.styleSheet", ".styleSheet")}} |
-| `<?xml-stylesheet ?>` processing instruction in the (non-HTML) document                        | Yes                                     | {{domxref("StyleSheet.ownerNode", ".ownerNode")}}     | {{domxref("ProcessingInstruction")}}                                                                                | {{domxref("LinkStyle.sheet", ".sheet")}}                     |
-| HTTP Link Header                                                                               | Yes                                     | _N/A_                                                                | N/A                                                                                                                             | N/A                                                                      |
-| User agent (default) style sheets                                                              | No                                      | N/A                                                                  | N/A                                                                                                                             | N/A                                                                      |
+| Reason for the style sheet to be associated with the document                 | Appears in `document. styleSheets` list | Getting the owner element/rule given the style sheet object | The interface for the owner object                                                                 | Getting the CSSStyleSheet object from the owner        |
+| ----------------------------------------------------------------------------- | --------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| {{HTMLElement("style")}} and {{HTMLElement("link")}} elements in the document | Yes                                     | {{domxref("StyleSheet.ownerNode", ".ownerNode")}}           | {{domxref("HTMLLinkElement")}}, {{domxref("HTMLStyleElement")}}, or {{domxref("SVGStyleElement")}} | {{domxref("LinkStyle.sheet", ".sheet")}}               |
+| CSS {{cssxref("@import")}} rule in other style sheets applied to the document | Yes                                     | {{domxref("CSSStyleSheet.ownerRule", ".ownerRule")}}        | {{domxref("CSSImportRule")}}                                                                       | {{domxref("CSSImportRule.styleSheet", ".styleSheet")}} |
+| `<?xml-stylesheet ?>` processing instruction in the (non-HTML) document       | Yes                                     | {{domxref("StyleSheet.ownerNode", ".ownerNode")}}           | {{domxref("ProcessingInstruction")}}                                                               | {{domxref("LinkStyle.sheet", ".sheet")}}               |
+| HTTP Link Header                                                              | Yes                                     | _N/A_                                                       | N/A                                                                                                | N/A                                                    |
+| User agent (default) style sheets                                             | No                                      | N/A                                                         | N/A                                                                                                | N/A                                                    |
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                    | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM", "#cssstylesheet", 'CSSStyleSheet')}}                     | {{Spec2("CSSOM")}}         |                    |
-| {{SpecName("DOM2 Style", "css.html#CSS-CSSStyleSheet", "CSSStyleSheet")}} | {{Spec2("DOM2 Style")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using dynamic styling information](/ru/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

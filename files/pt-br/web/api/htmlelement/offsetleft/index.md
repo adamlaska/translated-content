@@ -1,13 +1,8 @@
 ---
 title: HTMLElement.offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
-tags:
-  - API
-  - ApenasLeitura
-  - Propriedade
-  - Referência(2)
-translation_of: Web/API/HTMLElement/offsetLeft
 ---
+
 {{ APIRef("HTML DOM") }}
 
 O **`HTMLElement.offsetLeft`** é um método apenas de leitura que retorna a medida, em pixels, da distância do canto superior esquerdo do elemento atual para o nó {{domxref("HTMLElement.offsetParent")}}.
@@ -37,7 +32,7 @@ if (tOLeft > 5) {
 
 Esse exemplo mostra uma frase 'longa' envolvida por uma div com uma borda azul, e uma caixa vermelha que deveria delimitar o span.
 
-![Image:offsetLeft.jpg](/@api/deki/files/790/=OffsetLeft.jpg)
+![Image:offsetLeft.jpg](offsetleft.jpg)
 
 ```
 <div style="width: 300px; border-color:blue;
@@ -60,15 +55,13 @@ Esse exemplo mostra uma frase 'longa' envolvida por uma div com uma borda azul, 
 </script>
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                    | Status                           | Comentário |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsetleft', 'offsetLeft')}} | {{Spec2('CSSOM View')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.HTMLElement.offsetLeft")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,26 +1,30 @@
 ---
-title: ReadableStreamBYOBReader.ReadableStreamBYOBReader()
+title: "ReadableStreamBYOBReader: ReadableStreamBYOBReader() コンストラクター"
+short-title: ReadableStreamBYOBReader()
 slug: Web/API/ReadableStreamBYOBReader/ReadableStreamBYOBReader
+l10n:
+  sourceCommit: d41c5446d4ef257280fae9b78e2298ced8954a95
 ---
 
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
 **`ReadableStreamBYOBReader()`** コンストラクターは、`ReadableStreamBYOBReader` オブジェクトのインスタンスを作成して返します。
 
-> **メモ:** 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("ReadableStream.getReader()")}} メソッドを使用します。
+> [!NOTE]
+> 通常、このコンストラクターを手動で使用することはありません。 代わりに、{{domxref("ReadableStream.getReader()")}} メソッドに `"byob"` を引数につけて使用してください。
 
 ## 構文
 
-```
-var readableStreamBYOBReader = new ReadableStreamBYOBReader(stream);
+```js-nolint
+new ReadableStreamBYOBReader(stream)
 ```
 
-### パラメーター
+### 引数
 
-- stream
+- `stream`
   - : 読み取られる {{domxref("ReadableStream")}}。
 
-### 戻り値
+### 返値
 
 {{domxref("ReadableStreamBYOBReader")}} オブジェクトのインスタンス。
 
@@ -31,14 +35,22 @@ var readableStreamBYOBReader = new ReadableStreamBYOBReader(stream);
 
 ## 例
 
-未定。
+コンストラクターが直接呼び出されることはほとんどありません。
+代わりに、表示させるように {{domxref("ReadableStream.getReader()")}} を呼び出してください。
 
-## 仕様
+```js
+const reader = stream.getReader({ mode: "byob" });
+```
 
-| 仕様                                                                                                     | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#byob-reader-constructor","ReadableStreamBYOBReader()")}} | {{Spec2('Streams')}} | 初期定義 |
+## 仕様書
+
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ReadableStreamBYOBReader.ReadableStreamBYOBReader")}}
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("ReadableStreamBYOBReader")}}
+- [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)

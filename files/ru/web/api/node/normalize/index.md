@@ -1,8 +1,8 @@
 ---
 title: Node.normalize()
 slug: Web/API/Node/normalize
-translation_of: Web/API/Node/normalize
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`Node.normalize()`** преобразует указанный узел и все его под-деревья в "нормализованный" вид. В нормализованном под-дереве нет ни пустых, ни смежных текстовых узлов.
@@ -18,8 +18,8 @@ element.normalize();
 ```js
 var wrapper = document.createElement("div");
 
-wrapper.appendChild( document.createTextNode("Part 1 ") );
-wrapper.appendChild( document.createTextNode("Part 2 ") );
+wrapper.appendChild(document.createTextNode("Part 1 "));
+wrapper.appendChild(document.createTextNode("Part 2 "));
 
 // At this point, wrapper.childNodes.length === 2
 // wrapper.childNodes[0].textContent === "Part 1 "
@@ -31,10 +31,14 @@ wrapper.normalize();
 // wrapper.childNodes[0].textContent === "Part 1 Part 2 "
 ```
 
-## Спецификация
+## Спецификации
 
-- [DOM Level 2 Core: Node.normalize](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-normalize)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
 
 ## Смотрите также
 
-- [`Text.splitText`](/ru/docs/DOM/Text.splitText "DOM/Text.splitText")
+- [`Text.splitText`](/ru/docs/Web/API/Text/splitText)

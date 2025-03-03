@@ -1,13 +1,8 @@
 ---
 title: block
 slug: Web/JavaScript/Reference/Statements/block
-tags:
-  - Declaração
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/block
 ---
+
 {{jsSidebar("Statements")}}
 
 Uma **declaração em bloco** (ou **declaração composta (compound)** em outras linguagens) é usado para agrupar nenhum ou mais declarações. O bloco é delimitado por um par de chaves e pode opcionalmente ser {{jsxref("Statements/label", "nomeado")}}:
@@ -83,17 +78,11 @@ Note que o escope bloqueado de `const c = 2` _não invoca uma_ `SyntaxError: Ide
 
 ## Especificações
 
-| Especificação                                                                | Situação                     | Comentário                                         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-block', 'Block statement')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-block', 'Block statement')}}         | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ES5.1', '#sec-12.1', 'Block statement')}}     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES3', '#sec-12.1', 'Block statement')}}         | {{Spec2('ES3')}}         |                                                    |
-| {{SpecName('ES1', '#sec-12.1', 'Block statement')}}         | {{Spec2('ES1')}}         | Definição inicial. Implementada no JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.block")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,8 +1,8 @@
 ---
 title: MessageChannel
 slug: Web/API/MessageChannel
-translation_of: Web/API/MessageChannel
 ---
+
 {{APIRef("HTML DOM")}}
 
 A interface **`MessageChannel`** da [API Channel Messaging](/pt-BR/docs/Web/API/Channel_Messaging_API) nos permite criar um novo canal de mensagem e enviar os dados através de suas duas propriedades {{domxref("MessagePort")}}.
@@ -27,15 +27,15 @@ No seguinte bloco de codigo, você pode ver um novo canal sendo criado usando o 
 
 ```js
 var channel = new MessageChannel();
-var para = document.querySelector('p');
+var para = document.querySelector("p");
 
-var ifr = document.querySelector('iframe');
+var ifr = document.querySelector("iframe");
 var otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+  otherWindow.postMessage("Hello from the main page!", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;
@@ -48,13 +48,11 @@ Para um exemplo completo, veja nosso [channel messaging basic demo](https://gith
 
 ## Especificações
 
-| Especificações                                                                                                   | Status                           | Comentário |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'web-messaging.html#message-channels','Message channels')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.MessageChannel")}}
+{{Compat}}
 
 ## Veja também
 

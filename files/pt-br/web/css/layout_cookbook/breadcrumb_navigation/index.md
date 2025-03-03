@@ -1,20 +1,13 @@
 ---
 title: Navegação "Migalha de Pão"
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
-tags:
-  - CSS
-  - Layout
-  - Migalha de pão
-  - Navegação
-  - cookbook
-  - flexbox
-translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 ---
+
 {{CSSRef}}
 
 A navegação "migalha de pão" ajuda o usuário a enteder sua localização no site, fornecendo uma trilha de navegação de volta à pagina inicial.
 
-![Links displayed inline with separators](https://mdn.mozillademos.org/files/16228/breadcrumb-navigation.png)
+![Links displayed inline with separators](breadcrumb-navigation.png)
 
 ## Exigências
 
@@ -24,7 +17,7 @@ Os itens tipicamente são exibidos em linha com um separador para indicar uma hi
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
 
-> **Note:** [Baixe esse exemplo](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
+> **Nota:** [Baixe esse exemplo](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
 
 ## Faça escolhas
 
@@ -40,10 +33,10 @@ Os vários métodos de layout têm diferente suporte para o navegador. Veja os g
 
 #### Flexbox
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## Veja também
 
-- [CSS Flexible Box Layout](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [CSS Flexible Box Layout](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout)
 - [Fornecendo uma trilha de "migalha de pão"](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
 - [Usando o atributo aria-current](https://tink.uk/using-the-aria-current-attribute/)

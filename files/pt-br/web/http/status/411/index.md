@@ -1,13 +1,8 @@
 ---
 title: 411 Length Required
 slug: Web/HTTP/Status/411
-tags:
-  - Códigos de status
-  - Códigos de status HTTP
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Status/411
 ---
+
 {{HTTPSidebar}}
 
 O código de resposta **`411 Length Required`** de erro de cliente do Protocolo de Transferência de HyperTexto (HTTP) indica que o servidor se nega a aceitar a requisição sem um cabeçalho {{HTTPHeader("Content-Length")}} definido.
@@ -22,8 +17,8 @@ O código de resposta **`411 Length Required`** de erro de cliente do Protocolo 
 
 ## Specifications
 
-| Specification                                                    | Title                                                                     |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| Specification                                     | Title                                                                     |
+| ------------------------------------------------- | ------------------------------------------------------------------------- |
 | {{RFC("7231", "411 Length Required" , "6.5.10")}} | Protocolo de transferência de Hipertexto (HTTP/1.1): Semântica e Conteúdo |
 
 ## See also

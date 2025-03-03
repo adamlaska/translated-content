@@ -1,8 +1,8 @@
 ---
 title: Server
 slug: Web/HTTP/Headers/Server
-translation_of: Web/HTTP/Headers/Server
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho **`Server`** contem informação sobre o software usado pelo servidor de origem para manipular a solicitação.
@@ -41,13 +41,13 @@ Server: Apache/2.4.1 (Unix)
 
 ## Especificações
 
-| Specification                                | Title                                                        |
-| -------------------------------------------- | ------------------------------------------------------------ |
+| Specification                      | Title                                                        |
+| ---------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7231", "Server", "7.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semântica e Conteúdo |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Server")}}
+{{Compat}}
 
 ## Veja também
 

@@ -3,7 +3,7 @@ title: 子結合子
 slug: Web/CSS/Child_combinator
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 **子結合子** (child combinator) (`>`) は 2 つの CSS セレクターの間に配置されます。 2 つ目のセレクターが 1 つ目のセレクターの直接の子要素の場合にのみ一致します。
 
@@ -40,7 +40,8 @@ div > span {
 
 ```html
 <div>
-  <span>Span #1, in the div.
+  <span
+    >Span #1, in the div.
     <span>Span #2, in the span that's in the div.</span>
   </span>
 </div>
@@ -53,11 +54,7 @@ div > span {
 
 ## 仕様書
 
-| 仕様書                                                                                        | 状態                               | 備考             |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS4 Selectors", "#child-combinators", "child combinator")}}     | {{Spec2("CSS4 Selectors")}} |                     |
-| {{SpecName("CSS3 Selectors", "#child-combinators", "child combinators")}}     | {{Spec2("CSS3 Selectors")}} | 変更なし          |
-| {{SpecName("CSS2.1", "selector.html#child-selectors", "child selectors")}} | {{Spec2("CSS2.1")}}             | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

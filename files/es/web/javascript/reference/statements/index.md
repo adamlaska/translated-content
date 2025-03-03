@@ -1,13 +1,8 @@
 ---
 title: Sentencias
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - JavaScript
-  - Referencia
-  - sentencias
-translation_of: Web/JavaScript/Reference/Statements
-original_slug: Web/JavaScript/Referencia/Sentencias
 ---
+
 {{jsSidebar("Statements")}}
 
 Las aplicaciones JavaScript se componen de sentencias con una sintaxis propia. Una sentencia puede estar formada por múltiples líneas. Puede haber varias sentencias en una sola línea si separamos cada una de las sentencias por un punto y coma. No es una palabra clave, sino un grupo de palabras clave.
@@ -68,7 +63,7 @@ Puedes encontrarlas por orden alfabético en la columna de la izquierda .
 - {{jsxref("Sentencias/for...in", "for...in")}}
   - : Itera sobre las propiedades enumerables de un objeto, en orden albitrario. Para cada propiedad distinta, las instrucciones pueden ser ejecutadas.
 - {{jsxref("Sentencias/for...of", "for...of")}}
-  - : Iterates over iterable objects (including {{jsxref("Array", "array")}}, array-like objects, [iterators and generators](/es/docs/JavaScript/Guide/Iterators_and_Generators)), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
+  - : Iterates over iterable objects (including {{jsxref("Array", "array")}}, array-like objects, [iterators and generators](/es/docs/Web/JavaScript/Guide/Iterators_and_generators)), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
 - {{jsxref("Sentencias/while", "while")}}
   - : Crea un bucle que ejecuta la instrucción especificada siempre que la condición de prueba se evalúe como verdadera. La condición se evalúa antes de ejecutar la instrucción.
 
@@ -81,6 +76,7 @@ Puedes encontrarlas por orden alfabético en la columna de la izquierda .
 - {{jsxref("Sentencias/import", "import")}}
   - : Usada para permitir a un escript importar propiedades, funciones y objetos desde otro script firmado que ha exportado su información. Esta antigua funcionalidad de Netscape ha sido removida y será redefinida por los modulos de ECMAScript 6.
 - {{jsxref("Sentencias/label", "label")}}
+
   - : Provee una instrucción con un identificador que puedes referir usando una instrucción `break` o `continue` .
 
 - {{deprecated_inline()}} {{jsxref("Sentencias/with", "with")}}
@@ -88,14 +84,8 @@ Puedes encontrarlas por orden alfabético en la columna de la izquierda .
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                                   | Status                       | Comentario                                     |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------- |
-| {{SpecName('ES1', '#sec-12', 'Statements')}}                                                                                                                     | {{Spec2('ES1')}}         | Definición inicial                             |
-| {{SpecName('ES3', '#sec-12', 'Statements')}}                                                                                                                     | {{Spec2('ES3')}}         |                                                |
-| {{SpecName('ES5.1', '#sec-12', 'Statements')}}                                                                                                                     | {{Spec2('ES5.1')}}     |                                                |
-| {{SpecName('ES6', '#sec-ecmascript-language-statements-and-declarations', 'ECMAScript Language: Statements and Declarations')}}         | {{Spec2('ES6')}}         | Nuevo: function\*, let, for...of, yield, class |
-| {{SpecName('ESDraft', '#sec-ecmascript-language-statements-and-declarations', 'ECMAScript Language: Statements and Declarations')}} | {{Spec2('ESDraft')}} |                                                |
+{{Specifications}}
 
 ## Vea También
 
-- [Operadores](/es/docs/Web/JavaScript/Referencia/Operadores)
+- [Operadores](/es/docs/Web/JavaScript/Reference/Operators)

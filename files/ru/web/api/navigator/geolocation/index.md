@@ -1,8 +1,8 @@
 ---
 title: Navigator.geolocation
 slug: Web/API/Navigator/geolocation
-translation_of: Web/API/Navigator/geolocation
 ---
+
 {{ APIRef("Geolocation API") }}
 
 Свойство **`Navigator.geolocation`** только для чтения, возвращающие объект {{domxref("Geolocation")}}, который даёт веб контенту доступ к месторасположению устройства. Это позволяет веб-сайту или приложению предложить индивидуальный результат основанный на месторасположении пользователя.
@@ -19,10 +19,10 @@ geo = navigator.geolocation
 
 {{Specifications}}
 
-## Доступность в браузере
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Использование геолокации.](/ru/docs/WebAPI/Using_geolocation)
+- [Использование геолокации.](/ru/docs/Web/API/Geolocation_API)

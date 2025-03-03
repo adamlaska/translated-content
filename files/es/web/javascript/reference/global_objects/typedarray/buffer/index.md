@@ -1,13 +1,8 @@
 ---
 title: TypedArray.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
-tags:
-  - Buffer
-  - JavaScript
-  - Propiedad
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
-original_slug: Web/JavaScript/Referencia/Objetos_globales/TypedArray/buffer
 ---
+
 {{JSRef}}
 
 La propiedad de acceso **`buffer`** representa el {{jsxref("ArrayBuffer")}} referenciada por un _TypedArray_ en tiempo de construcción.
@@ -20,7 +15,7 @@ typedArray.buffer
 
 ## Descripción
 
-La propiedad `buffer` es una propiedad de acceso cuya función _set accessor_ es `undefined`, significa que tu sólo puedes leer esta propiedad. El valor es establecido cuando _TypedArray_ se construye y no puede ser cambiado. _TypedArray_ es uno de los [TypedArray objects](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
+La propiedad `buffer` es una propiedad de acceso cuya función _set accessor_ es `undefined`, significa que tu sólo puedes leer esta propiedad. El valor es establecido cuando _TypedArray_ se construye y no puede ser cambiado. _TypedArray_ es uno de los [TypedArray objects](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
 
 ## Ejemplos
 
@@ -34,16 +29,13 @@ uint16.buffer; // ArrayBuffer { byteLength: 8 }
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estatus                      | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-get-%typedarray%.prototype.buffer', 'TypedArray.prototype.buffer')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.buffer', 'TypedArray.prototype.buffer')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.TypedArray.buffer")}}
+{{Compat}}
 
 ## Véase también
 
-- [JavaScript typed arrays](/es/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/es/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}

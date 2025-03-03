@@ -1,11 +1,11 @@
 ---
 title: HTMLCanvasElement.captureStream()
 slug: Web/API/HTMLCanvasElement/captureStream
-translation_of: Web/API/HTMLCanvasElement/captureStream
 ---
+
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
-**`HTMLCanvasElement`\*\***`.captureStream()`\*\* метод возвращает {{domxref("CanvasCaptureMediaStream")}}, который является видеозахватчиком (оцифровщиком) в реальном времени на поверхности canvas.
+**`HTMLCanvasElement.captureStream()`** метод возвращает {{domxref("CanvasCaptureMediaStream")}}, который является видеозахватчиком (оцифровщиком) в реальном времени на поверхности canvas.
 
 ## Синтаксис
 
@@ -42,7 +42,7 @@ var stream = canvasElt.captureStream(25); // 25 FPS
 pc.addStream(stream);
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

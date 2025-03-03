@@ -1,10 +1,8 @@
 ---
 title: StorageManager.estimate()
 slug: Web/API/StorageManager/estimate
-tags:
-  - метод
-translation_of: Web/API/StorageManager/estimate
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 The **`estimate()`** method of the {{domxref("StorageManager")}} interface asks the Storage Manager to obtain quota and usage information for the current origin. This method operates asynchronously, so it returns a {{jsxref("Promise")}} which resolves once the information is available. The promise's fulfillment handler receives as an input a {{domxref("StorageEstimate")}} with the usage and quota data.
@@ -33,17 +31,18 @@ In this example, we obtain the usage estimates and present the percentage of sto
 
 ```html
 <p>
-  You're currently using about <span id="percent">
-  </span>% of your available storage.
+  You're currently using about <span id="percent"> </span>% of your available
+  storage.
 </p>
 ```
 
 ### JavaScript content
 
 ```js
-navigator.storage.estimate().then(function(estimate) {
-  document.getElementById("percent").innerHTML =
-      (estimate.usage / estimate.quota).toFixed(2);
+navigator.storage.estimate().then(function (estimate) {
+  document.getElementById("percent").innerHTML = (
+    estimate.usage / estimate.quota
+  ).toFixed(2);
 });
 ```
 
@@ -51,7 +50,7 @@ navigator.storage.estimate().then(function(estimate) {
 
 {{ EmbedLiveSample('Example', 600, 40) }}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

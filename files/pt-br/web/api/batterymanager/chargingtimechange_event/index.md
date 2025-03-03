@@ -1,18 +1,11 @@
 ---
 title: BatteryManager.onchargingtimechange
 slug: Web/API/BatteryManager/chargingtimechange_event
-tags:
-  - API
-  - Battery API
-  - Event Handler
-  - Propriedade
-  - Referencia
-translation_of: Web/API/BatteryManager/onchargingtimechange
-original_slug: Web/API/BatteryManager/onchargingtimechange
 ---
+
 {{APIRef("Battery API")}}
 
-Especifica um _event listener_ para receber eventos {{event("chargingtimechange")}}. Esses eventos ocorrem quando a propriedade {{domxref("BatteryManager.chargingTime","chargingTime")}} (tempo de carregamento) da bateria é atualizada.
+Especifica um _event listener_ para receber eventos [`chargingtimechange`](/pt-BR/docs/Web/Events/chargingtimechange). Esses eventos ocorrem quando a propriedade {{domxref("BatteryManager.chargingTime","chargingTime")}} (tempo de carregamento) da bateria é atualizada.
 
 ## Sintaxe
 
@@ -20,15 +13,15 @@ Especifica um _event listener_ para receber eventos {{event("chargingtimechange"
 navigator.battery.onchargingtimechange = funcRef
 ```
 
-Onde `funcRef` é uma função para ser chamada quando o evento {{event("chargingtimechange")}} ocorre.
+Onde `funcRef` é uma função para ser chamada quando o evento [`chargingtimechange`](/pt-BR/docs/Web/Events/chargingtimechange) ocorre.
 
 ## Especificações
 
-{{page("/pt-BR/docs/Web/API/BatteryManager","Specifications")}}
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{page("/pt-BR/docs/Web/API/BatteryManager","Browser_compatibility")}}
+{{Compat}}
 
 ## Veja também
 

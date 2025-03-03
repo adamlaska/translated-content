@@ -1,16 +1,9 @@
 ---
 title: MouseEvent.clientY
 slug: Web/API/MouseEvent/clientY
-tags:
-  - API
-  - CSSOM View
-  - Eventos de DOM
-  - Eventos de mouse
-  - Propriedade
-  - Somente Leitura
-translation_of: Web/API/MouseEvent/clientY
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 A propriedade **`clientY`** da interface {{domxref("MouseEvent")}} fornece a coordenada vertical do cliente dentro da aplicacão em que o evento ocorreu (ao contrário da coordenada que pertence a página).
 
@@ -28,7 +21,7 @@ O valor retornado por essa propriedade é um valor flutuante double como foi red
 
 ## Exemplo
 
-Este exemplo mostra as coordenadas do mouse quando você ativar o evento {{Event("mousemove")}}.
+Este exemplo mostra as coordenadas do mouse quando você ativar o evento [`mousemove`](/pt-BR/docs/Web/API/Element/mousemove_event).
 
 ### HTML
 
@@ -40,8 +33,8 @@ Este exemplo mostra as coordenadas do mouse quando você ativar o evento {{Event
 ### JavaScript
 
 ```js
-let screenLog = document.querySelector('#screen-log');
-document.addEventListener('mousemove', logKey);
+let screenLog = document.querySelector("#screen-log");
+document.addEventListener("mousemove", logKey);
 
 function logKey(e) {
   screenLog.innerText = `
@@ -56,17 +49,11 @@ function logKey(e) {
 
 ## Especificações
 
-| Especificação                                                                                        | Status                           | Comentário                                                         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------ |
-| {{SpecName('CSSOM View','#dom-mouseevent-clienty', 'clientY')}}                 | {{Spec2('CSSOM View')}} | Redefine {{domxref("MouseEvent")}} de `long` para `double`. |
-| {{SpecName('DOM3 Events','#widl-MouseEvent-clientY','MouseEvent.clientY')}} | {{Spec2('DOM3 Events')}} | Sem mudanças vindas de {{SpecName('DOM2 Events')}}.       |
-| {{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.clientY')}}         | {{Spec2('DOM2 Events')}} | Definição inicial.                                                 |
-
-<
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.MouseEvent.clientY")}}
+{{Compat}}
 
 ## Veja também
 

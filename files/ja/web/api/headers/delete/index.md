@@ -1,23 +1,21 @@
 ---
-title: Headers.delete()
+title: "Headers: delete() メソッド"
+short-title: delete()
 slug: Web/API/Headers/delete
+l10n:
+  sourceCommit: 7b21121cd93f9f967248d53c6fd24db2af42b314
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
-{{domxref("Headers")}} インターフェイスの **`delete()`** メソッドは、現在の `Headers` オブジェクトからヘッダーを削除します。
+**`delete()`** は {{domxref("Headers")}} インターフェイスのメソッドで、現在の `Headers` オブジェクトからヘッダーを削除します。
 
-このメソッドは、次の理由で {{jsxref("TypeError")}} をスローします。
-
-- name パラメーターの値は、HTTP ヘッダーの名前ではありません。
-- {{Glossary("Guard")}} の値は `immutable` です。
-
-セキュリティ上の理由から、一部のヘッダーはユーザーエージェントのみがコントローラーにすることができます。 これらのヘッダーには {{Glossary("Forbidden_header_name", "禁止ヘッダー名", 1)}} および {{Glossary("Forbidden_response_header_name", "禁止レスンポンスヘッダー名", 1)}} が含まれます。
+セキュリティ上の理由から、いくつかのヘッダーはユーザーエージェントでしか制御できません。これには、{{Glossary("Forbidden_header_name", "禁止ヘッダー名")}}と{{Glossary("Forbidden_response_header_name", "禁止レスポンスヘッダー名")}}があります。
 
 ## 構文
 
-```
-myHeaders.delete(name);
+```js-nolint
+delete(name)
 ```
 
 ### 引数
@@ -25,44 +23,42 @@ myHeaders.delete(name);
 - `name`
   - : `Headers` オブジェクトから削除する HTTP ヘッダーの名前。
 
-### 戻り値
+### 返値
 
-Void.
+なし ({{jsxref("undefined")}})。
 
-## Example
+## 例
 
 空の `Headers` オブジェクトの作成は簡単です。
 
 ```js
-var myHeaders = new Headers(); // Currently empty
+const myHeaders = new Headers(); // Currently empty
 ```
 
 {{domxref("Headers.append")}} を使用して、これにヘッダーを追加できます。
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // Returns 'image/jpeg'
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // Returns 'image/jpeg'
 ```
 
-その後、再度削除できます。
+その後、再度削除することができます。
 
 ```js
-myHeaders.delete('Content-Type');
-myHeaders.get('Content-Type'); // Returns null, as it has been deleted
+myHeaders.delete("Content-Type");
+myHeaders.get("Content-Type"); // 削除されているため null を返す
 ```
 
 ## 仕様書
 
-| 仕様書                                                                   | Status                   | Comment |
-| ------------------------------------------------------------------------ | ------------------------ | ------- |
-| {{SpecName('Fetch','#dom-headers-delete','delete()')}} | {{Spec2('Fetch')}} |         |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Headers.delete")}}
+{{Compat}}
 
 ## 関連情報
 
-- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

@@ -1,11 +1,6 @@
 ---
 title: user-select
 slug: Web/CSS/user-select
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/user-select
 ---
 
 {{CSSRef}}
@@ -51,8 +46,8 @@ user-select: unset;
 
     - Pour les pseudo-éléments `::before` et `::after`, la valeur calculée sera `none`
     - Si l'élément est un élément éditable, la valeur calculée est `contain`
-    - Sinon, si la valeur calculée de  `user-select` pour l'élément parent est `all`, la valeur calculée sera `all`
-    - Sinon, si la valeur calculée de  `user-select` pour l'élément parent est `all`, la valeur calculée sera `none`
+    - Sinon, si la valeur calculée de `user-select` pour l'élément parent est `all`, la valeur calculée sera `all`
+    - Sinon, si la valeur calculée de `user-select` pour l'élément parent est `all`, la valeur calculée sera `none`
     - Sinon, la valeur calculée est `text`
 
 - `text`
@@ -65,7 +60,8 @@ user-select: unset;
 
   - : Uniquement supporté par Internet Explorer. Cela permet d'activer la sélection au sein de l'élément, celle-ci ne pourra pas « sortir » de cet élément.
 
-> **Note :** CSS UI 4 [a renommé `user-select: element` en `contain`](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
+> [!NOTE]
+> CSS UI 4 [a renommé `user-select: element` en `contain`](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
 
 ### Syntaxe formelle
 
@@ -96,7 +92,9 @@ user-select: unset;
 ```html
 <p>Vous devriez pouvoir sélectionner ce texte.</p>
 <p class="unselectable">Hop, vous ne pouvez pas sélectionner ce texte !</p>
-<p class="all">Cliquer une fois permettra de sélectionner l'ensemble du texte.</p>
+<p class="all">
+  Cliquer une fois permettra de sélectionner l'ensemble du texte.
+</p>
 ```
 
 ### Résultat

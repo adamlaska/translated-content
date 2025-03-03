@@ -1,14 +1,8 @@
 ---
 title: font-synthesis
 slug: Web/CSS/font-synthesis
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/font-synthesis
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`font-synthesis`** 속성은 브라우저가 굵은 글꼴과 이탤릭 글꼴을 합성하는 것을 허용할지 설정합니다.
@@ -52,7 +46,7 @@ translation_of: Web/CSS/font-synthesis
 
 ```html
 <em class="syn">절 합성하세요! Synthesize!</em>
-<br/>
+<br />
 <em class="no-syn">절 합성하지 마세요! Synthesize!</em>
 ```
 

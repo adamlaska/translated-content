@@ -1,8 +1,8 @@
 ---
 title: Object.prototype.__lookupGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 O método **`__lookupGetter__`** retorna a função limite como uma getter para a específica propriedade.
@@ -33,15 +33,13 @@ Agora é possível fazer isso de um jeito uniforme usando:. {{jsxref("Object.get
 ```js
 var obj = {
   get foo() {
-    return Math.random() > 0.5 ? 'foo' : 'bar';
-  }
+    return Math.random() > 0.5 ? "foo" : "bar";
+  },
 };
 
-
 // Non-standard and deprecated way
-obj.__lookupGetter__('foo');
+obj.__lookupGetter__("foo");
 // (function() { return Math.random() > 0.5 ? 'foo' : 'bar'; })
-
 
 // Standard-compliant way
 Object.getOwnPropertyDescriptor(obj, "foo").get;
@@ -58,9 +56,9 @@ Object.getOwnPropertyDescriptor(obj, "foo").get;
 
 ## Ver também
 
-- {{jsxref("Object.prototype.__lookupSetter__()")}}
+- [`Object.prototype.__lookupSetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
 - {{jsxref("Functions/get", "get")}} operador
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} e {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.prototype.__defineGetter__()")}}
-- {{jsxref("Object.prototype.__defineSetter__()")}}
-- [JS Guide: Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
+- [`Object.prototype.__defineGetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
+- [JS Guide: Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)

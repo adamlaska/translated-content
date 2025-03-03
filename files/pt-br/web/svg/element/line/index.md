@@ -1,15 +1,8 @@
 ---
 title: line
 slug: Web/SVG/Element/line
-tags:
-  - Elemento
-  - Gráficos SVG
-  - Linha
-  - Referencia
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/line
 ---
+
 {{SVGRef}}
 
 O elemento `line` é uma forma básica do SVG, utilizada para criar uma linha conectando dois pontos.
@@ -20,24 +13,24 @@ O elemento `line` é uma forma básica do SVG, utilizada para criar uma linha co
 
 ## Exemplo
 
-» [line.svg](https://developer.mozilla.org/files/3254/line.svg)
+» [line.svg](/files/3254/line.svg)
 
 Você também pode aplicar transformações para obter o mesmo resultado. Começando com uma linha normal,
 
-» [line1.svg](https://developer.mozilla.org/files/3345/line1.svg)
+» [line1.svg](/files/3345/line1.svg)
 
 adicionar as opções de transformação para mudar a direção da linha:
 
-» [line2.svg](https://developer.mozilla.org/files/3346/line2.svg)
+» [line2.svg](/files/3346/line2.svg)
 
 ## Atributos
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing) »
-- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
-- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent) »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
+- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -52,11 +45,11 @@ adicionar as opções de transformação para mudar a direção da linha:
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGLineElement`](/pt-BR/DOM/SVGLineElement).
+Este elemento implementa a interface do [`SVGLineElement`](/pt-BR/docs/DOM/SVGLineElement).
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.line")}}
+{{Compat}}
 
 ## Relacionado
 

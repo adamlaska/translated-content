@@ -1,9 +1,8 @@
 ---
 title: calc
 slug: Web/CSS/calc
-translation_of: Web/CSS/calc()
-original_slug: Web/CSS/calc()
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Sumario
@@ -38,9 +37,11 @@ La expresión puede ser una combinación de los siguientes operadores:
 
 Los operandos en la expresión pueden ser valores tanto positivos como negativos. Puedes usar diferentes unidades para cada valor si lo deseas. Es recomendable el uso de paréntesis para añadir legibilidad a la expresión o para forzar precedencia en las operaciones en caso necesario.
 
-> **Nota:** La división por cero dará lugar a un error generado por el analizador de HTML del navegador.
+> [!NOTE]
+> La división por cero dará lugar a un error generado por el analizador de HTML del navegador.
 
-> **Nota:** las operaciones + y - siempre deben estar separadas de sus operandos mediante espacios en blanco. La expresión `calc(50% -8px)` será tomada como un operando de porcentaje seguido de otro operando de signo negativo (una expresión inválida, dado que no hay operador en medio), mientras que la expresión `calc(50% - 8px)` es un porcentaje seguido de una operación de resta.
+> [!NOTE]
+> Las operaciones + y - siempre deben estar separadas de sus operandos mediante espacios en blanco. La expresión `calc(50% -8px)` será tomada como un operando de porcentaje seguido de otro operando de signo negativo (una expresión inválida, dado que no hay operador en medio), mientras que la expresión `calc(50% - 8px)` es un porcentaje seguido de una operación de resta.
 > Los operadores `* y` `/` no requieren espacio en blanco, pero es recomendable añadirlo por consistencia.
 
 ## Ejemplos
@@ -53,7 +54,7 @@ Los operandos en la expresión pueden ser valores tanto positivos como negativos
 .banner {
   position: absolute;
   left: 40px;
-  width: 90%;               /* salvaguarda para navegadores que no reconocen calc() */
+  width: 90%; /* salvaguarda para navegadores que no reconocen calc() */
   width: calc(100% - 80px);
   border: solid black 1px;
   box-shadow: 1px 2px;
@@ -71,7 +72,7 @@ Los operandos en la expresión pueden ser valores tanto positivos como negativos
 
 ### Entradas de formulario que se ajustan automáticamente al ancho de su contenedor
 
-Otro caso de uso para`calc()` es asegurar que los campos de un formulario llenan el espacio disponible sin pasarse de los límites de su contenedor mientras mantienen el margen apropiado.
+Otro caso de uso para `calc()` es asegurar que los campos de un formulario llenan el espacio disponible sin pasarse de los límites de su contenedor mientras mantienen el margen apropiado.
 
 Echémosle un vistazo al CSS:
 
@@ -79,12 +80,12 @@ Echémosle un vistazo al CSS:
 input {
   padding: 2px;
   display: block;
-  width: 98%;               /* salvaguarda para navegadores que no reconocen calc() */
+  width: 98%; /* salvaguarda para navegadores que no reconocen calc() */
   width: calc(100% - 1em);
 }
 
 #formbox {
-  width: 130px;             /* salvaguarda para navegadores que no reconocen calc() */
+  width: 130px; /* salvaguarda para navegadores que no reconocen calc() */
   width: calc(100% / 6);
   border: 1px solid black;
   padding: 4px;
@@ -96,8 +97,8 @@ El formulario usa 1/6 del ancho disponible. Para asegurar que los campos de entr
 ```html
 <form>
   <div id="formbox">
-  <label>Type something:</label>
-  <input type="text">
+    <label>Type something:</label>
+    <input type="text" />
   </div>
 </form>
 ```
@@ -106,13 +107,11 @@ El formulario usa 1/6 del ancho disponible. Para asegurar que los campos de entr
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                           | Comentario |
-| ------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('CSS3 Values', '#calc-notation', 'calc()')}} | {{Spec2('CSS3 Values')}} |            |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.calc")}}
+{{Compat}}
 
 ## Ver también
 

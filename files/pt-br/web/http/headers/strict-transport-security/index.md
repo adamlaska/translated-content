@@ -1,14 +1,8 @@
 ---
 title: Strict-Transport-Security
 slug: Web/HTTP/Headers/Strict-Transport-Security
-tags:
-  - HSTS
-  - HTTP
-  - HTTPS
-  - Segurança
-  - header
-translation_of: Web/HTTP/Headers/Strict-Transport-Security
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta **HTTP `Strict-Transport-Security`** (geralmente abreviado como {{Glossary("HSTS")}}) permite que um site informe aos navegadores que ele deve ser acessado apenas por HTTPS, em vez de usar HTTP.
@@ -51,7 +45,8 @@ Se um site aceitar uma conexão por meio de HTTP e redirecionar para HTTPS, os v
 
 O cabeçalho HTTP Strict Transport Security informa ao navegador que ele nunca deve carregar um site usando HTTP e deve converter automaticamente todas as tentativas de acessar o site usando HTTP para solicitações HTTPS.
 
-> **Nota:** O cabeçalho `Strict-Transport-Security` é **ignorado** pelo navegador quando seu site é acessado usando HTTP; isso ocorre porque um invasor pode interceptar conexões HTTP e injetar o cabeçalho ou removê-lo. Quando seu site é acessado por HTTPS sem erros de certificado, o navegador sabe que seu site é capaz de HTTPS e honrará o `Strict-Transport-Security`cabeçalho.
+> [!NOTE]
+> O cabeçalho `Strict-Transport-Security` é **ignorado** pelo navegador quando seu site é acessado usando HTTP; isso ocorre porque um invasor pode interceptar conexões HTTP e injetar o cabeçalho ou removê-lo. Quando seu site é acessado por HTTPS sem erros de certificado, o navegador sabe que seu site é capaz de HTTPS e honrará o `Strict-Transport-Security`cabeçalho.
 
 ### Um cenário de exemplo
 
@@ -84,17 +79,15 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 ## Especificações
 
-| Especificação                | Status                   | Comentário         |
-| ---------------------------- | ------------------------ | ------------------ |
-| {{SpecName('HSTS')}} | {{Spec2('HSTS')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Strict-Transport-Security")}}
+{{Compat}}
 
 ## Veja também
 
 - Postagem no blog: [HTTP Strict Transport Security has landed!](http://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
-- Postagem no blog: [HTTP Strict Transport Security (force HTTPS)](http://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
+- Postagem no blog: [HTTP Strict Transport Security (force HTTPS)](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
 - Artigo OWASP: [HTTP Strict Transport Security](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security)
 - Wikipedia: [HTTP Strict Transport Security](http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)

@@ -1,14 +1,8 @@
 ---
-title: 'SyntaxError: missing } after property list'
+title: "SyntaxError: missing } after property list"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
-tags:
-  - Erro de Sintaxe
-  - Erros
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
-original_slug: Web/JavaScript/Reference/Errors/Fecha_chaves_esquecida_apos_lista_propriedades
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensagem
@@ -45,7 +39,7 @@ O código correto deve ser:
 var obj = {
   a: 1,
   b: { minhaProp: 2 },
-  c: 3
+  c: 3,
 };
 ```
 

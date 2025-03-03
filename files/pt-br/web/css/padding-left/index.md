@@ -1,20 +1,13 @@
 ---
 title: padding-left
 slug: Web/CSS/padding-left
-tags:
-  - CSS
-  - CSS Padding
-  - La
-  - Reference
-  - Referencia
-  - Web
-translation_of: Web/CSS/padding-left
 ---
+
 {{ CSSRef() }}
 
 ## Resumo
 
-`A propriedade CSS padding-left` é um elemento que define o espaço de preenchimento obrigatório no lado esquerdo de um elemento. [padding area](/en/CSS/box_model#padding) é o espaço entre o conteúdo do elemento e a borda. Um valor negativo não é permitido.
+`A propriedade CSS padding-left` é um elemento que define o espaço de preenchimento obrigatório no lado esquerdo de um elemento. [padding area](/pt-BR/docs/CSS/box_model#padding) é o espaço entre o conteúdo do elemento e a borda. Um valor negativo não é permitido.
 
 {{cssinfo}}
 
@@ -43,19 +36,18 @@ padding-left: inherit
 ## Exemplos
 
 ```css
-.content { padding-left: 5%; }
-.sidebox { padding-left: 10px; }
+.content {
+  padding-left: 5%;
+}
+.sidebox {
+  padding-left: 10px;
+}
 ```
 
 ## Especificações
 
-| Especificação                                                                                    | Status                                   | Comentário                             |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------------------- |
-| {{ SpecName('CSS3 Box', '#the-padding', 'padding-left') }}                     | {{ Spec2('CSS3 Box') }}         | Nenhuma mudança.                       |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'padding-left') }}     | {{ Spec2('CSS3 Transitions') }} | Define `padding-left` como animatable. |
-| {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-left') }} | {{ Spec2('CSS2.1') }}             | Nenhuma mudança.                       |
-| {{ Specname('CSS1', '#padding-left', 'padding-left') }}                         | {{ Spec2('CSS1') }}                 | Definição inicial.                     |
+{{Specifications}}
 
 ## Compatibilidade do Navegador
 
-{{Compat("css.properties.padding-left")}}
+{{Compat}}

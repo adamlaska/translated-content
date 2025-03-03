@@ -1,12 +1,8 @@
 ---
 title: font-variant-numeric
 slug: Web/CSS/font-variant-numeric
-tags:
-  - CSS
-  - Свойства CSS
-  - Шрифты CSS
-translation_of: Web/CSS/font-variant-numeric
 ---
+
 {{CSSRef}}
 
 ## Summary
@@ -17,7 +13,7 @@ translation_of: Web/CSS/font-variant-numeric
 
 ## Syntax
 
-[Formal syntax](/ru/docs/CSS/Value_definition_syntax): {{csssyntax("font-variant-numeric")}}
+[Formal syntax](/ru/docs/Web/CSS/Value_definition_syntax): {{csssyntax("font-variant-numeric")}}
 
 ```css
 font-variant-numeric: normal
@@ -46,7 +42,7 @@ font-variant-numeric: unset
   - : Это ключевое слово включает перечёркнутый ноль; это полезно, когда нужно чёткое различие между буквой O и цифрой 0. Это соответствует значению OpenType `zero`.
 - _\<numeric-figure-values_>
   - : Эти значения управляют тем, какими знаками будут отображаться цифры. Возможны два значения:
-    -`lining-nums` включает маюскульные («заглавные») цифры, стоящие на опорной линии текста. Это соответствует значению OpenType `lnum`.
+    - `lining-nums` включает маюскульные («заглавные») цифры, стоящие на опорной линии текста. Это соответствует значению OpenType `lnum`.
     - `oldstyle-nums` включает минускульные («строчные») цифры, в которых некоторые знаки (3, 4, 7, 9) уходят нижним краем под опорную линию (в русской типографике не принято, зато широко используется в западной, в основном в шрифтах с засечками). Это соответствует значению OpenType `onum`.
 - _\<numeric-spacing-values_>
   - : Эти значения управляют горизонтальным размером цифр. Возможны два значения:
@@ -65,16 +61,14 @@ p {
 }
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                    | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts', '#propdef-font-variant-numeric', 'font-variant-numeric')}} | {{Spec2('CSS3 Fonts')}} | Initial definition |
+{{Specifications}}
 
-## Browser Compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{cssxref("font-variant")}}, {{cssxref("font-kerning")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-synthesis")}}.

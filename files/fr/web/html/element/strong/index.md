@@ -1,23 +1,31 @@
 ---
-title: '<strong> : l''élément de haute importance'
+title: "<strong> : l'élément de haute importance"
 slug: Web/HTML/Element/strong
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/strong
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<strong>`** indique que le texte a une importance particulière ou un certain sérieux voire un caractère urgent. Cela se traduit généralement par un affichage en gras.
 
-{{EmbedInteractiveExample("pages/tabbed/strong.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;strong&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  ... the most important rule, the rule you can never forget, no matter how much
+  he cries, no matter how much he begs:
+  <strong>never feed him after midnight</strong>.
+</p>
+```
+
+```css interactive-example
+p {
+  font-size: 1rem;
+}
+```
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -37,7 +45,7 @@ Il est important de savoir que `<b></b>` ne doit pas être utilisé, à part dan
 
 ### `<em>` ou `<strong>` ?
 
-En HTML 4, `<strong>` indiquait simplement une emphase plus forte. En HTML5, l'élément représente une « importance forte » de son contenu. Il est important de faire la différence. L'emphase (`<em>` étant l'élément HTML équivalent) permet de changer le sens d'une phrase : par exemple :  « J'_adore_ les licornes » et « J'adore les _licornes_ ». `<strong>` est utilisé pour augmenter l'importance de certaines portions de phrases : « **Attention !** C'est **très dangereux** ».  `<strong>` et `<em>` peuvent être imbriqués pour augmenter relativement l'importance ou l'emphase d'un texte.
+En HTML 4, `<strong>` indiquait simplement une emphase plus forte. En HTML5, l'élément représente une « importance forte » de son contenu. Il est important de faire la différence. L'emphase (`<em>` étant l'élément HTML équivalent) permet de changer le sens d'une phrase : par exemple : « J'_adore_ les licornes » et « J'adore les _licornes_ ». `<strong>` est utilisé pour augmenter l'importance de certaines portions de phrases : « **Attention !** C'est **très dangereux** ». `<strong>` et `<em>` peuvent être imbriqués pour augmenter relativement l'importance ou l'emphase d'un texte.
 
 ## Exemples
 
@@ -46,8 +54,7 @@ En HTML 4, `<strong>` indiquait simplement une emphase plus forte. En HTML5, l'�
 ```html
 <p>
   Avant de faire le truc X il est
-  <strong>nécessaire</strong> de
-  faire le truc Y avant.
+  <strong>nécessaire</strong> de faire le truc Y avant.
 </p>
 ```
 
@@ -72,7 +79,7 @@ En HTML 4, `<strong>` indiquait simplement une emphase plus forte. En HTML5, l'�
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >,
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
@@ -84,7 +91,7 @@ En HTML 4, `<strong>` indiquait simplement une emphase plus forte. En HTML5, l'�
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >Contenu phrasé</a
         >.
       </td>
@@ -101,7 +108,7 @@ En HTML 4, `<strong>` indiquait simplement une emphase plus forte. En HTML5, l'�
       <td>
         Tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >
         ou tout élément acceptant du

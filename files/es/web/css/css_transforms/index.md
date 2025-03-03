@@ -1,31 +1,38 @@
 ---
-title: CSS Transforms
-slug: Web/CSS/CSS_Transforms
-translation_of: Web/CSS/CSS_Transforms
+title: Transformaciones CSS
+slug: Web/CSS/CSS_transforms
+l10n:
+  sourceCommit: e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
 ---
-{{CSSRef}}{{SeeCompatTable}}
 
-**CSS Transforms** is a module of CSS that defines how elements styled with CSS can be transformed in two-dimensional or three-dimensional space.
+{{CSSRef}}
 
-## Reference
+El módulo **Transformaciones CSS** define cómo los elementos diseñados con CSS se pueden transformar en un espacio bidimensional o tridimensional.
 
-### CSS Properties
+## Referencia
+
+### Propiedades
 
 - {{cssxref("backface-visibility")}}
 - {{cssxref("perspective")}}
 - {{cssxref("perspective-origin")}}
+- {{cssxref("rotate")}}
+- {{cssxref("scale")}}
 - {{cssxref("transform")}}
 - {{cssxref("transform-box")}}
 - {{cssxref("transform-origin")}}
 - {{cssxref("transform-style")}}
+- {{cssxref("translate")}}
 
-## Guides
+### Tipos de datos
 
-- [Using CSS transforms](/es/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
-  - : Step-by-step tutorial about how to transform elements styled with CSS.
+- {{cssxref("&lt;transform-function&gt;")}}
 
-## Specifications
+## Guías
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Transforms') }} | {{ Spec2('CSS3 Transforms') }} | Initial definition. |
+- [Usando transformaciones CSS](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+  - : Tutorial paso a paso sobre cómo transformar elementos estilizados con CSS.
+
+## Especificaciones
+
+{{Specifications}}

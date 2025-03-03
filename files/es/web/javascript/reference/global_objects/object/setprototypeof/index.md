@@ -1,15 +1,8 @@
 ---
 title: Object.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-tags:
-  - ECMAScript6
-  - Experimental
-  - JavaScript
-  - Método(2)
-  - Objeto
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/setPrototypeOf
 ---
+
 {{JSRef}}
 
 El método **`Object.setPrototypeOf()`** establece el prototipo (p.e., la propiedad interna `[[Prototype]]`) de un objeto especificado a otro objeto o sino establece {{jsxref("null")}}.
@@ -33,7 +26,7 @@ Object.setPrototypeOf(obj, prototype);
 
 Arroja una excepción del tipo {{jsxref("TypeError")}} si el objeto cuyo `[[Prototype]]` se va a modificar no es extensible de acuerdo con {{jsxref("Object.isExtensible()")}}. No hace nada si el parametro `prototype` no es un objeto o {{jsxref("null")}} (p.e., número, cadena, booleano, o {{jsxref("undefined")}}). De cualquier otra forma, este método cambia la propiedad `[[Prototype]]` del `obj` al valor nuevo.
 
-`Object.setPrototypeOf()` está en el último borrador del estandar ECMAScript6. Es considerado generalmente la manera adecuada de establecer el prototipo de un objeto, contra la propiedad más controversial {{jsxref("Object.prototype.__proto__")}}.
+`Object.setPrototypeOf()` está en el último borrador del estandar ECMAScript6. Es considerado generalmente la manera adecuada de establecer el prototipo de un objeto, contra la propiedad más controversial [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto).
 
 ## Ejemplos
 
@@ -43,48 +36,56 @@ var dict = Object.setPrototypeOf({}, null);
 
 ## Polyfill
 
-Utilizando la vieja propiedad {{jsxref("Object.prototype.__proto__")}}, podemos definir facilmente `Object.setPrototypeOf` si aún no está disponible:
+Utilizando la vieja propiedad [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), podemos definir facilmente `Object.setPrototypeOf` si aún no está disponible:
 
 ```js
 // Solo funciona en Chrome y FirefoxOnly works in Chrome y FireFox, no funciona en IE:
-Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
-  obj.__proto__ = proto;
-  return obj;
-}
+Object.setPrototypeOf =
+  Object.setPrototypeOf ||
+  function (obj, proto) {
+    obj.__proto__ = proto;
+    return obj;
+  };
 ```
 
 ## Agregando cadenas de prototipo
 
-Una combinación de `Object.getPrototypeOf()` y {{jsxref("Object.proto", "Object.prototype.__proto__")}} permite agregar una nueva cadena de prototipos al nuevo prototipo del objeto.
+Una combinación de `Object.getPrototypeOf()` y [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) permite agregar una nueva cadena de prototipos al nuevo prototipo del objeto.
 
 ```js
 /**
-*** Object.appendChain(@object, @prototype)
-*
-* Agrega el primer prototipo no-nativo de una cadena a un nuevo prototipo.
-* Retorna @object (si es Primitivo (Primitive value) será transoformado a Objeto).
-*
-*** Object.appendChain(@object [, "@arg_name_1", "@arg_name_2", "@arg_name_3", "..."], "@function_body")
-*** Object.appendChain(@object [, "@arg_name_1, @arg_name_2, @arg_name_3, ..."], "@function_body")
-*
-*  Agrega el primer prototipo no-nativo de una cadena a la Function.prototype nativa del objeto, luego agrega una
-* ueva Function(["@arg"(s)], "@function_body") a la cadena.
-* Retorna la función.
-*
-**/
+ *** Object.appendChain(@object, @prototype)
+ *
+ * Agrega el primer prototipo no-nativo de una cadena a un nuevo prototipo.
+ * Retorna @object (si es Primitivo (Primitive value) será transoformado a Objeto).
+ *
+ *** Object.appendChain(@object [, "@arg_name_1", "@arg_name_2", "@arg_name_3", "..."], "@function_body")
+ *** Object.appendChain(@object [, "@arg_name_1, @arg_name_2, @arg_name_3, ..."], "@function_body")
+ *
+ *  Agrega el primer prototipo no-nativo de una cadena a la Function.prototype nativa del objeto, luego agrega una
+ * ueva Function(["@arg"(s)], "@function_body") a la cadena.
+ * Retorna la función.
+ *
+ **/
 
-Object.appendChain = function(oChain, oProto) {
+Object.appendChain = function (oChain, oProto) {
   if (arguments.length < 2) {
-    throw new TypeError('Object.appendChain - Not enough arguments');
+    throw new TypeError("Object.appendChain - Not enough arguments");
   }
-  if (typeof oProto === 'number' || typeof oProto === 'boolean') {
-    throw new TypeError('second argument to Object.appendChain must be an object or a string');
+  if (typeof oProto === "number" || typeof oProto === "boolean") {
+    throw new TypeError(
+      "second argument to Object.appendChain must be an object or a string",
+    );
   }
 
   var oNewProto = oProto,
-      oReturn = o2nd = oLast = oChain instanceof this ? oChain : new oChain.constructor(oChain);
+    oReturn =
+      (o2nd =
+      oLast =
+        oChain instanceof this ? oChain : new oChain.constructor(oChain));
 
-  for (var o1st = this.getPrototypeOf(o2nd);
+  for (
+    var o1st = this.getPrototypeOf(o2nd);
     o1st !== Object.prototype && o1st !== Function.prototype;
     o1st = this.getPrototypeOf(o2nd)
   ) {
@@ -99,7 +100,7 @@ Object.appendChain = function(oChain, oProto) {
 
   this.setPrototypeOf(o2nd, oNewProto);
   return oReturn;
-}
+};
 ```
 
 ### Uso
@@ -108,7 +109,7 @@ Object.appendChain = function(oChain, oProto) {
 
 ```js
 function Mammal() {
-  this.isMammal = 'yes';
+  this.isMammal = "yes";
 }
 
 function MammalSpecies(sMammalSpecies) {
@@ -118,12 +119,12 @@ function MammalSpecies(sMammalSpecies) {
 MammalSpecies.prototype = new Mammal();
 MammalSpecies.prototype.constructor = MammalSpecies;
 
-var oCat = new MammalSpecies('Felis');
+var oCat = new MammalSpecies("Felis");
 
 console.log(oCat.isMammal); // 'yes'
 
 function Animal() {
-  this.breathing = 'yes';
+  this.breathing = "yes";
 }
 
 Object.appendChain(oCat, new Animal());
@@ -135,7 +136,7 @@ console.log(oCat.breathing); // 'yes'
 
 ```js
 function Symbol() {
-  this.isSymbol = 'yes';
+  this.isSymbol = "yes";
 }
 
 var nPrime = 17;
@@ -156,8 +157,10 @@ function Person(sName) {
   this.identity = sName;
 }
 
-var george = Object.appendChain(new Person('George'),
-                                'console.log("Hello guys!!");');
+var george = Object.appendChain(
+  new Person("George"),
+  'console.log("Hello guys!!");',
+);
 
 console.log(george.identity); // 'George'
 george(); // 'Hello guys!!'
@@ -165,17 +168,15 @@ george(); // 'Hello guys!!'
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado               | Comentario          |
-| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-object.setprototypeof', 'Object.setProtoypeOf')}} | {{Spec2('ES6')}} | Initial definition. |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.setPrototypeOf")}}
+{{Compat}}
 
 ## Ver también
 
 - {{jsxref("Reflect.setPrototypeOf()")}}
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

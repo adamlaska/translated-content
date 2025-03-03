@@ -50,13 +50,11 @@ Access-Control-Max-Age: 600
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                     | 備考       |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('Fetch','#http-access-control-max-age', 'Access-Control-Max-Age')}} | {{Spec2("Fetch")}} | 初回定義。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Access-Control-Max-Age")}}
+{{Compat}}
 
 ## 関連情報
 

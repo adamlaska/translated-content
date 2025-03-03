@@ -1,77 +1,79 @@
 ---
 title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
+l10n:
+  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
 {{JSRef}}
 
-**`Math.cbrt()`** 関数は、引数として与えた数の立方根を返します。すなわち、
+**`Math.cbrt()`** は静的メソッドで、引数として与えた数の立方根を返します。
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>c</mi><mi>b</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mi>y</mi><mn>3</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{Math.cbrt(x)} = \sqrt[3]{x} = \text{the unique} \; y \; \text{such that} \; y^3 = x</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚌𝚋𝚛𝚝</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;such that&nbsp;</mtext><msup><mi>y</mi><mn>3</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cbrt}(x)} = \sqrt[3]{x} = \text{the unique } y \text{ such that } y^3 = x</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-cbrt.html")}}
+{{InteractiveExample("JavaScript Demo: Math.cbrt()")}}
+
+```js interactive-example
+console.log(Math.cbrt(-1));
+// Expected output: -1
+
+console.log(Math.cbrt(1));
+// Expected output: 1
+
+console.log(Math.cbrt(Infinity));
+// Expected output: Infinity
+
+console.log(Math.cbrt(64));
+// Expected output: 4
+```
 
 ## 構文
 
-```
+```js-nolint
 Math.cbrt(x)
 ```
 
 ### 引数
 
-- _x_
-  - : 数値。
+- `x`
+  - : 数値です。
 
 ### 返値
 
-与えられた数値の立方根です。
+`x` の立方根です。
 
 ## 解説
 
 `cbrt()` は `Math` の静的なメソッドであるため、自ら生成した `Math` オブジェクトのメソッドとしてではなく、常に、 `Math.cbrt()` として使用してください (`Math` はコンストラクターではありません)。
-
-## ポリフィル
-
-すべての <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="TeX">x \geq 0</annotation></semantics></math> に対して、 <math><semantics><mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup><mi>x</mi><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="TeX">\sqrt[3]{x} = x^{1/3}</annotation></semantics></math> が存在し、次の関数でエミュレートできます:
-
-```js
-if (!Math.cbrt) {
-  Math.cbrt = (function(pow) {
-    return function cbrt(x){
-      // ensure negative numbers remain negative:
-      return x < 0 ? -pow(-x, 1/3) : pow(x, 1/3);
-    };
-  })(Math.pow); // localize Math.pow to increase efficiency
-}
-```
 
 ## 例
 
 ### Math.cbrt() の使用
 
 ```js
-Math.cbrt(NaN); // NaN
+Math.cbrt(-Infinity); // -Infinity
 Math.cbrt(-1); // -1
 Math.cbrt(-0); // -0
-Math.cbrt(-Infinity); // -Infinity
 Math.cbrt(0); // 0
 Math.cbrt(1); // 1
+Math.cbrt(2); // 1.2599210498948732
 Math.cbrt(Infinity); // Infinity
-Math.cbrt(null); // 0
-Math.cbrt(2);  // 1.2599210498948732
 ```
 
 ## 仕様書
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.cbrt', 'Math.cbrt')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.cbrt")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`Math.cbrt` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.pow()")}}
 - {{jsxref("Math.sqrt()")}}

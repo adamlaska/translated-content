@@ -1,12 +1,8 @@
 ---
 title: 406 Not Acceptable
 slug: Web/HTTP/Status/406
-tags:
-  - Código de status
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Status/406
 ---
+
 {{HTTPSidebar}}
 
 O código de resposta do erro de cliente **`406 Not Acceptable`** indica que o servidor não pode produzir uma resposta que combine com a lista de valores aceitáveis definidas nos cabeçalhos de negociação de conteúdo da requisição proativa, e o servidor é incapaz de produzir uma representação padrão.
@@ -30,15 +26,15 @@ Se o servidor retornar este status de erro, o corpo da mensagem deve conter a a 
 
 ## Especificações
 
-| Especificação                                                    | Título                                                        |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                                   | Título                                                        |
+| ----------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "406 Not Acceptable" , "6.5.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
 A informação mostrada abaixo foi buscada do MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.406")}}
+{{Compat}}
 
 ## Veja também
 

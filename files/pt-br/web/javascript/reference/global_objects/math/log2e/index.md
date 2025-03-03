@@ -1,15 +1,8 @@
 ---
 title: Math.LOG2E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Propriedade
-  - Reference
-  - Referência(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
 ---
+
 {{JSRef}}
 
 A propriedade **`Math.LOG2E`** representa o logaritmo com base 2 de `e`, aproximadamente 1.442:
@@ -38,16 +31,11 @@ getLog2e(); // 1.4426950408889634
 
 ## Especificações
 
-| Specification                                                                | Status                       | Comment                                            |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.4', 'Math.LOG2E')}}         | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.log2e', 'Math.LOG2E')}}         | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-math.log2e', 'Math.LOG2E')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.LOG2E")}}
+{{Compat}}
 
 ## Veja também
 

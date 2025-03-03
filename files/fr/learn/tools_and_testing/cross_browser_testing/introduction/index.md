@@ -1,13 +1,6 @@
 ---
 title: Introduction au test en navigateur croisé
 slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
-tags:
-  - Apprentissage
-  - Débutant
-  - multi navigateur
-  - navigateur croisé
-  - test
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -53,16 +46,17 @@ D'un autre côté, ce n'est pas ok qu'un site soit fonctionnel pour les personne
 
 De plus, lorsqu'on dit "à travers un nombre acceptable de navigateurs", on ne veut pas dire 100% des navigateurs dans le monde — c'est tout simplement impossible. Vous pouvez faire des recherches d'informations (analyse sectorielle) pour savoir quels sont les types de supports et de navigateurs que vos utilisateurs vont utiliser (comme on peut en parler dans le second article — voir [Gotta test 'em all?](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all)), mais vous ne pouvez pas tout garantir. En tant que developpeur web, vous devez convenir avec le demandeur du site d'une liste de navigateurs et d'appareils sur lesquels le code doit absolument fonctionner, au-delà de ces prérequis, vous devez vous assurer de donner un maximum de chances aux autres navigateurs de pouvoir afficher votre contenu grâce à du code préventif. Cette étape représente le défi le plus important d'un développeur web.
 
-> **Note :** Nous traiterons également du code préventif dans ce module.
+> [!NOTE]
+> Nous traiterons également du code préventif dans ce module.
 
 ## Pourquoi y'a-t-il des problèmes en navigateur croisé?
 
-Il y a beaucoup de raisons différentes qui amènent des problèmes en navigateur croisé, et notez qu'ici nous parlons des bug qui se comportent différemment selon les navigateurs / supports / préférences de navigateurs. Avant même d'attaquer les problèmes en navigateurs croisés, commencez déjà par fixer encore et encore tous les bugs présents dans votre propre code (voir [Debugging HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS), et [What went wrong? Troubleshooting JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong) des sujets précédents afin de vous rafraichir la mémoire si nécessaire).
+Il y a beaucoup de raisons différentes qui amènent des problèmes en navigateur croisé, et notez qu'ici nous parlons des bug qui se comportent différemment selon les navigateurs / supports / préférences de navigateurs. Avant même d'attaquer les problèmes en navigateurs croisés, commencez déjà par fixer encore et encore tous les bugs présents dans votre propre code (voir [Debugging HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS), et [What went wrong? Troubleshooting JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong) des sujets précédents afin de vous rafraichir la mémoire si nécessaire).
 
 Les problèmes en navigateurs croisés se produisent le plus fréquemment parce que :
 
-- Parfois les navigateurs ont des bugs, ou implémentent des fonctionnalités différemment. Cette situation n'est pas aussi grave qu'elle n'y paraît ; si on regarde IE4 et Netscape 4 qui étaient en compétition pour devenir le navigateur dominant dans les années 90,  les compagnies de navigateurs implémentaient délibérément des fonctionnalités différentes les uns des autres afin de prendre l'avantage, ce qui faisait de la vie des développeurs un véritable enfer. Les navigateurs sont biens meilleurs pour respecter les standards de nos jours, mais les bug et les différences continuent d'apparaître de temps en temps.
-- Certains navigateurs peuvent avoir différents niveaux d'acceptation de fonctionnalités par rapport à d'autres. C'est inévitable lorsque vous traitez avec des fonctionnalités de pointe que les navigateurs commencent seulement à implémenter, ou encore si vous devez supporter de vraiment vieux navigateurs qui ne sont plus du tout développés, ou qui ont arrêté  (c-à-d plus aucun travail effectué sur ces derniers) bien longtemps avant même qu'une nouvelle fonctionnalité n'est put être inventée. Par exemple, si vous voulez utiliser des fonctionnalités avancées de Javascript sur votre site, elles ne marcheront sûrement pas sur d'anciens navigateurs. Si vous devez supportez des vieux navigateurs, vous ne devriez pas utiliser ces fonctionnalités ou bien convetir votre code dans une ancienne syntaxe en utilisant un compileur ou quelque chose de similaire si nécessaire.
+- Parfois les navigateurs ont des bugs, ou implémentent des fonctionnalités différemment. Cette situation n'est pas aussi grave qu'elle n'y paraît ; si on regarde IE4 et Netscape 4 qui étaient en compétition pour devenir le navigateur dominant dans les années 90, les compagnies de navigateurs implémentaient délibérément des fonctionnalités différentes les uns des autres afin de prendre l'avantage, ce qui faisait de la vie des développeurs un véritable enfer. Les navigateurs sont biens meilleurs pour respecter les standards de nos jours, mais les bug et les différences continuent d'apparaître de temps en temps.
+- Certains navigateurs peuvent avoir différents niveaux d'acceptation de fonctionnalités par rapport à d'autres. C'est inévitable lorsque vous traitez avec des fonctionnalités de pointe que les navigateurs commencent seulement à implémenter, ou encore si vous devez supporter de vraiment vieux navigateurs qui ne sont plus du tout développés, ou qui ont arrêté (c-à-d plus aucun travail effectué sur ces derniers) bien longtemps avant même qu'une nouvelle fonctionnalité n'est put être inventée. Par exemple, si vous voulez utiliser des fonctionnalités avancées de Javascript sur votre site, elles ne marcheront sûrement pas sur d'anciens navigateurs. Si vous devez supportez des vieux navigateurs, vous ne devriez pas utiliser ces fonctionnalités ou bien convetir votre code dans une ancienne syntaxe en utilisant un compileur ou quelque chose de similaire si nécessaire.
 - Certains appareils peuvent avoir des contraintes qui rendraient la navigation plus lente sur un site web, ou afficheraient mal le contenu. Par exemple, si un site a été designé pour être beau sur un support PC il paraîtra sûrement très serré et très difficile à lire sur un écran de mobile. Si votre site inclut une quantité importante de grosses animation ça passera sûrement sur une tablette haut de gamme, mais peut-être lent et saccadé sur un appareil de plus basse gamme.
 
 Et encore tant d'autres raisons.
@@ -77,7 +71,7 @@ Si vous attendez la fin d'un projet pour démarrer les sessions de tests, chaque
 
 Le flux de travail pour tester et fixer les bugs sur un projet peut-être diviser en quatre phases ( c'est assez dur— certaines personnes peuvent agir un peu différemment ) :
 
-**Plan initial > Développement > Test/découvertes > Fixes/itération**
+**Plan initial** > **Développement** > **Test/découvertes** > **Fixes/itération**
 
 Les étapes 2-4 vont tendre à se répéter autant de fois que nécessaire jusqu'à ce que l'implémentation soit aboutie. Nous aborderons les différentes parties du processus de test dans plus de détails dans des articles subséquents, pour l'instant, commençons par résumer ce qu'on peut faire dans chacune de ces étapes.
 
@@ -87,13 +81,14 @@ Durant la phase de plan initial, vous allez probablement avoir plusieurs réunio
 
 Une fois que vous vous êtes fait une idée des fonctionnalités requises et de quelles technologies vous allez avoir besoin pour les construire, vous pouvez commencer à rechercher le public cible — quel navigateurs, supports, etc. ce public cible va-t-il utiliser pour aller sur ce site? Le client peut déjà avoir des données à ce propos provenant de recherches qu'il aurait faites auparavant, p.e. d'un autre site web qu'il possède, ou d'une ancienne version du site sur lequel vous travaillez actuellement. Si ça n'est pas le cas, vous serez en mesure de vous faire une idée en prenant en compte d'autres sources, comme les statistiques d'utilisation pour les concurrents ou bien dans quels pays le site sera délivré. Vous pouvez évidemment vous servir un peu de votre intuition.
 
-Par exemple, vous pouvez être en train de construire un site e-commerce qui ne sera désservi que pour des utilisateurs dans l'Amérique du Nord. Le site devra entièrement fonctionner sur les toutes dernières versions des ordinateurs et des mobiles (iOS, Android, Windows phone) et les navigateurs les plus populaires  — cela doit inclure Chrome (et Opera car il est basé sur le même moteur de rendu que Chrome), Firefox, IE/Edge, et Safari. Il devra aussi fournir une expérience acceptable sur IE 8 et 9, et être accessible avec les conformité de l'Accessibilité Web.
+Par exemple, vous pouvez être en train de construire un site e-commerce qui ne sera désservi que pour des utilisateurs dans l'Amérique du Nord. Le site devra entièrement fonctionner sur les toutes dernières versions des ordinateurs et des mobiles (iOS, Android, Windows phone) et les navigateurs les plus populaires — cela doit inclure Chrome (et Opera car il est basé sur le même moteur de rendu que Chrome), Firefox, IE/Edge, et Safari. Il devra aussi fournir une expérience acceptable sur IE 8 et 9, et être accessible avec les conformité de l'Accessibilité Web.
 
 Maintenant que vous connaissez votre plate-forme de test cible, vous devriez revenir en arrière et revoir les fonctionnalités requises ainsi que les technologies que vous allez utiliser. Par exemple, si le client du site de e-commerce veut un tour WebGL 3D de chaque produit intégré dans la page produit, il devra accepter que cela ne sera juste pas possible sur les versions d'IE avant la 11ème. Vous devez vous entendre pour fournir une version du site sans cette fonctionnalité pour les utilisateurs des anciennes versions d'IE.
 
 Vous devriez mettre en place une liste des différents champs de problèmes potentiels.
 
-> **Note :** Vous pouvez trouver les informations concernant les différentes technologies et leur support par les navigateurs en recherchant les différentes fonctionnalités sur MDN — le site sur lequel vous vous trouvez! Vous pouvrez également consulter  [caniuse.com](http://caniuse.com/), pour d'autres détails utiles.
+> [!NOTE]
+> Vous pouvez trouver les informations concernant les différentes technologies et leur support par les navigateurs en recherchant les différentes fonctionnalités sur MDN — le site sur lequel vous vous trouvez! Vous pouvrez également consulter [caniuse.com](http://caniuse.com/), pour d'autres détails utiles.
 
 Une fois que vous êtes d'accord sur ces détails, vous pouvez continuer et démarrer le développement du site.
 
@@ -104,7 +99,7 @@ Maintenant concernant le développement du site. Vous devez séparer les différ
 Il existe plusieurs stratégies générales concernant le développement multi-navigateurs, par exemple :
 
 - Obtenir toutes les fonctionnalités qui marchent le plus possible de la même manière sur tous les navigateurs croisés. Cela peut induire d'écrire différents codes qui reproduisent la même fonctionnalité d'une manière différentes visant différents navigateurs, ou bien utiliser un {{glossary("Polyfill")}} afin d'imiter tout support manquant en utilisant Javascript ou d'autres technologies, ou utiliser une librairie qui vous autorise à écrire une seule fois le code et ensuite appliquer différents comportements en arrière-plan selon ce que le navigateur prend en charge.
-- Accepter que certaines choses ne vont pas se comporter de la même manière sur tous les navigateurs, et fournir différentes solutions  (acceptables) sur les navigateurs qui ne supportent pas toutes les fonctionnalités. Parfois c'est inévitable à cause des contraintes du support — un écran de cinéma ne va pas donner la même expérience visuelle qu'un écran 4 pouces de smartphone, indépendamment de comment vous programmez votre site.
+- Accepter que certaines choses ne vont pas se comporter de la même manière sur tous les navigateurs, et fournir différentes solutions (acceptables) sur les navigateurs qui ne supportent pas toutes les fonctionnalités. Parfois c'est inévitable à cause des contraintes du support — un écran de cinéma ne va pas donner la même expérience visuelle qu'un écran 4 pouces de smartphone, indépendamment de comment vous programmez votre site.
 - Acceptez que votre site ne va juste pas marcher sur certains vieux navigateurs, et aller au-delà. Il n'y a pas de soucis à condition que votre client/base d'utilisateurs soit d'accord avec ceci.
 
 Normalement votre développement devra inclure une combinaison des trois approches ci-dessus. La chose la plus importante est que vous testiez chacune des petites étapes avant de les commiter— n'attendez pas la fin avant de commencer à tester!
@@ -146,7 +141,7 @@ C'est souvent une bonne idée de tester sur les versions en avant-première des 
 - [Edge Insider Preview](https://insider.windows.com/)
 - [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
 - [Chrome Canary](https://www.google.com/chrome/browser/canary.html)
-- [Opera Developer](http://www.opera.com/computer/beta)
+- [Opera Developer](https://www.opera.com/computer/beta)
 
 C'est surtout répandu lorsque vous utiliser des technologies très récentes sur votre site, et que vous voulez les tester par rapport aux anciennes implémentations, ou si vous rencontrez un bug dans la dernières version sortie d'un navigateur, et que vous voulez vérifier si les développeurs du navigateur on fixé le bug sur une version plus récente.
 
@@ -158,7 +153,7 @@ La première chose à faire est de réduire l'origine du bug avec un maximum de 
 
 Ce n'est pas forcément de votre faute — si un bug existe sur un navigateur, alors on peut espérer que le distributeur le fixera rapidement. Il est peut-être même déjà réparé — par exemple si un bug est présent sur la release 49 de Firefox, mais qu'il n'existe plus sur Firefox Nightly (version52), alors il a été fixé. S'il n'a pas été résolu, alors vous pouvez déposer un bug (voir [Rapporter un bug](#rapporter_un_bug), plus bas).
 
-Si c'est de votre faute, vous devez le résoudre ! Trouver la cause d'un bug implique la même stratégie que pour n'importe quel bug de développement web (à nouveau, voir [Debugging HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS), et [What went wrong? Troubleshooting JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong)). Une fois que vous avez découvert ce qui causait le bug, vous devez décider comment est-ce que vous allez travailler sur le navigateur en particulier qui vous pose problèmes — vous ne pouvez pas juste modifier le code du problème, cela risque de casser le code sur un autre navigateur. En général, l'approche veut qu'on fasse bifurquer le code dans une certaine direction, par exemple utilisez une fonctionnalité de détecton en code Javascript pour détecter les situations où une fonctionnalité ne marche pas, et éxecuter un code différent qui fonctionnera dans ce cas.
+Si c'est de votre faute, vous devez le résoudre ! Trouver la cause d'un bug implique la même stratégie que pour n'importe quel bug de développement web (à nouveau, voir [Debugging HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS), et [What went wrong? Troubleshooting JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong)). Une fois que vous avez découvert ce qui causait le bug, vous devez décider comment est-ce que vous allez travailler sur le navigateur en particulier qui vous pose problèmes — vous ne pouvez pas juste modifier le code du problème, cela risque de casser le code sur un autre navigateur. En général, l'approche veut qu'on fasse bifurquer le code dans une certaine direction, par exemple utilisez une fonctionnalité de détecton en code Javascript pour détecter les situations où une fonctionnalité ne marche pas, et éxecuter un code différent qui fonctionnera dans ce cas.
 
 Lorsque le fix a été créé, vous devrez repéter votre processus de test afin de vous assurer que votre réparation fonctionne bien, et n'a pas causé une faille autre part sur le site ou sur un autre navigateur.
 
@@ -177,14 +172,3 @@ Juste pour redire ce qui a déjà été dit au-dessus, si vous découvrez des bu
 Cet article devrez vous avoir donné un haut niveau de compréhension des concepts les plus importants que vous devez connaître à propos du test en navigateur croisé. Armé de ce savoir, vous êtes maintenant prêt à démarrer et à commencer à apprendre à propos des stratégies de test multi-navigateur.
 
 {{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## Sur ce module
-
-- [Introduction to cross browser testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

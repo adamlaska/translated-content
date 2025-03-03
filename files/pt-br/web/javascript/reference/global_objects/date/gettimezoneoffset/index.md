@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.getTimezoneOffset()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 ---
+
 {{JSRef}}
 
 O método **`getTimezoneOffset()`** retorna a diferença, em minutos, do deslocamento de fuso horário entre o UTC (Tempo Universal Coordenado) e a localidade atual.
@@ -32,12 +32,8 @@ var currentTimeZoneOffsetInHours = x.getTimezoneOffset() / 60;
 
 ## Especificações
 
-| Especificação                                                                                                                    | Situação                 | comentário                                         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                         | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.26', 'Date.prototype.getTimezoneOffset')}}                             | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.gettimezoneoffset', 'Date.prototype.getTimezoneOffset')}} | {{Spec2('ES6')}}     |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getTimezoneOffset")}}
+{{Compat}}

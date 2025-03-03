@@ -1,21 +1,23 @@
 ---
 title: String.prototype.trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - Remover espaços ao final da string
-  - String
-  - metodo
-  - trimEnd()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 ---
+
 {{JSRef}}
 
 O método `trimEnd()` remove espaços do final de uma _string_. `trimRight()` é um apelido para este método.
 
-{{EmbedInteractiveExample("pages/js/string-trimend.html")}}
+{{InteractiveExample("JavaScript Demo: String.trimEnd()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trimEnd());
+// Expected output: "   Hello world!";
+```
 
 ## Sintaxe
 
@@ -47,24 +49,22 @@ String.prototype.trimRight.name === "trimEnd";
 O exemplo a seguir mostra a _string_ em caixa baixa `' foo'`:
 
 ```js
-var str = '   foo  ';
+var str = "   foo  ";
 
 console.log(str.length); // retorna 8
 
 str = str.trimEnd();
 console.log(str.length); // retorna 6
-console.log(str);        // retorna '   foo'
+console.log(str); // retorna '   foo'
 ```
 
 ## Especificações
 
-| Especificação                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.trimend', 'String.prototype.trimEnd')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.trimEnd")}}
+{{Compat}}
 
 ## Veja também
 

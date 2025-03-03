@@ -1,13 +1,14 @@
 ---
 title: HTMLCollection
 slug: Web/API/HTMLCollection
-translation_of: Web/API/HTMLCollection
 ---
+
 {{APIRef("HTML DOM")}}
 
 A interface **`HTMLCollection`** representa uma coleção genérica (objeto array) de elementos (na ordem em que aparecem no documento) e oferece métodos e propriedades para selecioná-los da lista.
 
-> **Nota:** Esta interface é chamada `HTMLCollection` por razões históricas (antes do DOM4, coleções implementadas por esta interface somente podiam ter elementos HTML).
+> [!NOTE]
+> Esta interface é chamada `HTMLCollection` por razões históricas (antes do DOM4, coleções implementadas por esta interface somente podiam ter elementos HTML).
 
 Uma coleção `HTMLCollection` de um HTML DOM está linkada com o documento; ela será automaticamente atualizada quando o documento for modificado.
 
@@ -53,8 +54,8 @@ Diferentes browsers se comportam de maneira diferente quando um os mais elemento
 
 ## Especificações
 
-- [DOM Level 2 HTML, Section 1.4, Miscellaneous Object Definitions](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506)
-- [DOM4: HTMLCollection](http://www.w3.org/TR/domcore/#interface-htmlcollection)
+- [DOM Level 2 HTML, Section 1.4, Miscellaneous Object Definitions](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506)
+- [DOM4: HTMLCollection](https://www.w3.org/TR/domcore/#interface-htmlcollection)
 
 ## Veja também
 

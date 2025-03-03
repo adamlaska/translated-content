@@ -1,14 +1,8 @@
 ---
 title: Alt-Svc
 slug: Web/HTTP/Headers/Alt-Svc
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de Resposta
-  - HTTP
-  - Reference
-  - Referencia
-translation_of: Web/HTTP/Headers/Alt-Svc
 ---
+
 O cabeçalho de resposta HTTP **`Alt-Svc`** é usado para indicar que serviços alternativos que podem ser utilizados para alcançar o mesmo recurso. Um serviço alternativo é definido por uma combinação de protocolo/host/porta.
 
 ## Sintaxe
@@ -43,14 +37,14 @@ Alt-Svc: h3-25=":443"; ma=3600, h2=":443"; ma=3600
 
 ## Especificações
 
-| Especificação    | Status   | Comentários        |
-| ---------------- | -------- | ------------------ |
+| Especificação | Status   | Comentários        |
+| ------------- | -------- | ------------------ |
 | {{RFC(7838)}} | IETF RFC | Definição inicial. |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Alt-Svc")}}
+{{Compat}}
 
 ## Veja também
 
-- [Identificando recursos na Web](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [Identificando recursos na Web](/pt-BR/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)

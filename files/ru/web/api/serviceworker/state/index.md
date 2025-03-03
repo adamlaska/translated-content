@@ -1,8 +1,8 @@
 ---
 title: ServiceWorker.state
 slug: Web/API/ServiceWorker/state
-translation_of: Web/API/ServiceWorker/state
 ---
+
 {{APIRef("Service Workers API")}}
 
 Свойство интерфейса {{domxref("ServiceWorker")}} **`state`**, доступное только для чтения является строкой, показывающей текущее состояние данного Service Worker. Его возможные значения: `installing`, `installed,` `activating`, `activated` и `redundant`.
@@ -19,25 +19,25 @@ someURL = ServiceWorker.state
 
 ## Примеры
 
-Это фрагмент кода из [примера событий Service Worker](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([демо](https://googlechrome.github.io/samples/service-worker/registration-events/)). Данный код возвращает значение [`ServiceWorker.state`](/ru/docs/Web/API/ServiceWorker/state "Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!") при каждом изменении состояния.
+Это фрагмент кода из [примера событий Service Worker](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([демо](https://googlechrome.github.io/samples/service-worker/registration-events/)). Данный код возвращает значение [`ServiceWorker.state`](/ru/docs/Web/API/ServiceWorker/state) при каждом изменении состояния.
 
 ```js
 var serviceWorker;
 if (registration.installing) {
   serviceWorker = registration.installing;
-  document.querySelector('#kind').textContent = 'installing';
+  document.querySelector("#kind").textContent = "installing";
 } else if (registration.waiting) {
   serviceWorker = registration.waiting;
-  document.querySelector('#kind').textContent = 'waiting';
+  document.querySelector("#kind").textContent = "waiting";
 } else if (registration.active) {
   serviceWorker = registration.active;
-  document.querySelector('#kind').textContent = 'active';
+  document.querySelector("#kind").textContent = "active";
 }
 
 if (serviceWorker) {
   logState(serviceWorker.state);
-  serviceWorker.addEventListener('statechange', function(e) {
-  logState(e.target.state);
+  serviceWorker.addEventListener("statechange", function (e) {
+    logState(e.target.state);
   });
 }
 ```
@@ -46,6 +46,6 @@ if (serviceWorker) {
 
 {{Specifications}}
 
-## Поддержка в браузерах
+## Совместимость с браузерами
 
 {{Compat}}

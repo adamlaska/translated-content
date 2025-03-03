@@ -1,14 +1,8 @@
 ---
 title: Storage.clear()
 slug: Web/API/Storage/clear
-tags:
-  - API
-  - Armazenamento
-  - Armazenamento web
-  - Referencia
-  - metodo
-translation_of: Web/API/Storage/clear
 ---
+
 {{APIRef("Web Storage API")}}
 
 O método `clear()` da interface {{domxref("Storage")}}, quando realizado uma chamada, todas as chaves do armazenamento são esvaziadas.
@@ -33,25 +27,24 @@ A função abaixo cria três itens e armazenam localmente, depois remove todos u
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'myCat.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "myCat.png");
 
   localStorage.clear();
 }
 ```
 
-> **Nota:** Para visualizar um exemplo real, veja nossa seção [Demonstração de Web Storage](https://github.com/mdn/web-storage-demo).
+> [!NOTE]
+> Para visualizar um exemplo real, veja nossa seção [Demonstração de Web Storage](https://github.com/mdn/web-storage-demo).
 
 ## Especificações
 
-| Especificação                                                                    | Status                           | Comentário |
-| -------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('Web Storage', '#dom-storage-clear', 'clear()')}} | {{Spec2('Web Storage')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Storage.clear")}}
+{{Compat}}
 
 ## Veja também
 

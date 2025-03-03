@@ -1,14 +1,8 @@
 ---
 title: animation-direction
 slug: Web/CSS/animation-direction
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Experemiental
-  - Reference
-translation_of: Web/CSS/animation-direction
 ---
+
 {{ CSSRef() }}
 
 {{ SeeCompatTable() }}
@@ -47,19 +41,17 @@ animation-direction: alternate, reverse, normal
 
 ## Ejemplos
 
-Visitar [animaciones CSS](/es/CSS/Usando_animaciones_CSS) para ver algunos ejemplos.
+Visitar [animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) para ver algunos ejemplos.
 
-Especificaciones
+## Especificaciones
 
-| Especificación                                                                                               | Estado                                   | Comentario                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| {{ SpecName('CSS3 Animations', '#animation-direction', 'animation-direction') }} | {{ Spec2('CSS3 Animations') }} | For the two new values, see the [W3C discussion](http://lists.w3.org/Archives/Public/www-style/2011May/0090.html). |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.animation-direction")}}
+{{Compat}}
 
 ## Consulte también
 
-- [Usando animaciones CSS](/es/docs/CSS/Using_CSS_animations)
+- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

@@ -1,14 +1,8 @@
 ---
 title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
-tags:
-  - ECMAScript6
-  - ES6
-  - Prototype
-  - metodo
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 ---
+
 {{JSRef}}
 
 O método **`delete()`** remove o elemento especificado de um objeto `Set`.
@@ -39,19 +33,16 @@ mySet.add("foo");
 mySet.delete("bar"); // Retorna false. Nenhum elemento "bar" foi encontrado para deletar.
 mySet.delete("foo"); // Retorna true. remoção bem sucedida.
 
-mySet.has("foo");    // Retorna false. O elemento "foo" não está mais presente.
+mySet.has("foo"); // Retorna false. O elemento "foo" não está mais presente.
 ```
 
 ## Especificações
 
-| Especificação                                                                                        | Status                       | Comentário         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-set.prototype.delete', 'Set.prototype.delete')}}     | {{Spec2('ES6')}}         | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-set.prototype.delete', 'Set.prototype.delete')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Set.delete")}}
+{{Compat}}
 
 ## Veja também
 

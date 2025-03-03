@@ -1,13 +1,8 @@
 ---
 title: 여백 상쇄 정복
-slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
-tags:
-  - CSS
-  - CSS Box Model
-  - Guide
-  - Reference
-translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 ---
+
 {{CSSRef}}
 
 여러 블록의 [위쪽](/ko/docs/Web/CSS/margin-top) 및 [아래쪽](/ko/docs/Web/CSS/margin-bottom) 바깥 여백(마진)은 경우에 따라 제일 큰 여백의 크기를 가진 단일 여백으로 결합(상쇄)되곤 합니다. 이런 동작을 **여백 상쇄**라고 부릅니다. 단, [플로팅](/ko/docs/Web/CSS/float) 요소와 [절대 위치를 지정](/ko/docs/Web/CSS/position#absolute)한 요소의 여백은 절대 상쇄되지 않습니다.
@@ -34,11 +29,21 @@ translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 
 ```html
 <p>The bottom margin of this paragraph is collapsed …</p>
-<p>… with the top margin of this paragraph, yielding a margin of <code>1.2rem</code> in between.</p>
+<p>
+  … with the top margin of this paragraph, yielding a margin of
+  <code>1.2rem</code> in between.
+</p>
 
-<div>This parent element contains two paragraphs!
-  <p>This paragraph has a <code>.4rem</code> margin between it and the text above.</p>
-  <p>My bottom margin collapses with my parent, yielding a bottom margin of <code>2rem</code>.</p>
+<div>
+  This parent element contains two paragraphs!
+  <p>
+    This paragraph has a <code>.4rem</code> margin between it and the text
+    above.
+  </p>
+  <p>
+    My bottom margin collapses with my parent, yielding a bottom margin of
+    <code>2rem</code>.
+  </p>
 </div>
 
 <p>I am <code>2rem</code> below the element above.</p>
@@ -53,7 +58,7 @@ div {
 }
 
 p {
-  margin: .4rem 0 1.2rem 0;
+  margin: 0.4rem 0 1.2rem 0;
   background: yellow;
 }
 ```
@@ -61,7 +66,3 @@ p {
 ### 결과
 
 {{EmbedLiveSample('예제', 'auto', 350)}}
-
-## 명세
-
-{{Specifications}}

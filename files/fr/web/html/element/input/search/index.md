@@ -1,15 +1,34 @@
 ---
 title: <input type="search">
 slug: Web/HTML/Element/input/search
-translation_of: Web/HTML/Element/input/search
-browser-compat: html.elements.input.input-search
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`search`** permettent de saisir des termes de recherche. Sur le plan fonctionnel, ils sont identiques aux champs de saisie textuels ([`<input type="text">`](/fr/docs/Web/HTML/Element/Input/text)), c'est leur mise en forme qui peut être différente selon [les agents utilisateurs](/fr/docs/Glossary/User_agent).
+Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`search`** permettent de saisir des termes de recherche. Sur le plan fonctionnel, ils sont identiques aux champs de saisie textuels ([`<input type="text">`](/fr/docs/Web/HTML/Element/input/text)), c'est leur mise en forme qui peut être différente selon [les agents utilisateurs](/fr/docs/Glossary/User_agent).
 
-{{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;search&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="site-search">Search the site:</label>
+<input type="search" id="site-search" name="q" />
+
+<button>Search</button>
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -48,7 +67,7 @@ Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `typ
 
 ## Valeur
 
-La valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value) contient une chaîne de caractères ([`DOMString`](/fr/docs/Web/API/DOMString)) qui représente la valeur du champ de recherche. En JavaScript, on peut récupérer cette information grâce à la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
+La valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value) contient une chaîne de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui représente la valeur du champ de recherche. En JavaScript, on peut récupérer cette information grâce à la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
 ```js
 termesRecherche = monChampSearch.value;
@@ -58,31 +77,32 @@ Si aucune contrainte de validation n'est imposée (cf. la section [Validation](#
 
 ## Attributs supplémentaires
 
-En complément des attributs communs à l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/Input), les champs de recherche prennent en charge les attributs suivants.
+En complément des attributs communs à l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/input), les champs de recherche prennent en charge les attributs suivants.
 
 ### `list`
 
-La valeur de cet attribut est l'identifiant ([`id`](/fr/docs/Web/API/Element/id)) d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) situé dans le même document. L'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) fournit une liste de valeurs prédéfinies qui doivent être suggérées lors de la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec le type de champ ([`type`](/fr/docs/Web/HTML/Element/Input#attr-type)) ne sera pas incluse dans les suggestions. Les valeurs fournies sont des suggestions et pas des contraintes&nbsp;: il reste tout à fait possible de choisir une valeur différente que celles de la liste.
+La valeur de cet attribut est l'identifiant ([`id`](/fr/docs/Web/API/Element/id)) d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) situé dans le même document. L'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) fournit une liste de valeurs prédéfinies qui doivent être suggérées lors de la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec le type de champ ([`type`](/fr/docs/Web/HTML/Element/input#attr-type)) ne sera pas incluse dans les suggestions. Les valeurs fournies sont des suggestions et pas des contraintes&nbsp;: il reste tout à fait possible de choisir une valeur différente que celles de la liste.
 
 ### `maxlength`
 
 Le nombre maximum de caractères (exprimé en nombre de points de code UTF-16) qu'il est possible de saisir dans le champ. Cette valeur doit être un entier positif ou nul. Si aucune valeur n'est fournie pour `maxlength` ou qu'une valeur invalide est fournie, il n'y a pas de contrainte de taille maximale. La valeur indiquée par cet attribut doit être supérieure à `minlength`.
 
-Le champ [ne sera pas valide](/fr/docs/Web/Guide/HTML/Constraint_validation) si la longueur du texte dépasse `maxlength` en nombre de points de code UTF-16.
+Le champ [ne sera pas valide](/fr/docs/Web/HTML/Constraint_validation) si la longueur du texte dépasse `maxlength` en nombre de points de code UTF-16.
 
 ### `minlength`
 
 Le nombre minimal de caractères (exprimé en nombre de points de code UTF-16) que l'utilisatrice ou l'utilisateur peut saisir dans le champ. Cette valeur doit être un entier positif ou nul. Si aucune valeur n'est fournie pour `minlength` ou qu'une valeur invalide est fournie, il n'y a pas de contrainte de taille minimale. La valeur indiquée par cet attribut doit être inférieure à `maxlength`.
 
-Le champ [ne sera pas valide](/fr/docs/Web/Guide/HTML/Constraint_validation) si la longueur du texte est inférieure à `minlength` en nombre de points de code UTF-16.
+Le champ [ne sera pas valide](/fr/docs/Web/HTML/Constraint_validation) si la longueur du texte est inférieure à `minlength` en nombre de points de code UTF-16.
 
 ### `pattern`
 
-L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui impose un format à [`value`](/fr/docs/Web/HTML/Element/Input#attr-value), que cette dernière doit respecter afin que le champ soit [valide](/fr/docs/Web/Guide/HTML/Constraint_validation). Le contenu de `pattern` doit être une expression rationnelle JavaScript valide (voir la documentation sur le type [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions). Le marqueur `'u'` est utilisé à la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode et non ASCII. Il ne faut pas entourer l'expression de barres obliques.
+L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui impose un format à [`value`](/fr/docs/Web/HTML/Element/input#attr-value), que cette dernière doit respecter afin que le champ soit [valide](/fr/docs/Web/HTML/Constraint_validation). Le contenu de `pattern` doit être une expression rationnelle JavaScript valide (voir la documentation sur le type [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions). Le marqueur `'u'` est utilisé à la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode et non ASCII. Il ne faut pas entourer l'expression de barres obliques.
 
 Si aucune expression rationnelle n'est fournie ou que celle-ci est invalide, aucune contrainte de format ne sera appliquée et cet attribut sera ignoré complètement.
 
-> **Note :** On utilisera l'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pour définir le texte que la plupart des navigateurs afficheront comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
+> [!NOTE]
+> On utilisera l'attribut [`title`](/fr/docs/Web/HTML/Element/input#attr-title) pour définir le texte que la plupart des navigateurs afficheront comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
 
 Voir la section [Indiquer un motif](#indiquer_un_motif) pour plus de détails et un exemple.
 
@@ -92,13 +112,15 @@ L'attribut `placeholder` est une chaîne de caractères qui fournit une indicati
 
 Si le contenu du contrôle utilise une direction (écriture de gauche à droite ou de droite à gauche), mais que le texte indicatif doit être présenté dans la direction inverse, vous pouvez utiliser des caractères de formatage pour l'algorithme bidirectionnel Unicode dans la valeur. Voir [Comment utiliser des contrôles Unicode pour le texte bidirectionnel (en anglais)](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
 
-> **Note :** On évitera d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile que d'autres sur le plan sémantique pour expliquer le formulaire et il peut causer des problèmes techniques avec le contenu. Voir [L'utilisation de libellés et de textes indicatifs](/fr/docs/Web/HTML/Element/Input#utilisation_de_libellés) pour plus d'informations.
+> [!NOTE]
+> On évitera d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile que d'autres sur le plan sémantique pour expliquer le formulaire et il peut causer des problèmes techniques avec le contenu. Voir [L'utilisation de libellés et de textes indicatifs](/fr/docs/Web/HTML/Element/input#utilisation_de_libell%c3%a9s) pour plus d'informations.
 
 ### `readonly`
 
 Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité dans le formulaire. La valeur du champ (portée par l'attribut `value`) peut toutefois être modifiée par du code JavaScript, qui changerait la propriété `value` rattachée à l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
-> **Note :** Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'a pas d'effet particulier sur les champs pour lesquels `readonly` est appliqué.
+> [!NOTE]
+> Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'a pas d'effet particulier sur les champs pour lesquels `readonly` est appliqué.
 
 ### `size`
 
@@ -108,7 +130,7 @@ Cet attribut _n'impose pas_ de limite sur le nombre de caractères qui peuvent �
 
 ### `spellcheck`
 
-`spellcheck` est un attribut universel qui est utilisé afin d'indiquer si la vérification orthographique doit être activée sur un élément. Il peut être utilisé sur n'importe quel contenu éditable. On considère ici les aspects spécifiques de `spellcheck` sur les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input). Les valeurs autorisées pour `spellcheck` sont&nbsp;:
+`spellcheck` est un attribut universel qui est utilisé afin d'indiquer si la vérification orthographique doit être activée sur un élément. Il peut être utilisé sur n'importe quel contenu éditable. On considère ici les aspects spécifiques de `spellcheck` sur les éléments [`<input>`](/fr/docs/Web/HTML/Element/input). Les valeurs autorisées pour `spellcheck` sont&nbsp;:
 
 - `false`
   - : La vérification orthographique est désactivée pour l'élément.
@@ -165,7 +187,7 @@ Les éléments `<input>` de type `search` sont semblables aux éléments `<input
 ```html
 <form>
   <div>
-    <input type="search" id="maRecherche" name="q">
+    <input type="search" id="maRecherche" name="q" />
     <button>Rechercher</button>
   </div>
 </form>
@@ -177,7 +199,8 @@ Cet exemple produira le résultat suivant&nbsp;:
 
 `q` est la valeur la plus communément utilisée pour l'attribut `name` des champs de recherche mais cette valeur spécifique n'est pas obligatoire. Lorsque le formulaire est envoyé, les données envoyées au serveur auront la forme `q=termederecherche`.
 
-> **Note :** Il est toujours nécessaire de fournir une valeur pour l'attribut [`name`](/fr/docs/Web/HTML/Element/Input#attr-name), sinon aucune valeur ne sera envoyée.
+> [!NOTE]
+> Il est toujours nécessaire de fournir une valeur pour l'attribut [`name`](/fr/docs/Web/HTML/Element/input#attr-name), sinon aucune valeur ne sera envoyée.
 
 ### Différences entre les champs de recherche et les champs texte
 
@@ -191,13 +214,16 @@ De plus, les navigateurs modernes proposent souvent une auto-complétion basée 
 
 ### Ajouter un texte indicatif
 
-Il est possible de fournir un texte indicatif dans le champ de recherche afin de fournir une indication quant aux recherches qu'il est possible de faire. Pour cela, on ajoutera un texte avec l'attribut [`placeholder`](/fr/docs/Web/HTML/Element/Input#attr-placeholder). Par exemple&nbsp;:
+Il est possible de fournir un texte indicatif dans le champ de recherche afin de fournir une indication quant aux recherches qu'il est possible de faire. Pour cela, on ajoutera un texte avec l'attribut [`placeholder`](/fr/docs/Web/HTML/Element/input#attr-placeholder). Par exemple&nbsp;:
 
 ```html
 <form>
   <div>
-    <input type="search" id="maRecherche" name="q"
-     placeholder="Rechercher sur le site…">
+    <input
+      type="search"
+      id="maRecherche"
+      name="q"
+      placeholder="Rechercher sur le site…" />
     <button>Rechercher</button>
   </div>
 </form>
@@ -214,16 +240,19 @@ Un des problèmes posé par les formulaires de recherche est leur accessibilité
 En revanche, pour les personnes qui utilisent des technologies d'assistance, cela peut être source de confusion. Une façon de résoudre ce problème sans modifier l'organisation visuelle est d'utiliser les fonctionnalités [WAI-ARIA](/fr/docs/Learn/Accessibility/WAI-ARIA_basics)&nbsp;:
 
 - Utiliser un attribut `role` avec la valeur `search` sur l'élément `<form>` permettra aux lecteurs d'écran d'indiquer le formulaire comme étant un formulaire de recherche.
-- Si cela n'est pas suffisant, il est possible d'utiliser l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-label) sur l'élément [`<input>`](/fr/docs/Web/HTML/Element/Input). Cet attribut peut contenir un texte descriptif qui sera lu à voix haute par un lecteur d'écran. Il s'agit d'un équivalent non-visuel de `<label>`.
+- Si cela n'est pas suffisant, il est possible d'utiliser l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-label) sur l'élément [`<input>`](/fr/docs/Web/HTML/Element/input). Cet attribut peut contenir un texte descriptif qui sera lu à voix haute par un lecteur d'écran. Il s'agit d'un équivalent non-visuel de `<label>`.
 
 Prenons un exemple&nbsp;:
 
 ```html
 <form role="search">
   <div>
-    <input type="search" id="maRecherche" name="q"
-     placeholder="Rechercher sur le site…"
-     aria-label="Rechercher parmi le contenu du site">
+    <input
+      type="search"
+      id="maRecherche"
+      name="q"
+      placeholder="Rechercher sur le site…"
+      aria-label="Rechercher parmi le contenu du site" />
     <button>Rechercher</button>
   </div>
 </form>
@@ -235,17 +264,22 @@ Voici le résultat obtenu grâce à ce fragment HTML&nbsp;:
 
 Il n'y a aucune différence visuelle avec l'exemple précédent mais avec cette deuxième version, les personnes qui utilisent un lecteur d'écran disposeront de plus d'informations.
 
-> **Note :** Voir [Panneaux/points de repère](/fr/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) pour plus d'informations à propos de ces fonctionnalités relatives à l'accessibilité.
+> [!NOTE]
+> Voir [Panneaux/points de repère](/fr/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) pour plus d'informations à propos de ces fonctionnalités relatives à l'accessibilité.
 
 ### Paramétrer la taille physique
 
-Il est possible de contrôler la taille physique du champ de saisie grâce à l'attribut [`size`](/fr/docs/Web/HTML/Element/Input#attr-size). Cet attribut permet d'indiquer le nombre de caractères qui peuvent être affichés simultanément à l'intérieur du champ. Ainsi, dans l'exemple qui suit, la zone de recherche peut contenir 30 caractères&nbsp;:
+Il est possible de contrôler la taille physique du champ de saisie grâce à l'attribut [`size`](/fr/docs/Web/HTML/Element/input#attr-size). Cet attribut permet d'indiquer le nombre de caractères qui peuvent être affichés simultanément à l'intérieur du champ. Ainsi, dans l'exemple qui suit, la zone de recherche peut contenir 30 caractères&nbsp;:
 
 ```html
 <form>
   <div>
-    <input type="search" id="maRecherche" name="q"
-    placeholder="Rechercher sur le site…" size="30">
+    <input
+      type="search"
+      id="maRecherche"
+      name="q"
+      placeholder="Rechercher sur le site…"
+      size="30" />
     <button>Rechercher</button>
   </div>
 </form>
@@ -259,7 +293,8 @@ On obtient une boîte de recherche plus large qu'auparavant&nbsp;:
 
 Les éléments `<input>` de type `search` possèdent les mêmes fonctionnalités de validation que les éléments `<input type="text">`. Il existe peu de raison de contraindre les termes d'une recherche mais voici quelques cas.
 
-> **Note :** Attention, la validation des données d'un formulaire de recherche HTML par le client _ne doit pas remplacer_ la vérification de ces données lorsqu'elles sont reçues sur le serveur. En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML de la page pour outrepasser les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur. Si le serveur ne valide pas les données reçues, des données potentiellement mal formatées pourraient causer des dommages aux bases de données et autres composants sensibles.
+> [!NOTE]
+> Attention, la validation des données d'un formulaire de recherche HTML par le client _ne doit pas remplacer_ la vérification de ces données lorsqu'elles sont reçues sur le serveur. En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML de la page pour outrepasser les mécanismes de validation. Il est également possible d'envoyer des données directement au serveur. Si le serveur ne valide pas les données reçues, des données potentiellement mal formatées pourraient causer des dommages aux bases de données et autres composants sensibles.
 
 ### Une note sur la mise en forme
 
@@ -267,15 +302,15 @@ Les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/d
 
 ```css
 input:invalid ~ span:after {
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
   position: absolute;
 }
 
 input:valid ~ span:after {
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
-  position: absolute
+  position: absolute;
 }
 ```
 
@@ -283,13 +318,17 @@ Vous pouvez ici voir qu'on utilise un élément [`<span>`](/fr/docs/Web/HTML/Ele
 
 ### Rendre le champ obligatoire
 
-Il est possible d'utiliser l'attribut [`required`](/fr/docs/Web/HTML/Element/Input#attr-required) afin d'indiquer que la valeur doit obligatoirement être saisie avant d'envoyer le formulaire&nbsp;:
+Il est possible d'utiliser l'attribut [`required`](/fr/docs/Web/HTML/Element/input#attr-required) afin d'indiquer que la valeur doit obligatoirement être saisie avant d'envoyer le formulaire&nbsp;:
 
 ```html
 <form>
   <div>
-    <input type="search" id="maRecherche" name="q"
-    placeholder="Recherche sur le site…" required>
+    <input
+      type="search"
+      id="maRecherche"
+      name="q"
+      placeholder="Recherche sur le site…"
+      required />
     <button>Rechercher</button>
     <span class="validity"></span>
   </div>
@@ -302,13 +341,13 @@ input {
 }
 
 input:invalid ~ span:after {
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
   position: absolute;
 }
 
 input:valid ~ span:after {
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   position: absolute;
 }
@@ -326,7 +365,7 @@ Différents messages peuvent être affichés selon le type d'erreur liée à la 
 
 ### Contraindre la taille de la valeur saisie
 
-Il est possible d'indiquer une taille minimale pour la longueur des termes de la recherche via l'attribut [`minlength`](/fr/docs/Web/HTML/Element/Input#attr-minlength). De même, on peut fixer la longueur maximale du texte qui peut être saisi pour la recherche grâce à l'attribut [`maxlength`](/fr/docs/Web/HTML/Element/Input#attr-maxlength). Ces deux attributs sont exprimés en nombres de caractères.
+Il est possible d'indiquer une taille minimale pour la longueur des termes de la recherche via l'attribut [`minlength`](/fr/docs/Web/HTML/Element/input#attr-minlength). De même, on peut fixer la longueur maximale du texte qui peut être saisi pour la recherche grâce à l'attribut [`maxlength`](/fr/docs/Web/HTML/Element/input#attr-maxlength). Ces deux attributs sont exprimés en nombres de caractères.
 
 Dans l'exemple qui suit, la valeur saisie dans le champ de recherche doit mesurer entre 4 et 8 caractères.
 
@@ -334,9 +373,15 @@ Dans l'exemple qui suit, la valeur saisie dans le champ de recherche doit mesure
 <form>
   <div>
     <label for="mySearch">Rechercher une utilisatrice ou un utilisateur</label>
-    <input type="search" id="mySearch" name="q"
-    placeholder="ID de 4 à 8 char." required
-    size="30" minlength="4" maxlength="8">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="ID de 4 à 8 char."
+      required
+      size="30"
+      minlength="4"
+      maxlength="8" />
     <button>Rechercher</button>
     <span class="validity"></span>
   </div>
@@ -349,13 +394,13 @@ input {
 }
 
 input:invalid ~ span:after {
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
   position: absolute;
 }
 
 input:valid ~ span:after {
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   position: absolute;
 }
@@ -369,7 +414,7 @@ Si vous essayez de soumettre une valeur qui est plus petite que 4 caractères, v
 
 ### Indiquer un motif
 
-L'attribut [`pattern`](/fr/docs/Web/HTML/Element/Input#attr-pattern) permet d'indiquer une expression rationnelle que doit respecter la valeur saisie pour être considérée valide (cf. [Validation selon une expression régulière](/fr/docs/Learn/Forms/Form_validation#validation_selon_une_expression_régulière) pour une introduction).
+L'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#attr-pattern) permet d'indiquer une expression rationnelle que doit respecter la valeur saisie pour être considérée valide (cf. [Validation selon une expression régulière](/fr/docs/Learn/Forms/Form_validation#validation_selon_une_expression_régulière) pour une introduction).
 
 Prenons un exemple. Imaginons qu'on veuille rechercher un produit grâce à son identifiant et que les identifiants commencent par deux lettres, suivies de 4 chiffres. Dans l'exemple qui suit, le formulaire n'accepte qu'une valeur dont la taille est comprise entre 4 et 8 caractères et qui commence par deux lettres puis termine par 4 chiffres.
 
@@ -377,9 +422,14 @@ Prenons un exemple. Imaginons qu'on veuille rechercher un produit grâce à son 
 <form>
   <div>
     <label for="mySearch">Rechercher un produit par son code :</label>
-    <input type="search" id="mySearch" name="q"
-    placeholder="2 lettres puis 4 chiffres" required
-    size="30" pattern="[A-z]{2}[0-9]{4}">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="2 lettres puis 4 chiffres"
+      required
+      size="30"
+      pattern="[A-z]{2}[0-9]{4}" />
     <button>Rechercher</button>
     <span class="validity"></span>
   </div>
@@ -392,13 +442,13 @@ input {
 }
 
 input:invalid ~ span:after {
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
   position: absolute;
 }
 
 input:valid ~ span:after {
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   position: absolute;
 }
@@ -423,6 +473,6 @@ Vous pouvez consulter un exemple de formulaire de recherche dans notre exemple [
 ## Voir aussi
 
 - [Les formulaires HTML](/fr/docs/Learn/Forms)
-- [`<input>`](/fr/docs/Web/HTML/Element/Input) et l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) DOM qui le porte
-- [`<input type="text">`](/fr/docs/Web/HTML/Element/Input/text)
+- [`<input>`](/fr/docs/Web/HTML/Element/input) et l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) DOM qui le porte
+- [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text)
 - [La compatibilité des propriétés CSS](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

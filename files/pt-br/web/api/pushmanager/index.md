@@ -1,23 +1,16 @@
 ---
 title: PushManager
 slug: Web/API/PushManager
-tags:
-  - API
-  - API de armazenamento
-  - Experimental
-  - Interface
-  - Referencia
-  - Service Workers
-  - Subir dados
-translation_of: Web/API/PushManager
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
 A `PushManager`interface da [API Push](/pt-BR/docs/Web/API/Push_API) fornece uma maneira de receber notificações de servidores de terceiros, bem como solicitar URLs para notificações push.
 
 Essa interface é acessada através da propriedade {{domxref ("ServiceWorkerRegistration.pushManager")}}.
 
-> **Nota:** : Esta interface substitui a funcionalidade anteriormente oferecida pela interface obsoleta {{domxref ("PushRegistrationManager")}}.
+> [!NOTE]
+> : Esta interface substitui a funcionalidade anteriormente oferecida pela interface obsoleta {{domxref ("PushRegistrationManager")}}.
 
 ## Propriedades
 
@@ -75,13 +68,11 @@ navigator.serviceWorker.register('serviceworker.js').then(
 
 ## Especificações
 
-| Especificação                                                                        | Status                       | Comentário         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('Push API','#pushmanager-interface','PushManager')}} | {{Spec2('Push API')}} | Definição inicial. |
+{{Specifications}}
 
-## Compatibilidade do navegador
+## Compatibilidade com navegadores
 
-{{Compat("api.PushManager")}}
+{{Compat}}
 
 ## Veja também
 

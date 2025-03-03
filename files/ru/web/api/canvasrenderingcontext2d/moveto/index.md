@@ -1,17 +1,11 @@
 ---
 title: CanvasRenderingContext2D.moveTo()
 slug: Web/API/CanvasRenderingContext2D/moveTo
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
-translation_of: Web/API/CanvasRenderingContext2D/moveTo
 ---
+
 {{APIRef}}
 
-Метод **`CanvasRenderingContext2D`\*\***`.moveTo()`\*\*, предоставляемый Canvas 2D API, перемещает начальную точку нового фрагмента контура в координаты `(x, y)`.
+Метод **`CanvasRenderingContext2D.moveTo()`**, предоставляемый Canvas 2D API, перемещает начальную точку нового фрагмента контура в координаты `(x, y)`.
 
 ## Синтаксис
 
@@ -45,7 +39,7 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(50,50);
+ctx.moveTo(50, 50);
 ctx.lineTo(200, 50);
 ctx.stroke();
 ```
@@ -62,7 +56,8 @@ ctx.stroke();
 ctx.beginPath();
 ctx.moveTo(50,50);
 ctx.lineTo(200, 50);
-ctx.stroke()</textarea>
+ctx.stroke()</textarea
+>
 ```
 
 ```js hidden
@@ -78,14 +73,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

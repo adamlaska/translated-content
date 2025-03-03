@@ -115,7 +115,7 @@ Cache-Control: max-age=604800
 ...
 ```
 
-La caché que almacenó esa respuesta cuenta el tiempo transcurrido desde que la respuesta fue generada. El significado de `max-age` es que si la respuesta se creó hace menos de una semana, entonces es _fresh_, y si se creó hace más de una semana, entonces es  _stale_ .
+La caché que almacenó esa respuesta cuenta el tiempo transcurrido desde que la respuesta fue generada. El significado de `max-age` es que si la respuesta se creó hace menos de una semana, entonces es _fresh_, y si se creó hace más de una semana, entonces es _stale_ .
 
 Si esa respuesta está almacenada en una caché privada, estará disponible para su reutilización en respuesta a las solicitudes de los clientes durante una semana después de que se almacene. Si la caché compartida lo guarda, es necesario informar al cliente del tiempo transcurrido desde que fue almacenada en la caché compartida hasta que sea reutilizada por el cliente. Si la respuesta ha sido almacenada en la caché compartida durante un día y luego el cliente la reutilizó, entonces la siguiente respuesta será enviada desde la caché compartida al cliente.
 
@@ -143,7 +143,7 @@ El header `Expires` especifica la vida útil de la memoria caché usando una fec
 Expires: Tue, 28 Feb 2022 22:22:22 GMT
 ```
 
-Sin embargo, el formato de hora es difícil de analizar, de ahí a que se encontraran varios bugs en la implementación, y es posible inducir problemas cambiando intencionalmente el reloj del sistema. Por lo tanto, `max-age`, para especificar un tiempo transcurrido, se adoptó para `Cache-Control`en HTTP/1.1.
+Sin embargo, el formato de hora es difícil de analizar, de ahí a que se encontraran varios bugs en la implementación, y es posible inducir problemas cambiando intencionalmente el reloj del sistema. Por lo tanto, `max-age`, para especificar un tiempo transcurrido, se adoptó para `Cache-Control` en HTTP/1.1.
 
 Si tanto `Expires` como `Cache-Control: max-age` están disponibles, `max-age` se define como preferido. Por lo tanto, no es necesario proporcionar `Expires` ahora que HTTP/1.1 se usa ampliamente.
 
@@ -236,7 +236,7 @@ Cache-Control: max-age=3600
 ...
 ```
 
-Si esa respuesta es  _stale_ , el cliente toma el valor del header de respuesta 'ETag' para la respuesta en caché y lo coloca en el header de solicitud 'If-None-Match', para preguntarle al servidor si el recurso ha sido modificado:
+Si esa respuesta es _stale_ , el cliente toma el valor del header de respuesta 'ETag' para la respuesta en caché y lo coloca en el header de solicitud 'If-None-Match', para preguntarle al servidor si el recurso ha sido modificado:
 
 ```http
 GET /index.html HTTP/1.1
@@ -249,7 +249,8 @@ El servidor devolverá `304 Not modified` si el valor del header `ETag` que dete
 
 Pero si el servidor determina que el recurso solicitado ahora debería tener un valor `ETag` diferente, el servidor responderá con `200 OK` y la última versión del recurso.
 
-> **Nota:** A la hora de evaluar como usar `ETag` y `Last-Modified`, se debería considerar lo siguiente:
+> [!NOTE]
+> A la hora de evaluar como usar `ETag` y `Last-Modified`, se debería considerar lo siguiente:
 > Durante la revalidación de la caché, si `ETag` y `Last-Modified` están presentes, `ETag` toma la preferencia.
 > Por lo tanto, si solamente se está considerando el almacenamiento en caché, se puede pensar que `Last-Modified` es innecesario.
 > Sin embargo, `Last-Modified` no solo es útil para el almacenamiento en caché; en cambio, es un encabezado HTTP estándar que también utilizan los sistemas de administración de contenido (CMS) para mostrar la hora de la última modificación, los rastreadores para ajustar la frecuencia de rastreo y para otros fines diversos.
@@ -280,7 +281,7 @@ A menudo se afirma que la combinación de `max-age=0` y `must-revalidate` tiene 
 Cache-Control: max-age=0, must-revalidate
 ```
 
-`max-age=0` significa que la respuesta es _stale_ de inmediato, y `must-revalidate` significa que no debe reutilizarse sin revalidación una vez que esté  _stale_ ; por lo tanto, en combinación, la semántica parece ser la misma que `no-cache`.
+`max-age=0` significa que la respuesta es _stale_ de inmediato, y `must-revalidate` significa que no debe reutilizarse sin revalidación una vez que esté _stale_ ; por lo tanto, en combinación, la semántica parece ser la misma que `no-cache`.
 
 Sin embargo, ese uso de `max-age=0` es un remanente del hecho de que muchas implementaciones anteriores a HTTP/1.1 no pudieron manejar la directiva `no-cache` y, por lo tanto, para lidiar con esa limitación, `max-age =0` se utilizó como solución alternativa.
 
@@ -449,7 +450,7 @@ Es posible que desee sobrescribir esa respuesta una vez que caduque en el servid
 
 Uno de los métodos mencionados en la especificación es enviar una solicitud de la misma URL con un método no seguro como `POST`, pero eso suele ser difícil de hacer intencionalmente en muchos clientes.
 
-También hay una especificación para un header y valor `Clear-Site-Data: cache`, pero [no todos los navegadores lo admiten] (<https://groups.google.com/a/mozilla.org/g/dev-platform/c/I939w1yrTp4>), e incluso cuando se usa, solo afecta los cachés del navegador, pero no tiene efecto en los cachés intermedios.
+También hay una especificación para un header y valor `Clear-Site-Data: cache`, pero [no todos los navegadores lo admiten](https://groups.google.com/a/mozilla.org/g/dev-platform/c/I939w1yrTp4), e incluso cuando se usa, solo afecta los cachés del navegador, pero no tiene efecto en los cachés intermedios.
 
 Por lo tanto, se debe suponer que cualquier respuesta almacenada permanecerá durante su período de `max-age` a menos que el usuario realice manualmente una acción de recarga, recarga forzada o borrado del historial.
 
@@ -560,7 +561,8 @@ A tener en cuenta que el número '41' tiene la 'max-age' más larga (1 año), pe
 
 El valor `public` tiene el efecto de hacer que la respuesta se pueda almacenar incluso si el encabezado `Authorization` está presente.
 
-> **Nota:** La directiva `public` solo debe usarse si es necesario almacenar la respuesta cuando se establece el header `Authorization`.
+> [!NOTE]
+> La directiva `public` solo debe usarse si es necesario almacenar la respuesta cuando se establece el header `Authorization`.
 > De lo contrario, no se requiere, porque una respuesta se almacenará en el caché compartido siempre que se proporcione `max-age`.
 
 Entonces, si la respuesta está personalizada con autenticación básica, la presencia de `public` puede causar problemas. Si le preocupa eso, puede elegir el segundo valor más largo, `37` (1 mes).
@@ -603,7 +605,8 @@ ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 Hacer que una respuesta se pueda almacenar en caché durante un largo período de tiempo cambiando la URL cuando cambia el contenido se denomina **cache busting**. Esa técnica se puede aplicar a todos los subrecursos, como las imágenes.
 
-> **Nota:** Al evaluar el uso de `immutable` y QPACK:
+> [!NOTE]
+> Al evaluar el uso de `immutable` y QPACK:
 > Si le preocupa que `immutable` cambie el valor predefinido proporcionado por QPACK, considere que
 > en este caso, la parte `immutable` se puede codificar por separado dividiendo el valor `Cache-Control` en dos líneas, aunque esto depende del algoritmo de codificación que utilice una implementación particular de QPACK.
 

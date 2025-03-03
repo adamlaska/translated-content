@@ -1,13 +1,8 @@
 ---
 title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
-tags:
-  - Expresion Regular
-  - Prototipo
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
-original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/test
 ---
+
 {{JSRef}}
 
 El método **`test()`** ejecuta la búsqueda de una ocurrencia entre una expresión regular y una cadena especificada. Devuelve `true` o `false`.
@@ -48,12 +43,12 @@ console.log(result); // true
 El siguiente ejemplo registra un mensaje que depende del éxito de la prueba:
 
 ```js
-function probarEntrada(regexp, cadena){
+function probarEntrada(regexp, cadena) {
   var subcadena;
   if (regexp.test(cadena)) {
-    subcadena = ' contiene ';
+    subcadena = " contiene ";
   } else {
-    subcadena = ' no contiene ';
+    subcadena = " no contiene ";
   }
   console.log(cadena + subcadena + regexp.source);
 }
@@ -61,18 +56,13 @@ function probarEntrada(regexp, cadena){
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                       | Comentario                                          |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                     | {{Spec2('ES3')}}         | Definition inicial. Implementado en JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.10.6.3', 'RegExp.test')}}                     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-regexp.prototype.test', 'RegExp.test')}}         | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.test', 'RegExp.test')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp.test")}}
+{{Compat}}
 
 ## Vea también
 
-- El capítulo [Expresiones Regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions) de la [Guía JavaScript](/es/docs/Web/JavaScript/Guide)
+- El capítulo [Expresiones Regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) de la [Guía JavaScript](/es/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}

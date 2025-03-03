@@ -1,13 +1,8 @@
 ---
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
-tags:
-  - Function
-  - JavaScript
-  - isFinite()
-translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
-original_slug: Web/JavaScript/Referencia/Objetos_globales/isFinite
 ---
+
 {{jsSidebar("Objects")}}
 
 ## Resumen
@@ -34,31 +29,27 @@ Puede usar esta función para determinar si un número es un número finito. La 
 ## Ejemplos
 
 ```js
-isFinite(Infinity);    // falso
-isFinite(NaN);         // falso
-isFinite(-Inifinity);  // falso
+isFinite(Infinity); // falso
+isFinite(NaN); // falso
+isFinite(-Inifinity); // falso
 
-isFinite(0);           // verdadero
-isFinite(2e64);        // verdadero
+isFinite(0); // verdadero
+isFinite(2e64); // verdadero
 
-isFinite("0");         // verdadero, hubiera sido falso en el caso de usar Number.isFinite("0") que es mas robusta
+isFinite("0"); // verdadero, hubiera sido falso en el caso de usar Number.isFinite("0") que es mas robusta
 ```
 
 ## Especificaciones
 
-| Especificaciones                                                         | Estado                   | Comentarios        |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| ECMAScript 2nd Edition.                                                  | Estándar                 | Definición inicial |
-| {{SpecName('ES5.1', '#sec-15.1.2.5', 'isFinite')}}     | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-isfinite-number', 'isFinite')}} | {{Spec2('ES6')}}     |                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.isFinite")}}
+{{Compat}}
 
 ## Vea También
 
 - **`Number.isFinite()`**
 - **`Number.NaN()`**
-- [**`Number.POSITIVE_INFINITY`**](/es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/Number/POSITIVE_INFINITY)
-- [**`Number.NEGATIVE_INFINITY`**](/es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/Number/NEGATIVE_INFINITY)
+- [**`Number.POSITIVE_INFINITY`**](/es/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY)
+- [**`Number.NEGATIVE_INFINITY`**](/es/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY)

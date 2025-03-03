@@ -1,14 +1,28 @@
 ---
 title: Number.prototype.toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toFixed
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toFixed
 ---
+
 {{JSRef}}
 
 El método **`toFixed()`** formatea un número usando notación de punto fijo.
 
-{{EmbedInteractiveExample("pages/js/number-tofixed.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toFixed()")}}
+
+```js interactive-example
+function financial(x) {
+  return Number.parseFloat(x).toFixed(2);
+}
+
+console.log(financial(123.456));
+// Expected output: "123.46"
+
+console.log(financial(0.004));
+// Expected output: "0.00"
+
+console.log(financial("1.23e+5"));
+// Expected output: "123000.00"
+```
 
 ## Sintaxis
 
@@ -43,29 +57,24 @@ Una cadena que representa el número dado, usando notación de punto fijo.
 ```js
 var numObj = 12345.6789;
 
-numObj.toFixed();       // Returns '12346': note rounding, no fractional part
-numObj.toFixed(1);      // Returns '12345.7': note rounding
-numObj.toFixed(6);      // Returns '12345.678900': note added zeros
-(1.23e+20).toFixed(2);  // Returns '123000000000000000000.00'
-(1.23e-10).toFixed(2);  // Returns '0.00'
-2.34.toFixed(1);        // Returns '2.3'
-2.35.toFixed(1);        // Returns '2.4'. Note that it rounds up in this case.
--2.34.toFixed(1);       // Returns -2.3 (due to operator precedence, negative number literals don't return a string...)
-(-2.34).toFixed(1);     // Returns '-2.3' (...unless you use parentheses)
+numObj.toFixed(); // Returns '12346': note rounding, no fractional part
+numObj.toFixed(1); // Returns '12345.7': note rounding
+numObj.toFixed(6); // Returns '12345.678900': note added zeros
+(1.23e20).toFixed(2); // Returns '123000000000000000000.00'
+(1.23e-10).toFixed(2); // Returns '0.00'
+(2.34).toFixed(1); // Returns '2.3'
+(2.35).toFixed(1); // Returns '2.4'. Note that it rounds up in this case.
+-(2.34).toFixed(1); // Returns -2.3 (due to operator precedence, negative number literals don't return a string...)
+(-2.34).toFixed(1); // Returns '-2.3' (...unless you use parentheses)
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                    | Status                       | Comment                                            |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                         | {{Spec2('ES3')}}         | Initial definition. Implemented in JavaScript 1.5. |
-| {{SpecName('ES5.1', '#sec-15.7.4.5', 'Number.prototype.toFixed')}}                         | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-number.prototype.tofixed', 'Number.prototype.toFixed')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-number.prototype.tofixed', 'Number.prototype.toFixed')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.toFixed")}}
+{{Compat}}
 
 ## See also
 

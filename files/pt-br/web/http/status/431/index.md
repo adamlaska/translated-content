@@ -1,17 +1,8 @@
 ---
 title: 431 Request Header Fields Too Large
 slug: Web/HTTP/Status/431
-tags:
-  - Client error
-  - Código de Status de HTTP
-  - Código de status
-  - Erro do cliente
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Status code
-translation_of: Web/HTTP/Status/431
 ---
+
 {{HTTPSidebar}}
 
 O código de stauts de resposta HTTP **`431 Request Header Fields Too Large`** indica que o servidor se recusou a processar a requisição por que os [cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers) da mesma são muito grandes. A requisição _pode_ ser resubmetida depois de o tamanho dos cabeçalhos serem reduzidos.
@@ -31,8 +22,8 @@ Servidores vão produzir esse status frequentemente se:
 
 ## Especificações
 
-| Especificação                                                                    | Título                       |
-| -------------------------------------------------------------------------------- | ---------------------------- |
+| Especificação                                                | Título                       |
+| ------------------------------------------------------------ | ---------------------------- |
 | {{RFC("6585", "431 Request Header Fields Too Large" , "5")}} | Additional HTTP Status Codes |
 
 ## Veja também

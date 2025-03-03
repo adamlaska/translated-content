@@ -1,8 +1,8 @@
 ---
 title: WebGLProgram
 slug: Web/API/WebGLProgram
-translation_of: Web/API/WebGLProgram
 ---
+
 {{APIRef("WebGL")}}
 
 **WebGLProgram** это часть [WebGL API](/ru/docs/Web/API/WebGL_API) и комбинация двух составляющих {{domxref("WebGLShader")}}-ов, состоящих из вертикального и фрагментного шейдеров (оба написаны на GLSL). Затем они связываются в готовую к использованию программу.
@@ -16,7 +16,7 @@ gl.attachShader(program, fragmentShader);
 
 gl.linkProgram(program);
 
-if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
   var info = gl.getProgramInfoLog(program);
   throw "Could not compile WebGL program. \n\n" + info;
 }
@@ -51,7 +51,7 @@ gl.drawArrays(gl.TRIANGLES, 0, 3);
 gl.deleteProgram(program);
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

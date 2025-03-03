@@ -1,11 +1,8 @@
 ---
 title: Digest
 slug: Web/HTTP/Headers/Digest
-tags:
-  - Cabeçalho HTTP
-  - HTTP
-translation_of: Web/HTTP/Headers/Digest
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta HTTP **`Digest`** provém uma {{Glossary("digest")}} do recurso requisitado.
@@ -63,7 +60,7 @@ Este cabeçalho foi originalmente definido na [RFC 3230](https://tools.ietf.org/
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Digest")}}
+{{Compat}}
 
 ## Veja também
 

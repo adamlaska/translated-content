@@ -1,14 +1,8 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-tags:
-  - JavaScript
-  - Laço de repetição
-  - Loop
-  - Statement
-  - for...in
-translation_of: Web/JavaScript/Reference/Statements/for...in
 ---
+
 {{jsSidebar("Statements")}}
 
 O laço **`for...in`** interage sobre propriedades enumeradas de um objeto, na ordem original de inserção. O laço pode ser executado para cada propriedade distinta do objeto.
@@ -49,7 +43,7 @@ A função seguinte toma como argumento um objeto. O laço for...in iterage sobr
 
 ```js
 //Objeto
-var obj = {a:1, b:2, c:3};
+var obj = { a: 1, b: 2, c: 3 };
 
 //Para prop (propriedade) in obj (objeto) faça
 for (var prop in obj) {
@@ -66,7 +60,7 @@ for (var prop in obj) {
 A função seguinte ilustra o uso de {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}}: as propriedades herdadas não são exibidas.
 
 ```js
-var triangle = {a:1, b:2, c:3};
+var triangle = { a: 1, b: 2, c: 3 };
 
 function ColoredTriangle() {
   this.color = "red";
@@ -77,7 +71,7 @@ ColoredTriangle.prototype = triangle;
 var obj = new ColoredTriangle();
 
 for (var prop in obj) {
-  if( obj.hasOwnProperty( prop ) ) {
+  if (obj.hasOwnProperty(prop)) {
     console.log("obj." + prop + " = " + obj[prop]);
   }
 }
@@ -86,27 +80,21 @@ for (var prop in obj) {
 // "obj.color = red"
 ```
 
-## Specificações
+## Especificações
 
-| Specificação                                                                                                 | Status                       | Comentário        |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------- |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...in statement')}} | {{Spec2('ESDraft')}} |                   |
-| {{SpecName('ES6', '#sec-for-in-and-for-of-statements', 'for...in statement')}}     | {{Spec2('ES6')}}         |                   |
-| {{SpecName('ES5.1', '#sec-12.6.4', 'for...in statement')}}                                 | {{Spec2('ES5.1')}}     |                   |
-| {{SpecName('ES3', '#sec-12.6.4', 'for...in statement')}}                                 | {{Spec2('ES3')}}         |                   |
-| {{SpecName('ES1', '#sec-12.6.3', 'for...in statement')}}                                 | {{Spec2('ES1')}}         | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.for_in")}}
+{{Compat}}
 
 ## Compatibilidade: Initializer expressions
 
-Anterior ao SpiderMonkey 40 {{geckoRelease(40)}}, era possível usar uma expressão inicial com o laço for...in, conforme exemplo que se segue:
+Anterior ao SpiderMonkey 40, era possível usar uma expressão inicial com o laço for...in, conforme exemplo que se segue:
 
-```js example-bad
-var obj = {a:1, b:2, c:3};
-for(var i=0 in obj) {
+```js-nolint example-bad
+var obj = { a: 1, b: 2, c: 3 };
+for (var i = 0 in obj) {
   console.log(obj[i]);
 }
 // 1
@@ -121,7 +109,7 @@ Este não é o comportamento padrão e atualmente é ignorado a partir da versã
 - {{jsxref("Statements/for...of", "for...of")}} - laço similar que iterage sobre os valores das propriedades.
 - {{jsxref("Statements/for_each...in", "for each in")}} - (deprecated).
 - {{jsxref("Statements/for", "for")}}
-- [Generator expressions](/pt-BR/docs/Web/JavaScript/Guide/Iterators_and_Generators) (uses the `for...in` syntax)
+- [Generator expressions](/pt-BR/docs/Web/JavaScript/Guide/Iterators_and_generators) (uses the `for...in` syntax)
 - [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.prototype.hasOwnProperty()")}}

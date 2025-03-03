@@ -1,11 +1,9 @@
 ---
 title: sum
 slug: Web/XPath/Functions/sum
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/sum
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}{{ XsltRef() }}
 
 `sum` 함수는 인수로 준 노드 집합의 각 노드의 숫자값의 합을 반환합니다.
 
@@ -17,7 +15,7 @@ sum(node-set )
 
 ### 인수
 
-- _`node-set`_
+- `node-set`
   - : 평가될 노드 집합. 이 노드 집합의 각 노드는 마치 `number` 함수에 넘겨준 것처럼 평가되고 결과 수의 합이 반환됩니다.
 
 ### 반환
@@ -26,11 +24,11 @@ sum(node-set )
 
 ### 주의
 
-_(없음)_
+_없음._
 
 ### 정의
 
-[XPath 1.0 4.3](http://www.w3.org/TR/xpath#function-sum)
+[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-sum)
 
 ### Gecko 지원
 

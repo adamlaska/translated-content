@@ -1,19 +1,17 @@
 ---
 title: Цветовой контраст
 slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
-tags:
-  - WCAG
-  - Контраст
-  - доступность
-translation_of: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 ---
+
+{{AccessibilitySidebar}}
+
 ## Описание проблемы
 
 Цветовой контраст между фоном и содержимым переднего плана (обычно текстом) должен быть минимальным, чтобы обеспечить удобство чтения. Хорошо иметь крутой дизайн на своём сайте, но он бесполезен, если ваши пользователи не могут прочитать контент.
 
-Пример хорошего контраста:![An example of good color contrast consisting of the words good contrast with a light purple background.](https://mdn.mozillademos.org/files/16466/Screen_Shot_2019-02-04_at_5.31.23_PM.png)
+Пример хорошего контраста:![An example of good color contrast consisting of the words good contrast with a light purple background.](screen_shot_2019-02-04_at_5.31.23_pm.png)
 
-Пример плохого контраста:![An example of bad color contrast consisting of the words bad contrast with a dark purple background.](https://mdn.mozillademos.org/files/16467/Screen_Shot_2019-02-04_at_5.31.34_PM.png)
+Пример плохого контраста:![An example of bad color contrast consisting of the words bad contrast with a dark purple background.](screen_shot_2019-02-04_at_5.31.34_pm.png)
 
 Наличие хорошего цветового контраста на вашем сайте принесёт пользу всем вашим пользователям, но в особенности будет полезно пользователям с определёнными типами дальтонизма и другими подобными условиями, которые испытывают затруднения при распознавании похожих цветов.
 
@@ -42,11 +40,11 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 
 Если вы используете нетекстовый контент, такой как видео или анимация, вы должны следовать 1.4.11.
 
-Чтобы проверить свой контраст при выборе цвета, используйте такой инструмент, как [Color Contrast Checker](http://webaim.org/resources/contrastchecker/) от WebAIM.
+Чтобы проверить свой контраст при выборе цвета, используйте такой инструмент, как [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) от WebAIM.
 
-Вы также можете проверить цветовой контраст на лету с помощью инструментов разработчика Firefox — см. наше руководство [Инспектор доступности](/ru/docs/Tools/Инспектор_доступности), и в частности раздел [Цветовой контраст](/ru/docs/Tools/Инспектор_доступности#Цветовой_контраст).
+Вы также можете проверить цветовой контраст на лету с помощью инструментов разработчика Firefox — см. наше руководство [Инспектор доступности](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html), и в частности раздел [Цветовой контраст](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#цветовой_контраст).
 
 ## Смотрите также
 
-- [Цвет и цветовой контраст](/ru/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast)
+- [Цвет и цветовой контраст](/ru/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast)
 - [Понимание нетекстового контраста](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)

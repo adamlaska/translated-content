@@ -1,14 +1,8 @@
 ---
-title: ':first-child'
+title: :first-child
 slug: Web/CSS/:first-child
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:first-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:first-child`** de [CSS](/es/docs/Web/CSS) representa el primer elemento entre un grupo de elementos hermanos.
@@ -21,7 +15,8 @@ p:first-child {
 }
 ```
 
-> **Nota:** Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
+> [!NOTE]
+> Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
 
 ## Sintaxis
 
@@ -67,7 +62,8 @@ p:first-child {
 <ul>
   <li>Objeto 1</li>
   <li>Objeto 2</li>
-  <li>Objeto 3
+  <li>
+    Objeto 3
     <ul>
       <li>Objeto 3.1</li>
       <li>Objeto 3.2</li>
@@ -96,15 +92,11 @@ ul li:first-child {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Comentarios                                             |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#first-child-pseudo', ':first-child')}} | {{Spec2('CSS4 Selectors')}} | Los elementos coincidentes no requieren tener un padre. |
-| {{SpecName('CSS3 Selectors', '#first-child-pseudo', ':first-child')}} | {{Spec2('CSS3 Selectors')}} | Ningún cambio.                                          |
-| {{SpecName('CSS2.1', 'selector.html#first-child', ':first-child')}}     | {{Spec2('CSS2.1')}}             | Definición Inicial.                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.first-child")}}
+{{Compat}}
 
 ## Ver también
 

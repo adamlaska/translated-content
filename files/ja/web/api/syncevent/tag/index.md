@@ -17,12 +17,10 @@ var tag = SyncEvent.tag
 
 この `SyncEvent` の開発者定義の識別子。
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                 | ステータス                           | 備考       |
-| -------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('Background Sync','#sync-event', 'tag')}} | {{Spec2('Background Sync')}} | 初回定義。 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 
-{{Compat("api.SyncEvent.tag")}}
+{{Compat}}

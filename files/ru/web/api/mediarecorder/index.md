@@ -1,8 +1,8 @@
 ---
 title: MediaRecorder
 slug: Web/API/MediaRecorder
-translation_of: Web/API/MediaRecorder
 ---
+
 {{APIRef("Media Recorder API")}}
 
 The **`MediaRecorder`** это интерфейс [MediaStream Recording API](/ru/docs/Web/API/MediaStream_Recording_API) представляющий функциональность для простой записи медиа. Создаётся с использованием {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} конструктора.
@@ -17,11 +17,11 @@ The **`MediaRecorder`** это интерфейс [MediaStream Recording API](/r
 - {{domxref("MediaRecorder.mimeType")}} {{readonlyInline}}
   - : Возвращает тип MIME, который был выбран в качестве контейнера записи для объекта MediaRecorder при его создании.
 - {{domxref("MediaRecorder.state")}} {{readonlyInline}}
-  - : Возвращает текущее состояние объекта `MediaRecorder `(`inactive`, `recording`, или `paused`.)
+  - : Возвращает текущее состояние объекта `MediaRecorder` (`inactive`, `recording`, или `paused`.)
 - {{domxref("MediaRecorder.stream")}} {{readonlyInline}}
   - : Возвращает поток который был передан конструктору при создании объекта `MediaRecorder`
 - {{domxref("MediaRecorder.ignoreMutedMedia")}}
-  - : Показывает записывает ли `MediaRecorder `дорожку {{domxref("MediaStreamTrack")}} если она отключена. Если атрибут равен` false, ``MediaRecorder` будет записывать тишину для аудио и чёрные кадры для видео. По умолчанию равно `false`
+  - : Показывает записывает ли `MediaRecorder` дорожку {{domxref("MediaStreamTrack")}} если она отключена. Если атрибут равен `false`, `MediaRecorder` будет записывать тишину для аудио и чёрные кадры для видео. По умолчанию равно `false`
 - {{domxref("MediaRecorder.videoBitsPerSecond")}} {{readonlyInline}}
   - : Возвращает скорость кодирования видео. Она может отличаться от скорости, определённой в конструкторе (если была предоставлена).
 - {{domxref("MediaRecorder.audioBitsPerSecond;")}} {{readonlyInline}}
@@ -38,24 +38,24 @@ The **`MediaRecorder`** это интерфейс [MediaStream Recording API](/r
 - {{domxref("MediaRecorder.resume()")}}
   - : Возобновляет запись медиа после паузы.
 - {{domxref("MediaRecorder.start()")}}
-  - : Начинает запись медиа. В этот метод можно передать аргумент `timeslice `со значением в миллисекундах. Если он определён, то медиа будет записываться в отдельные блоки заданной продолжительности, вместо записи в один большой блок.
+  - : Начинает запись медиа. В этот метод можно передать аргумент `timeslice` со значением в миллисекундах. Если он определён, то медиа будет записываться в отдельные блоки заданной продолжительности, вместо записи в один большой блок.
 - {{domxref("MediaRecorder.stop()")}}
-  - : Останавливает запись, после чего запускается событие {{event("dataavailable")}}, содержащее последний `Blob` сохранённых данных.
+  - : Останавливает запись, после чего запускается событие [`dataavailable`](/ru/docs/Web/Events/dataavailable), содержащее последний `Blob` сохранённых данных.
 
 ## Обработчики событий
 
 - {{domxref("MediaRecorder.ondataavailable")}}
-  - : Вызывает обработчик {{event("dataavailable")}} события, которое запускается раз в `timeslice` миллисекунд (или, если `timeslice` не был задан - по окончанию записи). Событие типа {{domxref("BlobEvent")}}, сдержит записанное медиа в {{domxref("BlobEvent.data", "data")}}. Вы можете использовать обработчик для сбора и других действий в зависимости от полученных данных.
+  - : Вызывает обработчик события [`dataavailable`](/ru/docs/Web/Events/dataavailable), которое запускается раз в `timeslice` миллисекунд (или, если `timeslice` не был задан - по окончанию записи). Событие типа {{domxref("BlobEvent")}}, сдержит записанное медиа в {{domxref("BlobEvent.data", "data")}}. Вы можете использовать обработчик для сбора и других действий в зависимости от полученных данных.
 - {{domxref("MediaRecorder.onerror")}}
-  - : {{event("Event_handlers", "event handler")}} вызывается для обработки события {{event("recordingerror")}}, включающего отчёт об ошибках во время записи. Это фатальные ошибки, приводящие к остановке записи. Полученное событие основано на интерфейсе {{domxref("MediaRecorderErrorEvent")}}, свойство которого {{domxref("MediaRecorderErrorEvent.error", "error")}} содержит {{domxref("DOMException")}} описывающие произошедшие ошибки.
+  - : [`event handler`](/ru/docs/Web/Events/Event_handlers) вызывается для обработки события [`recordingerror`](/ru/docs/Web/Events/recordingerror), включающего отчёт об ошибках во время записи. Это фатальные ошибки, приводящие к остановке записи. Полученное событие основано на интерфейсе {{domxref("MediaRecorderErrorEvent")}}, свойство которого {{domxref("MediaRecorderErrorEvent.error", "error")}} содержит {{domxref("DOMException")}} описывающие произошедшие ошибки.
 - {{domxref("MediaRecorder.onpause")}}
-  - : {{event("Event_handlers", "event handler")}} вызывается для обработки события {{event("pause")}}, случившегося во время приостановки медиа.
+  - : [`event handler`](/ru/docs/Web/Events/Event_handlers) вызывается для обработки события [`pause`](/ru/docs/Web/API/HTMLMediaElement/pause_event), случившегося во время приостановки медиа.
 - {{domxref("MediaRecorder.onresume")}}
-  - : {{event("Event_handlers", "event handler")}} вызывается для обработки события {{event("resume")}}, случившегося во время возобновления записи.
+  - : [`event handler`](/ru/docs/Web/Events/Event_handlers) вызывается для обработки события [`resume`](/ru/docs/Web/API/SpeechSynthesisUtterance/resume_event), случившегося во время возобновления записи.
 - {{domxref("MediaRecorder.onstart")}}
-  - : {{event("Event_handlers", "event handler")}}вызывается для обработки события {{event("start")}}, случившегося во время начала записи.
+  - : [`event handler`](/ru/docs/Web/Events/Event_handlers)вызывается для обработки события [`start`](/ru/docs/Web/API/SpeechRecognition/start_event), случившегося во время начала записи.
 - {{domxref("MediaRecorder.onstop")}}
-  - : {{event("Event_handlers", "event handler")}} вызывается для обработки события {{event("stop")}}, случившегося во время завершения записи, а так же при окончании {{domxref("MediaStream")}} — или после вызова {{domxref("MediaRecorder.stop()")}}
+  - : [`event handler`](/ru/docs/Web/Events/Event_handlers) вызывается для обработки события [`stop`](/ru/docs/Web/Events/stop), случившегося во время завершения записи, а так же при окончании {{domxref("MediaStream")}} — или после вызова {{domxref("MediaRecorder.stop()")}}
 
 ## Пример
 
@@ -142,7 +142,8 @@ if (navigator.getUserMedia) {
 }
 ```
 
-> **Примечание:** Код выше был взят из демо Web Dictaphone. Некоторые строчки были пропущены для краткости. Полный код смотрите [здесь](https://github.com/mdn/web-dictaphone/)
+> [!NOTE]
+> Код выше был взят из демо Web Dictaphone. Некоторые строчки были пропущены для краткости. Полный код смотрите [здесь](https://github.com/mdn/web-dictaphone/)
 
 ## Спецификации
 
@@ -154,7 +155,7 @@ if (navigator.getUserMedia) {
 
 ## Ещё по теме
 
-- [Использование MediaRecorder API](/ru/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API)
+- [Использование MediaRecorder API](/ru/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("Navigator.getUserMedia")}}

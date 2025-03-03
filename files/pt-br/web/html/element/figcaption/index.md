@@ -1,12 +1,9 @@
 ---
-title: '<figcaption>: O elemento de legenda da figura'
+title: "<figcaption>: O elemento de legenda da figura"
 slug: Web/HTML/Element/figcaption
-tags:
-  - Elemento
-  - HTML
-translation_of: Web/HTML/Element/figcaption
 ---
-{{HTMLRef}}O **Elemento HTML Figcaption** (`<figcaption>`) representa uma legenda ou uma legenda associada com uma figura ou ilustração descrita pelo resto dos dados do elemento {{ HTMLElement("figure") }} que seu elemento pai.{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
+
+{{HTMLSidebar}}O **Elemento HTML Figcaption** (`<figcaption>`) representa uma legenda ou uma legenda associada com uma figura ou ilustração descrita pelo resto dos dados do elemento {{ HTMLElement("figure") }} que seu elemento pai.{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
 
 <table class="properties">
   <tbody>
@@ -41,7 +38,7 @@ translation_of: Web/HTML/Element/figcaption
 
 ## Atributos
 
-Esse elemento possui somente os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Esse elemento possui somente os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ## Exemplos
 
@@ -49,15 +46,12 @@ Por favor, consulte a página {{HTMLElement("figure")}} para visualizar o exempl
 
 ## Especificações
 
-| Especificação                                                                                                                    | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-figcaption-element', '&lt;figcaption&gt;')}}         | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-figcaption-element', '&lt;figcaption&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.figcaption")}}
+{{Compat}}
 
-## Veja também:
+## Veja também
 
 - O elemento {{HTMLElement("figure")}}.

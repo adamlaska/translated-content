@@ -1,11 +1,8 @@
 ---
 title: Audio()
 slug: Web/API/HTMLAudioElement/Audio
-tags:
-  - аудио
-translation_of: Web/API/HTMLAudioElement/Audio
-original_slug: Web/API/HTMLAudioElement/Audio()
 ---
+
 {{APIRef("HTML DOM")}}
 
 Конструктор **`Audio()`** создаёт и возвращает новый {{domxref("HTMLAudioElement")}} объект, который может быть прикреплён к документу, чтобы пользователь мог взаимодействовать и/или слушать его, либо может использоваться вне экрана для управления и воспроизведения звука.
@@ -40,7 +37,7 @@ audioObj = new Audio(url);
 Лучший подход, основанный на событии:
 
 ```js
-myAudioElement.addEventListener("canplaythrough", event => {
+myAudioElement.addEventListener("canplaythrough", (event) => {
   /* аудио может быть воспроизведено; проиграть, если позволяют разрешения */
   myAudioElement.play();
 });
@@ -54,7 +51,7 @@ myAudioElement.addEventListener("canplaythrough", event => {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

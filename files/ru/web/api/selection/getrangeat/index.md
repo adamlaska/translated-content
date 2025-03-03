@@ -1,9 +1,9 @@
 ---
 title: Selection.getRangeAt()
 slug: Web/API/Selection/getRangeAt
-translation_of: Web/API/Selection/getRangeAt
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+
+{{APIRef("DOM")}}
 
 Метод **`Selection.getRangeAt()`** возвращает объект диапазона, который представляет один из диапазонов, выделенного на данный момент.
 
@@ -27,8 +27,8 @@ var ranges = [];
 
 sel = window.getSelection();
 
-for(var i = 0; i < sel.rangeCount; i++) {
- ranges[i] = sel.getRangeAt(i);
+for (var i = 0; i < sel.rangeCount; i++) {
+  ranges[i] = sel.getRangeAt(i);
 }
 /* Каждый элемент в массиве диапазонов является
  * объектом диапазона, который представляет
@@ -39,11 +39,11 @@ for(var i = 0; i < sel.rangeCount; i++) {
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - {{domxref("Selection")}}, интерфейс, к которому принадлежит метод.
-- [Tree Selection](/ru/docs/XUL_Tutorial/Tree_Selection "XUL_Tutorial/Tree_Selection") (для метода `getRangeAt()` в интерфейсе `nsITreeSelection`)
+- [Tree Selection](/ru/docs/XUL_Tutorial/Tree_Selection) (для метода `getRangeAt()` в интерфейсе `nsITreeSelection`)

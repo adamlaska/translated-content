@@ -1,8 +1,8 @@
 ---
 title: Element.attachShadow()
 slug: Web/API/Element/attachShadow
-translation_of: Web/API/Element/attachShadow
 ---
+
 {{APIRef}}
 
 El método `Element.attachShadow()` adjunta un árbol DOM "sombra" al elemento especificado y devuelve una referencia a su raíz {{domxref("ShadowRoot")}}.
@@ -87,33 +87,33 @@ class CuentaPalabras extends HTMLParagraphElement {
     // contar las palabras en el nodo padre
     var cpPadre = this.parentNode;
 
-    function cuentaPalabras(nodo){
-      var texto = nodo.innerText || nodo.textContent
+    function cuentaPalabras(nodo) {
+      var texto = nodo.innerText || nodo.textContent;
       return texto.trim().split(/\s+/g).length;
     }
 
-    var cuenta = 'Palabras: ' + cuentaPalabras(cpPadre);
+    var cuenta = "Palabras: " + cuentaPalabras(cpPadre);
 
     // Crear un DOM "sombra"
-    var sombra = this.attachShadow({mode: 'open'});
+    var sombra = this.attachShadow({ mode: "open" });
 
     // Crear el nodo de texto y añadirle el contador de palabras
-    var texto = document.createElement('span');
+    var texto = document.createElement("span");
     texto.textContent = count;
 
     // Añadirlo a la sombra
     sombra.appendChild(texto);
 
     // Actualizar el contador cuando el contenido del elemento cambie
-    setInterval(function() {
-      var cuenta = 'Palabras: ' + cuentaPalabras(cpPadre);
+    setInterval(function () {
+      var cuenta = "Palabras: " + cuentaPalabras(cpPadre);
       texto.textContent = cuenta;
-    }, 200)
+    }, 200);
   }
 }
 
 // Definir el nuevo elemento
-customElements.define('cuenta-palabras', CuentaPalabras , { extends: 'p' });
+customElements.define("cuenta-palabras", CuentaPalabras, { extends: "p" });
 ```
 
 ## Especificaciones

@@ -1,14 +1,10 @@
 ---
 title: Оптимизация ваших страниц для рискованного парсинга
-slug: Glossary/speculative_parsing
-tags:
-  - HTML
-  - HTML5
-  - Веб-разработка
-  - Продвинутый
-translation_of: Glossary/speculative_parsing
-original_slug: Web/HTML/Optimizing_Your_Pages_for_Speculative_Parsing
+slug: Glossary/Speculative_parsing
 ---
+
+{{GlossarySidebar}}
+
 Традиционно, HTML-парсер в браузерах работает на главной ветке и блокируется после тега `</script>`, пока скрипт не загрузится и не выполнится. HTML-парсер в Firefox 4 и новее поддерживает рискованный парсинг вне главной ветки. Он продолжает парсить, пока скрипты загружаются и выполняются. В Firefox 3.5 и 3.6 парсер начинает рискованную загрузку скриптов, стилей и изображений, когда он находит их. Однако, в Firefox 4 и новее HTML-парсер также рискованно загружает алгоритм постройки дерева HTML. С одной стороны, когда риск оправдался, нет необходимости в репарсинге части, которая уже была просканирована на скрипты, стили и изображения. С другой стороны, когда риск не оправдался, HTML-парсеру достаётся больше работы.
 
 Эта статья поможет избежать некоторых проблем, которые замедляют загрузку страницы.
@@ -27,4 +23,4 @@ original_slug: Web/HTML/Optimizing_Your_Pages_for_Speculative_Parsing
 - Не пишите незаконченные теги. Не стоит писать `<script>document.write("<div></div");</script>`.
 - Не заканчивайте строку возрастной кареткой (`\r`). Вместо `<script>document.write("Hello World!\r");</script>` лучше написать `<script>document.write("Hello World!\n");</script>`.
 - Заметьте, что написание законченных тегов может повлиять на другие теги так, что они станут незаконченными. В том числе, `<script>document.write("<div></div>");</script>` внутри `<head>` будет интерпретировано как `<script>document.write("</head><body><div></div>");</script>`, что повлияет на `<head>` так, что он станет незаконченным.
-- Не форматируйте часть таблицы. Вместо `<table><script>document.write("<tr><td>Hello World!</td></tr>");</script></table>` лучше написать ` <script>document.write("``<table>``<tr><td>Hello World!</td></tr>``</table>``");</script> `.
+- Не форматируйте часть таблицы. Вместо `<table><script>document.write("<tr><td>Hello World!</td></tr>");</script></table>` лучше написать `<script>document.write("<table><tr><td>Hello World!</td></tr></table>");</script>`.

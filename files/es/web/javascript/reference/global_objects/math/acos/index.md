@@ -1,14 +1,8 @@
 ---
 title: Math.acos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acos
-tags:
-  - JavaScript
-  - Math
-  - Métodos
-  - Referências
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/acos
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/acos
 ---
+
 {{JSRef}}
 
 La función **`Math.acos()`** devuelve el arco coseno (en radianes) de un número que es
@@ -41,28 +35,23 @@ Debido a que `acos()` es un método estático de `Math`, siempre debe usarse com
 ### Usando `Math.acos()`
 
 ```js
-Math.acos(-2);  // NaN
-Math.acos(-1);  // 3.141592653589793
-Math.acos(0);   // 1.5707963267948966
+Math.acos(-2); // NaN
+Math.acos(-1); // 3.141592653589793
+Math.acos(0); // 1.5707963267948966
 Math.acos(0.5); // 1.0471975511965979
-Math.acos(1);   // 0
-Math.acos(2);   // NaN
+Math.acos(1); // 0
+Math.acos(2); // NaN
 ```
 
 Para valores menores que -1 o mayores que 1, `Math.acos()` devuelve {{jsxref("NaN")}}.
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                       | Comentarios                                         |
-| ------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.2', 'Math.acos')}}     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-math.acos', 'Math.acos')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-math.acos', 'Math.acos')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
-## Compatibilidad con navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.acos")}}
+{{Compat}}
 
 ## Ver también
 

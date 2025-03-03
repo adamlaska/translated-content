@@ -1,12 +1,8 @@
 ---
 title: background
 slug: Web/CSS/background
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/background
 ---
+
 {{CSSRef}}
 
 La propiedad `background` es un atajo para definir los valores individuales del fondo en una única regla CSS. Se puede usar `background` para definir los valores de una o de todas las propiedades siguientes: {{ Cssxref("background-attachment") }}, {{ Cssxref("background-color", "color") }}, {{ Cssxref("background-image", "image") }}, {{ Cssxref("background-position", "position") }}, {{ Cssxref("background-repeat", "repeat") }}.
@@ -40,28 +36,28 @@ La sintaxis de cada capa es la siguiente:
 
 - Cada capa puede incluir cero o una ocurrencia de cualquiera de los siguientes valores
 
-  - [`<attachment>`](/es/docs/Web/CSS/background$edit#%3Cattachment%3E)
-  - [`<bg-image>`](/es/docs/Web/CSS/background$edit#%3Cbg-image%3E)
-  - [`<position>`](/es/docs/Web/CSS/background$edit#%3Cposition%3E)
-  - [`<bg-size>`](/es/docs/Web/CSS/background$edit#%3Cbg-size%3E)
-  - [`<repeat-style>`](/es/docs/Web/CSS/background$edit#%3Crepeat-style%3E)
+  - [`<attachment>`](#attachment)
+  - [`<bg-image>`](#bg-image)
+  - [`<position>`](#position)
+  - [`<bg-size>`](#bg-size)
+  - [`<repeat-style>`](#repeat-style)
 
-- El valor [`<bg-size>`](/es/docs/Web/CSS/background$edit#%3Cbg-size%3E) sólo puede ser incluido inmediatamente después de la [\<position>](/es/docs/Web/CSS/background$edit#%3Cposition%3E), separado con el carácter '/', así: "`center/80%`".
-- El valor [\<box>](/es/docs/Web/CSS/background$edit#%3Cbox%3E) puede ser incluido cero, una o dos veces. Si se incluye una vez, establece ambos {{cssxref("background-origin")}} y {{cssxref("background-clip")}}. Si se incluye dos veces, la primera ocurrencia establece {{cssxref("background-origin")}}, y el segundo conjunto {{cssxref("background-clip")}}.
-- El valor [`<background-color>`](/es/docs/Web/CSS/background$edit#%3Cbackground-color%3E) sólo puede ser incluido en la última capa especificada.
+- El valor [`<bg-size>`](#bg-size) sólo puede ser incluido inmediatamente después de la [\<position>](#position), separado con el carácter '/', así: "`center/80%`".
+- El valor [\<box>](#box) puede ser incluido cero, una o dos veces. Si se incluye una vez, establece ambos {{cssxref("background-origin")}} y {{cssxref("background-clip")}}. Si se incluye dos veces, la primera ocurrencia establece {{cssxref("background-origin")}}, y el segundo conjunto {{cssxref("background-clip")}}.
+- El valor [`<background-color>`](#background-color) sólo puede ser incluido en la última capa especificada.
 
 ## Valores
 
 - background-color
-  - : ver [`color`](/es/CSS/background-color).
+  - : ver [`color`](/es/docs/Web/CSS/background-color).
 - background-image
-  - : ver [`image`](/es/CSS/background-image).
+  - : ver [`image`](/es/docs/Web/CSS/background-image).
 - background-repeat
-  - : ver [`repeat`](/es/CSS/background-repeat).
+  - : ver [`repeat`](/es/docs/Web/CSS/background-repeat).
 - background-attachment
-  - : ver [`background-attachment`](/es/CSS/background-attachment).
+  - : ver [`background-attachment`](/es/docs/Web/CSS/background-attachment).
 - background-position
-  - : ver [`position`](/es/CSS/background-position).
+  - : ver [`position`](/es/docs/Web/CSS/background-position).
 
 ## Ejemplos
 
@@ -69,11 +65,11 @@ La sintaxis de cada capa es la siguiente:
 
 ```html
 <p class="topbanner">
-  Starry sky<br/>
-  Twinkle twinkle<br/>
+  Starry sky<br />
+  Twinkle twinkle<br />
   Starry sky
 </p>
-<p class="warning">Here is a paragraph<p>
+<p class="warning">Here is a paragraph</p>
 ```
 
 ### CSS
@@ -84,7 +80,7 @@ La sintaxis de cada capa es la siguiente:
 }
 
 .topbanner {
-  background: url("https://mdn.mozillademos.org/files/11983/starsolid.gif") #00D repeat-y fixed;
+  background: url("star-solid.gif") #00d repeat-y fixed;
 }
 ```
 
@@ -96,20 +92,13 @@ La sintaxis de cada capa es la siguiente:
 
 Tomando una declaración válida, la propiedad `background` inicia las propiedades individuales a sus valores iniciales para después asignarles los valores especificadas explícitamente en la declaración. No hay que definir un valor por cada propiedad individual, se cambia solo las que necesitamos en relación al valor por defecto.
 
-## Especificaciones
+### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#background)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/colors.html#propdef-background)
-- [CSS 3](http://www.w3.org/TR/2005/WD-css3-background-20050216/#the-background)
+{{Specifications}}
 
-## Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
-| Navegador         | Mínima versión |
-| ----------------- | -------------- |
-| Internet Explorer | 4              |
-| Firefox           | 1              |
-| Netscape          | 6              |
-| Opera             | 3.5            |
+{{Compat}}
 
 ## Ver también
 

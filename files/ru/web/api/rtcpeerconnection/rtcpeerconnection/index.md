@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
-translation_of: Web/API/RTCPeerConnection/RTCPeerConnection
 ---
+
 {{APIRef("WebRTC")}}
 
 Конструктор **`RTCPeerConnection()`** возвращает новый экземпляр объекта {{domxref("RTCPeerConnection")}}, который представляет соединение между локальным устройством и удалённым пиром (участником соединения)
@@ -16,11 +16,7 @@ pc = new RTCPeerConnection([configuration]);
 ### Параметры
 
 - `configuration` {{optional_inline}}
-  - : Объект класса [`RTCConfiguration` ](#RTCConfiguration_dictionary), предоставляющий свойства для конфигурации нового экземпляра соединения.
-
-### Объект конфигурации RTCConfiguration
-
-{{page("/en-US/docs/Web/API/RTCConfiguration", "Properties")}}
+  - : Объект класса [`RTCConfiguration`](#rtcconfiguration_dictionary), предоставляющий свойства для конфигурации нового экземпляра соединения.
 
 ### Возвращаемое значение
 
@@ -37,6 +33,6 @@ pc = new RTCPeerConnection([configuration]);
 ## Смотрите также
 
 - [Сигнализированные и видеовызов](/ru/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- [Обзор архитектуры WebRTC](/ru/docs/Web/API/WebRTC_API/Architecture)
+- [Обзор архитектуры WebRTC](/ru/docs/Web/API/WebRTC_API/Protocols)
 - [Жизненный цикл сессии WebRTC](/ru/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}

@@ -1,14 +1,8 @@
 ---
 title: Math.imul()
 slug: Web/JavaScript/Reference/Global_Objects/Math/imul
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/imul
-browser-compat: javascript.builtins.Math.imul
 ---
+
 {{JSRef}}
 
 **`Math.imul()`** 함수는 C 언어와 같은 양식으로 2개 파라메터의 32-bit 곱셈 결과를 리턴합니다.
@@ -16,7 +10,7 @@ browser-compat: javascript.builtins.Math.imul
 ## 문법
 
 ```js
-    Math.imul(a, b)
+Math.imul(a, b);
 ```
 
 ### 파라메터
@@ -35,9 +29,9 @@ browser-compat: javascript.builtins.Math.imul
 ### `Math.imul() 사용법`
 
 ```js
-Math.imul(2, 4);          // 8
-Math.imul(-1, 8);         // -8
-Math.imul(-2, -2);        // 4
+Math.imul(2, 4); // 8
+Math.imul(-1, 8); // -8
+Math.imul(-2, -2); // 4
 Math.imul(0xffffffff, 5); // -5
 Math.imul(0xfffffffe, 5); // -10
 ```
@@ -47,15 +41,17 @@ Math.imul(0xfffffffe, 5); // -10
 다음과 같은 함수로 Math.imul() 을 흉내낼 수 있습니다.
 
 ```js
-Math.imul = Math.imul || function(a, b) {
-  var ah = (a >>> 16) & 0xffff;
-  var al = a & 0xffff;
-  var bh = (b >>> 16) & 0xffff;
-  var bl = b & 0xffff;
-  // the shift by 0 fixes the sign on the high part
-  // the final |0 converts the unsigned value into a signed value
-  return ((al * bl) + (((ah * bl + al * bh) << 16) >>> 0)|0);
-};
+Math.imul =
+  Math.imul ||
+  function (a, b) {
+    var ah = (a >>> 16) & 0xffff;
+    var al = a & 0xffff;
+    var bh = (b >>> 16) & 0xffff;
+    var bl = b & 0xffff;
+    // the shift by 0 fixes the sign on the high part
+    // the final |0 converts the unsigned value into a signed value
+    return (al * bl + (((ah * bl + al * bh) << 16) >>> 0)) | 0;
+  };
 ```
 
 ## 명세

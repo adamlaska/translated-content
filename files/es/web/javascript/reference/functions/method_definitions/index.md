@@ -1,9 +1,8 @@
 ---
 title: Method definitions
 slug: Web/JavaScript/Reference/Functions/Method_definitions
-translation_of: Web/JavaScript/Reference/Functions/Method_definitions
-original_slug: Web/JavaScript/Referencia/Funciones/Method_definitions
 ---
+
 {{JsSidebar("Functions")}}A partir de ECMAScript 2015 (ES6), se introdujo una sintaxis abreviada para la definición de métodos en inicializadores de objetos. Es una forma abreviada para la asignación de una función al nombre del método.
 
 ## Sintaxis
@@ -29,8 +28,8 @@ Dado el siguiente código:
 
 ```js
 var obj = {
-  foo: function() {},
-  bar: function() {}
+  foo: function () {},
+  bar: function () {},
 };
 ```
 
@@ -39,11 +38,12 @@ Ahora se puede abreviar esto mismo como:
 ```js
 var obj = {
   foo() {},
-  bar() {}
+  bar() {},
 };
 ```
 
-> **Nota:** La sintaxis abreviada usa funciones con nombre en lugar de funciones anónimas (como en …`foo: function() {}`…). Las funciones con nombre pueden ser llamadas desde el cuerpo de la función (esto es imposible con funciones anónimas, ya que no existe un identificador al que referirse). Para más detalles, ver {{jsxref("Operators/function","function","#Examples")}}.
+> [!NOTE]
+> La sintaxis abreviada usa funciones con nombre en lugar de funciones anónimas (como en … `foo: function() {}`…). Las funciones con nombre pueden ser llamadas desde el cuerpo de la función (esto es imposible con funciones anónimas, ya que no existe un identificador al que referirse). Para más detalles, ver {{jsxref("Operators/function","function","#Examples")}}.
 
 ### Abreviatura de métodos generadores
 
@@ -81,12 +81,12 @@ Las las definiciones de métodos no son constructores y generarán un {{jsxref("
 var obj = {
   method() {},
 };
-new obj.method; // TypeError: obj.method no es un constructor
+new obj.method(); // TypeError: obj.method no es un constructor
 
 var obj = {
-  * g() {}
+  *g() {},
 };
-new obj.g; // TypeError: obj.g no es un constructor (cambiado en ES2016)
+new obj.g(); // TypeError: obj.g no es un constructor (cambiado en ES2016)
 ```
 
 ## Ejemplos
@@ -117,31 +117,16 @@ console.log(bar.foo1()); // 1
 console.log(bar.foo2()); // 2
 ```
 
-## Especificaciónes
+## Especificaciones
 
-| Especificación                                                                                   | Estado                       | Observaciones                                                                                                              |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES6')}}         | Definición inicial.                                                                                                        |
-| {{SpecName('ES7', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES7')}}         | Cambiado el que los métodos generadores no deban tener una trampa \[\[Construct]] y deban fallar cuando se usen con `new`. |
-| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                                                                                                                            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.functions.method_definitions")}}
-
-## Notas específicas para SpiderMonkey
-
-- Anteriormente a SpiderMonkey 38 {{geckoRelease(38)}}, "`get`" y "`set`" eran nombres no válidos para métodos generadores. Esto ha sido corregido en {{bug(1073809)}}.
-- Anteriormente a SpiderMonkey 41 {{geckoRelease(41)}}, las llaves no eran requeridas en las definiciones de métodos. Estas son requeridas de ahora en adelante conforme a la especificación ES6 y su omisión arrojará un {{jsxref("SyntaxError")}} en esta versión y posteriores ({{bug(1150855)}}).
-
-  ```js example-bad
-  var o = {x() 12}; // SyntaxError
-  ```
-
-- La restricción de que sólo los métodos generadores sean constructores fue implementada en SpiderMonkey 41 {{geckoRelease(41)}}. Ver también {{bug(1059908)}} y {{bug(1166950)}}.
+{{Compat}}
 
 ## Ver también
 
-- [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get)
-- [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [`get`](/es/docs/Web/JavaScript/Reference/Functions/get)
+- [`set`](/es/docs/Web/JavaScript/Reference/Functions/set)
 - [Lexica grammatical](/es/docs/Web/JavaScript/Reference/Lexical_grammar)

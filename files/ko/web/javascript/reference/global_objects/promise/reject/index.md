@@ -1,13 +1,8 @@
 ---
 title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
 ---
+
 {{JSRef}}
 
 **`Promise.reject(reason)`** 메서드는 주어진 이유(reason)로 거부된 `Promise` 객체를 반환합니다.
@@ -32,17 +27,23 @@ Promise.reject(reason);
 ### 정적 Promise.reject() 메서드 사용
 
 ```js
-Promise.reject("Testing static reject").then(function(reason) {
-  // 호출되지 않음
-}, function(reason) {
-  console.log(reason); // "Testing static reject"
-});
+Promise.reject("Testing static reject").then(
+  function (reason) {
+    // 호출되지 않음
+  },
+  function (reason) {
+    console.log(reason); // "Testing static reject"
+  },
+);
 
-Promise.reject(new Error("fail")).then(function(error) {
-  // 호출되지 않음
-}, function(error) {
-  console.log(error); // Stacktrace
-});
+Promise.reject(new Error("fail")).then(
+  function (error) {
+    // 호출되지 않음
+  },
+  function (error) {
+    console.log(error); // Stacktrace
+  },
+);
 ```
 
 ## 명세서

@@ -1,15 +1,11 @@
 ---
 title: Popups
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Popups
-tags:
-  - WebExtensions
-  - interface utilisateur
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 ---
 
 {{AddonSidebar}}
 
-Une fenêtre contextuelle est une boîte de dialogue associée à un [bouton de la barre d'outils](/fr/Add-ons/WebExtensions/Browser_action) ou à un [bouton de la barre d'adresse](/fr/Add-ons/WebExtensions/Page_actions). Cette page décrit les popups en général, leur spécification, leur débogage, leur redimensionnement et leur conception, ainsi que des exemples d'utilisation..
+Une fenêtre contextuelle est une boîte de dialogue associée à un [bouton de la barre d'outils](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_action) ou à un [bouton de la barre d'adresse](/fr/docs/Mozilla/Add-ons/WebExtensions/Page_actions). Cette page décrit les popups en général, leur spécification, leur débogage, leur redimensionnement et leur conception, ainsi que des exemples d'utilisation..
 
 ![](page_action_popup.png)
 
@@ -19,7 +15,7 @@ Vous pouvez définir un raccourci clavier qui ouvre la fenêtre contextuelle en 
 
 ## Spécification d'une fenêtre contextuelle
 
-Le popup est spécifié comme un fichier HTML, qui peut inclure des fichiers CSS et JavaScript, comme le fait une page Web normale. Contrairement à une page normale, le JavaScript peut utiliser toutes les [APIs WebExtension](/fr/Add-ons/WebExtensions/API) auxquelles l'extension possède des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+Le popup est spécifié comme un fichier HTML, qui peut inclure des fichiers CSS et JavaScript, comme le fait une page Web normale. Contrairement à une page normale, le JavaScript peut utiliser toutes les [APIs WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/API) auxquelles l'extension possède des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
 Le fichier HTML est inclus dans la WebExtension et spécifié en partie à la clé [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) ou [page_action](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) par `"default_popup"` dans le manifest.json :
 
@@ -33,11 +29,11 @@ Le fichier HTML est inclus dans la WebExtension et spécifié en partie à la cl
 
 Vous pouvez demander au navigateur d'inclure une feuille de style dans votre fenêtre contextuelle qui la rendra compatible avec l'interface utilisateur du navigateur. Pour ce faire, ajoutez `"browser_style": true` dans la clé [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) ou [page_action](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action).
 
-Les popups ont une politique de sécurité de contenu qui restreint les sources à partir de laquelle ils peuvent charger des ressources et interdire certaines pratiques dangereuses telles que l'utilisation [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Voir la [politique de sécurité du contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)  pour plus de détails à ce sujet.
+Les popups ont une politique de sécurité de contenu qui restreint les sources à partir de laquelle ils peuvent charger des ressources et interdire certaines pratiques dangereuses telles que l'utilisation [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Voir la [politique de sécurité du contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) pour plus de détails à ce sujet.
 
 ## Déboguer des fenêtres pop-up
 
-Vous pouvez déboguer la balisage et le javaScript d'un popup en utilisant le débogueur de l'extension, mais vous devrez activer la fonction désactiver de la fonction d'occlusion automatique contextuelle pour éviter que les fenêtres contextuelles ne se cache lorsque vous cliquez à l'extérieur. [En savoir plus sur le débogage des fenêtres pop-up](/fr/Add-ons/WebExtensions/Debugging#Debugging_popups).
+Vous pouvez déboguer la balisage et le javaScript d'un popup en utilisant le débogueur de l'extension, mais vous devrez activer la fonction désactiver de la fonction d'occlusion automatique contextuelle pour éviter que les fenêtres contextuelles ne se cache lorsque vous cliquez à l'extérieur. [En savoir plus sur le débogage des fenêtres pop-up](/fr/docs/Mozilla/Add-ons/WebExtensions/Debugging#debugging_popups).
 
 ## Redimensionnement contextuel
 

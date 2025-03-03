@@ -5,15 +5,21 @@ slug: Web/HTTP/Status/406
 
 {{HTTPSidebar}}
 
-HTTP 协议中的 **`406 Not Acceptable`** 状态码表示客户端错误，指代服务器端无法提供与 {{HTTPHeader("Accept-Charset")}} 以及 {{HTTPHeader("Accept-Language")}} 消息头指定的值相匹配的响应。
+HTTP **`406 Not Acceptable`** [客户端错误响应](/zh-CN/docs/Web/HTTP/Status#客户端错误响应)状态码表示服务器无法根据请求的[主动内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation#服务端驱动型内容协商机制)标头中定义的可接受值的列表产生匹配的响应，并且服务器不愿意提供默认表示。
 
-在实际应用中，这个错误状态码极少使用：不是给用户返回一个晦涩难懂（且难以更正）的错误状态码，而是将相关的消息头忽略，同时给用户提供一个看得见摸得着的页面。这种做法基于这样一个假设：即便是不能达到用户十分满意，也强于返回错误状态码。
+主动内容协商标头包括：
+
+- {{HTTPHeader("Accept")}}
+- {{HTTPHeader("Accept-Encoding")}}
+- {{HTTPHeader("Accept-Language")}}
+
+实际上，这种错误极少使用。服务器不应使用此错误代码响应，因为它对终端用户来说很难理解和修复，而是忽略相关的标头并向用户提供实际页面。假设即使用户不完全满意，他们也会更喜欢这种情况，而不是错误代码。
 
 如果服务器返回了这个错误状态码，那么消息体中应该包含所能提供的资源表现形式的列表，允许用户手动进行选择。
 
 ## 状态
 
-```plain
+```http
 406 Not Acceptable
 ```
 
@@ -21,12 +27,10 @@ HTTP 协议中的 **`406 Not Acceptable`** 状态码表示客户端错误，指�
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
+- [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Status)
+- {{HTTPHeader("Accept")}}
+- {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Accept-Language")}}
-- {{HTTPHeader("Accept-Charset")}}
 - HTTP [内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)

@@ -1,8 +1,8 @@
 ---
 title: WorkerGlobalScope.importScripts()
 slug: Web/API/WorkerGlobalScope/importScripts
-translation_of: Web/API/WorkerGlobalScope/importScripts
 ---
+
 {{APIRef("Web Workers API")}}
 
 Метод **`importScripts()`** интерфейса {{domxref("WorkerGlobalScope")}} синхронно импортирует один или несколько скриптов, добавляя их в область видимости сервис-воркера.
@@ -33,7 +33,7 @@ _Нет._
 Если вы хотите использовать некоторую функциональность, определённую файлом `foo.js`, необходимо сделать следующее:
 
 ```js
-importScripts('foo.js');
+importScripts("foo.js");
 ```
 
 `importScripts()` и `self.importScripts()` по сути эквивалентны — и то и другое вызывает функцию `importScripts()` в области видимости воркера.
@@ -42,7 +42,7 @@ importScripts('foo.js');
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

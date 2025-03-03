@@ -1,16 +1,9 @@
 ---
 title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
-tags:
-  - Cadena
-  - JavaScript
-  - Método(2)
-  - Prototipo
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/slice
 ---
-{{JSRef("Objetos_globales", "String")}}
+
+{{JSRef}}
 
 ## Resumen
 
@@ -25,6 +18,7 @@ cadena.slice(inicioTrozo[, finTrozo])
 ### Parameters
 
 - `inicioTrozo`
+
   - : El índice basado en cero en el cual empieza la extracción. Si es negativo, se trata como `longCadena + inicioTrozo` donde `longCadena` es la longitud de la cadena (por ejemplo, si `inicioTrozo` es `-3` se trata como `longCadena - 3`)
 
 - `finTrozo`
@@ -66,23 +60,18 @@ El siguiente ejemplo usa `slice()` con índices negativos.
 
 ```js
 var cad = "La mañana se nos echa encima.";
-cad.slice(-3);     // retorna 'ma.'
+cad.slice(-3); // retorna 'ma.'
 cad.slice(-3, -1); // retorna 'ma'
-cad.slice(0, -1);  // retorna 'La mañana se nos echa encima'
+cad.slice(0, -1); // retorna 'La mañana se nos echa encima'
 ```
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentario                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Definición inicial. Implementado en JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.13', 'String.prototype.slice')}}                     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-string.prototype.slice', 'String.prototype.slice')}}         | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-string.prototype.slice', 'String.prototype.slice')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.slice")}}
+{{Compat}}
 
 ## Vea También
 

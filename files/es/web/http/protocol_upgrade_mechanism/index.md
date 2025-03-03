@@ -1,12 +1,11 @@
 ---
 title: Mecanismo de actualización del protocolo
 slug: Web/HTTP/Protocol_upgrade_mechanism
-translation_of: Web/HTTP/Protocol_upgrade_mechanism
-original_slug: Web/HTTP/mecanismo_actualizacion_protocolo
 ---
+
 {{HTTPSidebar}}
 
-El protocolo [HTTP](/en/HTTP) posee un mecanismo especifico para permitir que una conexión de comunicación ya establecida, pueda actualizar su protocolo a un nuevo protocolo, incluso si es incompatible. Este documento muestra este mecanismo y presenta ejemplos de posibles escenarios en los que se puede usar.
+El protocolo [HTTP](/en-US/HTTP) posee un mecanismo especifico para permitir que una conexión de comunicación ya establecida, pueda actualizar su protocolo a un nuevo protocolo, incluso si es incompatible. Este documento muestra este mecanismo y presenta ejemplos de posibles escenarios en los que se puede usar.
 
 Este mecanismo, siempre es iniciado por el cliente (con la única excepción de que el servidor use: [requerida actualización a TLS](#server-initiated_upgrade_to_tls)), y el servidor puede aceptar o rechazar el cambio al nuevo protocolo. Esto hace posible comenzar una conexión usando un protocolo de uso común, como puede ser HTTP/1.1, y posteriormente pedir un cambio de protocolo a HTTP/2.0 o incluso WebSockets.
 
@@ -16,9 +15,9 @@ Las actualizaciones del protocolo de comunicación son siempre iniciadas por el 
 
 Específicamente la petición ha de incluir las dos siguientes cabeceras:
 
-- [`Connection: Upgrade`](/en-US/docs/Web/HTTP/Headers/Connection)
+- [`Connection: Upgrade`](/es/docs/Web/HTTP/Headers/Connection)
   - : La cabecera de conexión (`Connection`) ha de tener el valor `"Upgrade"`, para indicar que se está pidiendo una actualización del protocolo.
-- [`Upgrade: protocols`](/en-US/docs/Web/HTTP/Headers/Upgrade)
+- [`Upgrade: protocols`](/es/docs/Web/HTTP/Headers/Upgrade)
   - : La cabecera de actualización (`Upgrade`) indica los protocolos deseados, en orden de preferencia, separados por comas.
 
 Puede que sean necesarias otras cabeceras, dependiendo del protocolo que se pida.; por ejemplo: las actualizaciones a [WebSocket](/es/docs/Web/API/WebSocket) necesitan cabeceras adicionales para definir la configuración de la conexión, así como para detalles de la seguridad. Para más detalles, lea la sección: [Upgrading to a WebSocket connection](#upgrading_to_a_websocket_connection).
@@ -51,7 +50,8 @@ HTTP2-Settings: base64EncodedSettings
 
 Aquí, `base64EncodedSettings` es una propiedad de HTTP/2 `"SETTINGS"` del contenido de la trama que se expresa en formato `base64url`, seguido de un carácter de igual, `"="`, omitido aquí para que se pudiera incluir en esta cabecera expresada en texto.
 
-> **Nota:** El formato [base64url](https://tools.ietf.org/html/rfc4648#section-5) fno es el mismo que el formato estándar Base64. La única diferencia es que para asegurar que la cadena de caracteres es segura para que pueda usarse con URLs y nombres de archivos, los caracteres 62 y 63 en el alfabeto de este formato se cambian de : `"+"` y `"/"` a: `"-"` (menos) y `"_"` respectivamente.
+> [!NOTE]
+> El formato [base64url](https://tools.ietf.org/html/rfc4648#section-5) fno es el mismo que el formato estándar Base64. La única diferencia es que para asegurar que la cadena de caracteres es segura para que pueda usarse con URLs y nombres de archivos, los caracteres 62 y 63 en el alfabeto de este formato se cambian de : `"+"` y `"/"` a: `"-"` (menos) y `"_"` respectivamente.
 
 Si el servidor no puede hacer el cambio a HTTP/2, este responderá en HTTP/1 como si fuera una petición normal (con los códigos: `"200 OK"` si todo es correcto, o `30x` si quiere hacer una redirección, o `40x` ó `50x` si no puede responder con el recurso pedido). Así una petición de una página que exista será respondida con `"HTTP/1.1 200 OK"` seguido del resto de la cabecera de la página. Si el servidor, si que puede cambiar al protocolo HTTP/2 , la respuesta será: "`HTTP/1.1 101 Switching Protocols"`. A continuación, se presenta un ejemplo de una posible respuesta, a una petición de actualización a HTTP/2.
 
@@ -75,7 +75,8 @@ webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");
 
 The {{domxref("WebSocket.WebSocket", "WebSocket()")}} constructor does all the work of creating an initial HTTP/1.1 connection then handling the handshaking and upgrade process for you.
 
-> **Nota:** You can also use the `"wss://"` URL scheme to open a secure WebSocket connection.
+> [!NOTE]
+> You can also use the `"wss://"` URL scheme to open a secure WebSocket connection.
 
 If you need to create a WebSocket connection from scratch, you'll have to handle the handshaking process yourself. After creating the initial HTTP/1.1 session, you need to request the upgrade by adding to a standard request the {{HTTPHeader("Upgrade")}} and {{HTTPHeader("Connection")}} headers, as follows:
 
@@ -168,11 +169,11 @@ Sec-WebSocket-Accept: hash
 ```
 
 - `hash`
-  - : If a `Sec-WebSocket-Key` header was provided, the value of this header is computed by taking the value of the key, concatenating the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" to it, taking the {{interwiki("wikipedia", "SHA-1")}} hash of that concatenated string, resulting in a 20-byte value. That value is then [base64](/es/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) encoded to obtain the value of this property.
+  - : If a `Sec-WebSocket-Key` header was provided, the value of this header is computed by taking the value of the key, concatenating the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" to it, taking the [SHA-1](https://es.wikipedia.org/wiki/SHA-1) hash of that concatenated string, resulting in a 20-byte value. That value is then [base64](/es/docs/Glossary/Base64) encoded to obtain the value of this property.
 
 ### Mejora a HTTP sobre TLS iniciada por el cliente
 
-You can also upgrade an HTTP/1.1 connection to TLS/1.0. The main advantages to this are that you can avoid using URL redirection from "http\://" to "https\://" on the server and you can easily use TLS on virtual hosts. This may, however, introduce problems with proxy servers.
+You can also upgrade an HTTP/1.1 connection to TLS/1.0. The main advantages to this are that you can avoid using URL redirection from `http://` to `https://` on the server and you can easily use TLS on virtual hosts. This may, however, introduce problems with proxy servers.
 
 Upgrading an HTTP connection to use {{Glossary("TLS")}} uses the {{HTTPHeader("Upgrade")}} header with the token `"TLS/1.0"`. If the switch is made successfully, the original request (which included `Upgrade`) is completed as normal, but on the TLS connection.
 

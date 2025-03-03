@@ -1,18 +1,8 @@
 ---
 title: Cache
 slug: Web/API/Cache
-tags:
-  - API
-  - Armazenamento
-  - Cache
-  - Experimental
-  - Interface
-  - Offline
-  - Rascunho
-  - Referencia
-  - Service Workers
-translation_of: Web/API/Cache
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 A interface de **Cache** provê um mecanismo de pares de objeto [Request](http://fetch.spec.whatwg.org/#request) / [Response](http://fetch.spec.whatwg.org/#response) que estão cacheados, por exemplo, como parte do ciclo de vida de um {{domxref("ServiceWorker")}}. Note que a interface do `Cache` é exposta a escopos de janela como também aos workers. Você não precisa utiliza-la em conjunto com os service workers em si, mesmo que ela esteja definida na especificação dos mesmos.
@@ -21,13 +11,16 @@ Uma origem pode ter múltiplos objetos de `cache` nomeados. Você é o responsá
 
 Você é também o responsavel por, periódicamente, limpar as entradas de cache. Cada browser tem um limite fixo do tamanho de armazenamento de cache que cada origem pode utilizar. O browser faz o melhor que pode para gerenciar o espaço em disco, mas ele pode deletar um cache que não devia. Ele também vai, geralmente, deletar todos os dados de uma origem ou nenhum dado da mesma, nunca haverá uma ocasião não atômica onde o browser delete parcialmente os dados.
 
-Certifique-se de versionar seus caches por nome e usar somente os caches nas versões do script que eles podem seguramente operar. Veja também o artigo sobre [remoção de caches antigos](/pt-BR/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches) para mais informações.
+Certifique-se de versionar seus caches por nome e usar somente os caches nas versões do script que eles podem seguramente operar. Veja também o artigo sobre [remoção de caches antigos](/pt-BR/docs/Web/API/Service_Worker_API/Using_Service_Workers#deleting_old_caches) para mais informações.
 
-> **Nota:** Implementações iniciais do Cache (tanto no Blink quando no Gecko) resolvem promises de {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, e {{domxref("Cache.put")}} somente quando o corpo completo da resposta foi armazenado. Versões mais recentes desta especificação possuem uma melhora de linguagem informando que o browser pode resolver a promise assim que a entrada é registrada no banco de dados, mesmo que o corpo da resposta ainda esteja sendo enviado.
+> [!NOTE]
+> Implementações iniciais do Cache (tanto no Blink quando no Gecko) resolvem promises de {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, e {{domxref("Cache.put")}} somente quando o corpo completo da resposta foi armazenado. Versões mais recentes desta especificação possuem uma melhora de linguagem informando que o browser pode resolver a promise assim que a entrada é registrada no banco de dados, mesmo que o corpo da resposta ainda esteja sendo enviado.
 
-> **Nota:** O algoritmo de comparação de chaves depende do [cabeçalho VARY](https://www.fastly.com/blog/best-practices-for-using-the-vary-header) no valor. Então, comparar uma nova chave depende tanto de olhar para o valor e para a própria chave para novas entradas no cache.
+> [!NOTE]
+> O algoritmo de comparação de chaves depende do [cabeçalho VARY](https://www.fastly.com/blog/best-practices-for-using-the-vary-header) no valor. Então, comparar uma nova chave depende tanto de olhar para o valor e para a própria chave para novas entradas no cache.
 
-> **Nota:** A API de cache não segue os padrões HTTP de cabeçalhos de Cache.
+> [!NOTE]
+> A API de cache não segue os padrões HTTP de cabeçalhos de Cache.
 
 ## Métodos
 
@@ -58,76 +51,76 @@ O trecho também mostra as melhores práticas de versionamento de caches utiliza
 
 No exemplo, "Caches" é um atributo dos service workers no WorkerGlobalScope. Ele contém o CacheStorage, um objeto pelo qual podemos acessar a [API de mesmo nome](/pt-BR/docs/Web/API/CacheStorage).
 
-> **Nota:** No Chrome, visite `chrome://inspect/#service-workers` e clique no link "inspect" abaixo do service worker registrado para analisar os logs das várias ações que o script "[service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js)" está executando.
+> [!NOTE]
+> No Chrome, visite `chrome://inspect/#service-workers` e clique no link "inspect" abaixo do service worker registrado para analisar os logs das várias ações que o script "[service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js)" está executando.
 
 ```js
 var CACHE_VERSION = 1;
 
 // Identificador menor para uma versão específica do cache
 var CURRENT_CACHES = {
-  font: 'font-cache-v' + CACHE_VERSION
+  font: "font-cache-v" + CACHE_VERSION,
 };
 
-self.addEventListener('activate', function(event) {
-  var expectedCacheNames = Object.keys(CURRENT_CACHES).map(function(key) {
+self.addEventListener("activate", function (event) {
+  var expectedCacheNames = Object.keys(CURRENT_CACHES).map(function (key) {
     return CURRENT_CACHES[key];
   });
 
   // O worker não vai ser tratado como ativo até que a Promise se resolva.
   event.waitUntil(
-    caches.keys().then(function(cacheNames) {
+    caches.keys().then(function (cacheNames) {
       return Promise.all(
-        cacheNames.map(function(cacheName) {
+        cacheNames.map(function (cacheName) {
           if (expectedCacheNames.indexOf(cacheName) == -1) {
-            console.log('Deletando cache expirado:', cacheName);
+            console.log("Deletando cache expirado:", cacheName);
 
             return caches.delete(cacheName);
           }
-        })
+        }),
       );
-    })
+    }),
   );
 });
 
-self.addEventListener('fetch', function(event) {
-  console.log('Obtendo evento fetch para', event.request.url);
+self.addEventListener("fetch", function (event) {
+  console.log("Obtendo evento fetch para", event.request.url);
 
   event.respondWith(
-
     // Abre o objeto de cache que inicia com 'font'
-    caches.open(CURRENT_CACHES['font']).then(function(cache) {
-      return cache.match(event.request).then(function(response) {
-        if (response) {
-          console.log(' Encontrou resposta em cache:', response);
+    caches.open(CURRENT_CACHES["font"]).then(function (cache) {
+      return cache
+        .match(event.request)
+        .then(function (response) {
+          if (response) {
+            console.log(" Encontrou resposta em cache:", response);
 
-          return response;
-        }
-      }).catch(function(error) {
+            return response;
+          }
+        })
+        .catch(function (error) {
+          // Trata exceções que vem de match() ou fetch().
+          console.error("  Erro na handler:", error);
 
-        // Trata exceções que vem de match() ou fetch().
-        console.error('  Erro na handler:', error);
-
-        throw error;
-      });
-    })
+          throw error;
+        });
+    }),
   );
 });
 ```
 
 ## Especificações
 
-| Especificação                                                        | Status                               | Comentário        |
-| -------------------------------------------------------------------- | ------------------------------------ | ----------------- |
-| {{SpecName('Service Workers', '#cache', 'Cache')}} | {{Spec2('Service Workers')}} | Definição inicial |
+{{Specifications}}
 
 ## Tabela de compatibilidade
 
-{{Compat("api.Cache")}}
+{{Compat}}
 
 ## Ver também
 
-- [Usando Service Workers](/pt-BR/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Usando Service Workers](/pt-BR/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Exemplo básico de service workers](https://github.com/mdn/sw-test)
 - [Service workers estão prontos?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Usando Web Workers](/pt-BR/docs/Web/Guide/Performance/Using_web_workers)
+- [Usando Web Workers](/pt-BR/docs/Web/API/Web_Workers_API/Using_web_workers)

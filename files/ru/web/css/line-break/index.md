@@ -1,16 +1,14 @@
 ---
 title: line-break
 slug: Web/CSS/line-break
-tags:
-  - разрыв строки
-translation_of: Web/CSS/line-break
 ---
+
 {{CSSRef}}
 
 CSS-свойство **`line-break`** устанавливает способ разрыва строки текста на китайском, японском или корейском (CJK) при работе с пунктуацией и символами.
 
 ```css
-/* Значения ключевым словом */
+/* Ключевые слова */
 line-break: auto;
 line-break: loose;
 line-break: normal;
@@ -45,6 +43,6 @@ line-break: unset;
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

@@ -1,10 +1,33 @@
 ---
 title: Math.exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/exp
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/exp
 ---
-{{JSRef}}La función **Math.exp()** devuelve `ex`, donde `x` es el argumento, y `e` es {{jsxref("Math.E", "El número de Euler (también conocido como la constante de Napier)", "", 1)}}, la base de los algoritmos naturales.
+
+{{JSRef}}
+
+El método estático Math.exp() devuelve e elevado a la potencia de un número. Es decir
+
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚎𝚡𝚙</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.exp}(x)} = \mathrm{e}^x</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
+
+{{InteractiveExample("JavaScript Demo: Math.exp()")}}
+
+```js interactive-example
+console.log(Math.exp(0));
+// Expected output: 1
+
+console.log(Math.exp(1));
+// Expected output: 2.718281828459 (approximately)
+
+console.log(Math.exp(-1));
+// Expected output: 0.36787944117144233
+
+console.log(Math.exp(2));
+// Expected output: 7.38905609893065
+```
 
 ## Sintaxis
 
@@ -31,22 +54,17 @@ Porque `exp()` es un método estático de `Math`, siempre úsalo como `Math.exp(
 
 ```js
 Math.exp(-1); // 0.36787944117144233
-Math.exp(0);  // 1
-Math.exp(1);  // 2.718281828459045
+Math.exp(0); // 1
+Math.exp(1); // 2.718281828459045
 ```
 
 ## Especificaciones
 
-| Especificación                                                       | Estado                       | Comentario                                          |
-| -------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.8', 'Math.exp')}} | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-math.exp', 'Math.exp')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-math.exp', 'Math.exp')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.exp")}}
+{{Compat}}
 
 ## Ve también
 

@@ -1,8 +1,8 @@
 ---
 title: Encadeamento opcional
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
+
 {{JSSidebar("Operators")}}
 
 O operador de **encadeamento opcional** **`?.`** permite a leitura do valor de uma propriedade localizada internamente em uma cadeia de objetos conectados, sem que a validação de cada referência da cadeia seja expressivamente realizada.
@@ -11,7 +11,23 @@ O operador **`?.`** funciona de maneira similar ao operador `.` de encadeamento,
 
 Isso resulta em expressões mais curtas e simples ao acessar propriedades encadeadas quando a possibilidade de uma referência ser inexistente. Isso também pode auxiliar ao explorar o conteúdo de um objeto quando não existe garantia da existência de determinadas propriedades obrigatórias.
 
-{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Optional chaining operator", "taller")}}
+
+```js interactive-example
+const adventurer = {
+  name: "Alice",
+  cat: {
+    name: "Dinah",
+  },
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
+```
 
 ## Sintaxe
 
@@ -46,7 +62,7 @@ Isso é equivalente ao seguinte, exceto que a variável temporária, de fato, n�
 
 ```js
 let temp = obj.first;
-let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);
+let nestedProp = temp === null || temp === undefined ? undefined : temp.second;
 ```
 
 ### Encadeamento opcional com chamadas de funções
@@ -59,20 +75,21 @@ Usar encadeamento opcional com chamadas de função faz com que a expressão aut
 let result = someInterface.customMethod?.();
 ```
 
-> **Nota:** Se existe uma propriedade com tal nome e que não é uma função, usando `?.` ainda lançará a exceção {{JSxRef("TypeError")}} (`x.y is not a function`).
+> [!NOTE]
+> Se existe uma propriedade com tal nome e que não é uma função, usando `?.` ainda lançará a exceção {{JSxRef("TypeError")}} (`x.y is not a function`).
 
 #### Lidando com callbacks opcionais ou manipuladores de eventos
 
-Se você usa callbacks ou consulta métodos de objetos com [atribuição via desestruturação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao#Object_destructuring), você pode ter valores não-existentes que você não conseguirá chamar como funções, a menos que você tenha testado sua existência. Usando `?.`, você pode evitar esse teste extra:
+Se você usa callbacks ou consulta métodos de objetos com [atribuição via desestruturação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring), você pode ter valores não-existentes que você não conseguirá chamar como funções, a menos que você tenha testado sua existência. Usando `?.`, você pode evitar esse teste extra:
 
 ```js
 // Escrito como ES2019
 function doSomething(onContent, onError) {
   try {
     // ... faz algo com os dados
-  }
-  catch (err) {
-    if (onError) { // teste se onError realmente existe
+  } catch (err) {
+    if (onError) {
+      // teste se onError realmente existe
       onError(err.message);
     }
   }
@@ -83,9 +100,8 @@ function doSomething(onContent, onError) {
 // Usando encadeamento opcional com chamadas de função
 function doSomething(onContent, onError) {
   try {
-   // ... faz algo com os dados
-  }
-  catch (err) {
+    // ... faz algo com os dados
+  } catch (err) {
     onError?.(err.message); // Nenhuma exceção se onError for undefined
   }
 }
@@ -93,10 +109,10 @@ function doSomething(onContent, onError) {
 
 ### Encadeamento opcional com expressões
 
-Você também pode usar o operador de encadeamento opcional ao acessar propriedades com uma expressão usando [assessores de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation):
+Você também pode usar o operador de encadeamento opcional ao acessar propriedades com uma expressão usando [assessores de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation):
 
 ```js
-let nestedProp = obj?.['prop' + 'Name'];
+let nestedProp = obj?.["prop" + "Name"];
 ```
 
 ### Encadeamento opcional não válido no lado esquerdo de uma atribuição
@@ -120,7 +136,7 @@ Esse exemplo busca plo valor da propriedade `name` para o membro `bar` em um map
 
 ```js
 let myMap = new Map();
-myMap.set("foo", {name: "baz", desc: "inga"});
+myMap.set("foo", { name: "baz", desc: "inga" });
 
 let nameBar = myMap.get("bar")?.name;
 ```
@@ -146,8 +162,8 @@ let customer = {
   name: "Carl",
   details: {
     age: 82,
-    location: "Paradise Falls" // endereço detalhado é desconhecido
-  }
+    location: "Paradise Falls", // endereço detalhado é desconhecido
+  },
 };
 let customerCity = customer.details?.address?.city;
 
@@ -162,7 +178,7 @@ O {{JSxRef("Operators/Nullish_Coalescing_Operator", "operador de coalescência n
 ```js
 let customer = {
   name: "Carl",
-  details: { age: 82 }
+  details: { age: 82 },
 };
 const customerCity = customer?.city ?? "Cidade desconhecida";
 console.log(customerCity); // Cidade desconhecida
@@ -176,7 +192,7 @@ console.log(customerCity); // Cidade desconhecida
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.optional_chaining")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,11 +1,8 @@
 ---
 title: Animation.currentTime
 slug: Web/API/Animation/currentTime
-tags:
-  - Animacion
-translation_of: Web/API/Animation/currentTime
-original_slug: Web/API/Animation/tiempoActual
 ---
+
 {{APIRef("Web Animations")}}
 
 La propiedad `Animation.currentTime` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve y establece el valor del tiempo de la animación en milisegundos, tanto si se está ejecutando como en pausa.
@@ -25,7 +22,7 @@ Un número que representa el tiempo actual en milisegundos, o `null` para desact
 
 ## Ejemplos
 
-En el juego [Drink Me/Eat Me](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010), la altura de Alicia está animada, por lo que puede cambiar de pequeña a grande y de grande a pequeña. Al inicio del juego, su altura de fija estableciendo el `currentTime` (tiempoActual) a la mitad de la duración total del[`KeyframeEffect`](/es/docs/Web/API/Web_Animations_API/Animation_timing_options):
+En el juego [Drink Me/Eat Me](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010), la altura de Alicia está animada, por lo que puede cambiar de pequeña a grande y de grande a pequeña. Al inicio del juego, su altura de fija estableciendo el `currentTime` (tiempoActual) a la mitad de la duración total del[`KeyframeEffect`](/es/docs/Web/API/KeyframeEffect/KeyframeEffect):
 
 ```js
 aliceChange.currentTime = aliceChange.effect.timing.duration / 2;

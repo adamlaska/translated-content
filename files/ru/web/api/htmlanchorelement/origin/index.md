@@ -1,17 +1,8 @@
 ---
 title: HTMLHyperlinkElementUtils.origin
 slug: Web/API/HTMLAnchorElement/origin
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - Read-only
-  - Reference
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/origin
-original_slug: Web/API/HTMLHyperlinkElementUtils/origin
 ---
+
 {{APIRef("URL API")}}
 
 Свойство только для чтения **`HTMLHyperlinkElementUtils.origin`** – это {{domxref("USVString")}}, содержащий сериализованные в Unicode протокол, хост и порт, а именно:

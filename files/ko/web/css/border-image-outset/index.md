@@ -1,13 +1,8 @@
 ---
 title: border-image-outset
 slug: Web/CSS/border-image-outset
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/border-image-outset
 ---
+
 {{CSSRef}}
 
 **`border-image-outset`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 테두리 상자와 [테두리 이미지](/ko/docs/Web/CSS/border-image)의 거리를 설정합니다.
@@ -74,7 +69,7 @@ border-image-outset: unset;
   background: #cef;
   border: 1.4rem solid;
   border-image: radial-gradient(#ff2, #55f) 40;
-  border-image-outset: 1.5;  /* = 1.5 * 1.4rem = 2.1rem */
+  border-image-outset: 1.5; /* = 1.5 * 1.4rem = 2.1rem */
   margin: 2.1rem;
 }
 ```

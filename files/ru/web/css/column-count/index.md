@@ -1,11 +1,8 @@
 ---
 title: column-count
 slug: Web/CSS/column-count
-tags:
-  - Свойство
-  - мультиколоночная вёрстка
-translation_of: Web/CSS/column-count
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`column-count`** разбивает содержимое элемента на заданное число столбцов.
@@ -15,13 +12,13 @@ translation_of: Web/CSS/column-count
 ## Синтаксис
 
 ```css
-/* Значение, заданное ключевым словом */
+/* Ключевые слова */
 column-count: auto;
 
 /* целое значение */
 column-count: 3;
 
-/* глобальные значения */
+/* Глобальные значения */
 column-count: inherit;
 column-count: initial;
 column-count: unset;
@@ -44,9 +41,8 @@ column-count: unset;
 
 ```html
 <p class="content-box">
-  This is a bunch of text split into three columns
-  using the CSS `column-count` property. The text
-  is equally distributed over the columns.
+  This is a bunch of text split into three columns using the CSS `column-count`
+  property. The text is equally distributed over the columns.
 </p>
 ```
 
@@ -68,11 +64,11 @@ column-count: unset;
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - [Multiple-column Layout](/ru/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) (Learn Layout)
-- [Basic Concepts of Multicol](/ru/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+- [Basic Concepts of Multicol](/ru/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)

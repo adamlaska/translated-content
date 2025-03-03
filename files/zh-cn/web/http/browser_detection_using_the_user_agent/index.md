@@ -3,11 +3,12 @@ title: 使用用户代理字段进行浏览器检测
 slug: Web/HTTP/Browser_detection_using_the_user_agent
 ---
 
-{{HTTPSidebar}}为不同浏览器提供不同的网页或服务通常是一个坏主意。互联网的本意是让任何人都可以访问，无论他们使用哪个浏览器或设备。有一些方法可以根据功能的可用性而不是针对特定的浏览器来开发您的网站以逐步增强自身。
+{{HTTPSidebar}}为不同浏览器提供不同的网页或服务通常是一个坏主意。互联网的本意是让任何人都可以访问，无论他们使用哪个浏览器或设备。有一些方法可以根据功能的可用性而不是针对特定的浏览器来开发你的网站以逐步增强自身。
 
-但浏览器和标准并不完美，仍然需要检测浏览器的一些边缘情况。使用用户代理检测浏览器看起来很简单，但是做得很好，实际上是一个非常困难的问题。本文档将指导您尽可能正确地进行此操作。
+但浏览器和标准并不完美，仍然需要检测浏览器的一些边缘情况。使用用户代理检测浏览器看起来很简单，但是做得很好，实际上是一个非常困难的问题。本文档将指导你尽可能正确地进行此操作。
 
-> **备注：** 值得重申的是：使用用户代理嗅探很少会成为一个好主意。你几乎总能发现一个更好的、更广泛兼容的方式来解决你的问题。
+> [!NOTE]
+> 值得重申的是：使用用户代理嗅探很少会成为一个好主意。你几乎总能发现一个更好的、更广泛兼容的方式来解决你的问题。
 
 ## 在使用浏览器检测之前需要考虑的一些事情
 
@@ -29,7 +30,7 @@ slug: Web/HTTP/Browser_detection_using_the_user_agent
 - 渐进增强
   - : 这种设计技术涉及了按照“层次”开发网页，使用自底向上的方法，从一个简单的层次开始，在一系列连续的层次中通过使用更多的功能来逐步提升站点的能力。
 - 优雅降级
-  - : 这是一种自顶向下的方式，在搭建可能最好的的站点时使用所有你想要的功能，然后稍微改进使其能在更老版本的浏览器上工作。与渐进增强的方法相比，这种方法可能更困难、效率更低，不过在一些情景下也许是有效的。
+  - : 这是一种自顶向下的方式，在搭建可能最好的站点时使用所有你想要的功能，然后稍微改进使其能在更老版本的浏览器上工作。与渐进增强的方法相比，这种方法可能更困难、效率更低，不过在一些情景下也许是有效的。
 
 ## 用户代理中的哪个部分包含你正在寻找的信息
 
@@ -53,19 +54,19 @@ slug: Web/HTTP/Browser_detection_using_the_user_agent
 | Opera             | OPR/xyz \[1]Opera/xyz \[2] |                            | \[1] Opera 15+ (基于 Blink 的引擎)\[2] Opera 12- (基于 Presto 的引擎)                          |
 | Internet Explorer | ; MSIE xyz;                |                            | IE 浏览器的名字并没有使用*BrowserName/VersionNumber*的格式                                     |
 
-当然，这里并没有保证其它浏览器不劫持上述字符串（像在过去，Chrome 劫持了 Safari 的字符串）。这就是为什么使用用户代理字段进行浏览器检测是不可信的，并且做这个检测也仅仅应该是为了检测版本号（劫持过去的版本号这种事情很少发生）。
+当然，这里并没有保证其他浏览器不劫持上述字符串（像在过去，Chrome 劫持了 Safari 的字符串）。这就是为什么使用用户代理字段进行浏览器检测是不可信的，并且做这个检测也仅仅应该是为了检测版本号（劫持过去的版本号这种事情很少发生）。
 
 ### 浏览器版本
 
 浏览器版本号通常但并不总是出现在用户代理字符串的*浏览器名/版本号*记号的值的位置。IE 浏览器（该浏览器放置版本号刚好在 MSIE 记号之后）以及在版本 10 之后的 Opera（新增了版本/版本号标记）就是例子。
 
-此处再一次强调，由于并没有保证其它标记会包含有效的数字，请确保选取你正在寻找的浏览器的正确的标记。
+此处再一次强调，由于并没有保证其他标记会包含有效的数字，请确保选取你正在寻找的浏览器的正确的标记。
 
 ### 渲染引擎
 
 正如早先提及到的，在大多数情况下，寻找渲染引擎是一个更好的方式。这将有助于保留鲜为人知的浏览器。使用共同的渲染引擎的浏览器将以相同的方式显示页面：这经常是一个公平的假设：一处有效，处处有效。
 
-现在市面上有 5 个主流的渲染引擎：Trident，Gecko，Presto，Blink 和 WebKit。由于嗅探渲染引擎名是很普遍的，大量的用户代理在其字段中增加其它的渲染引擎名来触发检测。因此当检测渲染引擎的时候，一件很重要的事情，就是要避免“假阳性”（注：false-positives，指一个特性可通过检测，但实际在该浏览器下并不可靠或不可用）情况的发生。
+现在市面上有 5 个主流的渲染引擎：Trident，Gecko，Presto，Blink 和 WebKit。由于嗅探渲染引擎名是很普遍的，大量的用户代理在其字段中增加其他的渲染引擎名来触发检测。因此当检测渲染引擎的时候，一件很重要的事情，就是要避免“假阳性”（注：false-positives，指一个特性可通过检测，但实际在该浏览器下并不可靠或不可用）情况的发生。
 
 |         | 必须包含        |                                                                                                         |
 | ------- | --------------- | ------------------------------------------------------------------------------------------------------- |
@@ -85,7 +86,7 @@ slug: Web/HTTP/Browser_detection_using_the_user_agent
 
 正如所有情形一样，这些字符串在将来也可能会改变，我们应该仅仅与已经发布的浏览器一起使用它们。当新的浏览器版本发布的时候，一份修改脚本以适应新版本的技术调查必须出现。
 
-### 手机，平板或者台式电脑
+### 手机、平板或者台式电脑
 
 执行用户代理嗅探的一个最普遍的原因是查明浏览器是在何种硬件设备上运行的。而这么做的目的是对不同类型的设备提供不同的 HTML 页面。
 
@@ -94,14 +95,15 @@ slug: Web/HTTP/Browser_detection_using_the_user_agent
 
 下面这张表格总结了主要浏览器开发商声明他们的浏览器运行在手机设备上的方式：
 
-| 浏览器                                           | 规则                                                                                                                                                                                                                                    | 示例                                                                                                                                                           |
-| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mozilla (Gecko, Firefox)                         | 注释中的 [**Mobile 或 Tablet 标记**](/zh-CN/docs/Gecko_user_agent_string_reference)                                                                                                                                              | Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0                                                                                                 |
-| WebKit-based (Android, Safari)                   | 注释外的[**Mobile Safari 标记**](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/OptimizingforSafarioniPhone/OptimizingforSafarioniPhone.html#//apple_ref/doc/uid/TP40006517-SW3) | Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30               |
-| Blink-based (Chromium, Google Chrome, Opera 15+) | 注释外的[**Mobile Safari 标记**](https://developers.google.com/chrome/mobile/docs/user-agent)                                                                                                                                           | Mozilla/5.0 (Linux; Android 4.4.2); Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047 |
-| Presto-based (Opera 12-)                         | 注释中的[**Opera Mobi/xyz 标记**](http://my.opera.com/community/openweb/idopera/)(Opera 12-)                                                                                                                                            | Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50                                                            |
-| Internet Explorer                                | 注释中的**IEMobile/xyz 标记**                                                                                                                                                                                                           | Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)                                                                            |
+| 浏览器                                                            | 规则                                  | 示例                                                                                                                                                             |
+| ----------------------------------------------------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mozilla（Gecko、Firefox）                                         | 注释中的 `Mobile` 或 `Tablet` 标记    | `Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0`                                                                                                 |
+| 基于 WebKit（Android、Safari）                                    | 注释外的 `Mobile Safari` 标记         | `Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30`               |
+| 基于 Blink（Chromium、Google Chrome、Opera 15+、Android 版 Edge） | 注释外的 `Mobile Safari` 标记         | `Mozilla/5.0 (Linux; Android 4.4.2; Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047`  |
+| 基于 Presto（Opera 12-）                                          | 注释中的 `Opera Mobi/xyz` 标记        | `Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50`                                                            |
+| Windows 10 Mobile 版 Edge                                         | 注释外的 `Mobile/xyz` 和 `Edge/` 标记 | `Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Mobile Safari/537.36 Edge/16.16299` |
 
 总之，我们建议检测移动设备的时候，在用户代理字符串中寻找“Mobi”字符串。
 
-> **备注：** 如果设备屏幕足够大，它就不会被用“Mobi”标记，你应该提供给用户你的桌面版网页（由于越来越多的桌面设备开始配有触摸屏，作为一个最佳体验，不管怎样，应该在该网页中提供触碰输入）
+> [!NOTE]
+> 如果设备屏幕足够大，它就不会被用“Mobi”标记，你应该提供给用户你的桌面版网页（由于越来越多的桌面设备开始配有触摸屏，作为一个最佳体验，不管怎样，应该在该网页中提供触碰输入）

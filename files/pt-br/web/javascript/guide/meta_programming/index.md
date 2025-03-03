@@ -1,8 +1,8 @@
 ---
 title: Meta programação
 slug: Web/JavaScript/Guide/Meta_programming
-translation_of: Web/JavaScript/Guide/Meta_programming
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}
 
 Começando com ECMAScript 6, o JavaScript ganha suporte para os objetos {{jsxref("Proxy")}} e {{jsxref("Reflect")}}, permitindo você interceptar e definir o comportamento personalizado para operações fundamentais da linguagem (por exemplo, pesquisa de propriedade, atribuição, enumeração, invocação de função, etc). Com a ajuda destes dois objetos você será capaz de programar a nível [meta](https://pt.wikipedia.org/wiki/Metaprograma%C3%A7%C3%A3o) em JavaScript.
@@ -13,23 +13,24 @@ Introduzido em ECMAScript 6, objetos {{jsxref("Proxy")}} permitem que você inte
 
 ```js
 var handler = {
-  get: function(target, name){
+  get: function (target, name) {
     return name in target ? target[name] : 42;
-}};
+  },
+};
 var p = new Proxy({}, handler);
 p.a = 1;
 console.log(p.a, p.b); // 1, 42
 ```
 
-O objeto Proxy define um _target_ (um objeto vazio aqui) e um objeto _handler_ em que um `get` _trap_ é implementado. Aqui, um objeto que está em proxy não retornará indefinido quando receber propriedades indefinidas, mas, ao contrário, retornar o número 42.
+O objeto Proxy define um `target` (um objeto vazio aqui) e um objeto `handler` em que um `get` _trap_ é implementado. Aqui, um objeto que está em proxy não retornará indefinido quando receber propriedades indefinidas, mas, ao contrário, retornar o número 42.
 
 Exemplos adicionais estão disponíveis na página de referência de {{jsxref("Proxy")}} .
 
 ### Terminologia
 
-Os seguintes termos são usados ​​quando se fala sobre a funcionalidade de proxies.
+Os seguintes termos são usados quando se fala sobre a funcionalidade de proxies.
 
-- {{jsxref("Global_Objects/Proxy/handler","handler","","true")}}
+- {{jsxref("Global_Objects/Proxy/handler","handler","",1)}}
   - : Espaço reservado de objeto que contenha traps.
 - traps
   - : Os métodos que fornecem acesso de propriedade. Isto é análogo ao conceito de traps em sistemas operacionais.
@@ -40,7 +41,7 @@ Os seguintes termos são usados ​​quando se fala sobre a funcionalidade de p
 
 ## Handlers e traps
 
-A tabela a seguir resume as traps disponíveis aos objetos do tipo Proxy. Veja as [páginas de referência](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler) para explicações detalhadas e exemplos.
+A tabela a seguir resume as traps disponíveis aos objetos do tipo Proxy. Veja as [páginas de referência](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy) para explicações detalhadas e exemplos.
 
 <table class="standard-table">
   <thead>
@@ -268,7 +269,7 @@ A tabela a seguir resume as traps disponíveis aos objetos do tipo Proxy. Veja a
           <li>
             No modo estrito, um valor de retorno <code>false</code> do
             manipulador <code>set</code> lançará uma exceção
-            {{jsxref ("TypeError")}}}.
+            {{jsxref ("TypeError")}}.
           </li>
         </ul>
       </td>
@@ -357,25 +358,28 @@ A tabela a seguir resume as traps disponíveis aos objetos do tipo Proxy. Veja a
 O método {{jsxref("Proxy.revocable()")}} é utilizado para criar um objeto Proxy revogável. Isso significa que o proxy pode ser revogado através da função `revoke`, desligando-o. Depois disso, qualquer operação com o proxy lançará um {{jsxref("TypeError")}}.
 
 ```js
-var revocable = Proxy.revocable({}, {
-  get: function(target, name) {
-    return "[[" + name + "]]";
-  }
-});
+var revocable = Proxy.revocable(
+  {},
+  {
+    get: function (target, name) {
+      return "[[" + name + "]]";
+    },
+  },
+);
 var proxy = revocable.proxy;
 console.log(proxy.foo); // "[[foo]]"
 
 revocable.revoke();
 
 console.log(proxy.foo); // TypeError é lançado
-proxy.foo = 1           // TypeError novamente
-delete proxy.foo;       // ainda um TypeError
-typeof proxy            // "object", typeof não desencadeia nenhuma trap
+proxy.foo = 1; // TypeError novamente
+delete proxy.foo; // ainda um TypeError
+typeof proxy; // "object", typeof não desencadeia nenhuma trap
 ```
 
 ## Reflexão
 
-{{jsxref("Reflect")}} é um objeto embutido que contém métodos que permitem a criação de operações interceptáveis em JavaScript. Os métodos são iguais àqueles de {{jsxref("Global_Objects/Proxy/handler","proxy handlers","","true")}}. `Reflect` não é um objeto do tipo function.
+{{jsxref("Reflect")}} é um objeto embutido que contém métodos que permitem a criação de operações interceptáveis em JavaScript. Os métodos são iguais àqueles de {{jsxref("Global_Objects/Proxy/handler","proxy handlers","",1)}}. `Reflect` não é um objeto do tipo function.
 
 `Reflect` auxilia no encaminhamento de operações padrão do handler para o target.
 
@@ -387,7 +391,7 @@ Reflect.has(Object, "assign"); // true
 
 ### Uma função `apply` melhorada
 
-Em ES5, você normalmente utiliza o método {{jsxref("Function.prototype.apply()")}} para invocar uma função com um dado valor para `this` e `arguments` fornecido como um array (ou um [objeto parecido com um array](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
+Em ES5, você normalmente utiliza o método {{jsxref("Function.prototype.apply()")}} para invocar uma função com um dado valor para `this` e `arguments` fornecido como um array (ou um [objeto parecido com um array](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 
 ```js
 Function.prototype.apply.call(Math.floor, undefined, [1.75]);

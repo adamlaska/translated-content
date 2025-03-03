@@ -1,12 +1,10 @@
 ---
 title: Cadenas del User Agent de Gecko
 slug: Web/HTTP/Headers/User-Agent/Firefox
-tags:
-  - Desarrollo_Web
-  - Todas_las_Categorías
-translation_of: Web/HTTP/Headers/User-Agent/Firefox
-original_slug: Cadenas_del_User_Agent_de_Gecko
 ---
+
+{{HTTPSidebar}}
+
 ### Uso Apropiado
 
 No se recomienda el uso de las cadenas del User Agent como su principal opción para la detección del navegador. Vea [Deteccion Cross browser y Soporte Cross Browser](/es/Deteccion_Cross_browser_y_Soporte_Cross_Browser) para una ojeada mas en profundo a varias técnicas sobre detección de navegadores con recomendaciones.
@@ -17,7 +15,7 @@ Para todos los detalles que lidian con detecciones con Gecko los cuales lidian c
 
 ### Lista de user agents liberados por Netscape y AOL basados en Gecko
 
-Vea [mozilla.org's user-agent strings reference](http://www.mozilla.org/build/revised-user-agent-strings.html) para Plataforma específico,
+Vea [mozilla.org's user-agent strings reference](https://www.mozilla.org/build/revised-user-agent-strings.html) para Plataforma específico,
 _Seguridad_
 ,
 _Sistema Operativo_
@@ -42,7 +40,7 @@ _localización_
 - `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:0.9.4) Gecko/20011128 Netscape6/6.2.1`
 - `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:0.9.2) Gecko/20010726 Netscape6/6.1`
 
-Para una información más detallada sobre liberaciones de Netscape y Mozilla, por favor vea el [mozilla.org cvstags reference](http://www.mozilla.org/releases/cvstags.html).
+Para una información más detallada sobre liberaciones de Netscape y Mozilla, por favor vea el [mozilla.org cvstags reference](https://www.mozilla.org/releases/cvstags.html).
 
 ### Informacion Del documento Original
 

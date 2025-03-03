@@ -1,8 +1,8 @@
 ---
 title: Селекторы по ID
 slug: Web/CSS/ID_selectors
-translation_of: Web/CSS/ID_selectors
 ---
+
 {{ CSSRef() }}
 
 ## Краткое описание
@@ -40,6 +40,6 @@ span#identified {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

@@ -58,13 +58,11 @@ overscroll-behavior-y: unset;
 
 ## 仕様書
 
-| 仕様書                                                                                                                               | 状態                                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ---- |
-| {{SpecName('CSS Overscroll Behavior', '#propdef-overscroll-behavior-y', 'overscroll-behavior-y')}} | {{Spec2('CSS Overscroll Behavior')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.overscroll-behavior-y")}}
+{{Compat}}
 
 ## 関連情報
 

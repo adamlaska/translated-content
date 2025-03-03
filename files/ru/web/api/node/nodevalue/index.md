@@ -1,8 +1,8 @@
 ---
 title: Node.nodeValue
 slug: Web/API/Node/nodeValue
-translation_of: Web/API/Node/nodeValue
 ---
+
 {{APIRef("DOM")}}
 
 Свойство **`Node.nodeValue`** возвращает или устанавливает значение текущего узла.
@@ -37,6 +37,6 @@ value = node.nodeValue;
 
 Когда `nodeValue` равно `null`, установки не имеют эффекта.
 
-## Спецификация
+## Спецификации
 
-- [DOM Level 2 Core: Node.nodeValue](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D080)
+- [DOM Level 2 Core: Node.nodeValue](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D080)

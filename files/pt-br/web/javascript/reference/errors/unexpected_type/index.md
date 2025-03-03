@@ -1,12 +1,8 @@
 ---
 title: 'TypeError: "x" is (not) "y"'
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
-tags:
-  - Erros
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Unexpected_type
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensagem
@@ -44,12 +40,11 @@ foo.substring(1); // TypeError: foo is undefined
 var foo = null;
 foo.substring(1); // TypeError: foo is null
 
-
 // Certos métodos podem precisar de um tipo específico
-var foo = {}
+var foo = {};
 Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
-var foo = 'bar'
+var foo = "bar";
 Object.create(foo); // TypeError: "foo" is not an object or null
 ```
 
@@ -58,7 +53,7 @@ Object.create(foo); // TypeError: "foo" is not an object or null
 Para consertar o pointeiro nulo para valores `undefined` ou `null`, você pode utilizar o operador [typeof](/pt-BR/docs/Web/JavaScript/Reference/Operators/typeof) , por exemplo.
 
 ```js
-if (typeof foo !== 'undefined') {
+if (typeof foo !== "undefined") {
   // Agora nós sabemos que foo está definido, então podemos prosseguir.
 }
 ```

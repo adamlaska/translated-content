@@ -1,15 +1,8 @@
 ---
 title: If-Range
 slug: Web/HTTP/Headers/If-Range
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Referencia
-  - Requisições Condicionais
-  - Requisições de Intervalo
-translation_of: Web/HTTP/Headers/If-Range
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de requisição HTTP **`If-Range`** faz uma requisição de intervalo condicional: se a condição é realizada, a requisição de intervalo será enviada e o servidor mandará de volta como resposta um {{HTTPStatus("206")}} `Partial Content` com o corpo apropriado. Se a condição não é realizada, a recurso inteiro é enviado de volta, com um código de status {{HTTPStatus("200")}} `OK`.
@@ -67,13 +60,13 @@ If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Especificações
 
-| Especificação                                | Título                                                 |
-| -------------------------------------------- | ------------------------------------------------------ |
+| Especificação                      | Título                                                 |
+| ---------------------------------- | ------------------------------------------------------ |
 | {{RFC("7233", "If-Range", "3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.If-Range")}}
+{{Compat}}
 
 ## Veja também
 

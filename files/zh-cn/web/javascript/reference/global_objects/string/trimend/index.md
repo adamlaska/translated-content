@@ -1,35 +1,41 @@
 ---
-title: String.prototype.trimRight()
+title: String.prototype.trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
-original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimRight
 ---
 
 {{JSRef}}
 
-`trimEnd()` 方法从一个字符串的末端移除空白字符。trimRight() 是这个方法的别名。
+{{jsxref("String")}} 的 **`trimEnd()`** 方法会从字符串的结尾移除空白字符，并返回一个新的字符串，而不会修改原始字符串。`trimRight()` 是该方法的别名。
 
-{{EmbedInteractiveExample("pages/js/string-trimend.html")}}
+{{InteractiveExample("JavaScript Demo: String.trimEnd()")}}
 
-The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trimEnd());
+// Expected output: "   Hello world!";
+```
 
 ## 语法
 
-```plain
-str.trimEnd();
-str.trimRight();
+```js-nolint
+trimEnd()
+
+trimRight()
 ```
 
 ### 返回值
 
-一个新字符串，表示从调用字串的末（右）端除去空白。
+一个新的字符串，表示从 `str` 的末尾（右侧）去除空白字符后的结果。空白字符定义为[空白符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#空白符)加上[行终止符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#行终止符)。
 
-## 描述
-
-`trimEnd()` / `trimRight()`方法移除原字符串右端的连续空白符并返回，`trimEnd()` / `trimRight()`方法并不会直接修改原字符串本身。
+如果 `str` 的末尾没有空白字符，仍然会返回一个新的字符串（实际上是 `str` 的副本）。
 
 ### 别名
 
-为了与 {{jsxref("String.prototype.padEnd")}} 等函数保持一致，标准方法名称为`trimEnd`。但是，出于 Web 兼容性原因，`trimRight`仍然是`trimEnd`的别名。在某些引擎中，这意味着：
+在 {{jsxref("String/trim", "trim()")}} 标准化后，引擎也实现了非标准的 `trimRight` 方法。然而，为了与 {{jsxref("String/padEnd", "padEnd()")}} 保持一致，在该方法标准化时，选择了 `trimEnd` 作为其名称。出于 Web 兼容性的考虑，`trimRight` 仍然作为 `trimEnd` 的别名，它们引用的是完全相同的函数对象。在某些引擎中，这意味着：
 
 ```js
 String.prototype.trimRight.name === "trimEnd";
@@ -37,33 +43,30 @@ String.prototype.trimRight.name === "trimEnd";
 
 ## 示例
 
-### 使用`trimEnd()`
+### 使用 trimEnd()
 
-下面的例子输出了小写的字符串" foo":
+下面的示例从 `str` 的末尾去除空白字符，但不会去除开头的空白字符。
 
 ```js
-var str = "   foo  ";
+let str = "   foo  ";
 
-alert(str.length); // 8
+console.log(str.length); // 8
 
-str = str.trimRight();  // 或写成 str = str.trimEnd();
+str = str.trimEnd();
 console.log(str.length); // 6
-console.log(str);       // '   foo'
+console.log(str); // '   foo'
 ```
 
-## Specifications
+## 规范
 
-| Specification                                                                                                                                               | Status  | Comment                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ----------------------------- |
-| [`String.prototype.{trimStart,trimEnd}`](https://github.com/tc39/proposal-string-left-right-trim/#stringprototypetrimstart--stringprototypetrimend)proposal | Stage 4 | Expected to be part of ES2019 |
+{{Specifications}}
 
-## Browser compatibility
-
-The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
+## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [`core-js` 中 `String.prototype.trimEnd` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.trim()")}}
 - {{jsxref("String.prototype.trimStart()")}}

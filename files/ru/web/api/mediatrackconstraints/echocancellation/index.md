@@ -1,20 +1,8 @@
 ---
 title: MediaTrackConstraints.echoCancellation
 slug: Web/API/MediaTrackConstraints/echoCancellation
-tags:
-  - API
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstrains
-  - WebRTC
-  - Медиа
-  - Ограничения
-  - Свойство
-  - Эхоподавление
-  - справочник
-translation_of: Web/API/MediaTrackConstraints/echoCancellation
-original_slug: Web/API/MediaTrackConstraints/Эхоподавление
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 Свойство **`echoCancellation`** объекта {{domxref("MediaTrackConstraints")}} это {{domxref("ConstrainBoolean")}} описывающее запрашиваемые или обязательные ограничения накладываемые на ограничивающее свойство {{domxref("MediaTrackSettings.echoCancellation", "echoCancellation")}}.
@@ -39,7 +27,7 @@ constraintsObject.echoCancellation = constraint;
 
 ## Пример
 
-Смотрите {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example: Constraint exerciser")}} для примера.
+Смотрите [Example: Constraint exerciser](/ru/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) для примера.
 
 ## Спецификации
 
@@ -51,8 +39,8 @@ constraintsObject.echoCancellation = constraint;
 
 ## Смотрите также
 
-- [Media Capture and Streams API](/ru/docs/Web/API/Media_Streams_API)
-- [Capabilities, constraints, and settings](/ru/docs/Web/API/Media_Streams_API/Constraints)
+- [Media Capture and Streams API](/ru/docs/Web/API/Media_Capture_and_Streams_API)
+- [Capabilities, constraints, and settings](/ru/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}

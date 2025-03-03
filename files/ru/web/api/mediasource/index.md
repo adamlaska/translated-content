@@ -1,15 +1,8 @@
 ---
 title: MediaSource
 slug: Web/API/MediaSource
-tags:
-  - Видео
-  - Интерфейс
-  - Источник
-  - Потоковое медиа
-  - Расширение
-  - аудио
-translation_of: Web/API/MediaSource
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 **`MediaSource`** – это интерфейс [Media Source Extensions API](/ru/docs/Web/API/Media_Source_Extensions_API) для предоставления интерактивного источника медиаданных объектам типа {{domxref("HTMLMediaElement")}}.
@@ -46,9 +39,10 @@ _Наследует свойства родительского интерфей
   - : Удаляет указанный {{domxref("SourceBuffer")}} из списка {{domxref("SourceBuffers")}}, связанного с текущим `MediaSource-объектом`.
 - {{domxref("MediaSource.endOfStream()")}}
   - : Сигнализирует об окончании потока.
-- ## Статичные методы
 
-  {{domxref("MediaSource.isTypeSupported()")}}
+## Статичные методы
+
+- {{domxref("MediaSource.isTypeSupported()")}}
 
   - : Возвращает значение {{domxref("Boolean")}}, поясняющее, поддерживается ли клиентом полученный MIME-тип — если это так, то можно успешно создать объект типа {{domxref("SourceBuffer")}} для этого MIME-типа.
 
@@ -57,59 +51,57 @@ _Наследует свойства родительского интерфей
 Нижеприведённый простой пример подгружает видео фрагмент за фрагментом так скоро, как может, воспроизводя их "как только так сразу". Этот пример был написан Nick Desaulniers и может быть [просмотрен здесь в виде демо](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (также вы можете [загрузить исходный код](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) для дальнейшего изучения.)
 
 ```js
-var video = document.querySelector('video');
+var video = document.querySelector("video");
 
-var assetURL = 'frag_bunny.mp4';
+var assetURL = "frag_bunny.mp4";
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
+if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource();
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener('sourceopen', sourceOpen);
+  mediaSource.addEventListener("sourceopen", sourceOpen);
 } else {
-  console.error('Unsupported MIME type or codec: ', mimeCodec);
+  console.error("Unsupported MIME type or codec: ", mimeCodec);
 }
 
-function sourceOpen (_) {
+function sourceOpen(_) {
   //console.log(this.readyState); // open
   var mediaSource = this;
   var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener('updateend', function (_) {
+    sourceBuffer.addEventListener("updateend", function (_) {
       mediaSource.endOfStream();
       video.play();
       //console.log(mediaSource.readyState); // ended
     });
     sourceBuffer.appendBuffer(buf);
   });
-};
+}
 
-function fetchAB (url, cb) {
+function fetchAB(url, cb) {
   console.log(url);
-  var xhr = new XMLHttpRequest;
-  xhr.open('get', url);
-  xhr.responseType = 'arraybuffer';
+  var xhr = new XMLHttpRequest();
+  xhr.open("get", url);
+  xhr.responseType = "arraybuffer";
   xhr.onload = function () {
     cb(xhr.response);
   };
   xhr.send();
-};
+}
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                | Status                                           | Comment             |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName('Media Source Extensions', '#mediasource', 'MediaSource')}} | {{Spec2('Media Source Extensions')}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("SourceBuffer")}}
 - {{domxref("SourceBufferList")}}

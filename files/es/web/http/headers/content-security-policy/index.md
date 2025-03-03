@@ -1,13 +1,8 @@
 ---
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
-tags:
-  - CSP
-  - HTTP
-  - Reference
-  - header
-translation_of: Web/HTTP/Headers/Content-Security-Policy
 ---
+
 {{HTTPSidebar}}
 
 La cabecera HTTP **`Content-Security-Policy`** en la respuesta permite a los administradores de un sitio web controlar los recursos que el User-Agent puede cargar a una pagina. Con algunas (Poquísimas) excepciones, las políticas implican principalmente especificar el servidor de origen la protección de puntos finales del script. Esto ayuda a protegerse contra ataques Cross-site scripting ({{Glossary("XSS")}}).
@@ -45,7 +40,8 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
   - : Define los origenes válidos para [web workers](/es/docs/Web/API/Web_Workers_API) y contextos de navegación anidados cargados usando elementos como {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 
-    > **Advertencia:** En lugar de **`child-src`**, los autores quienes deseen regular los contextos de navegación anidados y "workers" deberían usar las directivas {{CSP("frame-src")}} y {{CSP("worker-src")}}, respectivamente.
+    > [!WARNING]
+    > En lugar de **`child-src`**, los autores quienes deseen regular los contextos de navegación anidados y "workers" deberían usar las directivas {{CSP("frame-src")}} y {{CSP("worker-src")}}, respectivamente.
 
 - {{CSP("connect-src")}}
   - : Restringe las URLs que pueden ser cargados usando scripts.
@@ -62,9 +58,11 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("media-src")}}
   - : Especifica origenes válidos para carga de archivos usando elementos como {{HTMLElement("audio")}} , {{HTMLElement("video")}} y {{HTMLElement("track")}}.
 - {{CSP("object-src")}}
-  - : Specifies valid sources for the {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}} elements.
+
+  - : Specifies valid sources for the {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements.
 
     Elements controlled by `object-src` are perhaps coincidentally considered legacy HTML elements and aren't recieving new standardized features (such as the security attributes `sandbox` or `allow` for `<iframe>`). Therefore it is **recommended** to restrict this fetch-directive (e.g. explicitly set `object-src 'none'` if possible).
+
 - {{CSP("prefetch-src")}}
   - : Specifies valid sources to be prefetched or prerendered.
 - {{CSP("script-src")}}
@@ -72,7 +70,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("style-src")}}
   - : Specifies valid sources for stylesheets.
 - {{CSP("webrtc-src")}} {{experimental_inline}}
-  - : Specifies valid sources for [WebRTC](/docs/Web/API/WebRTC_API) connections.
+  - : Specifies valid sources for [WebRTC](/es/docs/Web/API/WebRTC_API) connections.
 - {{CSP("worker-src")}}
   - : Specifies valid sources for {{domxref("Worker")}}, {{domxref("SharedWorker")}}, or {{domxref("ServiceWorker")}} scripts.
 
@@ -85,8 +83,8 @@ Document directives govern the properties of a document or [worker](/es/docs/Web
 - {{CSP("plugin-types")}}
   - : Restricts the set of plugins that can be embedded into a document by limiting the types of resources which can be loaded.
 - {{CSP("sandbox")}}
-  - : Enables a sandbox for the requested resource similar to the {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}} attribute.
-- {{CSP("disown-opener")}} {{obsolete_inline}}
+  - : Enables a sandbox for the requested resource similar to the {{HTMLElement("iframe")}} [`sandbox`](/es/docs/Web/HTML/Element/iframe#sandbox) attribute.
+- {{CSP("disown-opener")}} {{deprecated_inline}}
   - : Ensures a resource will disown its opener when navigated to.
 
 ### {{Glossary("Navigation directive", "Navigation directives")}}
@@ -96,7 +94,7 @@ Navigation directives govern to which location a user can navigate to or submit 
 - {{CSP("form-action")}}
   - : Restricts the URLs which can be used as the target of a form submissions from a given context.
 - {{CSP("frame-ancestors")}}
-  - : Specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or {{HTMLElement("applet")}}.
+  - : Specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
 - {{CSP("navigate-to")}} {{experimental_inline}}
   - : Restricts the URLs to which a document can navigate by any means (a, form, window\.location, window\.open, etc.)
 
@@ -104,11 +102,12 @@ Navigation directives govern to which location a user can navigate to or submit 
 
 Reporting directives control the reporting process of CSP violations. See also the {{HTTPHeader("Content-Security-Policy-Report-Only")}} header.
 
-- {{CSP("report-uri")}} {{obsolete_inline}}
+- {{CSP("report-uri")}} {{deprecated_inline}}
 
   - : Instructs the user agent to report attempts to violate the Content Security Policy. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
 
-    > **Advertencia:** Though the {{CSP("report-to")}} directive is intended to replace the deprecated **`report-uri`** directive, {{CSP("report-to")}} isn’t supported in most browsers yet. So for compatibility with current browsers while also adding forward compatibility when browsers get {{CSP("report-to")}} support, you can specify both **`report-uri`** and {{CSP("report-to")}}:
+    > [!WARNING]
+    > Though the {{CSP("report-to")}} directive is intended to replace the deprecated **`report-uri`** directive, {{CSP("report-to")}} isn't supported in most browsers yet. So for compatibility with current browsers while also adding forward compatibility when browsers get {{CSP("report-to")}} support, you can specify both **`report-uri`** and {{CSP("report-to")}}:
     >
     > ```
     > Content-Security-Policy: ...; report-uri https://endpoint.example.com; report-to groupname
@@ -123,7 +122,7 @@ Reporting directives control the reporting process of CSP violations. See also t
 
 - {{CSP("block-all-mixed-content")}}
   - : Prevents loading any assets using HTTP when the page is loaded using HTTPS.
-- {{CSP("referrer")}} {{obsolete_inline}}
+- {{CSP("referrer")}} {{deprecated_inline}}
   - : Used to specify information in the referer (sic) header for links away from a page. Use the {{HTTPHeader("Referrer-Policy")}} header instead.
 - {{CSP("require-sri-for")}}
   - : Requires the use of {{Glossary("SRI")}} for scripts or styles on the page.
@@ -183,25 +182,18 @@ Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violati
 
 See [Mozilla Web Security Guidelines](https://wiki.mozilla.org/Security/Guidelines/Web_Security#Examples_5) for more examples.
 
-## Espeficicaciones
+## Especificaciones
 
-| Specification                                            | Status                                               | Comment                                                                                                                                                                      |
-| -------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{specName("CSP 3.0")}}                         | {{Spec2('CSP 3.0')}}                         | Adds `disown-opener`, `manifest-src`, `navigate-to`, `report-to`, `strict-dynamic`, `worker-src`. Undeprecates `frame-src`. Deprecates `report-uri` in favor if `report-to`. |
-| {{specName("Mixed Content")}}                 | {{Spec2('Mixed Content')}}                 | Adds `block-all-mixed-content`.                                                                                                                                              |
-| {{specName("Subresource Integrity")}}         | {{Spec2('Subresource Integrity')}}         | Adds `require-sri-for`.                                                                                                                                                      |
-| {{specName("Upgrade Insecure Requests")}} | {{Spec2('Upgrade Insecure Requests')}} | Adds `upgrade-insecure-requests`.                                                                                                                                            |
-| {{specName("CSP 1.1")}}                         | {{Spec2('CSP 1.1')}}                         | Adds `base-uri`, `child-src`, `form-action`, `frame-ancestors`, `plugin-types`, `referrer`, and `report-uri`. Deprecates `frame-src`.                                        |
-| {{specName("CSP 1.0")}}                         | {{Spec2('CSP 1.0')}}                         | Defines `connect-src`, `default-src`, `font-src`, `frame-src`, `img-src`, `media-src`, `object-src`, report-uri, `sandbox`, `script-src,` and `style-src`.                   |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("http.headers.csp.Content-Security-Policy")}}
+{{Compat}}
 
 ## Mirar tambien
 
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-- [Learn about: Content Security Policy](/docs/Web/HTTP/CSP)
+- [Learn about: Content Security Policy](/es/docs/Web/HTTP/CSP)
 - [Content Security in WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [Display security and privacy policies In Firefox Developer Tools](/es/docs/Tools/GCLI/Display_security_and_privacy_policies)
 - [Adopting a strict policy](https://csp.withgoogle.com/docs/strict-csp.html)

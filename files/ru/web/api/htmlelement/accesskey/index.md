@@ -1,21 +1,19 @@
 ---
 title: Element.accessKey
 slug: Web/API/HTMLElement/accessKey
-translation_of: Web/API/HTMLElement/accessKey
-translation_of_original: Web/API/Element/accessKey
-original_slug: Web/API/Element/accessKey
 ---
+
 {{APIRef("DOM")}}
 
 ## Описание
 
 Свойство **accessKey** позволяет перейти к элементу с помощью сочетания клавиш - заданной им и тех, что назначит браузер.
 
-> **Примечание:** По сути, **accessKey** задаёт значение для [одноимённого атрибута](/ru/docs/Web/HTML/Global_attributes/accesskey)...
+> [!NOTE]
+> По сути, **accessKey** задаёт значение для [одноимённого атрибута](/ru/docs/Web/HTML/Global_attributes/accesskey)...
 
-> **Предупреждение:** Данное свойство использовать не рекомендуется, поскольку в браузерах уже заданы подобные привязки и неосторожное обращение может привести к жестокому конфликту.
-
-##
+> [!WARNING]
+> Данное свойство использовать не рекомендуется, поскольку в браузерах уже заданы подобные привязки и неосторожное обращение может привести к жестокому конфликту.
 
 ## Синтаксис
 
@@ -23,8 +21,6 @@ original_slug: Web/API/Element/accessKey
 var key = elem.accessKey;
 elem.accessKey = key;
 ```
-
-##
 
 ## Пример
 
@@ -35,7 +31,7 @@ elem.accessKey = "w";
 
 ## Немного информации
 
-Фокусировка на элемент произойдёт при нажатии следующих клавиш (,где **acesskey** - значение свойства**` acessKey).`**
+Фокусировка на элемент произойдёт при нажатии следующих клавиш (,где **acesskey** - значение свойства **`acessKey`**).
 
 <table class="standard-table" style="height: 252px; width: 388px">
   <tbody>

@@ -25,13 +25,11 @@ TBC
 
 ## 仕様書
 
-| 仕様                                                                                                                             | ステータス                               | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('GamepadExtensions', '#dom-gamepadhapticactuatortype', 'GamepadHapticActuatorType')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.GamepadHapticActuator.type")}}
+{{Compat}}
 
 ## 関連情報
 

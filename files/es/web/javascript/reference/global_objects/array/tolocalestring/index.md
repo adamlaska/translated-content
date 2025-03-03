@@ -1,14 +1,22 @@
 ---
 title: Array.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/toLocaleString
 ---
+
 {{JSRef}}
 
-El método **`toLocaleString()`** devuelve una cadena de texto representando los elementos del array. Los elementos son convertidos a texto usando su método `toLocaleString` y dichos Strings son separados por un caracter específico para la localidad (como una coma para la separación de decimales “,”).
+El método **`toLocaleString()`** devuelve una cadena de texto representando los elementos del array. Los elementos son convertidos a texto usando su método `toLocaleString` y dichos Strings son separados por un caracter específico para la localidad (como una coma para la separación de decimales ",").
 
-{{EmbedInteractiveExample("pages/js/array-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Array.toLocaleString()")}}
+
+```js interactive-example
+const array1 = [1, "a", new Date("21 Dec 1997 14:12:00 UTC")];
+const localeString = array1.toLocaleString("en", { timeZone: "UTC" });
+
+console.log(localeString);
+// Expected output: "1,a,12/21/1997, 2:12:00 PM",
+// This assumes "en" locale and UTC timezone - your results may vary
+```
 
 ## Sintaxis
 
@@ -40,8 +48,8 @@ Los elementos del array son convertidos a strings usando sus métodos `toLocaleS
 Siempre mostrar la moneda para los strings y números en el array `precios`:
 
 ```js
-var precios = ['$7', 500, 8123, 12];
-precios.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' });
+var precios = ["$7", 500, 8123, 12];
+precios.toLocaleString("es-AR", { style: "currency", currency: "ARS" });
 
 // "$7, $500, $8.123, $12"
 ```
@@ -53,8 +61,8 @@ Para más ejemplos, ver también {{jsxref("Intl")}}, {{jsxref("NumberFormat")}},
 ```js
 // https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
 if (!Array.prototype.toLocaleString) {
-  Object.defineProperty(Array.prototype, 'toLocaleString', {
-    value: function(locales, options) {
+  Object.defineProperty(Array.prototype, "toLocaleString", {
+    value: function (locales, options) {
       // 1. Let O be ? ToObject(this value).
       if (this == null) {
         throw new TypeError('"this" is null or not defined');
@@ -70,11 +78,11 @@ if (!Array.prototype.toLocaleString) {
       //    host environment's current locale (this is
       //    derived in an implementation-defined way).
       // NOTE: In this case, we will use a comma
-      var separator = ',';
+      var separator = ",";
 
       // 4. If len is zero, return the empty String.
       if (len === 0) {
-        return '';
+        return "";
       }
 
       // 5. Let firstElement be ? Get(A, "0").
@@ -90,8 +98,10 @@ if (!Array.prototype.toLocaleString) {
       //        « locales, options »
       //       )
       //     )
-      var r = firstElement == null ?
-        '' : firstElement.toLocaleString(locales, options);
+      var r =
+        firstElement == null
+          ? ""
+          : firstElement.toLocaleString(locales, options);
 
       // 8. Let k be 1.
       var k = 1;
@@ -116,8 +126,10 @@ if (!Array.prototype.toLocaleString) {
         //        « locales, options »
         //       )
         //     )
-        r = nextElement == null ?
-          '' : nextElement.toLocaleString(locales, options);
+        r =
+          nextElement == null
+            ? ""
+            : nextElement.toLocaleString(locales, options);
 
         // e. Let R be a String value produced by
         //   concatenating S and R.
@@ -129,23 +141,20 @@ if (!Array.prototype.toLocaleString) {
 
       // 10. Return R.
       return r;
-    }
+    },
   });
 }
 ```
 
-Si necesitas soportar motores de JavaScript obsoletos que no compatibilizan con [`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), es mejor no utilizar los métodos `Array.prototype`, ya que no se pueden hacer no-enumerables.
+Si necesitas soportar motores de JavaScript obsoletos que no compatibilizan con [`Object.defineProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), es mejor no utilizar los métodos `Array.prototype`, ya que no se pueden hacer no-enumerables.
 
 ## Especificaciones
 
-| Especificación                                                                                                                           | Estado                           | Comentario                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}}         | {{Spec2('ESDraft')}}     | La definicion original fue en ECMAScript 3.             |
-| {{SpecName('ES Int Draft', '#sup-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}} | {{Spec2('ES Int Draft')}} | Esta definición reemplaza la proporcionada en ECMA-262. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.toLocaleString")}}
+{{Compat}}
 
 ## Ver también
 

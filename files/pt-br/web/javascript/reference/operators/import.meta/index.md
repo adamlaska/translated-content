@@ -1,9 +1,8 @@
 ---
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
-translation_of: Web/JavaScript/Reference/Statements/import.meta
-original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
+
 {{JSSidebar("Statements")}}
 
 O objeto **`import.meta`** mostra os metadados específicos do contexto de um módulo JavaScript. Ele contém informações sobre o módulo, como a sua URL.
@@ -44,7 +43,7 @@ Por exemplo, seguindo esse HTML:
 
 ```html
 <script type="module">
-import './index.mjs?someURLInfo=5';
+  import "./index.mjs?someURLInfo=5";
 </script>
 ```
 
@@ -52,33 +51,30 @@ O arquivo JavaScript a seguir vai registrar o parâmetro `someURLInfo`:
 
 ```js
 // index.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
+new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
 O mesmo se aplica quando um arquivo importa outro:
 
 ```js
 // index.mjs
-import './index2.mjs?someURLInfo=5';
+import "./index2.mjs?someURLInfo=5";
 
 // index2.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
+new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
 Note que enquanto o Node.js vai passar nos parâmetros query (ou na cerquilha) como no exemplo passsado, a partir do Node 14.1.0, a URL com parâmetro query vai dar erro quando carregar no formulário `node --experimental-modules index.mjs?someURLInfo=5` (é tratado como um arquivo ao invés de uma URL nesse contexto).
 
 Nesse arquivo específico, o argumento passado pode ser complementar para ser usado na ampla aplicação `location.href` (com strings query ou cerquilha adicionada depois do caminho de arquivo HTML) (ou por Node.js, através do `process.argv`).
 
-## Especifícações
+## Especificações
 
-| Especifícação                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| [`import.meta`](https://tc39.es/proposal-import-meta/#prod-ImportMeta)                                                   |
-| {{SpecName("HTML WHATWG", "webappapis.html#hostgetimportmetaproperties", "import.meta")}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.import_meta")}}
+{{Compat}}
 
 ## Veja também
 

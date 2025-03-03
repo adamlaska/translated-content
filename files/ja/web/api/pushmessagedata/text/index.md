@@ -1,46 +1,43 @@
 ---
-title: PushMessageData.text()
+title: "PushMessageData: text() メソッド"
+short-title: text()
 slug: Web/API/PushMessageData/text
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Push API")}}{{SeeCompatTable()}}
+{{APIRef("Push API")}}
 
-{{domxref("PushMessageData")}} インターフェースの **`text()`** メソッドは、プッシュメッセージデータをプレーンテキスト文字列として抽出します。
+**`text()`** は {{domxref("PushMessageData")}} インターフェイスのメソッドで、プッシュメッセージのデータをプレーンテキスト文字列として抽出します。
 
 ## 構文
 
-```js
-var myText = PushEvent.data.text();
+```js-nolint
+text()
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
-{{domxref("USVString")}}。
+文字列です。
 
 ## 例
 
 ```js
-self.addEventListener('push', function(event) {
-  var textObj = event.data.text();
+self.addEventListener("push", (event) => {
+  const textObj = event.data.text();
 
   // テキストを使用して何かを実行する
 });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                 | 状態                         | コメント   |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('Push API', '#widl-PushMessageData-text-USVString', 'text()')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
-{{Compat("api.PushMessageData.text")}}
-
-## 関連項目
-
-- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)
+{{Compat}}

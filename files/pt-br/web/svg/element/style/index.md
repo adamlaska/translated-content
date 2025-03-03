@@ -1,13 +1,8 @@
 ---
 title: style
 slug: Web/SVG/Element/style
-tags:
-  - Elemento
-  - Estilo
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/style
 ---
+
 {{SVGRef}}
 
 O elemento de estilo possibilita que folhas de estilos sejam incorporadas diretamente ao conteúdo do SVG. O elemento `style` do SVG possui os mesmos atributos que o elemento correspondente no HTML (veja o elemento no HTML {{ HTMLElement("style") }}).
@@ -19,8 +14,11 @@ O elemento de estilo possibilita que folhas de estilos sejam incorporadas direta
 ## Exemplo
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 100 100"
+  xmlns="https://www.w3.org/2000/svg">
   <style>
     /* <![CDATA[ */
     circle {
@@ -43,7 +41,7 @@ Resultado:
 
 ### Atributos globais
 
-- [Atributos centrais](/en/SVG/Attribute#Core) »
+- [Atributos centrais](/pt-BR/docs/SVG/Attribute#core) »
 
 ### Atributos específicos
 
@@ -53,12 +51,12 @@ Resultado:
 
 ## Interface DOM
 
-O elemento implementa a interface do [`SVGStyleElement`](/en/DOM/SVGStyleElement).
+O elemento implementa a interface do [`SVGStyleElement`](/pt-BR/docs/DOM/SVGStyleElement).
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.style")}}
+{{Compat}}
 
 ## Veja também
 
-- [Elemento \<style> no HTML](/en/HTML/Element/style)
+- [Elemento \<style> no HTML](/pt-BR/docs/HTML/Element/style)

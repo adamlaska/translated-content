@@ -30,25 +30,23 @@ var bar = {};
 ws.add(foo);
 ws.add(bar);
 
-ws.has(foo);    // true
-ws.has(bar);    // true
+ws.has(foo); // true
+ws.has(bar); // true
 
 ws.delete(foo); // foo を set から削除
-ws.has(foo);    // false, foo は削除済み
-ws.has(bar);    // true, bar は残っている
+ws.has(foo); // false, foo は削除済み
+ws.has(bar); // true, bar は残っている
 ```
 
 `foo !== bar` であることに注意してください。これらは似たオブジェクトですが、_**まったく同じオブジェクト**ではありません_。したがって、両方のオブジェクトが set に追加されます。
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakset-constructor', 'WeakSet constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakSet.WeakSet")}}
+{{Compat}}
 
 ## 関連情報
 

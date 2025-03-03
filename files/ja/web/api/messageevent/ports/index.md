@@ -1,6 +1,9 @@
 ---
-title: MessageEvent.ports
+title: "MessageEvent: ports プロパティ"
+short-title: ports
 slug: Web/API/MessageEvent/ports
+l10n:
+  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
 {{APIRef("HTML DOM")}}
@@ -14,16 +17,16 @@ slug: Web/API/MessageEvent/ports
 ## 例
 
 ```js
-onconnect = function(e) {
-  var port = e.ports[0];
+onconnect = (e) => {
+  const port = e.ports[0];
 
-  port.addEventListener('message', function(e) {
-    var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  port.addEventListener("message", (e) => {
+    const workerResult = `Result: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
   });
 
-  port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
-}
+  port.start(); // addEventListener を使用した場合は必要。 onmessage セッターからは暗黙に呼び出されます。
+};
 ```
 
 ## 仕様書

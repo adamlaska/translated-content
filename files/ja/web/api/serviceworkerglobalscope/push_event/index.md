@@ -1,66 +1,72 @@
 ---
-title: 'ServiceWorkerGlobalScope: push イベント'
+title: "ServiceWorkerGlobalScope: push イベント"
+short-title: push
 slug: Web/API/ServiceWorkerGlobalScope/push_event
+l10n:
+  sourceCommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
 ---
 
-{{APIRef("Push API")}}
+{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
-`push` イベントは、サービスワーカーがプッシュメッセージを受信したときにサービスワーカーのグローバルスコープ ({{domxref("ServiceWorkerGlobalScope")}} インターフェイスで表現されるもの) に送られます。
+**`push`** イベントは、サービスワーカーがプッシュメッセージを受信したときにサービスワーカーのグローバルスコープ ({{domxref("ServiceWorkerGlobalScope")}} インターフェイスで表現されるもの) に送られます。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("PushEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("ServiceWorkerGlobalScope.onpush", "onpush")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("push", (event) => {});
+
+onpush = (event) => {};
+```
+
+## イベント型
+
+{{domxref("PushEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("PushEvent")}}
+
+## イベントプロパティ
+
+_祖先である {{domxref("ExtendableEvent")}} からプロパティを継承しています_。
+
+- {{domxref("PushEvent.data")}} {{ReadOnlyInline}}
+  - : {{domxref("PushMessageData")}} オブジェクトへの参照を返します。これには {{domxref("PushSubscription")}} に送られたデータが含まれています。
 
 ## 例
 
-この例は `push` イベントのハンドラーを設定して、 {{Glossary("JSON")}} データを取り、解析し、メッセージ内に含まれる情報に基づいて扱うためにメッセージを仕分けします。
+この例では、{{Glossary("JSON")}} データを受け取り、解釈し、メッセージに含まれる情報に基づいて処理するためにメッセージを送出する `push` イベント用のハンドラーを設定します。
 
 ```js
-self.addEventListener("push", event => {
-  let message = event.data.json();
+self.addEventListener(
+  "push",
+  (event) => {
+    let message = event.data.json();
 
-  switch(message.type) {
-    case "init":
-      doInit();
-      break;
-    case "shutdown":
-      doShutdown();
-      break;
-  }
-}, false);
+    switch (message.type) {
+      case "init":
+        doInit();
+        break;
+      case "shutdown":
+        doShutdown();
+        break;
+    }
+  },
+  false,
+);
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                         | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName('Push API', '#extensions-to-the-serviceworkerglobalscope-interface', 'push')}} | {{Spec2('Push API')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ServiceWorkerGlobalScope.push_event")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Push API の使用](/ja/docs/Web/API/Push_API/Using_the_Push_API)
-- {{domxref("ServiceWorkerGlobalScope.onpush", "onpush")}} イベントハンドラープロパティ
+- [プッシュ API の使用](/ja/docs/Web/API/Push_API)
 - {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}} イベント

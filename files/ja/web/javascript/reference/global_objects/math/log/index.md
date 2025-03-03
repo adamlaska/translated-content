@@ -1,52 +1,70 @@
 ---
 title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
+l10n:
+  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
 {{JSRef}}
 
-**`Math.log()`** 関数は、 ({{jsxref("Math.E", "e")}} を底とした) 数値の自然対数を返します。
+**`Math.log()`** は静的メソッドで、数値の（[e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) を底とした）自然対数を返します。
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mi>e</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log}(x)} = \ln(x) = \text{the unique} \; y \; \text{such that} \; e^y = x</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚕𝚘𝚐</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;such that&nbsp;</mtext><msup><mi>e</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0,\;\mathtt{\operatorname{Math.log}(x)} = \ln(x) = \text{the unique } y \text{ such that } e^y = x</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-JavaScript の **`Math.log()`** 関数は、数学の _ln(x)_ と同等です。
+{{InteractiveExample("JavaScript Demo: Math.log()")}}
 
-{{EmbedInteractiveExample("pages/js/math-log.html")}}
+```js interactive-example
+function getBaseLog(x, y) {
+  return Math.log(y) / Math.log(x);
+}
+
+// 2 x 2 x 2 = 8
+console.log(getBaseLog(2, 8));
+// Expected output: 3
+
+// 5 x 5 x 5 x 5 = 625
+console.log(getBaseLog(5, 625));
+// Expected output: 4
+```
 
 ## 構文
 
-```
+```js-nolint
 Math.log(x)
 ```
 
 ### 引数
 
 - `x`
-  - : 数値です。
+  - : 0 以上の数値です。
 
 ### 返値
 
-({{jsxref("Math.E", "e")}} を底とした) 与えられた数値の自然対数です。数値が負の数であった場合、 {{jsxref("NaN")}} が返されます。
+`x` の（[e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) を底とした）自然対数です。 `x` が ±0 の場合は、 [`-Infinity`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY) を返します。 `x < 0` の場合は、 {{jsxref("NaN")}} が返されます。
 
 ## 解説
 
-`x` の値が 0 であった場合、返値は常に {{jsxref("Number.NEGATIVE_INFINITY", "-Infinity")}} です。
-
-`x` の値が 0 未満であった場合、返値は常に {{jsxref("NaN")}} です。
-
 `log()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.log()` として使用するようにしてください (`Math` はコンストラクターではありません)。
 
-2 または 10 の自然対数が必要な場合は、定数の {{jsxref("Math.LN2")}} または {{jsxref("Math.LN10")}} を使用してください。 2 や 10 を底とした対数が必要な場合は、 {{jsxref("Math.log2()")}} または {{jsxref("Math.log10()")}} を使用してください。他の数を底とした対数が必要な場合は、下記の例にあるように Math.log(x) / Math.log(otherBase) を使用してください。事前に 1 / Math.log(otherBase) を計算しておいた方がいいかもしれません。
+2 または 10 の自然対数が必要な場合は、定数の {{jsxref("Math.LN2")}} または {{jsxref("Math.LN10")}} を使用してください。 2 や 10 を底とした対数が必要な場合は、 {{jsxref("Math.log2()")}} または {{jsxref("Math.log10()")}} を使用してください。他の数を底とした対数が必要な場合は、下記の例にあるように `Math.log(x) / Math.log(otherBase)` を使用してください。事前に `1 / Math.log(otherBase)` を計算しておいた方がいいかもしれません。 `Math.log(x) * constant` の乗算の方がはるかに高速だからです。
+
+1 にとても近い正の数値は、精度が損なわれ、自然対数が不正確になる可能性がありますのでご注意ください。この場合、 {{jsxref("Math.log1p")}} を使用することをお勧めします。
 
 ## 例
 
 ### Math.log() の使用
 
 ```js
-Math.log(-1); // NaN, out of range
-Math.log(0);  // -Infinity
-Math.log(1);  // 0
+Math.log(-1); // NaN
+Math.log(-0); // -Infinity
+Math.log(0); // -Infinity
+Math.log(1); // 0
 Math.log(10); // 2.302585092994046
+Math.log(Infinity); // Infinity
 ```
 
 ### 様々な底による Math.log() の使用
@@ -63,13 +81,11 @@ function getBaseLog(x, y) {
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.log', 'Math.log')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.log")}}
+{{Compat}}
 
 ## 関連情報
 

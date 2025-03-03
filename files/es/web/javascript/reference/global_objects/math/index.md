@@ -1,13 +1,8 @@
 ---
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
-tags:
-  - JavaScript
-  - Math
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Math
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math
 ---
+
 {{JSRef}}
 
 **`Math`** es un objeto incorporado que tiene propiedades y métodos para constantes y funciones matemáticas. No es un objeto de función.
@@ -39,9 +34,11 @@ A diferencia de los demás objetos globales, el objeto `Math` no se puede editar
 
 ## Métodos
 
-> **Nota:** Tenga en cuenta que las funciones trigonométricas (`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`) devuelven ángulos en radianes. Para convertir radianes a grados, divida por `(Math.PI / 180)`, y multiplique por esto para convertir a la inversa.
+> [!NOTE]
+> Tenga en cuenta que las funciones trigonométricas (`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`) devuelven ángulos en radianes. Para convertir radianes a grados, divida por `(Math.PI / 180)`, y multiplique por esto para convertir a la inversa.
 
-> **Nota:** Tenga en cuenta que muchas de las funciones matemáticas tienen una precisión que es dependiente de la implementación. Esto significa que los diferentes navegadores pueden dar un resultado diferente, e incluso el mismo motor de JS en un sistema operativo o arquitectura diferente puede dar resultados diferentes.
+> [!NOTE]
+> Tenga en cuenta que muchas de las funciones matemáticas tienen una precisión que es dependiente de la implementación. Esto significa que los diferentes navegadores pueden dar un resultado diferente, e incluso el mismo motor de JS en un sistema operativo o arquitectura diferente puede dar resultados diferentes.
 
 - {{jsxref("Global_Objects/Math/abs", "Math.abs(x)")}}
   - : Devuelve el valor absoluto de un número.
@@ -129,18 +126,16 @@ Como demostración, el siguiente ejemplo agrega un método al objeto `Math` para
 
 ```js
 /* Función variádica -- Retorna el máximo común divisor de una lista de argumentos */
-Math.gcd = function() {
-    if (arguments.length == 2) {
-        if (arguments[1] == 0)
-            return arguments[0];
-        else
-            return Math.gcd(arguments[1], arguments[0] % arguments[1]);
-    } else if (arguments.length > 2) {
-        var result = Math.gcd(arguments[0], arguments[1]);
-        for (var i = 2; i < arguments.length; i++)
-            result = Math.gcd(result, arguments[i]);
-        return result;
-    }
+Math.gcd = function () {
+  if (arguments.length == 2) {
+    if (arguments[1] == 0) return arguments[0];
+    else return Math.gcd(arguments[1], arguments[0] % arguments[1]);
+  } else if (arguments.length > 2) {
+    var result = Math.gcd(arguments[0], arguments[1]);
+    for (var i = 2; i < arguments.length; i++)
+      result = Math.gcd(result, arguments[i]);
+    return result;
+  }
 };
 ```
 
@@ -152,16 +147,11 @@ console.log(Math.gcd(20, 30, 15, 70, 40)); // `5`
 
 ## Especificaciones
 
-| Especificación                                                       | Estado                       | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| -------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Definición Inicial. Implementado en JavaScript 1.1.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| {{SpecName('ES5.1', '#sec-15.8', 'Math')}}             | {{Spec2('ES5.1')}}     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| {{SpecName('ES6', '#sec-math-object', 'Math')}}     | {{Spec2('ES6')}}         | Nuevos métodos {{jsxref("Math.log10()", "log10()")}}, {{jsxref("Math.log2()", "log2()")}}, {{jsxref("Math.log1p()", "log1p()")}}, {{jsxref("Math.expm1()", "expm1()")}}, {{jsxref("Math.cosh()", "cosh()")}}, {{jsxref("Math.sinh()", "sinh()")}}, {{jsxref("Math.tanh()", "tanh()")}}, {{jsxref("Math.acosh()", "acosh()")}}, {{jsxref("Math.asinh()", "asinh()")}}, {{jsxref("Math.atanh()", "atanh()")}}, {{jsxref("Math.hypot()", "hypot()")}}, {{jsxref("Math.trunc()", "trunc()")}}, {{jsxref("Math.sign()", "sign()")}}, {{jsxref("Math.imul()", "imul()")}}, {{jsxref("Math.fround()", "fround()")}}, {{jsxref("Math.cbrt()", "cbrt()")}} y {{jsxref("Math.clz32()", "clz32()")}} añadidos. |
-| {{SpecName('ESDraft', '#sec-math-object', 'Math')}} | {{Spec2('ESDraft')}} |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math")}}
+{{Compat}}
 
 ## Ver también
 

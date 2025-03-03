@@ -1,25 +1,15 @@
 ---
 title: browsingData.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - remove
-browser-compat: webextensions.api.browsingData.remove
-translation-of: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Remove o dado de navegação especificado.
 
-O dado de navegação a ser removido está especificado na opção  `dataTypes`, em que é um objeto {{WebExtAPIRef("browsingData.DataTypeSet")}}.
+O dado de navegação a ser removido está especificado na opção `dataTypes`, em que é um objeto {{WebExtAPIRef("browsingData.DataTypeSet")}}.
 
-Você pode usar a opção `removalOptions`, um {{WebExtAPIRef("browsingData.RemovalOptions")}} objeto, para controlar o quão longe no passado a remoção de dados será feita e se deseja remover dados apenas de páginas normais ou remover  de aplicativos e extensões hospedados também.
+Você pode usar a opção `removalOptions`, um {{WebExtAPIRef("browsingData.RemovalOptions")}} objeto, para controlar o quão longe no passado a remoção de dados será feita e se deseja remover dados apenas de páginas normais ou remover de aplicativos e extensões hospedados também.
 
 Isso é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -27,15 +17,15 @@ Isso é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/Jav
 
 ```js
 let removing = browser.browsingData.remove(
-  removalOptions,            // RemovalOptions object
-  dataTypes                  // DataTypeSet object
-)
+  removalOptions, // RemovalOptions object
+  dataTypes, // DataTypeSet object
+);
 ```
 
 ### Parâmetros
 
 - `removalOptions`
-  - : `object`. Um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, que pode ser usado para controlar o quão longe no passado a remoção de dados será feita e se deseja remover dados apenas de páginas normais ou remover  de aplicativos e extensões hospedados também.
+  - : `object`. Um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, que pode ser usado para controlar o quão longe no passado a remoção de dados será feita e se deseja remover dados apenas de páginas normais ou remover de aplicativos e extensões hospedados também.
 - `dataTypes`
   - : `object`. Um objeto {{WebExtAPIRef("browsingData.DataTypeSet")}}, descrevendo os tipos de dados para remover (e.g. histórico, downloads, ...).
 
@@ -60,12 +50,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.remove(
-  {since: oneWeekAgo},
-  {downloads: true, history: true}).
-then(onRemoved, onError);
+browser.browsingData
+  .remove({ since: oneWeekAgo }, { downloads: true, history: true })
+  .then(onRemoved, onError);
 ```
 
 Remove todo o histórico de download e navegação:
@@ -92,7 +81,8 @@ browser.browsingData
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
